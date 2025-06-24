@@ -1,0 +1,21 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+// Get the current language and translation function
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<section class="introduction-section" id="what-is-invisible-text">
+    <div class="section-content text-center">
+        <h2 class="section-title">
+            {t("about.introduction.title").split("InvisibleText.me")[0]}{" "}
+            <a href="https://invisibletext.me" class="site-link">
+                InvisibleText.me
+            </a>
+            {t("about.introduction.title").includes("InvisibleText.me")
+            ? t("about.introduction.title").split("InvisibleText.me")[1]
+              : ""}
+        </h2>
+        <p class="section-description">{t("about.introduction.description")}</p>
+    </div>
+</section>

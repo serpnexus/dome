@@ -1,0 +1,539 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+// Get the current language and translation function
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Unicode character data
+const unicodeChars = [
+  {
+    unicode: "U+0020",
+    description: t("unicode.space.description"),
+    html: "&nbsp;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.space.notes"),
+  },
+  {
+    unicode: "U+00A0",
+    description: t("unicode.noBreakSpace.description"),
+    html: "&nbsp;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.noBreakSpace.notes"),
+  },
+  {
+    unicode: "U+2000",
+    description: t("unicode.enQuad.description"),
+    html: "&#8192;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.enQuad.notes"),
+  },
+  {
+    unicode: "U+2001",
+    description: t("unicode.emQuad.description"),
+    html: "&#8193;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.emQuad.notes"),
+  },
+  {
+    unicode: "U+2002",
+    description: t("unicode.enSpace.description"),
+    html: "&#8194;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.enSpace.notes"),
+  },
+  {
+    unicode: "U+2003",
+    description: t("unicode.emSpace.description"),
+    html: "&#8195;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.emSpace.notes"),
+  },
+  {
+    unicode: "U+2004",
+    description: t("unicode.threePerEmSpace.description"),
+    html: "&#8196;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.threePerEmSpace.notes"),
+  },
+  {
+    unicode: "U+2005",
+    description: t("unicode.fourPerEmSpace.description"),
+    html: "&#8197;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.fourPerEmSpace.notes"),
+  },
+  {
+    unicode: "U+2006",
+    description: t("unicode.sixPerEmSpace.description"),
+    html: "&#8198;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.sixPerEmSpace.notes"),
+  },
+  {
+    unicode: "U+2007",
+    description: t("unicode.figureSpace.description"),
+    html: "&#8199;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.figureSpace.notes"),
+  },
+  {
+    unicode: "U+2008",
+    description: t("unicode.punctuationSpace.description"),
+    html: "&#8200;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.punctuationSpace.notes"),
+  },
+  {
+    unicode: "U+2009",
+    description: t("unicode.thinSpace.description"),
+    html: "&#8201;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.thinSpace.notes"),
+  },
+  {
+    unicode: "U+200A",
+    description: t("unicode.hairSpace.description"),
+    html: "&#8202;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.hairSpace.notes"),
+  },
+  {
+    unicode: "U+200B",
+    description: t("unicode.zeroWidthSpace.description"),
+    html: "&#8203;",
+    example: "​",
+    character: "​",
+    notes: t("unicode.zeroWidthSpace.notes"),
+  },
+  {
+    unicode: "U+200C",
+    description: t("unicode.zeroWidthNonJoiner.description"),
+    html: "&#8204;",
+    example: "‌",
+    character: "‌",
+    notes: t("unicode.zeroWidthNonJoiner.notes"),
+  },
+  {
+    unicode: "U+200D",
+    description: t("unicode.zeroWidthJoiner.description"),
+    html: "&#8205;",
+    example: "‍",
+    character: "‍",
+    notes: t("unicode.zeroWidthJoiner.notes"),
+  },
+  {
+    unicode: "U+200E",
+    description: t("unicode.leftToRightMark.description"),
+    html: "&#8206;",
+    example: "‎",
+    character: "‎",
+    notes: t("unicode.leftToRightMark.notes"),
+  },
+  {
+    unicode: "U+200F",
+    description: t("unicode.rightToLeftMark.description"),
+    html: "&#8207;",
+    example: "‏",
+    character: "‏",
+    notes: t("unicode.rightToLeftMark.notes"),
+  },
+  {
+    unicode: "U+205F",
+    description: t("unicode.mediumMathematicalSpace.description"),
+    html: "&#8287;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.mediumMathematicalSpace.notes"),
+  },
+  {
+    unicode: "U+2060",
+    description: t("unicode.wordJoiner.description"),
+    html: "&#8288;",
+    example: "⁠",
+    character: "⁠",
+    notes: t("unicode.wordJoiner.notes"),
+  },
+  {
+    unicode: "U+2061",
+    description: t("unicode.functionApplication.description"),
+    html: "&#8289;",
+    example: "⁡",
+    character: "⁡",
+    notes: t("unicode.functionApplication.notes"),
+  },
+  {
+    unicode: "U+2062",
+    description: t("unicode.invisibleTimes.description"),
+    html: "&#8290;",
+    example: "⁢",
+    character: "⁢",
+    notes: t("unicode.invisibleTimes.notes"),
+  },
+  {
+    unicode: "U+2063",
+    description: t("unicode.invisibleSeparator.description"),
+    html: "&#8291;",
+    example: "⁣",
+    character: "⁣",
+    notes: t("unicode.invisibleSeparator.notes"),
+  },
+  {
+    unicode: "U+2064",
+    description: t("unicode.invisiblePlus.description"),
+    html: "&#8292;",
+    example: "⁤",
+    character: "⁤",
+    notes: t("unicode.invisiblePlus.notes"),
+  },
+  {
+    unicode: "U+3000",
+    description: t("unicode.ideographicSpace.description"),
+    html: "&#12288;",
+    example: "　",
+    character: "　",
+    notes: t("unicode.ideographicSpace.notes"),
+  },
+  {
+    unicode: "U+3164",
+    description: t("unicode.hangulFiller.description"),
+    html: "&#12644;",
+    example: "ㅤ",
+    character: "ㅤ",
+    notes: t("unicode.hangulFiller.notes"),
+  },
+  {
+    unicode: "U+FEFF",
+    description: t("unicode.zeroWidthNoBreakSpace.description"),
+    html: "&#65279;",
+    example: "﻿",
+    character: "﻿",
+    notes: t("unicode.zeroWidthNoBreakSpace.notes"),
+  },
+  {
+    unicode: "U+180E",
+    description: t("unicode.mongolianVowelSeparator.description"),
+    html: "&#6158;",
+    example: " ",
+    character: " ",
+    notes: t("unicode.mongolianVowelSeparator.notes"),
+  },
+  {
+    unicode: "U+2800",
+    description: t("unicode.braillePatternBlank.description"),
+    html: "&#10240;",
+    example: "⠀",
+    character: "⠀",
+    notes: t("unicode.braillePatternBlank.notes"),
+  },
+];
+---
+
+<section class="unicode-table">
+  <div class="container">
+    <h2 class="unicode-title">{t("unicode.title")}</h2>
+    <p class="unicode-description">{t("unicode.subtitle")}</p>
+    
+    <div class="table-container">
+      <table class="unicode-table-content">
+        <thead>
+          <tr>
+            <th>{t("unicode.table.unicode")}</th>
+            <th>{t("unicode.table.description")}</th>
+            <th>{t("unicode.table.html")}</th>
+            <th>{t("unicode.table.example")}</th>
+            <th class="actions-column">{t("unicode.table.actions")}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {unicodeChars.map((char, index) => (
+            <>
+              <tr class={index % 2 === 0 ? "row-even" : "row-odd"}>
+                <td>{char.unicode}</td>
+                <td>{char.description}</td>
+                <td><code>{char.html}</code></td>
+                <td class="example-cell">[{char.example}]</td>
+                <td class="actions-cell">
+                  <button 
+                    class="copy-btn"
+                    data-character={char.character}
+                    aria-label={t("unicode.copy")}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                    <span>{t("unicode.copy")}</span>
+                  </button>
+                  
+                  {char.notes && (
+                    <button 
+                      class="info-btn"
+                      data-index={index}
+                      aria-label="Unicode info button"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 16v-4"/>
+                        <path d="M12 8h.01"/>
+                      </svg>
+                    </button>
+                  )}
+                </td>
+              </tr>
+              {char.notes && (
+                <tr class="info-row hidden" data-info-row={index}>
+                  <td colspan="5">
+                    <div class="info-content">{char.notes}</div>
+                  </td>
+                </tr>
+              )}
+            </>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<style>
+  .unicode-table {
+    padding: 1rem 0;
+  }
+  
+  .unicode-title {
+    text-align: center;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--yellow-400);
+    margin-bottom: 1rem;
+  }
+  
+  .unicode-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: var(--gray-300);
+  }
+  
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: var(--navy-800);
+    border: 1px solid var(--navy-600);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .unicode-table-content {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .unicode-table-content th {
+    background-color: var(--navy-700);
+    color: var(--yellow-400);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.75rem 1rem;
+  }
+  
+  .unicode-table-content td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--navy-700);
+  }
+  
+  .row-even {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .row-odd {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+  
+  .row-even:hover, .row-odd:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .example-cell {
+    font-family: monospace;
+    font-size: 1.1rem;
+  }
+  
+  .actions-cell {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .copy-btn, .info-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: var(--navy-600);
+    color: var(--yellow-400);
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .info-btn {
+    padding: 0.25rem;
+  }
+  
+  .copy-btn:hover, .info-btn:hover {
+    background-color: var(--navy-500);
+  }
+  
+  .info-row {
+    background-color: var(--navy-700);
+  }
+  
+  .info-content {
+    padding: 0.75rem 1rem;
+    color: var(--gray-300);
+    font-size: 0.875rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .unicode-table-content {
+      font-size: 0.875rem;
+    }
+    
+    .unicode-table-content th,
+    .unicode-table-content td {
+      padding: 0.5rem;
+    }
+    
+    .copy-btn span {
+      display: none;
+    }
+    
+    .actions-column {
+      width: 80px;
+      text-align: center;
+    }
+    
+    .actions-cell {
+      justify-content: center;
+    }
+  }
+</style>
+
+<script>
+  // Handle copy buttons
+  const copyButtons = document.querySelectorAll('.copy-btn');
+  copyButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const character = button.getAttribute('data-character');
+      if (character) {
+        navigator.clipboard.writeText(character)
+          .then(() => {
+            // Show success state
+            const originalHTML = button.innerHTML;
+            button.innerHTML = `
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+              <span>Copied!</span>
+            `;
+            
+            // Show toast notification
+            showToast('Character copied to clipboard!');
+            
+            // Reset button after delay
+            setTimeout(() => {
+              button.innerHTML = originalHTML;
+            }, 1500);
+          })
+          .catch(err => {
+            console.error('Failed to copy: ', err);
+            showToast('Failed to copy');
+          });
+      }
+    });
+  });
+
+  // Handle info buttons
+  const infoButtons = document.querySelectorAll('.info-btn');
+  infoButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const index = button.getAttribute('data-index');
+      if (index) {
+        const infoRow = document.querySelector(`[data-info-row="${index}"]`);
+        if (infoRow) {
+          infoRow.classList.toggle('hidden');
+        }
+      }
+    });
+  });
+
+  // Toast notification function
+  function showToast(message) {
+    // Remove any existing toasts
+    const existingToasts = document.querySelectorAll('.toast-notification');
+    existingToasts.forEach(toast => {
+      document.body.removeChild(toast);
+    });
+    
+    // Create new toast
+    const toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    toast.textContent = message;
+    
+    // Style the toast
+    toast.style.position = 'fixed';
+    toast.style.bottom = '1rem';
+    toast.style.right = '1rem';
+    toast.style.backgroundColor = 'var(--yellow-400)';
+    toast.style.color = 'var(--navy-900)';
+    toast.style.padding = '0.75rem 1rem';
+    toast.style.borderRadius = '0.25rem';
+    toast.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.2)';
+    toast.style.zIndex = '9999';
+    toast.style.transition = 'opacity 0.3s, transform 0.3s';
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(1rem)';
+    
+    document.body.appendChild(toast);
+    
+    // Show toast with animation
+    setTimeout(() => {
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateY(0)';
+    }, 10);
+    
+    // Hide and remove toast after delay
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateY(1rem)';
+      
+      setTimeout(() => {
+        if (document.body.contains(toast)) {
+          document.body.removeChild(toast);
+        }
+      }, 300);
+    }, 3000);
+  }
+</script>

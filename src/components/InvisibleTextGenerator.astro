@@ -1,0 +1,845 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="invisible-text-generator">
+  <div class="container">
+    <h1 class="h1 generator-title">{t("invisibletext.title")}</h1>
+    <p class="generator-description">
+      {t("invisibletext.description")}
+    </p>
+    <!-- First row (Method 1 & Method 2) -->
+    <div class="methods-grid">
+      <!-- Method 1: Quick Copy -->
+      <div class="method-card">
+        <h2 class="method-title">{t("invisibletext.method1.title")}</h2>
+        <div class="quick-copy-buttons">
+          <button 
+            id="copySmall" 
+            class="copy-button" 
+            data-count="3"
+            data-tooltip={t("invisibletext.copy")}
+            aria-label={`${t("invisibletext.method1.small")} ${t("invisibletext.copy")}`}
+          >
+            <span >
+              {t("invisibletext.method1.small")}
+            </span>
+            <span class="icon-container">
+              <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+              </svg>
+              <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+            </span>
+          </button>
+          <button 
+            id="copyMedium" 
+            class="copy-button" 
+            data-count="10"
+            data-tooltip={t("invisibletext.copy")}
+            aria-label={`${t("invisibletext.method1.medium")} ${t("invisibletext.copy")}`}
+          >
+            <span>
+              {t("invisibletext.method1.medium")}
+            </span>
+            <span class="icon-container">
+              <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+              </svg>
+              <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+            </span>
+          </button>
+          <button 
+            id="copyLarge" 
+            class="copy-button" 
+            data-count="30"
+            data-tooltip={t("invisibletext.copy")}
+            aria-label={`${t("invisibletext.method1.large")} ${t("invisibletext.copy")}`}
+          >
+            <span >
+              {t("invisibletext.method1.large")}
+            </span>
+            <span class="icon-container">
+              <svg class="copy-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+              </svg>
+              <svg class="check-icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <p class="method-description">
+          {t("invisibletext.method1.description")}
+        </p>
+        <p class="method-note">
+          {t("invisibletext.method1.fallback")}
+        </p>
+      </div>
+
+      <!-- Method 2: Character Selection -->
+      <div class="method-card">
+        <h2 class="method-title">{t("invisibletext.method2.title")}</h2>
+        <p class="method-description">
+          {t("invisibletext.method2.description")}
+        </p>
+        <div class="character-selector">
+          <!-- Associated Label for Select (visually hidden) -->
+          <label for="characterType" class="visually-hidden">
+            {t("invisibletext.method2.selectLabel")}
+          </label>
+          <select id="characterType" class="character-select">
+            <option value="zwsp">Zero Width Space (U+200B)</option>
+            <option value="zwj">Zero Width Joiner (U+200D)</option>
+            <option value="zwnj">Zero Width Non-Joiner (U+200C)</option>
+            <option value="hangul" selected>Hangul Filler (U+3164)</option>
+            <option value="wj">Word Joiner (U+2060)</option>
+          </select>
+          <div class="character-actions">
+            <button 
+              id="copySelected" 
+              class="action-button"
+              data-tooltip={t("invisibletext.copy")}
+              aria-label={t("invisibletext.copy")}
+            >
+              <span class="visually-hidden">{t("invisibletext.copy")}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+              </svg>
+              <span class="tooltip">{t("invisibletext.copy")}</span>
+            </button>
+            <button 
+              id="previewSelected" 
+              class="action-button"
+              data-tooltip={t("invisibletext.preview")}
+              aria-label={t("invisibletext.preview")}
+            >
+              <span class="visually-hidden">{t("invisibletext.preview")}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <span class="tooltip">{t("invisibletext.preview")}</span>
+            </button>
+          </div>
+        </div>
+        <div class="character-info">
+          <h3 class="info-title" id="selectedCharName">Hangul Filler</h3>
+          <p class="info-description" id="selectedCharDesc">
+            An invisible character mainly used in the Korean script. In gaming and social media, it can be employed to create invisible names or disguise messages.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row (Method 3 & Method 4) -->
+    <div class="methods-grid">
+      <!-- Method 3: Custom Generator -->
+      <div class="method-card">
+        <h2 class="method-title">{t("invisibletext.method3.title")}</h2>
+        <p class="method-description">
+          {t("invisibletext.method3.description")}
+        </p>
+        <div class="custom-generator">
+          <div class="generator-controls">
+            <!-- Label for custom select (visually hidden) -->
+            <label for="customCharType" class="visually-hidden">
+              {t("invisibletext.method3.selectLabel")}
+            </label>
+            <select id="customCharType" class="character-select">
+              <option value="zwsp">Zero Width Space (U+200B)</option>
+              <option value="zwj">Zero Width Joiner (U+200D)</option>
+              <option value="zwnj">Zero Width Non-Joiner (U+200C)</option>
+              <option value="hangul" selected>Hangul Filler (U+3164)</option>
+              <option value="wj">Word Joiner (U+2060)</option>
+            </select>
+            <div class="count-control">
+              <label for="customCount" class="count-label">{t("invisibletext.count")}</label>
+              <input 
+                type="number" 
+                id="customCount" 
+                min="1" 
+                max="1000"
+                value="5" 
+                class="count-input"
+              />
+            </div>
+          </div>
+          <div class="generator-actions">
+            <button 
+              id="generateCustom" 
+              class="primary-button"
+              data-tooltip={t("invisibletext.generate")}
+              aria-label={t("invisibletext.generate")}
+            >
+              <span>{t("invisibletext.generate")}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4"/>
+                <path d="M12 18v4"/>
+                <path d="m4.93 4.93 2.83 2.83"/>
+                <path d="m16.24 16.24 2.83 2.83"/>
+                <path d="M2 12h4"/>
+                <path d="M18 12h4"/>
+                <path d="m4.93 19.07 2.83-2.83"/>
+                <path d="m16.24 7.76 2.83-2.83"/>
+              </svg>
+            </button>
+            <button 
+              id="copyCustom" 
+              class="secondary-button"
+              data-tooltip={t("invisibletext.copy")}
+              aria-label={t("invisibletext.copy")}
+            >
+              <span class="visually-hidden">{t("invisibletext.copy")}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Method 4: Advanced Options -->
+      <div class="method-card">
+        <h2 class="method-title">{t("invisibletext.method4.title")}</h2>
+        <p class="method-description">
+          {t("invisibletext.method4.description")}
+        </p>
+        <div class="advanced-options">
+          <div class="option-group">
+            <label class="option-label">
+              <input type="checkbox" id="mixCharacters" class="option-checkbox" />
+              {t("invisibletext.method4.mix")}
+            </label>
+            <div class="option-info">{t("invisibletext.method4.mixInfo")}</div>
+          </div>
+          <div class="option-group">
+            <label class="option-label">
+              <input type="checkbox" id="addPattern" class="option-checkbox" />
+              {t("invisibletext.method4.pattern")}
+            </label>
+            <div class="option-info">{t("invisibletext.method4.patternInfo")}</div>
+          </div>
+          <div class="count-control large">
+            <label for="advancedCount" class="count-label">{t("invisibletext.count")}</label>
+            <input 
+              type="number" 
+              id="advancedCount" 
+              min="1" 
+              max="5000"
+              value="20" 
+              class="count-input"
+            />
+          </div>
+          <button 
+            id="generateAdvanced" 
+            class="primary-button full-width"
+            aria-label={t("invisibletext.method4.generateAdvanced")}
+          >
+            <span class="visually-hidden">{t("invisibletext.method4.generateAdvanced")}</span>
+            {t("invisibletext.method4.generateAdvanced")}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Test Area -->
+    <div class="test-area-container">
+      <h2 class="test-area-title">{t("invisibletext.testarea.title")}</h2>
+      <p class="test-area-description">
+        {t("invisibletext.testarea.description")}
+      </p>
+      <div class="test-area-wrapper">
+        <textarea 
+          id="testArea" 
+          class="test-area"
+          placeholder={t("invisibletext.testarea.placeholder")}
+        ></textarea>
+      </div>
+      <div class="test-area-footer">
+        <div class="character-count">
+          {t("invisibletext.testarea.characters")}: <span id="charCount">0</span>
+        </div>
+        <div class="test-area-actions">
+          <button 
+            id="copyTest" 
+            class="action-button"
+            data-tooltip={t("invisibletext.copy")}
+            aria-label={t("invisibletext.copy")}
+          >
+            <span class="visually-hidden">{t("invisibletext.copy")}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+            </svg>
+            <span class="tooltip">{t("invisibletext.copy")}</span>
+          </button>
+          <button 
+            id="clearTest" 
+            class="action-button"
+            data-tooltip={t("invisibletext.clear")}
+            aria-label={t("invisibletext.clear")}
+          >
+            <span class="visually-hidden">{t("invisibletext.clear")}</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 6h18"/>
+              <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
+              <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+            </svg>
+            <span class="tooltip">{t("invisibletext.clear")}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Visually hidden class for accessibility */
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; 
+    border: 0;
+  }
+
+  .title-section {
+    margin-bottom: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Main Section */
+  .invisible-text-generator {
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  /* Methods grid using CSS Grid; two columns on larger screens */
+  .methods-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  /* Collapse grid on mobile devices */
+  @media (max-width: 768px) {
+    .h1 {
+      color: var(--yellow-200) !important;
+    }
+    .methods-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Cards styling */
+  .method-card {
+    background-color: var(--yellow-200);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    color: var(--black);
+  }
+
+  /* Title styling inside cards */
+  .method-title {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+
+  /* Description and notes */
+  .method-description,
+  .method-note {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+  }
+
+  /* Quick Copy Buttons */
+  .quick-copy-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* General button styling */
+  .copy-button,
+  .action-button,
+  .primary-button,
+  .secondary-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--navy-800);
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+    position: relative;
+  }
+
+  /* Hover effect */
+  .copy-button:hover,
+  .action-button:hover,
+  .primary-button:hover,
+  .secondary-button:hover {
+    background-color: var(--navy-900);
+  }
+
+  /* Character Selector */
+  .character-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .character-select {
+    flex: 1 1 ;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .character-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  /* Character Info */
+  .character-info {
+    margin-top: 1rem;
+  }
+
+  /* Custom Generator Styles */
+  .custom-generator {
+    margin-top: 1rem;
+  }
+
+  .generator-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .count-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .count-label {
+    min-width: 60px;
+  }
+
+  .count-input {
+    width: 80px;
+    padding: 0.4rem;
+  }
+
+  .generator-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* Advanced Options */
+  .advanced-options {
+    margin-top: 1rem;
+  }
+
+  .option-group {
+    margin-bottom: 1rem;
+  }
+
+  .option-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .option-checkbox {
+    transform: scale(1.2);
+  }
+
+  .option-info {
+    font-size: 0.875rem;
+    color: #333;
+    margin-top: 0.3rem;
+  }
+
+  .count-control.large {
+    margin: 1rem 0;
+  }
+
+  .primary-button.full-width {
+    width: 100%;
+  }
+
+  /* Test Area */
+  .test-area-container {
+    margin-top: 3rem;
+    background-color: var(--yellow-200);
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: var(--black);
+  }
+
+  .test-area-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .test-area-description {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .test-area-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .test-area {
+    width: 100%;
+    min-height: 120px;
+    padding: 0.5rem;
+    resize: vertical;
+    font-size: 1rem;
+    color: var(--black);
+  }
+
+  .test-area-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 110px;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+    border: 1px solid var(--yellow-500);
+    border-radius: 8px;
+  }
+
+  .test-area-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .overlay-message {
+    color: #555;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .test-area-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .character-count {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .test-area-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  /* Tooltip */
+  .tooltip {
+    visibility: hidden;
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+
+  .action-button:hover .tooltip,
+  .copy-button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* Toast */
+  .toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .toast.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  const characters = {
+    zwsp: { char: '\u200B', name: 'Zero Width Space', description: 'An invisible character for formatting digital text. It allows word breaks or line breaks without adding a visible space.' },
+    zwj: { char: '\u200D', name: 'Zero Width Joiner', description: 'An empty character for joining two characters without any visible separation. It is commonly used in creating complex scripts and emoji sequences.' },
+    zwnj: { char: '\u200C', name: 'Zero Width Non-Joiner', description: 'Prevents characters from joining together. This is particularly useful in scripts where certain character combinations should remain separate.' },
+    hangul: { char: '\u3164', name: 'Hangul Filler', description: 'An invisible character mainly used in the Korean script. In gaming and social media, it can be employed to create invisible names or disguise messages.' },
+    wj: { char: '\u2060', name: 'Word Joiner', description: 'Similar to the Zero Width No-Break Space, it prevents line breaks between the characters it separates.' }
+  };
+
+  const testArea = document.getElementById('testArea');
+  const testAreaOverlay = document.getElementById('testAreaOverlay');
+  const charCount = document.getElementById('charCount');
+
+  document.querySelectorAll('.copy-button').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const target = e.currentTarget;
+      const count = parseInt(target.dataset.count || '1');
+      const invisibleText = characters.hangul.char.repeat(count);
+      navigator.clipboard.writeText(invisibleText);
+      if (testArea) {
+        testArea.value += invisibleText;
+        updateTestArea();
+      }
+      showCopiedState(target);
+    });
+  });
+
+  const characterType = document.getElementById('characterType');
+  const selectedCharName = document.getElementById('selectedCharName');
+  const selectedCharDesc = document.getElementById('selectedCharDesc');
+  const copySelected = document.getElementById('copySelected');
+  const previewSelected = document.getElementById('previewSelected');
+
+  characterType?.addEventListener('change', () => {
+    const selected = characterType.value;
+    if (selectedCharName) selectedCharName.textContent = characters[selected].name;
+    if (selectedCharDesc) selectedCharDesc.textContent = characters[selected].description;
+  });
+
+  copySelected?.addEventListener('click', () => {
+    const selected = characterType.value;
+    const invisibleChar = characters[selected].char;
+    
+    navigator.clipboard.writeText(invisibleChar);
+    
+    if (testArea) {
+      testArea.value += invisibleChar;
+      updateTestArea();
+    }
+    
+    showCopiedState(copySelected);
+  });
+
+  previewSelected?.addEventListener('click', () => {
+    const selected = characterType.value;
+    const invisibleChar = characters[selected].char;
+    
+    if (testArea) {
+      testArea.value += invisibleChar;
+      updateTestArea();
+    }
+  });
+
+  // Method 3: Custom Generator
+  const customCharType = document.getElementById('customCharType');
+  const customCount = document.getElementById('customCount');
+  const generateCustom = document.getElementById('generateCustom');
+  const copyCustom = document.getElementById('copyCustom');
+
+  let lastGeneratedText = '';
+
+  generateCustom?.addEventListener('click', () => {
+    const selected = customCharType.value;
+    const count = parseInt(customCount.value || '1');
+    lastGeneratedText = characters[selected].char.repeat(count);
+    
+    if (testArea) {
+      testArea.value += lastGeneratedText;
+      updateTestArea();
+    }
+    
+    showToast('Generated and added to test area!');
+  });
+
+  copyCustom?.addEventListener('click', () => {
+    if (lastGeneratedText) {
+      navigator.clipboard.writeText(lastGeneratedText);
+      showCopiedState(copyCustom);
+    } else {
+      showToast('Generate text first!');
+    }
+  });
+
+  // Method 4: Advanced Options
+  const mixCharacters = document.getElementById('mixCharacters');
+  const addPattern = document.getElementById('addPattern');
+  const advancedCount = document.getElementById('advancedCount');
+  const generateAdvanced = document.getElementById('generateAdvanced');
+
+  generateAdvanced?.addEventListener('click', () => {
+    const count = parseInt(advancedCount.value || '20');
+    let result = '';
+    
+    if (mixCharacters.checked) {
+      const charTypes = Object.keys(characters);
+      for (let i = 0; i < count; i++) {
+        const randomType = charTypes[Math.floor(Math.random() * charTypes.length)];
+        result += characters[randomType].char;
+      }
+    } else if (addPattern.checked) {
+      const charTypes = Object.keys(characters);
+      const patternLength = Math.min(charTypes.length, 3);
+      const pattern = charTypes.slice(0, patternLength);
+      
+      for (let i = 0; i < count; i++) {
+        const typeIndex = i % patternLength;
+        result += characters[pattern[typeIndex]].char;
+      }
+    } else {
+      result = characters.hangul.char.repeat(count);
+    }
+    
+    lastGeneratedText = result;
+    
+    if (testArea) {
+      testArea.value += result;
+      updateTestArea();
+    }
+    
+    showToast('Advanced text generated and added to test area!');
+  });
+
+  // Test Area Functionality
+  const copyTest = document.getElementById('copyTest');
+  const clearTest = document.getElementById('clearTest');
+
+  function updateTestArea() {
+    if (testArea && charCount) {
+      charCount.textContent = testArea.value.length.toString();
+      if (testAreaOverlay) {
+        if (testArea.value.length > 0) {
+          testAreaOverlay.classList.add('hidden');
+        } else {
+          testAreaOverlay.classList.remove('hidden');
+        }
+      }
+    }
+  }
+
+  updateTestArea();
+
+  testArea?.addEventListener('input', updateTestArea);
+
+  copyTest?.addEventListener('click', () => {
+    if (testArea && testArea.value) {
+      navigator.clipboard.writeText(testArea.value);
+      showCopiedState(copyTest);
+    } else {
+      showToast('Nothing to copy!');
+    }
+  });
+
+  clearTest?.addEventListener('click', () => {
+    if (testArea) {
+      testArea.value = '';
+      updateTestArea();
+      showToast('Test area cleared!');
+    }
+  });
+
+  // Helper Functions
+  function showCopiedState(button) {
+    const copyIcon = button.querySelector('.copy-icon');
+    const checkIcon = button.querySelector('.check-icon');
+    
+    if (copyIcon && checkIcon) {
+      copyIcon.classList.add('hidden');
+      checkIcon.classList.remove('hidden');
+      
+      setTimeout(() => {
+        copyIcon.classList.remove('hidden');
+        checkIcon.classList.add('hidden');
+      }, 2000);
+    }
+    
+    showToast('Copied to clipboard!');
+  }
+
+  function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    // Show the toast after a slight delay
+    setTimeout(() => {
+      toast.classList.add('show');
+    }, 10);
+    
+    // Remove the toast after it's been visible
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => {
+        document.body.removeChild(toast);
+      }, 300);
+    }, 2000);
+  }
+</script>

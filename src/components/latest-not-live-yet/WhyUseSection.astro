@@ -1,0 +1,189 @@
+---
+import Features from "./Features.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+// Get the current language and translation function
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="why-section">
+  <div class="container">
+    <h2 class="why-title">{t("why.title")}</h2>
+
+    <p class="why-intro">{t('why.intro')}</p>
+    <div class="why-use-box">
+      <h3 class="why-use-title">{t('why.whyuse.title')}</h3>
+      <p class="why-use-description">{t('why.whyuse.description')}</p>
+      <ul class="why-use-list">
+        <li>{t("why.whyuse.use1")}</li>
+        <li>{t("why.whyuse.use2")}</li>
+        <li>{t("why.whyuse.use3")}</li>
+        <li>{t("why.whyuse.use4")}</li>
+        <li>{t("why.whyuse.use5")}</li>
+        <li>{t("why.whyuse.use6")}</li>
+        <li>{t("why.whyuse.use7")}</li>
+      </ul>
+      <p>
+        {t("why.intro").split("invisibletext.me")[0]}
+        <a href="https://www.invisibletext.me" class="why-link">
+          {" "}
+          invisibletext.me
+        </a>
+        {t("why.intro").split("invisibletext.me")[1]}
+      </p>
+    </div>
+
+    <Features />
+    <!-- <div class="features-grid">
+      <div class="features-column">
+        <div class="feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+            <path d="m15 15-6-6"/>
+            <path d="M9.5 15a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+            <path d="M14.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+          </svg>
+          <div class="feature-content">
+            <h3 class="feature-title">{t("why.features.easyToUse.title")}</h3>
+            <p>
+              {t("why.features.easyToUse.description").split("(using method 1)")[0]}
+              <a href="#" class="why-link">
+                (using method 1)
+              </a>{" "}
+              {t("why.features.easyToUse.description").split("(using method 1)")[1]}
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+            <line x1="12" y1="2" x2="12" y2="6"/>
+            <line x1="12" y1="18" x2="12" y2="22"/>
+            <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
+            <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+            <line x1="2" y1="12" x2="6" y2="12"/>
+            <line x1="18" y1="12" x2="22" y2="12"/>
+            <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
+            <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+          </svg>
+          <div class="feature-content">
+            <h3 class="feature-title">{t("why.features.totallyFree.title")}</h3>
+            <p>{t("why.features.totallyFree.description")}</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+            <path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.133-8-12.739-8-4.585 0-4.585 8 0 8 5.606 0 7.644-8 12.74-8z"/>
+          </svg>
+          <div class="feature-content">
+            <h3 class="feature-title">{t("why.features.unlimitedCharacters.title")}</h3>
+            <p>{t("why.features.unlimitedCharacters.description")}</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+            <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+            <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+          </svg>
+          <div class="feature-content">
+            <h3 class="feature-title">{t("why.features.oneClickCopy.title")}</h3>
+            <p>{t("why.features.oneClickCopy.description")}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-column">
+        <div class="feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <line x1="17" y1="8" x2="23" y2="14"/>
+            <line x1="23" y1="8" x2="17" y2="14"/>
+          </svg>
+          <div class="feature-content">
+            <h3 class="feature-title">{t("why.features.noSignup.title")}</h3>
+            <p>{t("why.features.noSignup.description")}</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+            <path d="M2 12h20"/>
+          </svg>
+          <div class="feature-content">
+            <h3 class="feature-title">{t("why.features.accessible.title")}</h3>
+            <p>{t("why.features.accessible.description")}</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+          </svg>
+          <div class="feature-content">
+            <h3 class="feature-title">{t("why.features.accuracy.title")}</h3>
+            <p>{t("why.features.accuracy.description")}</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+            <path d="m5 8 6 6"/>
+            <path d="m4 14 6-6 2-3"/>
+            <path d="M2 5h12"/>
+            <path d="M7 2h1"/>
+            <path d="m22 22-5-10-5 10"/>
+            <path d="M14 18h6"/>
+          </svg>
+          <div class="feature-content">
+            <h3 class="feature-title">{t("why.features.multipleLanguages.title")}</h3>
+            <p>{t("why.features.multipleLanguages.description")}</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="benefits-section">
+      <h3 class="benefits-title">{t("why.benefits.title")}</h3>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="benefit-icon">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <path d="m15 14-4-4-4 4"/>
+          </svg>
+          <h4 class="benefit-title">{t("why.benefits.privacy.title")}</h4>
+          <p class="benefit-description">{t("why.benefits.privacy.description")}</p>
+        </div>
+
+        <div class="benefit-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="benefit-icon">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+            <path d="M19 17.5v.5a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-.5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2Z"/>
+            <path d="M5 8a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v.5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8Z"/>
+          </svg>
+          <h4 class="benefit-title">{t("why.benefits.creative.title")}</h4>
+          <p class="benefit-description">{t("why.benefits.creative.description")}</p>
+        </div>
+
+        <div class="benefit-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="benefit-icon">
+            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/>
+            <path d="M13 2v7h7"/>
+            <path d="m9 18 3-3-3-3"/>
+          </svg>
+          <h4 class="benefit-title">{t("why.benefits.performance.title")}</h4>
+          <p class="benefit-description">{t("why.benefits.performance.description")}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

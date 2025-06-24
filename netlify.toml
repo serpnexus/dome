@@ -1,0 +1,105 @@
+[build.processing.html]
+  pretty_urls = false
+
+
+[[redirects]]
+  from = "/unicode-u280f"
+  to = "/unicode/u280f"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/hangul-filler-unicode-character-u3164"
+  to = "/unicode/hangul-filler-u3164"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/unicode-3164"
+  to = "/unicode/hangul-filler-u3164"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blogs"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/en"
+  to = "/"
+  status = 301
+  force = true
+
+[build]
+  # Your build command and publish directory, if not default:
+  # command = "npm run build"
+  # publish = "dist"
+
+#----------------------------------------------------
+#  Global Security Headers
+#----------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection       = "1; mode=block"
+    X-Frame-Options        = "SAMEORIGIN"
+
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/blog/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/contact/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/unicode/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/partytown/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

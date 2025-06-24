@@ -1,0 +1,72 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+// Get the current language and translation function
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="why-section">
+  <div class="container">
+    <h2 class="why-title">{t("why.title")}</h2>
+
+    <p class="why-intro text-center">{t('why.intro')}</p>
+    <div class="why-use-box">
+      <h3 class="why-use-title">{t('why.whyuse.title')}</h3>
+      <p class="why-use-description">{t('why.whyuse.description')}</p>
+      <ul class="why-use-list">
+        <li>{t("why.whyuse.use1")}</li>
+        <li>{t("why.whyuse.use2")}</li>
+        <li>{t("why.whyuse.use3")}</li>
+        <li>{t("why.whyuse.use4")}</li>
+        <li>{t("why.whyuse.use5")}</li>
+        <li>{t("why.whyuse.use6")}</li>
+        <li>{t("why.whyuse.use7")}</li>
+      </ul>
+      <p>
+        {t("why.intro").split("invisibletext.me")[0]}
+        <a href="https://www.invisibletext.me" class="why-link">
+          {" "}
+          invisibletext.me
+        </a>
+        {t("why.intro").split("invisibletext.me")[1]}
+      </p>
+    </div>
+
+    <div class="benefits-section">
+      <h3 class="benefits-title">{t("why.benefits.title")}</h3>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3 class="benefit-title">{t("why.features.accuracy.title")}</h3>
+          <p class="benefit-description">{t("why.features.accuracy.description")}</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3 class="benefit-title">{t("why.features.totallyFree.title")}</h3>
+          <p class="benefit-description">{t("why.features.totallyFree.description")}</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3 class="benefit-title">{t("why.features.unlimitedCharacters.title")}</h3>
+          <p class="benefit-description">{t("why.features.unlimitedCharacters.description")}</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3 class="benefit-title">{t("why.benefits.privacy.title")}</h3>
+          <p class="benefit-description">{t("why.features.easyToUse.description")}</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3 class="benefit-title">{t("why.features.oneClickCopy.title")}</h3>
+          <p class="benefit-description">{t("why.features.oneClickCopy.description")}</p>
+        </div>
+
+        <div class="benefit-card">
+          <h3 class="benefit-title">{t("why.features.noSignup.title")}</h3>
+          <p class="benefit-description">{t("why.features.noSignup.description")}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

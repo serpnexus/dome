@@ -1,0 +1,165 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+// Get the current language and translation function
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// FAQ items array
+const faqs = [
+  {
+    question: t("faq.q1"),
+    answer: t("faq.a1")
+  },
+  {
+    question: t("faq.q2"),
+    answer: t("faq.a2")
+  },
+  {
+    question: t("faq.q3"),
+    answer: t("faq.a3")
+  },
+  {
+    question: t("faq.q4"),
+    answer: t("faq.a4")
+  },
+  {
+    question: t("faq.q5"),
+    answer: t("faq.a5")
+  },
+  {
+    question: t("faq.q6"),
+    answer: t("faq.a6")
+  }
+];
+---
+
+<section class="faq-section">
+  <div class="container">
+    <h2 class="faq-title">{t("faq.title")}</h2>
+    
+    <div class="faq-container">
+      {faqs.map((faq, index) => (
+        <div class="faq-item">
+          <button class="faq-question">
+            <h3 class="question-text">{faq.question}</h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="faq-icon">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer hidden">
+            <p>{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-section {
+    padding: 4rem 0;
+  }
+  
+  .faq-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--yellow-400);
+    margin-bottom: 2rem;
+  }
+  
+  .faq-container {
+    max-width: 48rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .faq-item {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    text-align: left;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .faq-question:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .question-text {
+    color: var(--yellow-400);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  .faq-icon {
+    color: var(--yellow-400);
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.2s ease;
+  }
+  
+  .faq-icon.rotate {
+    transform: rotate(180deg);
+  }
+  
+  .faq-answer {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--gray-300);
+  }
+  
+  .hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  // This script handles the accordion functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', (e) => {
+        // Prevent default behavior
+        e.preventDefault();
+        
+        const faqItem = question.closest('.faq-item');
+        const answer = faqItem?.querySelector('.faq-answer');
+        const icon = question.querySelector('.faq-icon');
+        
+        // Toggle the current FAQ item
+        answer?.classList.toggle('hidden');
+        icon?.classList.toggle('rotate');
+        
+        // Close other FAQ items
+        faqQuestions.forEach(otherQuestion => {
+          if (otherQuestion !== question) {
+            const otherItem = otherQuestion.closest('.faq-item');
+            const otherAnswer = otherItem?.querySelector('.faq-answer');
+            const otherIcon = otherQuestion.querySelector('.faq-icon');
+            
+            otherAnswer?.classList.add('hidden');
+            otherIcon?.classList.remove('rotate');
+          }
+        });
+      });
+    });
+  });
+</script>
+

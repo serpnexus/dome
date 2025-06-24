@@ -1,0 +1,120 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+  
+<div class="features-title">
+  <h2 class="text-3xl font-bold text-white">
+    {t('features.title')}
+  </h2>
+  <p class="text-yellow-200">
+    {t('features.subtitle')}
+  </p>
+</div>
+
+<div class="features-grid">
+  <div class="card">
+    <div class="feature-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2v4"></path>
+        <path d="M12 18v4"></path>
+        <path d="m4.93 4.93 2.83 2.83"></path>
+        <path d="m16.24 16.24 2.83 2.83"></path>
+        <path d="M2 12h4"></path>
+        <path d="M18 12h4"></path>
+        <path d="m4.93 19.07 2.83-2.83"></path>
+        <path d="m16.24 7.76 2.83-2.83"></path>
+      </svg>
+    </div>
+    <h3 class="text-xl font-bold text-white mb-2">
+      {t('features.feature1.title')}
+    </h3>
+    <p class="text-gray-300">
+      {t('features.feature1.description')}
+    </p>
+  </div>
+  
+  <div class="card">
+    <div class="feature-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 9V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-1"></path>
+        <path d="M2 13h10"></path>
+        <path d="m9 16 3-3-3-3"></path>
+      </svg>
+    </div>
+    <h3 class="text-xl font-bold text-white mb-2">
+      {t('features.feature2.title')}
+    </h3>
+    <p class="text-gray-300">
+      {t('features.feature2.description')}
+    </p>
+  </div>
+  
+  <div class="card">
+    <div class="feature-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+      </svg>
+    </div>
+    <h3 class="text-xl font-bold text-white mb-2">
+      {t('features.feature3.title')}
+    </h3>
+    <p class="text-gray-300">
+      {t('features.feature3.description')}
+    </p>
+  </div>
+  
+  <div class="card">
+    <div class="feature-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m3 15 5.12-5.12A3 3 0 0 1 10.24 9H13a2 2 0 1 1 0 4h-2.5m4-.68 4.17-4.89a1.88 1.88 0 0 1 2.92 2.36l-4.2 5.94A3 3 0 0 1 14.96 17H9.83a2 2 0 0 0-1.42.59L7 19"></path>
+        <path d="m2 14 6 6"></path>
+      </svg>
+    </div>
+    <h3 class="text-xl font-bold text-white mb-2">
+      {t('features.feature4.title')}
+    </h3>
+    <p class="text-gray-300">
+      {t('features.feature4.description')}
+    </p>
+  </div>
+  
+  <div class="card">
+    <div class="feature-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"></path>
+        <path d="M7 21h10"></path>
+        <path d="M19 3v9"></path>
+        <path d="M5 3v9"></path>
+        <path d="M12 3v6"></path>
+      </svg>
+    </div>
+    <h3 class="text-xl font-bold text-white mb-2">
+      {t('features.feature5.title')}
+    </h3>
+    <p class="text-gray-300">
+      {t('features.feature5.description')}
+    </p>
+  </div>
+  
+  <div class="card">
+    <div class="feature-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"></path>
+        <path d="M16 3h1a2 2 0 0 1 2 2v5c0 1.1.9 2 2 2a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2h-1"></path>
+      </svg>
+    </div>
+    <h3 class="text-xl font-bold text-white mb-2">
+      {t('features.feature6.title')}
+    </h3>
+    <p class="text-gray-300">
+      {t('features.feature6.description')}
+    </p>
+  </div>
+</div>
+  
+
+

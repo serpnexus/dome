@@ -1,0 +1,186 @@
+---
+import StaticPageLayout from '../layouts/StaticPageLayout.astro';
+
+export const prerender = true;
+---
+
+<StaticPageLayout title="About InvisibleText.me" description="Learn about InvisibleText.me, our mission, and how we help users generate and use invisible Unicode characters.">
+  <div class="about-container">
+    <section class="about-section">
+      <h2 class="section-title">Our Mission</h2>
+      <p class="section-content">
+        InvisibleText.me was created with a simple mission: to provide a free, easy-to-use tool for generating and using invisible Unicode characters. We believe that these special characters have many practical applications, from creative text formatting to enhancing user experiences across various platforms.
+      </p>
+      <p class="section-content">
+        Our goal is to make invisible characters accessible to everyone, regardless of technical knowledge, while educating users about their proper and responsible use.
+      </p>
+    </section>
+    
+    <section class="about-section">
+      <h2 class="section-title">What We Offer</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v4"></path>
+              <path d="M12 18v4"></path>
+              <path d="m4.93 4.93 2.83 2.83"></path>
+              <path d="m16.24 16.24 2.83 2.83"></path>
+              <path d="M2 12h4"></path>
+              <path d="M18 12h4"></path>
+              <path d="m4.93 19.07 2.83-2.83"></path>
+              <path d="m16.24 7.76 2.83-2.83"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Easy-to-Use Generator</h3>
+          <p class="feature-description">
+            Our intuitive generator allows you to create invisible characters with just a few clicks, no technical knowledge required.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Educational Resources</h3>
+          <p class="feature-description">
+            We provide comprehensive information about different types of invisible characters, their uses, and practical applications.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Privacy-Focused</h3>
+          <p class="feature-description">
+            We don't track your usage or store any of the text you generate, ensuring your privacy is protected at all times.
+          </p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+              <path d="M2 12h20"></path>
+            </svg>
+          </div>
+          <h3 class="feature-title">Multilingual Support</h3>
+          <p class="feature-description">
+            Our tool is available in multiple languages to serve users from around the world, making it accessible to a global audience.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="about-section">
+      <h2 class="section-title">Our Story</h2>
+      <p class="section-content">
+        InvisibleText.me was born out of a personal need. Our founder, while working on a web development project, discovered the utility of invisible Unicode characters for solving specific formatting challenges. Realizing that these characters could be useful for many people but were not easily accessible, the idea for InvisibleText.me was born.
+      </p>
+      <p class="section-content">
+        Since our launch, we've helped thousands of users across various fields—from web developers to social media enthusiasts, gamers to digital artists—leverage the power of invisible characters in their work and creative endeavors.
+      </p>
+      <p class="section-content">
+        We're committed to continuously improving our tools and resources based on user feedback and evolving needs in the digital landscape.
+      </p>
+    </section>
+    
+    <section class="about-section">
+      <h2 class="section-title">Responsible Use</h2>
+      <p class="section-content">
+        We encourage the responsible use of invisible characters. While they have many legitimate applications, we do not condone their use for deceptive or harmful purposes. We believe in transparency and ethical practices in all digital interactions.
+      </p>
+      <p class="section-content">
+        If you have questions about appropriate uses or need guidance on implementing invisible characters in your projects, please don't hesitate to <a href="/contact" class="inline-link">contact us</a>.
+      </p>
+    </section>
+  </div>
+</StaticPageLayout>
+
+<style>
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--yellow-400);
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-content {
+    color: var(--gray-300);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .feature-card {
+    background-color: var(--navy-700);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .feature-icon {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--navy-600);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--yellow-400);
+  }
+  
+  .feature-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--white);
+  }
+  
+  .feature-description {
+    color: var(--gray-300);
+    line-height: 1.5;
+  }
+  
+  .inline-link {
+    color: var(--yellow-400);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .inline-link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (min-width: 768px) {
+    .features-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

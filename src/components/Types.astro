@@ -1,0 +1,119 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+// Get the current language and translation function
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="types-of-invisible-text">
+  <div class="container">
+    <h2 class="types-title">{t("about.types.title")}</h2>
+    <div class="types-grid">
+      <div class="type-card">
+        <h3 class="type-title">{t("about.types.zeroWidthSpace.title")}</h3>
+        <div class="type-icon-container">
+          <div class="type-icon">
+            <span class="invisible-char">&#8203;</span>
+          </div>
+        </div>
+        <p class="type-description">{t("about.types.zeroWidthSpace.description")}</p>
+      </div>
+
+      <div class="type-card">
+        <h3 class="type-title">{t("about.types.hangulFiller.title")}</h3>
+        <div class="type-icon-container">
+          <div class="type-icon">
+            <span class="invisible-char">ㅤ</span>
+          </div>
+        </div>
+        <p class="type-description">{t("about.types.hangulFiller.description")}</p>
+      </div>
+
+      <div class="type-card">
+        <h3 class="type-title">{t("about.types.zeroWidthJoiner.title")}</h3>
+        <div class="type-icon-container">
+          <div class="type-icon">
+            <span class="invisible-char">&#8205;</span>
+          </div>
+        </div>
+        <p class="type-description">{t("about.types.zeroWidthJoiner.description")}</p>
+      </div>
+
+      <div class="type-card">
+        <h3 class="type-title">{t("about.types.zeroWidthNonJoiner.title")}</h3>
+        <div class="type-icon-container">
+          <div class="type-icon">
+            <span class="invisible-char">&#8204;</span>
+          </div>
+        </div>
+        <p class="type-description">{t("about.types.zeroWidthNonJoiner.description")}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+    .types-of-invisible-text {
+      padding: 4rem 0;
+    }
+    
+    .types-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--yellow-400);
+      margin-bottom: 2rem;
+    }
+    
+    .types-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .type-card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+    }
+    
+    .type-title {
+      color: var(--yellow-400);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    
+    .type-icon-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .type-icon {
+      background-color: var(--navy-700);
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.25rem;
+    }
+    
+    .invisible-char {
+      color: var(--white);
+      font-size: 1.25rem;
+    }
+    
+    .type-description {
+      color: var(--white);
+    }
+    
+    @media (min-width: 768px) {
+      .types-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+  

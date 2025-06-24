@@ -1,0 +1,221 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export const prerender = true;
+
+// Get all Unicode characters
+const allUnicodeChars = await getCollection('unicode');
+
+// Group by category
+const categories = {
+  'zero-width': {
+    title: 'Zero Width Characters',
+    description: 'Characters that have no width when rendered but still exist in the text.',
+    characters: []
+  },
+//'space': {
+//  title: 'Space Characters',
+//  description: 'Various types of space characters with different widths and behaviors.',
+//  characters: []
+//  },
+  'braille': {
+    title: 'Space Characters',
+    description: 'Various types of space characters with different widths and behaviors.',
+    characters: []
+  },
+  'invisible': {
+    title: 'Special Invisible Characters',
+    description: 'Special characters with unique properties that are not visible when rendered.',
+    characters: []
+  },
+//'formatting': {
+//  title: 'Formatting Characters',
+//  description: 'Characters that control text direction and formatting.',
+//  characters: []
+//}
+};
+
+// Sort characters by order and populate categories
+allUnicodeChars.sort((a, b) => a.data.order - b.data.order);
+allUnicodeChars.forEach(char => {
+  if (categories[char.data.category]) {
+    categories[char.data.category].characters.push(char);
+  }
+});
+---
+
+<Layout title="Unicode Invisible Characters - InvisibleText.me" description=''>
+  <div class="content-container">
+    <div class="content-header">
+      <h1 class="content-title">Unicode Invisible Characters</h1>
+      <p class="content-description">
+        Explore the world of invisible Unicode characters and learn how they can be used in various applications.
+      </p>
+    </div>
+    
+    <div class="unicode-categories">
+      {Object.entries(categories).map(([categoryId, category]) => (
+        <div class="category-section">
+          <h2 class="category-title">{category.title}</h2>
+          <p class="category-description">{category.description}</p>
+          
+          <div class="unicode-list">
+            {category.characters.map(character => (
+              <div class="unicode-card">
+                <div class="unicode-card-header">
+                  <h3 class="unicode-card-title">{character.data.title}</h3>
+                  <div class="unicode-card-code">{character.data.code}</div>
+                </div>
+                <p class="unicode-card-description">{character.data.description}</p>
+                <div class="unicode-card-actions">
+                  <a href={`/unicode/${character.slug}`} class="unicode-card-link">
+                    View Details
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </a>
+                  <button class="unicode-card-copy" data-copy={character.slug} title="Copy Character">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="unicode-usage">
+      <h2 class="usage-title">How to Use Invisible Characters</h2>
+      <p class="usage-description">
+        Invisible characters can be used in various ways across different platforms and applications:
+      </p>
+      <ul class="usage-list">
+        <li class="usage-item">
+          <div class="usage-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <span>
+            <strong>Social Media:</strong> Create unique usernames, empty posts, or add invisible formatting to your content.
+          </span>
+        </li>
+        <li class="usage-item">
+          <div class="usage-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <span>
+            <strong>Gaming:</strong> Create distinctive usernames or send hidden messages in game chats.
+          </span>
+        </li>
+        <li class="usage-item">
+          <div class="usage-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <span>
+            <strong>Web Development:</strong> Format text without visible spaces or create special layouts.
+          </span>
+        </li>
+        <li class="usage-item">
+          <div class="usage-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+          </div>
+          <span>
+            <strong>Messaging:</strong> Send blank messages or create special formatting in messaging apps.
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  // Character codes
+  const characters = {
+    'zero-width-space': '\u200B',
+    'zero-width-joiner': '\u200D',
+    'zero-width-non-joiner': '\u200C',
+    'hangul-filler': '\u3164',
+    'space': ' ',
+    'no-break-space': '\u00A0',
+    'en-space': '\u2002',
+    'em-space': '\u2003',
+    'thin-space': '\u2009',
+    'word-joiner': '\u2060',
+    'soft-hyphen': '\u00AD',
+    'left-to-right-mark': '\u200E',
+    'right-to-left-mark': '\u200F',
+    'left-to-right-embedding': '\u202A',
+    'right-to-left-embedding': '\u202B'
+  };
+
+  // Copy buttons
+  document.querySelectorAll('.unicode-card-copy').forEach(button => {
+    button.addEventListener('click', () => {
+      const copyData = button.getAttribute('data-copy');
+      let textToCopy = '';
+      
+      if (copyData && copyData in characters) {
+        textToCopy = characters[copyData];
+      } else {
+        // Default to hangul filler if character not found
+        textToCopy = characters['hangul-filler'];
+      }
+      
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+          // Show copied state
+          const originalHTML = button.innerHTML;
+          button.innerHTML = `
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          `;
+          
+          setTimeout(() => {
+            button.innerHTML = originalHTML;
+          }, 2000);
+          
+          // Show toast
+          showToast('Copied to clipboard!');
+        })
+        .catch(err => {
+          console.error('Failed to copy: ', err);
+          showToast('Failed to copy');
+        });
+    });
+  });
+  
+  // Toast notification
+  function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    // Trigger animation
+    setTimeout(() => {
+      toast.classList.add('show');
+    }, 10);
+    
+    // Remove after animation
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => {
+        document.body.removeChild(toast);
+      }, 300);
+    }, 2000);
+  }
+</script>

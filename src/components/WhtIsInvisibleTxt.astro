@@ -1,0 +1,13 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+// Get the current language and translation function
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+<section class="what-is-section" id="what-is-invisible-text">
+    <div class="section-content text-center">
+        <h2 class="section-title text-center">{t("about.whatIs.title")}</h2>
+        <p class="section-description text-center">{t("about.whatIs.description")}</p>
+    </div>
+</section>

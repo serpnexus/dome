@@ -1,0 +1,208 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+
+export async function getStaticPaths() {
+  const unicodeEntries = await getCollection('unicode');
+  
+  return unicodeEntries.map(entry => ({
+    params: { 
+      slug: entry.slug 
+    },
+    props: { entry },
+  }));
+}
+export const prerender = true;
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+// Get all Unicode characters for navigation
+const allUnicodeChars = await getCollection('unicode');
+const sortedChars = allUnicodeChars.sort((a, b) => a.data.order - b.data.order);
+const currentIndex = sortedChars.findIndex(char => char.slug === entry.slug);
+const prevChar = currentIndex > 0 ? sortedChars[currentIndex - 1] : null;
+const nextChar = currentIndex < sortedChars.length - 1 ? sortedChars[currentIndex + 1] : null;
+---
+
+<Layout title={`${entry.data.title} - InvisibleText.me`} description={entry.data.description}>
+  <div class="content-container">
+    <div class="unicode-container">
+      <div class="unicode-header">
+        <a href="/unicode" class="back-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6"></path>
+          </svg>
+          Back to Unicode Characters
+        </a>
+        
+        <h1 class="unicode-title">{entry.data.title}</h1>
+        
+        <p class="unicode-description">
+          {entry.data.description}
+        </p>
+      </div>
+      
+      <div class="unicode-details">
+        <div class="unicode-content">
+          <Content />
+          
+          {entry.data.useCases && entry.data.useCases.length > 0 && (
+            <div class="unicode-use-cases">
+              <h3 class="unicode-use-cases-title">Common Use Cases</h3>
+              <ul class="unicode-use-cases-list">
+                {entry.data.useCases.map(useCase => (
+                  <li class="unicode-use-cases-item">{useCase}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+        
+        <div class="unicode-info">
+          <div class="unicode-info-header">
+            <h2 class="unicode-info-title">{entry.data.title}</h2>
+            <div class="unicode-info-code">{entry.data.code}</div>
+          </div>
+          
+          <p class="unicode-info-description">{entry.data.description}</p>
+          
+          <div class="unicode-examples">
+            <div class="unicode-example">
+              <h3 class="unicode-example-title">HTML Entity</h3>
+              <div class="unicode-example-display">
+                {entry.data.html}
+              </div>
+              <button 
+                class="unicode-copy-button" 
+                data-copy="html"
+              >
+                Copy HTML Entity
+              </button>
+            </div>
+            
+            <div class="unicode-example">
+              <h3 class="unicode-example-title">Character</h3>
+              <div class="unicode-example-display">
+                <span class="invisible-char" id="characterDisplay"></span>
+                <span class="unicode-example-label">[{entry.data.title}]</span>
+              </div>
+              <button 
+                class="unicode-copy-button" 
+                data-copy="char"
+              >
+                Copy Character
+              </button>
+            </div>
+          </div>
+          
+          <div class="unicode-navigation">
+            {prevChar && (
+              <a href={`/unicode/${prevChar.slug}`} class="blog-nav-link prev">
+                <span>Previous</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m15 18-6-6 6-6"></path>
+                </svg>
+              </a>
+            )}
+            
+            {nextChar && (
+              <a href={`/unicode/${nextChar.slug}`} class="blog-nav-link next">
+                <span>Next</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m9 18 6-6-6-6"></path>
+                </svg>
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+
+
+<script define:vars={{ slug: entry.slug, html: entry.data.html }}>
+  // Character codes
+  const characters = {
+    'zero-width-space': '\u200B',
+    'zero-width-joiner': '\u200D',
+    'zero-width-non-joiner': '\u200C',
+    'hangul-filler': '\u3164',
+    'space': ' ',
+    'no-break-space': '\u00A0',
+    'en-space': '\u2002',
+    'em-space': '\u2003',
+    'thin-space': '\u2009',
+    'word-joiner': '\u2060',
+    'soft-hyphen': '\u00AD',
+    'left-to-right-mark': '\u200E',
+    'right-to-left-mark': '\u200F',
+    'left-to-right-embedding': '\u202A',
+    'right-to-left-embedding': '\u202B'
+  };
+
+  // Set the character in the display
+  const characterDisplay = document.getElementById('characterDisplay');
+  if (characterDisplay && slug in characters) {
+    characterDisplay.textContent = characters[slug];
+  }
+
+  // Copy buttons
+  document.querySelectorAll('.unicode-copy-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const copyType = button.getAttribute('data-copy');
+      let textToCopy = '';
+      
+      if (copyType === 'html') {
+        textToCopy = html;
+      } else if (copyType === 'char' && slug in characters) {
+        textToCopy = characters[slug];
+      } else {
+        // Default to hangul filler if character not found
+        textToCopy = characters['hangul-filler'];
+      }
+      
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => {
+          // Show copied state
+          const originalText = button.textContent;
+          button.textContent = '✓ Copied!';
+          
+          setTimeout(() => {
+            button.textContent = originalText;
+          }, 2000);
+          
+          // Show toast
+          showToast('Copied to clipboard!');
+        })
+        .catch(err => {
+          console.error('Failed to copy: ', err);
+          showToast('Failed to copy');
+        });
+    });
+  });
+  
+  // Toast notification
+  function showToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+    
+    // Trigger animation
+    setTimeout(() => {
+      toast.classList.add('show');
+    }, 10);
+    
+    // Remove after animation
+    setTimeout(() => {
+      toast.classList.remove('show');
+      setTimeout(() => {
+        document.body.removeChild(toast);
+      }, 300);
+    }, 2000);
+  }
+</script>

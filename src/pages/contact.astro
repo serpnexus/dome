@@ -1,0 +1,279 @@
+---
+import StaticPageLayout from '../layouts/StaticPageLayout.astro';
+
+export const prerender = true;
+---
+
+<StaticPageLayout title="Contact Us" description="Get in touch with the InvisibleText.me team for questions, feedback, or support.">
+  <div class="contact-container">
+    <div class="contact-info">
+      <p class="contact-intro">
+        Have questions, suggestions, or feedback about InvisibleText.me? We'd love to hear from you! Fill out the form below or reach out to us directly.
+      </p>
+      
+      <div class="contact-methods">
+        <div class="contact-method">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          <div class="contact-details">
+            <h3 class="contact-method-title">Email</h3>
+            <p class="contact-method-value">
+              <a href="mailto:contact@invisibletext.me" class="contact-link">contact@invisibletext.me</a>
+            </p>
+          </div>
+        </div>
+        
+        <div class="contact-method">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+          </svg>
+          <div class="contact-details">
+            <h3 class="contact-method-title">Twitter</h3>
+            <p class="contact-method-value">
+              <a href="https://twitter.com/invisibletextme" target="_blank" rel="noopener noreferrer" class="contact-link">@invisibletextme</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contact-form-container">
+      <h2 class="form-title">Send Us a Message</h2>
+      <form class="contact-form" id="contact-form">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" class="form-input" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" class="form-input" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" id="subject" name="subject" class="form-input" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" rows="5" class="form-textarea" required></textarea>
+        </div>
+        
+        <button type="submit" class="form-submit-btn">Send Message</button>
+      </form>
+      
+      <div id="form-success" class="form-message success hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <p>Your message has been sent successfully! We'll get back to you soon.</p>
+      </div>
+      
+      <div id="form-error" class="form-message error hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        <p>There was an error sending your message. Please try again later.</p>
+      </div>
+    </div>
+  </div>
+</StaticPageLayout>
+
+<style>
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contact-intro {
+    color: var(--gray-300);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .contact-icon {
+    color: var(--yellow-400);
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+  }
+  
+  .contact-method-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.25rem;
+  }
+  
+  .contact-method-value {
+    color: var(--gray-300);
+  }
+  
+  .contact-link {
+    color: var(--yellow-400);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-form-container {
+    background-color: var(--navy-700);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+  }
+  
+  .form-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--yellow-400);
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--white);
+  }
+  
+  .form-input,
+  .form-textarea {
+    padding: 0.75rem;
+    background-color: var(--navy-800);
+    color: var(--white);
+    border: 1px solid var(--navy-600);
+    border-radius: 0.375rem;
+    transition: border-color 0.2s ease;
+    width: 100%;
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--yellow-400);
+  }
+  
+  .form-textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .form-submit-btn {
+    background-color: var(--yellow-400);
+    color: var(--navy-900);
+    font-weight: 5 00;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 0.5rem;
+  }
+  
+  .form-submit-btn:hover {
+    background-color: var(--yellow-500);
+  }
+  
+  .form-message {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-top: 1.5rem;
+  }
+  
+  .form-message.success {
+    background-color: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+  
+  .form-message.success svg {
+    color: rgb(16, 185, 129);
+  }
+  
+  .form-message.error {
+    background-color: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+  
+  .form-message.error svg {
+    color: rgb(239, 68, 68);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @media (min-width: 768px) {
+    .contact-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const successMessage = document.getElementById('form-success');
+    const errorMessage = document.getElementById('form-error');
+    
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // In a real implementation, you would send the form data to your server
+        // For this demo, we'll just simulate a successful submission
+        
+        // Hide any existing messages
+        if (successMessage) successMessage.classList.add('hidden');
+        if (errorMessage) errorMessage.classList.add('hidden');
+        
+        // Simulate form processing
+        setTimeout(() => {
+          // Show success message
+          if (successMessage) successMessage.classList.remove('hidden');
+          
+          // Reset form
+          form.reset();
+          
+          // Scroll to success message
+          successMessage?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 1000);
+      });
+    }
+  });
+</script>

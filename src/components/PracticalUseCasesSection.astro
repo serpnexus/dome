@@ -1,0 +1,324 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { Image } from "astro:assets";
+
+// Get the current language and translation function
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="practical-usecases">
+  <div class="container">
+    <h2 class="usecases-title">{t("usecases.title")}</h2>
+
+    <!-- Gaming Section -->
+    <div class="usecases-section gaming-section">
+      <div class="section-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icon">
+          <rect x="2" y="6" width="20" height="12" rx="2"/>
+          <path d="M12 12h.01"/>
+          <path d="M7 12h.01"/>
+          <path d="M17 12h.01"/>
+          <path d="M2 10h20"/>
+          <path d="M2 14h20"/>
+        </svg>
+        <h3 class="section-title">{t('usecases.gaming.title')}</h3>
+      </div>
+
+      <p class="section-description">{t('usecases.gaming.description')}</p>
+
+      <div class="games-grid">
+        <div class="game-card">
+          <h4 class="game-title">{t('usecases.fortnite.title')}</h4>
+          <p class="game-description">{t("usecases.fortnite.description")}</p>
+          <div class="game-howto">
+            <h5 class="howto-title">
+              {t("usecases.fortnite.howto")}
+            </h5>
+            <ol class="steps-list">
+              <li>{t('usecases.fortnite.step1')}</li>
+              <li>{t("usecases.fortnite.step2")}</li>
+              <li>{t("usecases.fortnite.step3")}</li>
+              <li>{t("usecases.fortnite.step4")}</li>
+              <li>{t("usecases.fortnite.step5")}</li>
+            </ol>
+          </div>
+          <div class="game-uses">
+            <h5 class="uses-title">{t('usecases.fortnite.uses')}</h5>
+            <ul class="uses-list">
+              <li>{t("usecases.fortnite.use1")}</li>
+              <li>{t("usecases.fortnite.use2")}</li>
+              <li>{t("usecases.fortnite.use3")}</li>
+              <li>{t("usecases.fortnite.use4")}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <h4 class="game-title">{t("usecases.pubg.title")}</h4>
+          <p class="game-description">{t("usecases.pubg.description")}</p>
+          <div class="game-howto">
+            <h5 class="howto-title">{t("usecases.pubg.howto")}</h5>
+            <ol class="steps-list">
+              <li>{t("usecases.pubg.step1")}</li>
+              <li>{t("usecases.pubg.step2")}</li>
+              <li>{t("usecases.pubg.step3")}</li>
+              <li>{t("usecases.pubg.step4")}</li>
+              <li>{t("usecases.pubg.step5")}</li>
+            </ol>
+          </div>
+          <div class="game-uses">
+            <h5 class="uses-title">{t("usecases.pubg.uses")}</h5>
+            <ul class="uses-list">
+              <li>{t("usecases.pubg.use1")}</li>
+              <li>{t("usecases.pubg.use2")}</li>
+              <li>{t("usecases.pubg.use3")}</li>
+              <li>{t("usecases.pubg.use4")}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="other-games">
+        <h4 class="other-games-title">{t("usecases.othergames.title")}</h4>
+        <p class="other-games-description">{t("usecases.othergames.description")}</p>
+
+        <div class="other-games-grid">
+          <div class="other-game">
+            <h5 class="other-game-title">{t("usecases.minecraft.title")}</h5>
+            <p class="other-game-description">{t("usecases.minecraft.description")}</p>
+          </div>
+
+          <div class="other-game">
+            <h5 class="other-game-title">{t("usecases.callofduty.title")}</h5>
+            <p class="other-game-description">{t("usecases.callofduty.description")}</p>
+          </div>
+
+          <div class="other-game">
+            <h5 class="other-game-title">{t("usecases.leagueoflegends.title")}</h5>
+            <p class="other-game-description">{t("usecases.leagueoflegends.description")}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Messaging Apps Section -->
+    <div class="usecases-section messaging-section">
+      <div class="section-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icon">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+        <h3 class="section-title">{t("usecases.messaging.title")}</h3>
+      </div>
+
+      <p class="section-description">{t("usecases.messaging.description")}</p>
+      <p class="section-additional-info">{t("usecases.messaging.additionalInfo")}</p>
+
+      <div class="messaging-apps-grid">
+        <div class="messaging-app">
+          <div class="app-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="app-icon">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <path d="M12 18h.01"/>
+            </svg>
+            <h4 class="app-title">{t("usecases.whatsapp.title")}</h4>
+          </div>
+          <p class="app-description">{t("usecases.whatsapp.description")}</p>
+          <p class="app-instructions">{t("usecases.whatsapp.instructions")}</p>
+
+          <div class="app-uses">
+            <h5 class="uses-title">{t("usecases.whatsapp.uses")}</h5>
+            <ul class="uses-list">
+              <li>{t("usecases.whatsapp.use1")}</li>
+              <li>{t("usecases.whatsapp.use2")}</li>
+              <li>{t("usecases.whatsapp.use3")}</li>
+              <li>{t("usecases.whatsapp.use4")}</li>
+            </ul>
+          </div>
+
+          <div class="app-image-container">
+            <Image
+              src="/images/send-invisible-messages-on-whatsapp.webp"
+              alt="WhatsApp message example"
+              width={200}
+              height={300}
+              class="app-image"
+            />
+          </div>
+        </div>
+
+        <div class="messaging-app">
+          <div class="app-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="app-icon">
+              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+            </svg>
+            <h4 class="app-title">{t("usecases.twitter.title")}</h4>
+          </div>
+          <p class="app-description">{t("usecases.twitter.description")}</p>
+
+          <div class="app-uses">
+            <h5 class="uses-title">{t("usecases.twitter.uses")}</h5>
+            <ul class="uses-list">
+              <li>{t("usecases.twitter.use1")}</li>
+              <li>{t("usecases.twitter.use2")}</li>
+              <li>{t("usecases.twitter.use3")}</li>
+              <li>{t("usecases.twitter.use4")}</li>
+            </ul>
+          </div>
+
+          <div class="app-image-container">
+            <Image
+              src="/images/send-invisible-message-on-twitter.webp"
+              alt="Twitter blank tweet example"
+              width={200}
+              height={300}
+              class="app-image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="other-messaging-apps">
+        <h4 class="other-apps-title">{t("usecases.othermessaging.title")}</h4>
+        <div class="other-apps-grid">
+          <div class="other-app">
+            <div class="other-app-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="other-app-icon">
+                <path d="M22 8.01V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8.01m20 0A2 2 0 0 0 20 6H4a2 2 0 0 0-2 2v.01m20 0v-.3a2 2 0 0 0-1.2-1.84l-8-4a2 2 0 0 0-1.6 0l-8 4A2 2 0 0 0 2 7.71v.3"/>
+              </svg>
+              <h5 class="other-app-title">{t('usecases.slack.title')}</h5>
+            </div>
+            <p class="other-app-description">{t("usecases.slack.description")}</p>
+          </div>
+
+          <div class="other-app">
+            <div class="other-app-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="other-app-icon">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+              <h5 class="other-app-title">{t('usecases.instagram.title')}</h5>
+            </div>
+            <p class="other-app-description">{t("usecases.instagram.description")}</p>
+          </div>
+
+          <div class="other-app">
+            <div class="other-app-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="other-app-icon">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+              <h5 class="other-app-title">{t('usecases.facebook.title')}</h5>
+            </div>
+            <p class="other-app-description">{t("usecases.facebook.description")}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Use Cases Section -->
+    <div class="usecases-section other-usecases-section">
+      <h3 class="section-title">{t("usecases.other.title")}</h3>
+
+      <div class="other-usecases-grid">
+        <div class="usecase-card">
+          <div class="usecase-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="usecase-icon">
+              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <line x1="10" y1="9" x2="8" y2="9"/>
+            </svg>
+            <h4 class="usecase-title">{t("usecases.documents.title")}</h4>
+          </div>
+          <p class="usecase-description">{t("usecases.documents.description")}</p>
+          <ul class="usecase-list">
+            <li>{t("usecases.documents.use1")}</li>
+            <li>{t("usecases.documents.use2")}</li>
+            <li>{t("usecases.documents.use3")}</li>
+            <li>{t("usecases.documents.use4")}</li>
+          </ul>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="usecase-icon">
+              <polyline points="16 18 22 12 16 6"/>
+              <polyline points="8 6 2 12 8 18"/>
+            </svg>
+            <h4 class="usecase-title">{t("usecases.programming.title")}</h4>
+          </div>
+          <p class="usecase-description">{t("usecases.programming.description")}</p>
+          <ul class="usecase-list">
+            <li>{t("usecases.programming.use1")}</li>
+            <li>{t("usecases.programming.use2")}</li>
+            <li>{t("usecases.programming.use3")}</li>
+            <li>{t("usecases.programming.use4")}</li>
+          </ul>
+        </div>
+
+        <div class="usecase-card">
+          <div class="usecase-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="usecase-icon">
+              <path d="m12 19 7-7 3 3-7 7-3-3z"/>
+              <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
+              <path d="m2 2 7.586 7.586"/>
+              <circle cx="11" cy="11" r="2"/>
+            </svg>
+            <h4 class="usecase-title">{t("usecases.design.title")}</h4>
+          </div>
+          <p class="usecase-description">{t("usecases.design.description")}</p>
+          <ul class="usecase-list">
+            <li>{t("usecases.design.use1")}</li>
+            <li>{t("usecases.design.use2")}</li>
+            <li>{t("usecases.design.use3")}</li>
+            <li>{t("usecases.design.use4")}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Professional Use Cases -->
+    <div class="usecases-section professional-section">
+      <h3 class="section-title">{t("usecases.professional.title")}</h3>
+
+      <div class="professional-grid">
+        <div class="professional-card">
+          <div class="professional-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="professional-icon">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+            <h4 class="professional-title">{t("usecases.linkedin.title")}</h4>
+          </div>
+          <p class="professional-description">{t("usecases.linkedin.description")}</p>
+          <ul class="professional-list">
+            <li>{t("usecases.linkedin.use1")}</li>
+            <li>{t("usecases.linkedin.use2")}</li>
+            <li>{t("usecases.linkedin.use3")}</li>
+            <li>{t("usecases.linkedin.use4")}</li>
+          </ul>
+        </div>
+
+        <div class="professional-card">
+          <div class="professional-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="professional-icon">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            <h4 class="professional-title">{t("usecases.email.title")}</h4>
+          </div>
+          <p class="professional-description">{t("usecases.email.description")}</p>
+          <ul class="professional-list">
+            <li>{t("usecases.email.use1")}</li>
+            <li>{t("usecases.email.use2")}</li>
+            <li>{t("usecases.email.use3")}</li>
+            <li>{t("usecases.email.use4")}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
