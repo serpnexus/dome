@@ -23,3 +23,31 @@ TestResults.xml
 node_modules
 .DS_Store
 .astro/
+# Local Netlify folder
+.netlify
+src/middleware.js
+# Local Netlify functions folder
+.netlify/functions
+# Local Netlify cache folder
+.netlify/cache
+# Local Netlify config file
+.netlify/config.json
+# Local Netlify redirects file
+.netlify/redirects
+# Local Netlify headers file
+.netlify/headers
+# Local Netlify functions cache folder
+.netlify/functions-cache
+# Local Netlify build cache folder
+.netlify/build-cache
+# Local Netlify logs folder
+.netlify/logs
+# Local Netlify state file
+.netlify/state.json
+.netlify/
+.netlify/config.json
+.netlify/v1/
+
+.vercel/
+dist/
+/netlify.toml

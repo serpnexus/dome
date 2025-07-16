@@ -3,15 +3,18 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
-import netlify from '@astrojs/netlify';
+import vercel from '@astrojs/vercel';
+
+
+import mdx from '@astrojs/mdx';
 
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), partytown({config: {debug: false }}), sitemap()],
+  integrations: [react(), partytown({config: {debug: false }}), sitemap(), mdx()],
   output: 'static',
-  adapter: netlify(),
   site: 'https://www.invisibletext.me',
+
   i18n: {
     defaultLocale: 'en',
     locales: [
@@ -21,6 +24,7 @@ export default defineConfig({
       prefixDefaultLocale: false
     }
   },
-  trailingSlash: 'never',
 
+  trailingSlash: 'never',
+  adapter: vercel(),
 });
