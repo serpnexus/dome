@@ -1,4 +1,6 @@
 ---
+import LazyAdSlot from '../../components/ads/LazyAdsSlot';
+import { ARTICLE_AD_SLOT, CA_PUB_ID, DISPLAY_AD_FORMAT, DISPLAY_AD_SLOT } from '../../const';
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
@@ -16,11 +18,10 @@ const formatDate = (date) => {
 
 // Get all unique tags
 const allTags = Array.from(new Set(sortedPosts.flatMap(post => post.data.tags || [])));
-
-export const prerender = true;
 ---
 
 <Layout title="Blog - InvisibleText.me" description='Explore our articles about invisible characters, Unicode, and creative text formatting'>
+
   <div class="blog-container">
     <div class="blog-header">
       <h1 class="blog-title">Blog</h1>
@@ -75,10 +76,18 @@ export const prerender = true;
               </div>
             </article>
           ))}
+          <LazyAdSlot
+            client:visible
+            adClient={CA_PUB_ID}
+            adSlot={DISPLAY_AD_SLOT || ARTICLE_AD_SLOT }
+            format={DISPLAY_AD_FORMAT}
+            style={{ display: 'block', textAlign: 'center' }}
+          />
         </div>
       </div>
     </div>
   </div>
+  
 </Layout>
 
 <style>

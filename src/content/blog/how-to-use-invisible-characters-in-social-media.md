@@ -3,12 +3,10 @@ title: "How to Use Invisible Characters in Social Media"
 description: "Learn how to enhance your social media presence with invisible Unicode characters."
 pubDate: 2025-03-25
 author: "John Doe"
-image: "/placeholder.svg?height=600&width=1200"
+image: "/images/blank-spaces-in-social-media.png?height=600&width=1200"
 tags: ["social media"]
 featured: false
 ---
-
-# How to Use Invisible Characters in Social Media
 
 Invisible characters have become increasingly popular on social media platforms, allowing users to create unique content, format their posts in creative ways, and even bypass certain platform limitations.
 

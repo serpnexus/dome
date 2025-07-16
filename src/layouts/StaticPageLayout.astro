@@ -1,7 +1,6 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { getLangFromUrl } from '../i18n/utils';
 import "../styles/global.css";
 
 interface Props {
@@ -55,6 +54,45 @@ const { title, description, image = '/images/og-image.webp' } = Astro.props;
     
     <link href="/styles/global.css" rel="stylesheet" />
     <meta name="theme-color" content="#0F1A36" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1370487049277752"
+     crossorigin="anonymous"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K5YY1JW4YH');
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Invisible Text",
+        "url": "https://www.invisibletext.me/",
+        "description": "Generate and use invisible Unicode characters for various applications.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.invisibletext.me/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Invisible Text",
+        "url": "https://www.invisibletext.me/",
+        "logo": "https://www.invisibletext.me/logo.webp",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contact@invisibletext.me",
+          "contactType": "Customer Support",
+          "availableLanguage": "English",
+          "areaServed": "Worldwide"
+        }
+      }
+    </script>
+    
 
   <style>
     .static-page-container {
@@ -93,9 +131,6 @@ const { title, description, image = '/images/og-image.webp' } = Astro.props;
       }
     }
   </style>
-
-
-  
 </head>
 <body>
   <Header />
