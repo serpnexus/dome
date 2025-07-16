@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/ads.txt",
+      "destination": "https://srv.adstxtmanager.com/19390/invisibletext.me",
+      "permanent": true
+    },
+    {
       "source": "/unicode-u280f",
       "destination": "/unicode/u280f",
       "permanent": true
