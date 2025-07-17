@@ -8,14 +8,15 @@ import InvisibleTextGenerator from '../components/InvisibleTextGenerator.astro';
 import TypesOfInvisibleText from '../components/Types.astro';
 import FAQSection from '../components/FAQ.astro';
 import UnicodeTable from '../components/UnicodeTable.astro';
-import BlogSection from '../components/BlogSection.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import BlogSection from '../components/BlogSection.astro';
 import LazyAdSlot from '../components/ads/LazyAdsSlot';
 import { CA_PUB_ID, DIS_AD_SLOT_WIDEBANNER, DISPLAY_AD_FORMAT, MULTIPLEX_AD_SLOT } from '../const';
 
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+export const prerender = true;
 ---
 
 <Layout title={t('meta.title')} description={t('meta.description')}>

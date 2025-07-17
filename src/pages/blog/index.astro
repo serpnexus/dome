@@ -1,385 +1,390 @@
 ---
-import LazyAdSlot from '../../components/ads/LazyAdsSlot';
-import { ARTICLE_AD_SLOT, CA_PUB_ID, DISPLAY_AD_FORMAT, DISPLAY_AD_SLOT } from '../../const';
-import Layout from '../../layouts/Layout.astro';
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../const';
 import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { Image } from 'astro:assets';
 
-const allPosts = await getCollection('blog');
-const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
 
-// Format date
-const formatDate = (date) => {
-  return new Intl.DateTimeFormat('en-US', { 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
-  }).format(date);
-};
-
-// Get all unique tags
-const allTags = Array.from(new Set(sortedPosts.flatMap(post => post.data.tags || [])));
+const [featuredPost, ...restPosts] = posts;
 ---
 
-<Layout title="Blog - InvisibleText.me" description='Explore our articles about invisible characters, Unicode, and creative text formatting'>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="blog-list-main">
+			<h1 class="blog-list-title">Blog</h1>
+			<section class="blog-section">
+				{featuredPost && (
+					<article class="blog-list-featured">
+						<a href={`/blog/${featuredPost.slug}`} class="blog-list-featured-link">
+							{featuredPost.data.image && (
+								<div class="blog-list-featured-image-container">
+									<Image 
+										width={1200} 
+										height={600} 
+										src={featuredPost.data.image} 
+										alt={featuredPost.data.title} 
+										class="blog-list-featured-image" 
+										format="webp" 
+										loading="lazy" 
+										sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px" 
+									/>
+								</div>
+							)}
+							<div class="blog-list-featured-content">
+								<h2 class="blog-list-featured-title">{featuredPost.data.title}</h2>
+								<p class="blog-list-featured-date"><FormattedDate date={featuredPost.data.pubDate} /></p>
+								<p class="blog-list-featured-desc">{featuredPost.data.description || ''}</p>
+							</div>
+						</a>
+					</article>
+				)}
+				<div class="blog-list-grid">
+					{restPosts.map((post) => (
+						<article class="blog-list-card">
+							<a href={`/blog/${post.slug}`} class="blog-list-link">
+								{post.data.image && (
+									<div class="blog-list-image-container">
+										<Image 
+											width={800} 
+											height={400} 
+											src={post.data.image} 
+											alt={post.data.title} 
+											class="blog-list-image" 
+											format="webp" 
+											loading="lazy" 
+											sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px" 
+										/>
+									</div>
+								)}
+								<div class="blog-list-card-content">
+									<h3 class="blog-list-card-title">{post.data.title}</h3>
+									<p class="blog-list-card-date"><FormattedDate date={post.data.pubDate} /></p>
+									<p class="blog-list-card-desc">{post.data.description || ''}</p>
+								</div>
+							</a>
+						</article>
+					))}
+				</div>
+			</section>
+		</main>
+		<Footer />
+		<style>
+		:root {
+			--blog-bg: #f8fafc;
+			--blog-card-bg: #ffffff;
+			--blog-primary: #1e40af;
+			--blog-primary-light: #3b82f6;
+			--blog-accent: #f59e0b;
+			--blog-accent-light: #fbbf24;
+			--blog-text-primary: #1f2937;
+			--blog-text-secondary: #6b7280;
+			--blog-text-light: #9ca3af;
+			--blog-border: #e5e7eb;
+			--blog-border-hover: #d1d5db;
+			--blog-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+			--blog-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+			--blog-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+		}
 
-  <div class="blog-container">
-    <div class="blog-header">
-      <h1 class="blog-title">Blog</h1>
-      <p class="blog-description">Explore our articles about invisible characters, Unicode, and creative text formatting</p>
-    </div>
-    
-    <div class="blog-layout">
-      <div class="blog-main">
-        <div class="blog-posts">
-          {sortedPosts.map(post => (
-            <article class="blog-post-card">
-              {post.data.image && (
-                <a href={`/blog/${post.slug}`} class="blog-post-image-link">
-                  <img 
-                    src={post.data.image || "/placeholder.svg"} 
-                    alt={post.data.title} 
-                    class="blog-post-image"
-                  />
-                </a>
-              )}
-              <div class="blog-post-content">
-                <div class="blog-post-meta">
-                  <span class="blog-post-date">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                      <line x1="16" y1="2" x2="16" y2="6"></line>
-                      <line x1="8" y1="2" x2="8" y2="6"></line>
-                      <line x1="3" y1="10" x2="21" y2="10"></line>
-                    </svg>
-                    {formatDate(post.data.pubDate)}
-                  </span>
-                </div>
-                <h2 class="blog-post-title">
-                  <a href={`/blog/${post.slug}`}>{post.data.title}</a>
-                </h2>
-                <p class="blog-post-excerpt">{post.data.description || post.data.excerpt || ''}</p>
-                <div class="blog-post-footer">
-                  <a href={`/blog/${post.slug}`} class="read-more">
-                    Read More
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="m9 18 6-6-6-6"></path>
-                    </svg>
-                  </a>
-                  {post.data.tags && post.data.tags.length > 0 && (
-                    <div class="blog-post-tags">
-                      {post.data.tags.slice(0, 2).map(tag => (
-                        <a href={`/blog/tag/${tag}`} class="blog-post-tag">#{tag}</a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </article>
-          ))}
-          <LazyAdSlot
-            client:visible
-            adClient={CA_PUB_ID}
-            adSlot={DISPLAY_AD_SLOT || ARTICLE_AD_SLOT }
-            format={DISPLAY_AD_FORMAT}
-            style={{ display: 'block', textAlign: 'center' }}
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-  
-</Layout>
+		* {
+			box-sizing: border-box;
+		}
 
-<style>
-  .blog-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 1.5rem;
-  }
-  
-  .blog-header {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-  
-  .blog-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--yellow-400);
-    margin-bottom: 1.5rem;
-  }
-  
-  .blog-description {
-    font-size: 1.375rem;
-    color: var(--gray-400);
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-  
-  .blog-layout {
-    display: flex;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-  
-  .blog-posts {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  
-  .blog-post-card {
-    background-color: var(--navy-800);
-    border: 1px solid var(--navy-700);
-    border-radius: 1rem;
-    overflow: hidden;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-  
-  .blog-post-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--navy-600);
-  }
-  
-  .blog-post-image-link {
-    display: block;
-    overflow: hidden;
-  }
-  
-  .blog-post-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .blog-post-image-link:hover .blog-post-image {
-    transform: scale(1.05);
-  }
-  
-  .blog-post-content {
-    padding: 2rem;
-  }
-  
-  .blog-post-meta {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
-    color: var(--gray-400);
-    font-size: 0.875rem;
-  }
-  
-  .blog-post-date {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .blog-post-title {
-    font-size: 1.625rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.3;
-  }
-  
-  .blog-post-title a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .blog-post-title a:hover {
-    color: var(--yellow-400);
-  }
-  
-  .blog-post-excerpt {
-    color: var(--gray-300);
-    margin-bottom: 2rem;
-    line-height: 1.7;
-    font-size: 1rem;
-  }
-  
-  .blog-post-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid var(--navy-700);
-    padding-top: 1.5rem;
-  }
-  
-  .read-more {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--yellow-400);
-    font-weight: 500;
-    text-decoration: none;
-    transition: gap 0.2s ease;
-    font-size: 0.875rem;
-  }
-  
-  .read-more:hover {
-    gap: 0.75rem;
-  }
-  
-  .blog-post-tags {
-    display: flex;
-    gap: 0.75rem;
-  }
-  
-  .blog-post-tag {
-    background-color: var(--navy-700);
-    color: var(--gray-300);
-    padding: 0.375rem 0.875rem;
-    border-radius: 0.5rem;
-    font-size: 0.75rem;
-    transition: background-color 0.2s ease;
-  }
-  
-  .blog-post-tag:hover {
-    background-color: var(--navy-600);
-    color: var(--white);
-  }
-  
-  .blog-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .sidebar-section {
-    background-color: var(--navy-800);
-    border: 1px solid var(--navy-700);
-    border-radius: 1rem;
-    overflow: hidden;
-  }
-  
-  .sidebar-title {
-    font-size: 1.375rem;
-    font-weight: 600;
-    color: var(--white);
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid var(--navy-700);
-    background-color: var(--navy-700);
-  }
-  
-  .sidebar-content {
-    padding: 2rem;
-  }
-  
-  .sidebar-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-  }
-  
-  .sidebar-tag {
-    background-color: var(--navy-700);
-    color: var(--gray-300);
-    padding: 0.375rem 0.875rem;
-    border-radius: 0.5rem;
-    font-size: 0.875rem;
-    transition: background-color 0.2s ease;
-  }
-  
-  .sidebar-tag:hover {
-    background-color: var(--navy-600);
-    color: var(--white);
-  }
-  
-  .recent-posts-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .recent-post-item {
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--navy-700);
-  }
-  
-  .recent-post-item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-  }
-  
-  .recent-post-item a {
-    color: var(--gray-300);
-    text-decoration: none;
-    transition: color 0.2s ease;
-    display: block;
-    line-height: 1.5;
-    font-size: 0.875rem;
-  }
-  
-  .recent-post-item a:hover {
-    color: var(--yellow-400);
-  }
-  
-  @media (min-width: 768px) {
-    .blog-layout {
-      grid-template-columns: 2fr 1fr;
-    }
-    
-    .blog-posts {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .blog-posts {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 767px) {
-    .blog-container {
-      padding: 3rem 1rem;
-    }
-    
-    .blog-header {
-      margin-bottom: 3rem;
-    }
-    
-    .blog-title {
-      font-size: 2.75rem;
-      margin-bottom: 1.25rem;
-    }
-    
-    .blog-description {
-      font-size: 1.125rem;
-    }
-    
-    .blog-posts {
-      gap: 2rem;
-    }
-    
-    .blog-post-content {
-      padding: 1.5rem;
-    }
-    
-    .blog-post-title {
-      font-size: 1.375rem;
-    }
-    
-    .blog-post-excerpt {
-      margin-bottom: 1.5rem;
-    }
-    
-    .blog-post-footer {
-      padding-top: 1.25rem;
-    }
-    
-    .sidebar-content {
-      padding: 1.5rem;
-    }
-    
-    .sidebar-title {
-      padding: 1.25rem 1.5rem;
-    }
-  }
-</style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
 
+		.blog-list-main {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 2rem 1rem;
+			min-height: 100vh;
+		}
+
+		.blog-list-title {
+			font-size: clamp(2rem, 4vw, 3rem);
+			font-weight: 700;
+			margin-bottom: 3rem;
+			text-align: center;
+			background: var(--blog-accent-light);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			letter-spacing: -0.025em;
+		}
+
+		.blog-section {
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+		}
+
+		/* Featured Post Styles */
+		.blog-list-featured {
+			background: var(--blog-card-bg);
+			border-radius: 1.5rem;
+			overflow: hidden;
+			box-shadow: var(--blog-shadow);
+			transition: all 0.3s ease;
+			border: 1px solid var(--blog-border);
+			display: flex;
+			flex-direction: column;
+		}
+
+		.blog-list-featured:hover {
+			box-shadow: var(--blog-shadow-hover);
+			transform: translateY(-2px);
+		}
+
+		.blog-list-featured-link {
+			display: flex;
+			flex-direction: column;
+			text-decoration: none;
+			color: inherit;
+			height: 100%;
+		}
+
+		.blog-list-featured-image-container {
+			position: relative;
+			width: 100%;
+			height: 280px;
+			overflow: hidden;
+			background: var(--blog-card-bg);
+			flex-shrink: 0;
+		}
+
+		.blog-list-featured-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+
+		.blog-list-featured-link:hover .blog-list-featured-image {
+			transform: scale(1.05);
+		}
+
+		.blog-list-featured-content {
+			padding: 2rem;
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.blog-list-featured-title {
+			font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+			font-weight: 700;
+			margin-bottom: 0.75rem;
+			color: var(--blog-text-primary);
+			line-height: 1.3;
+			transition: color 0.3s ease;
+		}
+
+		.blog-list-featured-link:hover .blog-list-featured-title {
+			color: var(--blog-primary);
+		}
+
+		.blog-list-featured-date {
+			font-size: 0.95rem;
+			color: var(--blog-accent);
+			margin-bottom: 1rem;
+			font-weight: 500;
+		}
+
+		.blog-list-featured-desc {
+			color: var(--blog-text-secondary);
+			font-size: 1rem;
+			line-height: 1.5;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		/* Grid Layout */
+		.blog-list-grid {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+
+		@media (min-width: 640px) {
+			.blog-list-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		@media (min-width: 1024px) {
+			.blog-list-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		/* Card Styles */
+		.blog-list-card {
+			background: var(--blog-card-bg);
+			border: 1px solid var(--blog-border);
+			border-radius: 1rem;
+			overflow: hidden;
+			box-shadow: var(--blog-shadow);
+			transition: all 0.3s ease;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		.blog-list-card:hover {
+			box-shadow: var(--blog-shadow-hover);
+			transform: translateY(-4px);
+			border-color: var(--blog-accent-light);
+		}
+
+		.blog-list-link {
+			text-decoration: none;
+			color: inherit;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		.blog-list-image-container {
+			position: relative;
+			width: 100%;
+			height: 200px;
+			overflow: hidden;
+			background: var(--blog-gradient);
+		}
+
+		.blog-list-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+
+		.blog-list-card:hover .blog-list-image {
+			transform: scale(1.1);
+		}
+
+		.blog-list-card-content {
+			padding: 1.5rem;
+			display: flex;
+			flex-direction: column;
+			flex: 1;
+			gap: 0.75rem;
+		}
+
+		.blog-list-card-title {
+			font-size: 1.25rem;
+			font-weight: 600;
+			color: var(--blog-text-primary);
+			line-height: 1.3;
+			transition: color 0.3s ease;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+		}
+
+		.blog-list-card:hover .blog-list-card-title {
+			color: var(--blog-primary);
+		}
+
+		.blog-list-card-date {
+			font-size: 0.875rem;
+			color: var(--blog-accent);
+			font-weight: 500;
+		}
+
+		.blog-list-card-desc {
+			color: var(--blog-text-secondary);
+			font-size: 0.95rem;
+			line-height: 1.5;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			flex: 1;
+		}
+
+		/* Responsive Design */
+		@media (min-width: 768px) {
+			.blog-list-main {
+				padding: 3rem 2rem;
+			}
+			
+			.blog-list-featured-image-container {
+				height: 320px;
+			}
+			
+			.blog-list-image-container {
+				height: 220px;
+			}
+		}
+
+		@media (min-width: 1024px) {
+			.blog-list-featured {
+				flex-direction: row;
+				min-height: 360px;
+			}
+			
+			.blog-list-featured-link {
+				flex-direction: row;
+			}
+			
+			.blog-list-featured-image-container {
+				width: 50%;
+				height: 100%;
+				min-height: 360px;
+			}
+			
+			.blog-list-featured-content {
+				width: 50%;
+				padding: 2.5rem;
+			}
+			
+			.blog-list-featured-title {
+				font-size: clamp(1.5rem, 2.5vw, 2rem);
+			}
+			
+			.blog-list-featured-desc {
+				font-size: 1.05rem;
+				-webkit-line-clamp: 3;
+			}
+			
+			.blog-list-image-container {
+				height: 240px;
+			}
+		}
+
+		/* Accessibility */
+		@media (prefers-reduced-motion: reduce) {
+			* {
+				animation-duration: 0.01ms !important;
+				animation-iteration-count: 1 !important;
+				transition-duration: 0.01ms !important;
+			}
+		}
+
+		/* Focus states */
+		.blog-list-featured-link:focus,
+		.blog-list-link:focus {
+			outline: 2px solid var(--blog-primary);
+			outline-offset: 2px;
+		}
+		</style>
+	</body>
+</html>
