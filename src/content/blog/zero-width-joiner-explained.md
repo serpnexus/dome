@@ -3,7 +3,7 @@ title: "Zero Width Joiner: The Hidden Character Behind Emoji Combinations"
 description: "Discover how the Zero Width Joiner makes complex emoji combinations possible."
 pubDate: 2025-01-25
 author: "Jane Smith"
-image: "/images/zero-width-joiner.png?height=600&width=1200"
+image: "/images/zeroo-width-joiner.png?height=600&width=1200"
 tags: ["unicode", "emoji", "zero width joiner"]
 featured: false
 ---

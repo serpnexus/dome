@@ -3,7 +3,7 @@ title: "How to Move Down a Line on Instagram: A Complete Guide to Using Blank Sp
 description: "Discover how the Zero Width Joiner makes complex emoji combinations possible."
 pubDate: 2025-04-01
 author: "Jane Smith"
-image: "/images/line-break-on-instagram.png?height=600&width=1200"
+image: "/images/line-breaks-insta.png?height=600&width=1200"
 tags: ["unicode", "emoji", "zero width joiner"]
 featured: true
 ---

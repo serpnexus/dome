@@ -3,15 +3,12 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import "../styles/global.css";
 import BaseHead from '../components/BaseHead.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../const';
-import AdSenseAd from '../components/ads/AdSenseAd';
 
 interface Props {
 	title: string;
 	description: string;
 	image?: string;
 }
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const { title, description, image = '/images/og-image.webp' } = Astro.props;
 ---
 
@@ -60,7 +57,6 @@ const { title, description, image = '/images/og-image.webp' } = Astro.props;
 <body>
   <Header />
   <main>
-    <AdSenseAd client:load/>
     <div class="static-page-container">
       <div class="static-page-content">
         <h1 class="static-page-title">{title}</h1>

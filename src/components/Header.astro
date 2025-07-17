@@ -64,7 +64,7 @@ const currentPath = Astro.url.pathname;
 
 /* Header Styles */
 .site-header {
-  background-color: #02184d;
+  background-color: #02194dbc;
   color: white;
   width: 100%;
   padding: 0.5rem 1rem;
@@ -73,7 +73,7 @@ const currentPath = Astro.url.pathname;
   z-index: 50;
   backdrop-filter: blur(8px);
 }
-@supports (backdrop-filter: blur(8px)) {
+@supports (backdrop-filter: blur(90px)) {
   .site-header {
     background-color: var(--background);
   }

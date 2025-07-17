@@ -21,14 +21,14 @@ export const prerender = true;
 
 <Layout title={t('meta.title')} description={t('meta.description')}>
   <InvisibleTextGenerator />
-  <LazyAdSlot 
-    client:visible
-    adClient={CA_PUB_ID}
-    adSlot={DIS_AD_SLOT_WIDEBANNER}
-    format={DISPLAY_AD_FORMAT}
-    responsive={true}
-    style={{ display: 'block', textAlign: 'center' }}
-  />
+  <ins
+    class="adsbygoogle"
+    style={{ display: 'block' }}
+    data-ad-client="ca-pub-1370487049277752"
+    data-ad-slot="3155482655"
+    data-ad-format="auto"
+    data-full-width-responsive="true"
+  ></ins>
   <Intro />
   <WhtIsInvisibleTxt />
   <TypesOfInvisibleText />
