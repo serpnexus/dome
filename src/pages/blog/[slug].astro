@@ -118,7 +118,7 @@ const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
           <div class="sidebar-content">
             <div class="sidebar-tags">
               {Array.from(new Set(sortedPosts.flatMap(post => post.data.tags || []))).slice(0, 10).map(tag => (
-                <a href={`/blog/tag/${tag}`} class="sidebar-tag">#{tag}</a>
+                <a href="#" class="sidebar-tag">#{tag}</a>
               ))}
             </div>
           </div>
