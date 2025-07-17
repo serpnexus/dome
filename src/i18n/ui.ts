@@ -15,10 +15,10 @@ export const languages = {
     name: "Deutsch",
     flag: "🇩🇪",
   },
-  // zh: {
-  //   name: "中文",
-  //   flag: "🇨🇳",
-  // },
+  my: {
+    name: "Myanmar",
+    flag: "",
+  },
   it: {
     name: "Italian",
     flag: "🇮🇹",
@@ -47,6 +47,26 @@ export const languages = {
     name: "Dutch",
     flag: "🇳🇱",
   },
+  ja: {
+    name: "Japanese",
+    flag: "",
+  },
+  th: {
+    name: "Thai",
+    flag: "",
+  },
+  vi: {
+    name: "Vitenam",
+    flag: "",
+  },
+  hu: {
+    name: "Hungary",
+    flag: "",
+  },
+  fi: {
+    name: "Finnish",
+    flag: "",
+  }
 }
 
 export const defaultLang = "en"
@@ -85,7 +105,7 @@ export const ui = {
     "hero.primaryButton": "Try Generator",
     "hero.secondaryButton": "Learn About Unicode",
 
-    
+
 
     // Invisible Text Generator
     "invisibletext.brand": "INVISIBLETEXT",
@@ -778,7 +798,7 @@ export const ui = {
     'about.introduction.description': 'Los caracteres invisibles son caracteres Unicode especiales que no muestran ningún símbolo ni espacio. Tienen valores Unicode únicos y ocupan espacio en el texto sin ser vistos. Son útiles para formatear texto sin interrupciones en diversas aplicaciones.',
     'about.whatIs.title': '¿Qué es el Texto Invisible?',
     'about.whatIs.description': 'Los personajes invisibles que son invisibles para el ojo humano pero que tienen funciones que realizar se conocen como personajes invisibles. Estos caracteres invisibles son los caracteres Unicode (a menudo obtenidos usando caracteres de ancho cero o métodos de formato) que indican el espacio en blanco sin usar la tecla de espacio.',
-    
+
     //type of unicode characters
     'about.types.title': 'Tipos de Caracteres Unicode Invisibles',
     'about.types.zeroWidthSpace.title': 'Espacio de Ancho Cero (U+200B)',
@@ -1037,61 +1057,61 @@ export const ui = {
     "blog.subtitle": "Aprende más sobre caracteres invisibles y sus usos creativos",
     "blog.readMore": "Leer más",
     "blog.viewAll": "Ver todas las publicaciones",
-    
+
     "blog.post1.title": "La historia de los caracteres Unicode invisibles",
     "blog.post1.date": "15 de marzo de 2023",
     "blog.post1.excerpt": "Descubre la fascinante historia detrás de los caracteres Unicode invisibles y cómo evolucionaron de soluciones prácticas para sistemas de escritura específicos a herramientas creativas utilizadas en el mundo digital.",
     "blog.post1.author": "Alex Johnson",
-    
+
     "blog.post2.title": "10 formas creativas de usar caracteres invisibles en las redes sociales",
     "blog.post2.date": "22 de abril de 2023",
     "blog.post2.excerpt": "Destaca entre la multitud con estas formas innovadoras de utilizar caracteres invisibles en tus perfiles, publicaciones y mensajes en redes sociales. Aprende a crear diseños únicos que llamen la atención.",
     "blog.post2.author": "Maria Garcia",
-    
+
     "blog.post3.title": "Caracteres invisibles en los videojuegos: Crea nombres de usuario únicos",
     "blog.post3.date": "10 de mayo de 2023",
     "blog.post3.excerpt": "Descubre cómo los jugadores utilizan caracteres invisibles para crear nombres de usuario y etiquetas de clan que destacan en juegos populares como Fortnite, PUBG y Call of Duty.",
     "blog.post3.author": "Ryan Park",
-    
-      // Terms Page
+
+    // Terms Page
     'terms.title': 'Términos de Servicio',
     'terms.introduction.title': 'Introducción',
     'terms.introduction.description': 'Bienvenido a InvisibleText. Al acceder o utilizar nuestro sitio web, acepta estar sujeto a estos Términos de Servicio.',
     'terms.introduction.agreement': 'Por favor, lea estos términos cuidadosamente antes de usar nuestro servicio. Si no está de acuerdo con alguna parte de estos términos, no puede usar nuestro servicio.',
-    
+
     'terms.usage.title': 'Uso Aceptable',
     'terms.usage.description': 'Al usar InvisibleText, acepta seguir estas pautas:',
     'terms.usage.rule1': 'Usar el servicio solo para fines legales',
     'terms.usage.rule2': 'No usar caracteres invisibles con fines engañosos o dañinos',
     'terms.usage.rule3': 'No intentar interrumpir o interferir con el servicio',
     'terms.usage.rule4': 'No usar el servicio para distribuir malware o contenido dañino',
-    
+
     'terms.intellectual.title': 'Propiedad Intelectual',
     'terms.intellectual.description': 'El servicio InvisibleText, incluido todo el contenido, características y funcionalidad, es propiedad nuestra y está protegido por derechos de autor, marcas comerciales y otras leyes de propiedad intelectual.',
     'terms.intellectual.ownership': 'No puede reproducir, distribuir, modificar, crear trabajos derivados, mostrar públicamente, realizar públicamente, republicar, descargar, almacenar o transmitir cualquier material de nuestro sitio web sin nuestro consentimiento previo por escrito.',
-    
+
     'terms.disclaimer.title': 'Descargo de Responsabilidad',
     'terms.disclaimer.description': 'El servicio InvisibleText se proporciona "tal cual" y "según disponibilidad" sin garantías de ningún tipo, ya sean expresas o implícitas.',
     'terms.disclaimer.warranty': 'No garantizamos que el servicio sea ininterrumpido, oportuno, seguro o libre de errores, o que los resultados que se puedan obtener del uso del servicio sean precisos o confiables.',
-    
+
     'terms.limitation.title': 'Limitación de Responsabilidad',
     'terms.limitation.description': 'En ningún caso InvisibleText, sus directores, empleados, socios, agentes, proveedores o afiliados serán responsables por daños indirectos, incidentales, especiales, consecuentes o punitivos, incluidos, entre otros, pérdida de ganancias, datos, uso, buena voluntad u otras pérdidas intangibles.',
-    
+
     'terms.changes.title': 'Cambios en los Términos',
     'terms.changes.description': 'Nos reservamos el derecho de modificar o reemplazar estos Términos en cualquier momento. Es su responsabilidad revisar estos Términos periódicamente para ver si hay cambios.',
-    
+
     'terms.contact.title': 'Contáctenos',
     'terms.contact.description': 'Si tiene alguna pregunta sobre estos Términos, contáctenos en contact@invisibletext.example.com.',
-    
+
     'terms.lastUpdated': 'Última Actualización',
     'terms.date': '28 de marzo de 2023',
-    
+
     // Privacy Page
     'privacy.title': 'Política de Privacidad',
     'privacy.introduction.title': 'Introducción',
     'privacy.introduction.description': 'En InvisibleText, respetamos su privacidad y estamos comprometidos a proteger sus datos personales.',
     'privacy.introduction.commitment': 'Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos su información cuando utiliza nuestro servicio.',
-    
+
     'privacy.information.title': 'Información que Recopilamos',
     'privacy.information.description': 'Recopilamos y utilizamos diferentes tipos de información cuando accede a nuestro servicio:',
     'privacy.information.collected.title': 'Información que Podemos Recopilar:',
@@ -1102,32 +1122,32 @@ export const ui = {
     'privacy.information.notCollected.item1': 'Información de Identificación Personal: No requerimos que proporcione su nombre, correo electrónico u otros datos personales para usar nuestro servicio básico',
     'privacy.information.notCollected.item2': 'Información de Pago: No recopilamos ni almacenamos detalles de pago',
     'privacy.information.notCollected.item3': 'Contenido: No almacenamos ni monitoreamos el texto invisible que genera',
-    
+
     'privacy.usage.title': 'Cómo Usamos Su Información',
     'privacy.usage.description': 'Utilizamos la información que recopilamos para los siguientes propósitos:',
     'privacy.usage.purpose1': 'Para proporcionar y mantener nuestro servicio',
     'privacy.usage.purpose2': 'Para mejorar y optimizar nuestro servicio',
     'privacy.usage.purpose3': 'Para monitorear el uso de nuestro servicio y detectar problemas técnicos',
-    
+
     'privacy.cookies.title': 'Cookies y Seguimiento',
     'privacy.cookies.description': 'Utilizamos cookies y tecnologías de seguimiento similares para rastrear la actividad en nuestro servicio y almacenar cierta información.',
     'privacy.cookies.management': 'Puede instruir a su navegador para que rechace todas las cookies o para que indique cuándo se está enviando una cookie. Sin embargo, si no acepta cookies, es posible que no pueda utilizar algunas partes de nuestro servicio.',
-    
+
     'privacy.thirdParty.title': 'Servicios de Terceros',
     'privacy.thirdParty.description': 'Nuestro servicio puede contener enlaces a sitios web o servicios de terceros que no son propiedad ni están controlados por InvisibleText. No tenemos control sobre, y no asumimos responsabilidad por, el contenido, las políticas de privacidad o las prácticas de sitios web o servicios de terceros.',
-    
+
     'privacy.security.title': 'Seguridad de Datos',
     'privacy.security.description': 'La seguridad de sus datos es importante para nosotros, pero recuerde que ningún método de transmisión por Internet o método de almacenamiento electrónico es 100% seguro. Si bien nos esforzamos por utilizar medios comercialmente aceptables para proteger su información, no podemos garantizar su seguridad absoluta.',
-    
+
     'privacy.changes.title': 'Cambios en Esta Política de Privacidad',
     'privacy.changes.description': 'Podemos actualizar nuestra Política de Privacidad de vez en cuando. Le notificaremos cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de "Última Actualización".',
-    
+
     'privacy.contact.title': 'Contáctenos',
     'privacy.contact.description': 'Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos en privacy@invisibletext.example.com.',
-    
+
     'privacy.lastUpdated': 'Última Actualización',
     'privacy.date': '28 de marzo de 2023',
-    
+
     // Contact Page
     'contact.title': 'Contáctenos',
     'contact.description': '¿Tiene preguntas, sugerencias o necesita ayuda? ¡Nos encantaría saber de usted! Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible.',
@@ -1140,27 +1160,27 @@ export const ui = {
     'contact.email': 'Correo Electrónico',
     'contact.address': 'Dirección',
     'contact.form.success': '¡Gracias por su mensaje! Nos pondremos en contacto con usted pronto.',
-    
+
     // About Page
     'about.title': 'Sobre Nosotros',
     'about.story.title': 'Nuestra Historia',
     'about.story.paragraph1': 'InvisibleText comenzó como una simple idea en 2020 cuando nuestro fundador notó la creciente necesidad de caracteres invisibles en la comunicación digital. Lo que comenzó como un proyecto personal rápidamente se convirtió en una herramienta integral utilizada por miles de personas en todo el mundo.',
     'about.story.paragraph2': 'Nuestro equipo de desarrolladores y diseñadores ha trabajado incansablemente para crear una plataforma fácil de usar que hace que generar y usar caracteres invisibles sea lo más simple posible. Hemos mejorado continuamente nuestro servicio basándonos en los comentarios de los usuarios y los avances tecnológicos.',
     'about.story.paragraph3': 'Hoy, InvisibleText es el principal proveedor de herramientas de generación de caracteres invisibles, sirviendo a usuarios de comunidades de juegos, plataformas de redes sociales y profesionales creativos de todo el mundo.',
-    
+
     'about.mission.title': 'Nuestra Misión',
     'about.mission.paragraph1': 'En InvisibleText, nuestra misión es proporcionar herramientas accesibles, confiables e innovadoras para generar y usar caracteres invisibles. Creemos en empoderar a los usuarios con la capacidad de personalizar su presencia digital de formas únicas y creativas.',
     'about.mission.paragraph2': 'Estamos comprometidos a mantener un servicio gratuito y accesible mientras mejoramos continuamente nuestras herramientas y ampliamos nuestras ofertas para satisfacer las necesidades cambiantes de nuestros usuarios.',
-    
+
     'about.mission.value1.title': 'Accesibilidad',
     'about.mission.value1.description': 'Creemos que todos deberían tener acceso a nuestras herramientas, independientemente de su experiencia técnica o antecedentes.',
-    
+
     'about.mission.value2.title': 'Innovación',
     'about.mission.value2.description': 'Exploramos continuamente nuevas formas de mejorar nuestro servicio y proporcionar soluciones innovadoras.',
-    
+
     'about.mission.value3.title': 'Transparencia',
     'about.mission.value3.description': 'Mantenemos una comunicación abierta con nuestros usuarios y somos transparentes sobre nuestras prácticas.',
-    
+
     'about.team.title': 'Nuestro Equipo',
     'about.team.description': 'Conozca a las personas apasionadas detrás de InvisibleText que trabajan juntas para proporcionarle las mejores herramientas de generación de caracteres invisibles.',
     'about.team.member1.role': 'Fundador y Desarrollador Principal',
@@ -1169,7 +1189,7 @@ export const ui = {
     'about.team.member2.bio': 'Maria aporta su experiencia en diseño de experiencia de usuario para garantizar que nuestras herramientas sean intuitivas, accesibles y visualmente atractivas.',
     'about.team.member3.role': 'Desarrollador Full-Stack',
     'about.team.member3.bio': 'David se especializa en optimización de rendimiento y garantiza que nuestro servicio funcione de manera fluida y eficiente para todos los usuarios.',
-    
+
   },
   fr: {
     //meta's
@@ -1349,7 +1369,7 @@ export const ui = {
     'usecases.messaging.title': 'Applications de messagerie',
     'usecases.messaging.description': 'Le texte invisible permet d’ajouter une touche ludique à vos messages. Copiez-collez du texte invisible dans vos chats pour surprendre vos interlocuteurs grâce à des messages apparemment vides mais riches en informations cachées.',
     'usecases.messaging.additionalInfo': 'Par exemple, WhatsApp n’autorise pas l’envoi de messages complètement vides. Notre outil vous permet d’envoyer des caractères invisibles facilement, révélant ainsi un message secret.',
-    
+
     'usecases.whatsapp.title': 'WhatsApp',
     'usecases.whatsapp.description': 'Envoyez des messages invisibles sur WhatsApp pour étonner vos amis avec une farce originale. Cette astuce populaire permet d’envoyer des messages vides pour un effet surprenant.',
     'usecases.whatsapp.instructions': 'Copiez simplement le texte vide depuis notre site et collez-le dans votre discussion WhatsApp pour créer la surprise.',
@@ -1358,7 +1378,7 @@ export const ui = {
     'usecases.whatsapp.use2': 'Créer des espaces entre les paragraphes de longs messages',
     'usecases.whatsapp.use3': 'Faire paraître votre statut minimaliste',
     'usecases.whatsapp.use4': 'Concevoir des mises en page textuelles artistiques',
-    
+
     'usecases.twitter.title': 'Tweet vide sur X (anciennement Twitter)',
     'usecases.twitter.description': 'Envoyez des tweets vides en utilisant des symboles invisibles pour surprendre vos abonnés et afficher votre créativité dans votre pseudo.',
     'usecases.twitter.uses': 'Utilisations créatives sur Twitter :',
@@ -1366,7 +1386,7 @@ export const ui = {
     'usecases.twitter.use2': 'Ajouter des espaces entre les paragraphes de tweets longs',
     'usecases.twitter.use3': 'Rendre votre nom d’affichage unique avec des caractères invisibles',
     'usecases.twitter.use4': 'Concevoir des profils minimalistes avec un espacement stratégique',
-    
+
     'usecases.othermessaging.title': 'Autres plateformes de messagerie',
     'usecases.slack.title': 'Slack',
     'usecases.slack.description': 'Utilisez des caractères invisibles pour un formatage épuré de vos messages professionnels ou pour créer des noms de canaux originaux.',
@@ -1374,7 +1394,7 @@ export const ui = {
     'usecases.instagram.description': 'Créez des sauts de ligne nets dans votre biographie ou vos légendes, et faites ressortir votre pseudo grâce aux caractères invisibles.',
     'usecases.facebook.title': 'Facebook',
     'usecases.facebook.description': 'Publiez des statuts vides qui captent l’attention ou créez un espacement soigné dans vos publications longues.',
-    
+
     // Other Use Cases section
     'usecases.other.title': 'Autres utilisations créatives',
     'usecases.documents.title': 'Documents et formulaires',
@@ -1383,21 +1403,21 @@ export const ui = {
     'usecases.documents.use2': 'Contourner les exigences minimales de caractères',
     'usecases.documents.use3': 'Ajouter des signets invisibles dans les PDF',
     'usecases.documents.use4': 'Formater le texte de manière créative',
-    
+
     'usecases.programming.title': 'Programmation',
     'usecases.programming.description': 'Les développeurs utilisent parfois des caractères invisibles pour répondre à des besoins spécifiques de formatage ou pour tester la gestion des chaînes.',
     'usecases.programming.use1': 'Tester la gestion des chaînes dans les applications',
     'usecases.programming.use2': 'Créer des alignements de texte précis',
     'usecases.programming.use3': 'Vérifier la compatibilité Unicode',
     'usecases.programming.use4': 'Formater les commentaires de code de manière originale',
-    
+
     'usecases.design.title': 'Design créatif',
     'usecases.design.description': 'Les designers et artistes peuvent exploiter les caractères invisibles pour concevoir des mises en page textuelles uniques et des effets visuels remarquables.',
     'usecases.design.use1': 'Créer des mises en page artistiques',
     'usecases.design.use2': 'Concevoir une typographie minimaliste',
     'usecases.design.use3': 'Innover dans l’espacement des textes',
     'usecases.design.use4': 'Formater le texte de manière non conventionnelle',
-    
+
     // Professional Use Cases
     'usecases.professional.title': 'Applications professionnelles',
     'usecases.linkedin.title': 'LinkedIn',
@@ -1406,14 +1426,14 @@ export const ui = {
     'usecases.linkedin.use2': 'Réalisez des publications attractives',
     'usecases.linkedin.use3': 'Ajoutez des espaces pour mettre en valeur l’essentiel',
     'usecases.linkedin.use4': 'Créez des profils minimalistes et élégants',
-    
+
     'usecases.email.title': 'Email',
     'usecases.email.description': 'Utilisez les caractères invisibles pour un formatage d’email professionnel et épuré.',
     'usecases.email.use1': 'Créer des signatures d’email avec un espacement net',
     'usecases.email.use2': 'Formater des newsletters avec précision',
     'usecases.email.use3': 'Concevoir des emails minimalistes',
     'usecases.email.use4': 'Ajouter un espacement subtil pour souligner l’essentiel',
-    
+
     // Why Use Invisible Text translations
     'why.title': 'Pourquoi utiliser notre générateur de texte invisible ?',
     'why.intro': 'Face à la question : quel site choisir pour obtenir des caractères vides ? Invisibletext.me a été conçu selon vos besoins, avec des fonctionnalités exclusives. Copiez et collez des caractères invisibles en un instant et gagnez du temps !',
@@ -1426,31 +1446,31 @@ export const ui = {
     'why.whyuse.use5': 'Dissimuler des messages en toute discrétion',
     'why.whyuse.use6': 'Contourner les restrictions de caractères sur certaines plateformes',
     'why.whyuse.use7': 'Créer des effets spéciaux sur vos réseaux sociaux',
-    
+
     'why.features.easyToUse.title': 'Facile à utiliser',
     'why.features.easyToUse.description': 'Notre outil de texte vide est simple et intuitif : un clic sur "Copier" (méthode 1) suffit pour impressionner vos amis sur les réseaux sociaux.',
-    
+
     'why.features.totallyFree.title': 'Entièrement gratuit',
     'why.features.totallyFree.description': 'Profitez gratuitement de notre outil de texte invisible, accessible à tout moment, sur mobile et PC, sans aucun frais caché.',
-    
+
     'why.features.unlimitedCharacters.title': 'Caractères illimités',
     'why.features.unlimitedCharacters.description': 'Générez autant de caractères invisibles que vous le souhaitez. Tweetez des messages entièrement vides et profitez d’options uniques rarement offertes ailleurs.',
-    
+
     'why.features.oneClickCopy.title': 'Copier-coller en un clic',
     'why.features.oneClickCopy.description': 'Avec notre outil, copiez le texte invisible en un seul clic. Trois méthodes simples vous permettent de copier directement ou de générer le nombre de caractères souhaité.',
-    
+
     'why.features.noSignup.title': 'Pas d\'inscription requise',
     'why.features.noSignup.description': 'Aucune installation ni inscription n’est nécessaire. Gagnez du temps en utilisant directement notre outil en ligne.',
-    
+
     'why.features.accessible.title': 'Accessible partout',
     'why.features.accessible.description': 'Que vous utilisiez un ordinateur, une tablette ou un smartphone, notre générateur de texte invisible fonctionne sur tous les navigateurs modernes avec une simple connexion Internet.',
-    
+
     'why.features.accuracy.title': 'Précision garantie',
     'why.features.accuracy.description': 'Notre générateur de texte invisible offre une précision inégalée. Suivez simplement les étapes, copiez-collez et obtenez instantanément les résultats souhaités.',
-    
+
     'why.features.multipleLanguages.title': 'Multilingue',
     'why.features.multipleLanguages.description': 'Notre outil est disponible en plusieurs langues pour faciliter son utilisation à l’international. Instructions traduites en : EN, DE, ES, FR, ID, IT, NL, PT.',
-    
+
     'why.benefits.title': 'Avantages supplémentaires',
     'why.benefits.privacy.title': 'Respectueux de la vie privée',
     'why.benefits.privacy.description': 'Nous ne suivons aucune de vos données. Votre texte invisible reste strictement privé.',
@@ -1462,22 +1482,22 @@ export const ui = {
     // FAQ translations
     'faq.title': 'Questions fréquemment posées',
     'faq.subtitle': 'Retrouvez ici les réponses aux questions courantes sur le texte invisible et son utilisation',
-    
+
     'faq.q1': 'Qu’est-ce que le texte invisible ?',
     'faq.a1': 'Le texte invisible est composé de caractères Unicode spéciaux qui occupent de l’espace sans être visibles. Ces caractères, conformes au standard Unicode, s’utilisent dans la majorité des champs de texte, réseaux sociaux, applications de messagerie, etc.',
-    
+
     'faq.q2': 'Les caractères invisibles sont-ils sûrs ?',
     'faq.a2': 'Oui, ces caractères sont totalement sûrs. Ils sont standards et n’endommagent ni votre appareil ni vos applications. Toutefois, certaines plateformes peuvent restreindre leur usage.',
-    
+
     'faq.q3': 'Pourquoi utiliser des caractères invisibles ?',
     'faq.a3': 'Ils offrent de nombreuses applications créatives : créer des pseudos uniques, envoyer des messages vides, personnaliser l’espacement dans vos publications ou concevoir des mises en page artistiques.',
-    
+
     'faq.q4': 'Fonctionnent-ils sur toutes les plateformes ?',
     'faq.a4': 'La plupart des caractères invisibles sont compatibles avec les principales plateformes, bien que leur support puisse varier. Certaines plateformes peuvent filtrer ou remplacer certains caractères.',
-    
+
     'faq.q5': 'Peut-on les utiliser pour les mots de passe ?',
     'faq.a5': 'Bien que possible techniquement, nous déconseillons leur usage pour les mots de passe car ils sont difficiles à mémoriser et à saisir, et certains systèmes pourraient les rejeter.',
-    
+
     'faq.q6': 'Comment vérifier que le caractère invisible a été copié ?',
     'faq.a6': 'Après avoir cliqué sur le bouton de copie, un message de confirmation s’affiche. Vous pouvez également tester le caractère dans la zone de test pour confirmer qu’il a été correctement copié.',
 
@@ -1486,22 +1506,22 @@ export const ui = {
     "blog.subtitle": "Découvrez-en plus sur les caractères invisibles et leurs utilisations créatives",
     "blog.readMore": "Lire la suite",
     "blog.viewAll": "Voir tous les articles",
-    
+
     "blog.post1.title": "L'histoire des caractères Unicode invisibles",
     "blog.post1.date": "15 mars 2023",
     "blog.post1.excerpt": "Découvrez l'histoire fascinante derrière les caractères Unicode invisibles et comment ils sont passés de solutions pratiques pour certains systèmes d'écriture à des outils créatifs utilisés dans le monde numérique.",
     "blog.post1.author": "Alex Johnson",
-    
+
     "blog.post2.title": "10 façons créatives d'utiliser les caractères invisibles sur les réseaux sociaux",
     "blog.post2.date": "22 avril 2023",
     "blog.post2.excerpt": "Démarquez-vous grâce à ces méthodes innovantes pour utiliser les caractères invisibles dans vos profils, publications et messages sur les réseaux sociaux. Apprenez à créer des mises en page uniques qui attirent l'attention.",
     "blog.post2.author": "Maria Garcia",
-    
+
     "blog.post3.title": "Les caractères invisibles dans le gaming : Créez des pseudos uniques",
     "blog.post3.date": "10 mai 2023",
     "blog.post3.excerpt": "Découvrez comment les joueurs utilisent les caractères invisibles pour créer des pseudos et des tags de clan remarquables dans des jeux populaires tels que Fortnite, PUBG et Call of Duty.",
     "blog.post3.author": "Ryan Park",
-    
+
     //termsPage
     "terms.title": "Conditions d'utilisation",
     "terms.introduction.title": "Introduction",
@@ -1527,7 +1547,7 @@ export const ui = {
     "terms.contact.description": "Si vous avez des questions concernant ces conditions, veuillez nous contacter à l'adresse contact@invisibletext.example.com.",
     "terms.lastUpdated": "Dernière mise à jour",
     "terms.date": "28 mars 2023",
-    
+
     "privacy.title": "Politique de confidentialité",
     "privacy.introduction.title": "Introduction",
     "privacy.introduction.description": "Chez InvisibleText, nous respectons votre vie privée et nous engageons à protéger vos données personnelles.",
@@ -1560,7 +1580,7 @@ export const ui = {
     "privacy.contact.description": "Si vous avez des questions concernant cette politique de confidentialité, veuillez nous contacter à privacy@invisibletext.example.com.",
     "privacy.lastUpdated": "Dernière mise à jour",
     "privacy.date": "28 mars 2023",
-    
+
     "contact.title": "Contactez-nous",
     "contact.description": "Vous avez des questions, des suggestions ou besoin d'aide ? Nous serions ravis de vous entendre ! Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible.",
     "contact.form.name": "Votre nom",
@@ -1572,7 +1592,7 @@ export const ui = {
     "contact.email": "E-mail",
     "contact.address": "Adresse",
     "contact.form.success": "Merci pour votre message ! Nous vous contacterons bientôt.",
-    
+
     "about.title": "À propos de nous",
     "about.story.title": "Notre histoire",
     "about.story.paragraph1": "InvisibleText a débuté en 2020 comme une idée simple lorsque notre fondateur a constaté le besoin croissant de caractères invisibles dans la communication numérique. Ce qui avait commencé comme un projet personnel est rapidement devenu un outil complet utilisé par des milliers de personnes dans le monde entier.",
@@ -1774,7 +1794,7 @@ export const ui = {
     'usecases.messaging.title': 'Messenger-Apps',
     'usecases.messaging.description': 'Unsichtbarer Text verleiht Ihren Nachrichten einen spielerischen Touch. Kopieren Sie den unsichtbaren Text und fügen Sie ihn in Ihre Chats ein, um überraschende, scheinbar leere Nachrichten mit versteckten Informationen zu senden.',
     'usecases.messaging.additionalInfo': 'Beispielsweise erlaubt WhatsApp keine komplett leeren Nachrichten – unser Tool ermöglicht es Ihnen, unsichtbare Zeichen einfach zu versenden und geheime Botschaften zu übermitteln.',
-    
+
     'usecases.whatsapp.title': 'WhatsApp',
     'usecases.whatsapp.description': 'Senden Sie unsichtbare Nachrichten auf WhatsApp, um Ihre Freunde mit einem originellen Streich zu überraschen. Diese beliebte Methode sorgt für Aufsehen und diskrete Kommunikation.',
     'usecases.whatsapp.instructions': 'Kopieren Sie den leeren Text von unserer Website und fügen Sie ihn in Ihren WhatsApp-Chat ein, um Ihre Freunde zu verblüffen.',
@@ -1783,7 +1803,7 @@ export const ui = {
     'usecases.whatsapp.use2': 'Erzeugen Sie Abstände zwischen Absätzen langer Nachrichten',
     'usecases.whatsapp.use3': 'Lassen Sie Ihren Status minimalistisch erscheinen',
     'usecases.whatsapp.use4': 'Erstellen Sie künstlerische Textlayouts in Ihren Nachrichten',
-    
+
     'usecases.twitter.title': 'Leerer Tweet auf X (ehemals Twitter)',
     'usecases.twitter.description': 'Veröffentlichen Sie leere Tweets mit unsichtbaren Zeichen, um Ihre Kreativität zu zeigen und Ihr Profil unverwechselbar zu gestalten.',
     'usecases.twitter.uses': 'Kreative Einsatzmöglichkeiten auf Twitter:',
@@ -1791,7 +1811,7 @@ export const ui = {
     'usecases.twitter.use2': 'Fügen Sie Absätze in langen Tweets mit unsichtbaren Zeichen ein',
     'usecases.twitter.use3': 'Machen Sie Ihren Anzeigenamen einzigartig',
     'usecases.twitter.use4': 'Gestalten Sie minimalistische Profile mit strategischen Leerzeichen',
-    
+
     'usecases.othermessaging.title': 'Weitere Messenger-Plattformen',
     'usecases.slack.title': 'Slack',
     'usecases.slack.description': 'Nutzen Sie unsichtbare Zeichen, um in Ihren Arbeitsnachrichten ein sauberes Layout oder originelle Kanalnamen zu kreieren.',
@@ -1799,7 +1819,7 @@ export const ui = {
     'usecases.instagram.description': 'Erzielen Sie saubere Zeilenumbrüche in Ihrer Bio oder Bildunterschrift und lassen Sie Ihren Benutzernamen mit unsichtbaren Zeichen hervorstechen.',
     'usecases.facebook.title': 'Facebook',
     'usecases.facebook.description': 'Veröffentlichen Sie leere Status-Updates oder gestalten Sie Ihre Beiträge mit strukturierten Abständen, um mehr Aufmerksamkeit zu erlangen.',
-    
+
     // Other Use Cases section
     'usecases.other.title': 'Weitere kreative Einsatzmöglichkeiten',
     'usecases.documents.title': 'Dokumente & Formulare',
@@ -1808,21 +1828,21 @@ export const ui = {
     'usecases.documents.use2': 'Umgehen Sie Mindestzeichenvorgaben',
     'usecases.documents.use3': 'Fügen Sie unsichtbare Lesezeichen in PDFs ein',
     'usecases.documents.use4': 'Formatieren Sie Text auf kreative Weise',
-    
+
     'usecases.programming.title': 'Programmierung',
     'usecases.programming.description': 'Entwickler nutzen unsichtbare Zeichen für spezielle Formatierungsanforderungen oder zum Testen von String-Verarbeitungen.',
     'usecases.programming.use1': 'Testen Sie die String-Verarbeitung in Anwendungen',
     'usecases.programming.use2': 'Erzeugen Sie präzise Textausrichtungen',
     'usecases.programming.use3': 'Überprüfen Sie die Unicode-Kompatibilität',
     'usecases.programming.use4': 'Formatieren Sie Code-Kommentare auf originelle Weise',
-    
+
     'usecases.design.title': 'Kreatives Design',
     'usecases.design.description': 'Designer und Künstler können unsichtbare Zeichen nutzen, um einzigartige Textlayouts und visuelle Effekte zu kreieren.',
     'usecases.design.use1': 'Erstellen Sie künstlerische Textlayouts',
     'usecases.design.use2': 'Entwerfen Sie minimalistische Typografie',
     'usecases.design.use3': 'Schaffen Sie originelle Abstände in Ihren Designs',
     'usecases.design.use4': 'Formatieren Sie Text auf unkonventionelle Weise',
-    
+
     // Professional Use Cases
     'usecases.professional.title': 'Professionelle Anwendungen',
     'usecases.linkedin.title': 'LinkedIn',
@@ -1831,14 +1851,14 @@ export const ui = {
     'usecases.linkedin.use2': 'Erstellen Sie visuell ansprechende Beiträge',
     'usecases.linkedin.use3': 'Fügen Sie Abstände ein, um wichtige Punkte hervorzuheben',
     'usecases.linkedin.use4': 'Kreieren Sie minimalistische und elegante Profile',
-    
+
     'usecases.email.title': 'E-Mail',
     'usecases.email.description': 'Verwenden Sie unsichtbare Zeichen, um E-Mails professionell und übersichtlich zu formatieren.',
     'usecases.email.use1': 'Erzeugen Sie klare Abstände in E-Mail-Signaturen',
     'usecases.email.use2': 'Formatieren Sie Newsletter mit präzisen Abständen',
     'usecases.email.use3': 'Gestalten Sie minimalistische E-Mail-Designs',
     'usecases.email.use4': 'Fügen Sie subtile Abstände hinzu, um wichtige Informationen zu betonen',
-    
+
     // Why Use Invisible Text translations
     'why.title': 'Warum unser Generator für unsichtbaren Text?',
     'why.intro': 'Die entscheidende Frage: Welches Tool wählen, um leere Zeichen zu generieren? Invisibletext.me wurde speziell für Ihre Bedürfnisse entwickelt – mit exklusiven Features. Kopieren und fügen Sie unsichtbare Zeichen in Sekundenschnelle ein und sparen Sie wertvolle Zeit!',
@@ -1851,31 +1871,31 @@ export const ui = {
     'why.whyuse.use5': 'Verbergen Sie Nachrichten dezent im Klartext',
     'why.whyuse.use6': 'Umgehen Sie Zeichenbeschränkungen auf manchen Plattformen',
     'why.whyuse.use7': 'Erzeugen Sie spezielle Effekte in Social-Media-Beiträgen',
-    
+
     'why.features.easyToUse.title': 'Einfach zu bedienen',
     'why.features.easyToUse.description': 'Unser Tool ist intuitiv: Mit nur einem Klick auf "Kopieren" (Methode 1) beeindrucken Sie Ihre Freunde in den sozialen Netzwerken.',
-    
+
     'why.features.totallyFree.title': 'Völlig kostenlos',
     'why.features.totallyFree.description': 'Nutzen Sie unseren unsichtbaren Textgenerator kostenfrei – jederzeit und auf allen Geräten, ohne versteckte Gebühren.',
-    
+
     'why.features.unlimitedCharacters.title': 'Unbegrenzte Zeichen',
     'why.features.unlimitedCharacters.description': 'Erzeugen Sie so viele unsichtbare Zeichen, wie Sie möchten. Tweeten Sie komplette, leere Nachrichten und nutzen Sie einzigartige Optionen, die kaum ein anderes Tool bietet.',
-    
+
     'why.features.oneClickCopy.title': 'Kopieren mit einem Klick',
     'why.features.oneClickCopy.description': 'Mit nur einem Klick können Sie den unsichtbaren Text kopieren. Drei einfache Methoden erlauben Ihnen, direkt zu kopieren oder die gewünschte Anzahl Zeichen zu generieren.',
-    
+
     'why.features.noSignup.title': 'Keine Anmeldung erforderlich',
     'why.features.noSignup.description': 'Es ist keine Installation oder Registrierung nötig – nutzen Sie unser Online-Tool sofort und sparen Sie Zeit.',
-    
+
     'why.features.accessible.title': 'Überall zugänglich',
     'why.features.accessible.description': 'Unser Generator funktioniert auf allen modernen Geräten – ob Desktop, Tablet oder Smartphone – und benötigt lediglich eine Internetverbindung.',
-    
+
     'why.features.accuracy.title': 'Garantierte Genauigkeit',
     'why.features.accuracy.description': 'Unser unsichtbarer Textgenerator liefert präzise Ergebnisse. Befolgen Sie die Schritte, kopieren Sie den Text und erhalten Sie sofort das gewünschte Resultat.',
-    
+
     'why.features.multipleLanguages.title': 'Mehrsprachig',
     'why.features.multipleLanguages.description': 'Unser Tool ist in mehreren Sprachen verfügbar – ideal für internationale Nutzer. Übersetzte Anleitungen: EN, DE, ES, FR, ID, IT, NL, PT.',
-    
+
     'why.benefits.title': 'Zusätzliche Vorteile',
     'why.benefits.privacy.title': 'Datenschutzfreundlich',
     'why.benefits.privacy.description': 'Wir speichern keine Daten und verfolgen Ihre Nutzung nicht. Ihr unsichtbarer Text bleibt privat.',
@@ -1887,22 +1907,22 @@ export const ui = {
     // FAQ translations
     'faq.title': 'Häufig gestellte Fragen',
     'faq.subtitle': 'Hier finden Sie Antworten auf häufige Fragen zu unsichtbarem Text und seiner Anwendung',
-    
+
     'faq.q1': 'Was ist unsichtbarer Text?',
     'faq.a1': 'Unsichtbarer Text besteht aus speziellen Unicode-Zeichen, die Raum einnehmen, ohne sichtbar zu sein. Diese Zeichen entsprechen dem Unicode-Standard und können in den meisten Textfeldern, sozialen Netzwerken, Messenger-Apps und mehr verwendet werden.',
-    
+
     'faq.q2': 'Sind unsichtbare Zeichen sicher?',
     'faq.a2': 'Ja, unsichtbare Zeichen sind absolut sicher. Es handelt sich um Standard-Unicode-Zeichen, die Ihrem Gerät oder Ihren Anwendungen nicht schaden. Allerdings können manche Plattformen deren Nutzung einschränken.',
-    
+
     'faq.q3': 'Warum sollte ich unsichtbare Zeichen verwenden?',
     'faq.a3': 'Unsichtbare Zeichen bieten zahlreiche kreative Einsatzmöglichkeiten – von einzigartigen Benutzernamen über leere Nachrichten bis hin zu individuellen Layouts in sozialen Medien.',
-    
+
     'faq.q4': 'Funktionieren sie auf allen Plattformen?',
     'faq.a4': 'Die meisten unsichtbaren Zeichen werden von den wichtigsten Plattformen unterstützt, wobei der Support variieren kann. Einige Plattformen filtern oder ersetzen bestimmte Zeichen.',
-    
+
     'faq.q5': 'Kann man sie für Passwörter nutzen?',
     'faq.a5': 'Obwohl dies technisch möglich ist, empfehlen wir dies nicht, da unsichtbare Zeichen schwer zu merken und einzugeben sind. Zudem können einige Systeme sie ablehnen.',
-    
+
     'faq.q6': 'Wie weiß ich, ob das unsichtbare Zeichen kopiert wurde?',
     'faq.a6': 'Nach einem Klick auf den Kopieren-Button erscheint eine Bestätigungsmeldung. Sie können den Text auch im Testbereich einfügen, um zu prüfen, ob er korrekt kopiert wurde.',
 
@@ -1912,22 +1932,22 @@ export const ui = {
     "blog.subtitle": "Erfahren Sie mehr über unsichtbare Zeichen und deren kreative Anwendungen",
     "blog.readMore": "Weiterlesen",
     "blog.viewAll": "Alle Beiträge anzeigen",
-    
+
     "blog.post1.title": "Die Geschichte unsichtbarer Unicode-Zeichen",
     "blog.post1.date": "15. März 2023",
     "blog.post1.excerpt": "Entdecken Sie die faszinierende Geschichte hinter unsichtbaren Unicode-Zeichen und wie sie sich von praktischen Lösungen für bestimmte Schriftsysteme zu kreativen Werkzeugen im digitalen Bereich entwickelt haben.",
     "blog.post1.author": "Alex Johnson",
-    
+
     "blog.post2.title": "10 kreative Möglichkeiten, unsichtbare Zeichen in sozialen Medien zu verwenden",
     "blog.post2.date": "22. April 2023",
     "blog.post2.excerpt": "Heben Sie sich von der Masse ab mit diesen innovativen Methoden, unsichtbare Zeichen in Ihren Social-Media-Profilen, Beiträgen und Nachrichten zu verwenden. Erfahren Sie, wie Sie einzigartige Layouts erstellen, die Aufmerksamkeit erregen.",
     "blog.post2.author": "Maria Garcia",
-    
+
     "blog.post3.title": "Unsichtbare Zeichen im Gaming: Erstellen Sie einzigartige Benutzernamen",
     "blog.post3.date": "10. Mai 2023",
     "blog.post3.excerpt": "Erfahren Sie, wie Gamer unsichtbare Zeichen nutzen, um markante Benutzernamen und Clantags in beliebten Spielen wie Fortnite, PUBG und Call of Duty zu erstellen.",
     "blog.post3.author": "Ryan Park",
-    
+
     "terms.title": "Nutzungsbedingungen",
     "terms.introduction.title": "Einführung",
     "terms.introduction.description": "Willkommen bei InvisibleText. Durch den Zugriff auf oder die Nutzung unserer Website stimmen Sie diesen Nutzungsbedingungen zu.",
@@ -1952,7 +1972,7 @@ export const ui = {
     "terms.contact.description": "Wenn Sie Fragen zu diesen Bedingungen haben, kontaktieren Sie uns bitte unter contact@invisibletext.example.com.",
     "terms.lastUpdated": "Zuletzt aktualisiert",
     "terms.date": "28. März 2023",
-    
+
     "privacy.title": "Datenschutzrichtlinie",
     "privacy.introduction.title": "Einführung",
     "privacy.introduction.description": "Bei InvisibleText respektieren wir Ihre Privatsphäre und verpflichten uns, Ihre persönlichen Daten zu schützen.",
@@ -1985,7 +2005,7 @@ export const ui = {
     "privacy.contact.description": "Wenn Sie Fragen zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte unter privacy@invisibletext.example.com.",
     "privacy.lastUpdated": "Zuletzt aktualisiert",
     "privacy.date": "28. März 2023",
-    
+
     "contact.title": "Kontaktieren Sie uns",
     "contact.description": "Haben Sie Fragen, Anregungen oder benötigen Sie Hilfe? Wir würden uns freuen, von Ihnen zu hören! Füllen Sie das untenstehende Formular aus und wir melden uns so schnell wie möglich bei Ihnen.",
     "contact.form.name": "Ihr Name",
@@ -1997,7 +2017,7 @@ export const ui = {
     "contact.email": "E-Mail",
     "contact.address": "Adresse",
     "contact.form.success": "Vielen Dank für Ihre Nachricht! Wir werden uns bald bei Ihnen melden.",
-    
+
     "about.title": "Über uns",
     "about.story.title": "Unsere Geschichte",
     "about.story.paragraph1": "InvisibleText begann im Jahr 2020 als eine einfache Idee, als unser Gründer den wachsenden Bedarf an unsichtbaren Zeichen in der digitalen Kommunikation bemerkte. Was als persönliches Projekt begann, entwickelte sich schnell zu einem umfassenden Tool, das von Tausenden von Menschen weltweit genutzt wird.",
@@ -2020,7 +2040,7 @@ export const ui = {
     "about.team.member2.bio": "Maria bringt ihre Expertise im Bereich Nutzererfahrung ein, um sicherzustellen, dass unsere Tools intuitiv, zugänglich und optisch ansprechend sind.",
     "about.team.member3.role": "Full-Stack-Entwickler",
     "about.team.member3.bio": "David ist auf Performance-Optimierung spezialisiert und sorgt dafür, dass unser Dienst reibungslos und effizient für alle Nutzer läuft."
-    
+
   },
   id: {
     //meta's
@@ -2200,7 +2220,7 @@ export const ui = {
     'usecases.messaging.title': 'Aplikasi Pesan',
     'usecases.messaging.description': 'Teks tak terlihat dapat memberikan sentuhan kreatif pada pesan Anda. Salin dan tempel teks ini ke kolom chat untuk mengirim pesan yang tampak kosong namun menyimpan informasi rahasia.',
     'usecases.messaging.additionalInfo': 'Misalnya, WhatsApp biasanya tidak mengizinkan pesan yang benar-benar kosong. Dengan alat ini, Anda dapat mengirim karakter tak terlihat dengan mudah untuk menyampaikan pesan rahasia.',
-    
+
     'usecases.whatsapp.title': 'WhatsApp',
     'usecases.whatsapp.description': 'Kirim pesan tak terlihat di WhatsApp untuk mengejutkan teman-teman Anda dengan lelucon kreatif. Metode ini populer untuk mengirim pesan kosong yang menimbulkan rasa penasaran.',
     'usecases.whatsapp.instructions': 'Cukup salin teks kosong dari situs kami dan tempelkan ke obrolan WhatsApp Anda untuk menciptakan efek kejutan.',
@@ -2209,7 +2229,7 @@ export const ui = {
     'usecases.whatsapp.use2': 'Buat jarak antar paragraf pada pesan panjang',
     'usecases.whatsapp.use3': 'Tampilkan status yang minimalis',
     'usecases.whatsapp.use4': 'Rancang tata letak teks yang artistik dalam pesan Anda',
-    
+
     'usecases.twitter.title': 'Tweet Kosong di X (sebelumnya Twitter)',
     'usecases.twitter.description': 'Kirim tweet kosong dengan menggunakan simbol tak terlihat untuk menunjukkan kreativitas Anda dan membuat profil Anda unik.',
     'usecases.twitter.uses': 'Penggunaan kreatif di Twitter:',
@@ -2217,7 +2237,7 @@ export const ui = {
     'usecases.twitter.use2': 'Tambahkan jarak antar paragraf di tweet panjang',
     'usecases.twitter.use3': 'Buat tampilan nama pengguna yang unik dengan karakter tak terlihat',
     'usecases.twitter.use4': 'Ciptakan profil minimalis dengan spasi strategis',
-    
+
     'usecases.othermessaging.title': 'Platform Pesan Lainnya',
     'usecases.slack.title': 'Slack',
     'usecases.slack.description': 'Gunakan karakter tak terlihat untuk menciptakan tata letak yang bersih dalam pesan kerja atau membuat nama channel yang unik.',
@@ -2225,7 +2245,7 @@ export const ui = {
     'usecases.instagram.description': 'Buat pemisah baris yang rapi di bio atau caption Anda, dan tonjolkan nama pengguna dengan karakter tak terlihat.',
     'usecases.facebook.title': 'Facebook',
     'usecases.facebook.description': 'Posting status kosong yang menarik perhatian atau ciptakan spasi rapi dalam postingan panjang Anda.',
-    
+
     // Other Use Cases section
     'usecases.other.title': 'Penggunaan Kreatif Lainnya',
     'usecases.documents.title': 'Dokumen & Formulir',
@@ -2234,21 +2254,21 @@ export const ui = {
     'usecases.documents.use2': 'Lampaui batas minimum karakter',
     'usecases.documents.use3': 'Tambahkan penanda tak terlihat di PDF',
     'usecases.documents.use4': 'Format teks dengan cara yang kreatif',
-    
+
     'usecases.programming.title': 'Pemrograman',
     'usecases.programming.description': 'Pengembang kadang menggunakan karakter tak terlihat untuk kebutuhan format tertentu atau untuk menguji penanganan string.',
     'usecases.programming.use1': 'Uji penanganan string dalam aplikasi',
     'usecases.programming.use2': 'Buat penyelarasan teks yang presisi',
     'usecases.programming.use3': 'Periksa kompatibilitas Unicode',
     'usecases.programming.use4': 'Format komentar kode secara kreatif',
-    
+
     'usecases.design.title': 'Desain Kreatif',
     'usecases.design.description': 'Desainer dan seniman dapat memanfaatkan karakter tak terlihat untuk menciptakan tata letak teks yang unik dan efek visual yang menarik.',
     'usecases.design.use1': 'Ciptakan tata letak teks artistik',
     'usecases.design.use2': 'Rancang tipografi minimalis',
     'usecases.design.use3': 'Buat jarak unik dalam desain Anda',
     'usecases.design.use4': 'Format teks dengan cara yang tidak konvensional',
-    
+
     // Professional Use Cases
     'usecases.professional.title': 'Aplikasi Profesional',
     'usecases.linkedin.title': 'LinkedIn',
@@ -2257,14 +2277,14 @@ export const ui = {
     'usecases.linkedin.use2': 'Buat postingan yang menarik secara visual',
     'usecases.linkedin.use3': 'Tambahkan jarak untuk menonjolkan poin penting',
     'usecases.linkedin.use4': 'Ciptakan profil yang minimalis dan elegan',
-    
+
     'usecases.email.title': 'Email',
     'usecases.email.description': 'Gunakan karakter tak terlihat untuk memformat email secara profesional dan rapi.',
     'usecases.email.use1': 'Buat tanda tangan email dengan spasi yang bersih',
     'usecases.email.use2': 'Format buletin dengan jarak yang tepat',
     'usecases.email.use3': 'Rancang desain email yang minimalis',
     'usecases.email.use4': 'Tambahkan jarak halus untuk menekankan informasi penting',
-    
+
     // Why Use Invisible Text translations
     'why.title': 'Mengapa Menggunakan Generator Teks Tak Terlihat Kami?',
     'why.intro': 'Pertanyaan penting: Situs mana yang harus Anda pilih untuk menghasilkan karakter kosong? Invisibletext.me dirancang sesuai kebutuhan Anda dengan fitur eksklusif. Salin dan tempel karakter tak terlihat secara instan untuk menghemat waktu!',
@@ -2277,31 +2297,31 @@ export const ui = {
     'why.whyuse.use5': 'Sembunyikan pesan secara halus tanpa mengorbankan kejelasan',
     'why.whyuse.use6': 'Lampaui batasan karakter di beberapa platform',
     'why.whyuse.use7': 'Ciptakan efek khusus di postingan media sosial',
-    
+
     'why.features.easyToUse.title': 'Mudah Digunakan',
     'why.features.easyToUse.description': 'Alat teks kosong kami sangat intuitif: cukup klik "Salin" (Metode 1) dan Anda akan segera mengesankan teman-teman Anda di media sosial.',
-    
+
     'why.features.totallyFree.title': 'Sepenuhnya Gratis',
     'why.features.totallyFree.description': 'Nikmati penggunaan generator teks tak terlihat kami secara gratis – kapan saja dan di semua perangkat, tanpa biaya tersembunyi.',
-    
+
     'why.features.unlimitedCharacters.title': 'Karakter Tanpa Batas',
     'why.features.unlimitedCharacters.description': 'Hasilkan sebanyak mungkin karakter tak terlihat sesuai kebutuhan. Tweet dengan pesan kosong sepenuhnya dan manfaatkan opsi unik yang jarang ditawarkan alat lain.',
-    
+
     'why.features.oneClickCopy.title': 'Salin dengan Satu Klik',
     'why.features.oneClickCopy.description': 'Dengan hanya satu klik, Anda dapat menyalin teks tak terlihat. Tiga metode sederhana memungkinkan Anda untuk langsung menyalin atau menghasilkan jumlah karakter yang diinginkan.',
-    
+
     'why.features.noSignup.title': 'Tidak Perlu Mendaftar',
     'why.features.noSignup.description': 'Tak perlu instalasi atau pendaftaran – gunakan alat online kami secara instan dan hemat waktu Anda.',
-    
+
     'why.features.accessible.title': 'Dapat Diakses di Mana Saja',
     'why.features.accessible.description': 'Generator kami bekerja di semua perangkat modern – baik desktop, tablet, maupun smartphone – hanya dengan koneksi internet.',
-    
+
     'why.features.accuracy.title': 'Akurasi Terjamin',
     'why.features.accuracy.description': 'Generator teks tak terlihat kami memberikan hasil yang sangat akurat. Ikuti langkah-langkahnya, salin teksnya, dan dapatkan hasil yang Anda butuhkan secara instan.',
-    
+
     'why.features.multipleLanguages.title': 'Multibahasa',
     'why.features.multipleLanguages.description': 'Alat kami tersedia dalam berbagai bahasa untuk memudahkan pengguna internasional. Instruksi tersedia dalam: EN, DE, ES, FR, ID, IT, NL, PT.',
-    
+
     'why.benefits.title': 'Keuntungan Tambahan',
     'why.benefits.privacy.title': 'Ramah Privasi',
     'why.benefits.privacy.description': 'Kami tidak melacak atau menyimpan data Anda. Teks tak terlihat Anda tetap bersifat pribadi.',
@@ -2313,22 +2333,22 @@ export const ui = {
     // FAQ translations
     'faq.title': 'Pertanyaan yang Sering Diajukan',
     'faq.subtitle': 'Temukan jawaban atas pertanyaan umum seputar teks tak terlihat dan cara menggunakannya',
-    
+
     'faq.q1': 'Apa itu teks tak terlihat?',
     'faq.a1': 'Teks tak terlihat terdiri dari karakter Unicode khusus yang mengisi ruang tanpa terlihat. Karakter-karakter ini merupakan bagian dari standar Unicode dan dapat digunakan di sebagian besar bidang teks, platform media sosial, aplikasi pesan, dan lainnya.',
-    
+
     'faq.q2': 'Apakah karakter tak terlihat aman digunakan?',
     'faq.a2': 'Ya, karakter tak terlihat sepenuhnya aman digunakan. Mereka adalah karakter standar Unicode yang tidak akan merusak perangkat atau aplikasi Anda, meskipun beberapa platform mungkin memberlakukan pembatasan tertentu.',
-    
+
     'faq.q3': 'Mengapa saya harus menggunakan karakter tak terlihat?',
     'faq.a3': 'Karakter tak terlihat memiliki banyak aplikasi kreatif, seperti membuat username unik, mengirim pesan kosong, menyesuaikan spasi dalam posting media sosial, atau merancang tata letak teks yang artistik.',
-    
+
     'faq.q4': 'Apakah mereka bekerja di semua platform?',
     'faq.a4': 'Sebagian besar karakter tak terlihat didukung oleh platform utama, meskipun kompatibilitasnya dapat bervariasi. Beberapa platform mungkin menyaring atau mengganti karakter tertentu.',
-    
+
     'faq.q5': 'Bisakah saya menggunakan karakter tak terlihat untuk password?',
     'faq.a5': 'Meskipun secara teknis memungkinkan, kami tidak menyarankan penggunaan karakter tak terlihat untuk password karena sulit diingat dan diketik, serta beberapa sistem mungkin menolak penggunaannya.',
-    
+
     'faq.q6': 'Bagaimana cara memastikan karakter tak terlihat telah tersalin?',
     'faq.a6': 'Setelah mengklik tombol salin, akan muncul pesan konfirmasi. Anda juga dapat menguji karakter tersebut di area uji untuk memastikan bahwa karakter telah tersalin dengan benar.',
 
@@ -2449,13 +2469,13 @@ export const ui = {
     'about.team.member3.role': 'Pengembang Full-Stack',
     'about.team.member3.bio': 'David mengkhususkan diri dalam optimasi kinerja dan memastikan bahwa layanan kami berjalan lancar dan efisien untuk semua pengguna.',
 
-    
+
   },
   it: {
     //meta's
     'meta.title': 'Testo Invisibile ( ) - Copia e Incolla Spazio Vuoto',
     'meta.description': "Copia e incolla caratteri invisibili e spazi vuoti per social, giochi e altro. Crea messaggi segreti con il nostro generatore invisibile.",
-    'meta.keywords': 'caratteri invisibili, spazi vuoti, Unicode, generatori di testo, giochi, social media, privacy',      
+    'meta.keywords': 'caratteri invisibili, spazi vuoti, Unicode, generatori di testo, giochi, social media, privacy',
     // Header translations
     'header.brand': 'INVISIBLETEXT',
     'header.blog': 'Blog',
@@ -2629,7 +2649,7 @@ export const ui = {
     'usecases.messaging.title': 'App di Messaggistica',
     'usecases.messaging.description': 'Il testo invisibile aggiunge un tocco creativo ai tuoi messaggi. Copia e incolla il testo invisibile nelle chat per inviare messaggi apparentemente vuoti ma ricchi di informazioni nascoste.',
     'usecases.messaging.additionalInfo': 'Ad esempio, WhatsApp non permette messaggi completamente vuoti; il nostro strumento ti consente di inviare facilmente caratteri invisibili per messaggi segreti.',
-    
+
     'usecases.whatsapp.title': 'WhatsApp',
     'usecases.whatsapp.description': 'Invia messaggi invisibili su WhatsApp per sorprendere i tuoi amici con uno scherzo originale. Questa tecnica popolare crea messaggi vuoti che catturano l’attenzione.',
     'usecases.whatsapp.instructions': 'Basta copiare il testo vuoto dal nostro sito e incollarlo nella chat di WhatsApp per creare l’effetto sorpresa.',
@@ -2638,7 +2658,7 @@ export const ui = {
     'usecases.whatsapp.use2': 'Crea spazi tra i paragrafi in messaggi lunghi',
     'usecases.whatsapp.use3': 'Fai apparire il tuo stato come minimalista',
     'usecases.whatsapp.use4': 'Progetta layout testuali artistici nei tuoi messaggi',
-    
+
     'usecases.twitter.title': 'Tweet Vuoti su X (ex Twitter)',
     'usecases.twitter.description': 'Pubblica tweet vuoti utilizzando caratteri invisibili per mostrare la tua creatività e rendere unico il tuo profilo.',
     'usecases.twitter.uses': 'Usi creativi su Twitter:',
@@ -2646,7 +2666,7 @@ export const ui = {
     'usecases.twitter.use2': 'Aggiungi spaziatura tra paragrafi in tweet lunghi',
     'usecases.twitter.use3': 'Rendi unico il tuo nome visualizzato con caratteri invisibili',
     'usecases.twitter.use4': 'Progetta profili minimalisti con spazi strategici',
-    
+
     'usecases.othermessaging.title': 'Altre Piattaforme di Messaggistica',
     'usecases.slack.title': 'Slack',
     'usecases.slack.description': 'Utilizza caratteri invisibili per creare layout puliti nei messaggi di lavoro o per dare nomi originali ai canali.',
@@ -2654,7 +2674,7 @@ export const ui = {
     'usecases.instagram.description': 'Crea interruzioni di linea nette nella tua bio o nei tuoi didascalie, e fai risaltare il tuo username con caratteri invisibili.',
     'usecases.facebook.title': 'Facebook',
     'usecases.facebook.description': 'Pubblica stati vuoti che attirano l’attenzione o crea spazi ordinati in post lunghi.',
-    
+
     // Other Use Cases section
     'usecases.other.title': 'Altri Usi Creativi',
     'usecases.documents.title': 'Documenti e Moduli',
@@ -2663,21 +2683,21 @@ export const ui = {
     'usecases.documents.use2': 'Supera il numero minimo di caratteri richiesto',
     'usecases.documents.use3': 'Aggiungi segnalibri invisibili nei PDF',
     'usecases.documents.use4': 'Formatta il testo in modo creativo',
-    
+
     'usecases.programming.title': 'Programmazione',
     'usecases.programming.description': 'Gli sviluppatori usano talvolta caratteri invisibili per esigenze specifiche di formattazione o per testare la gestione delle stringhe.',
     'usecases.programming.use1': 'Testa la gestione delle stringhe nelle applicazioni',
     'usecases.programming.use2': 'Crea allineamenti testuali precisi',
     'usecases.programming.use3': 'Verifica la compatibilità Unicode',
     'usecases.programming.use4': 'Formatta i commenti del codice in maniera originale',
-    
+
     'usecases.design.title': 'Design Creativo',
     'usecases.design.description': 'Designer e artisti possono sfruttare i caratteri invisibili per creare layout testuali unici ed effetti visivi sorprendenti.',
     'usecases.design.use1': 'Progetta layout testuali artistici',
     'usecases.design.use2': 'Crea una tipografia minimalista',
     'usecases.design.use3': 'Genera spaziature originali nei design',
     'usecases.design.use4': 'Formatta il testo in modi non convenzionali',
-    
+
     // Professional Use Cases
     'usecases.professional.title': 'Applicazioni Professionali',
     'usecases.linkedin.title': 'LinkedIn',
@@ -2686,14 +2706,14 @@ export const ui = {
     'usecases.linkedin.use2': 'Realizza post visivamente accattivanti',
     'usecases.linkedin.use3': 'Aggiungi spazi per evidenziare i punti chiave',
     'usecases.linkedin.use4': 'Crea profili minimalisti ed eleganti',
-    
+
     'usecases.email.title': 'Email',
     'usecases.email.description': 'Utilizza caratteri invisibili per formattare le email in modo professionale e ordinato.',
     'usecases.email.use1': 'Crea firme email con spaziatura pulita',
     'usecases.email.use2': 'Formatta newsletter con spazi precisi',
     'usecases.email.use3': 'Progetta layout email minimalisti',
     'usecases.email.use4': 'Aggiungi spazi sottili per enfatizzare le informazioni importanti',
-    
+
     // Why Use Invisible Text translations
     'why.title': 'Perché Usare il Nostro Generatore di Testo Invisibile?',
     'why.intro': 'La domanda cruciale: quale sito scegliere per generare caratteri vuoti? Invisibletext.me è stato progettato su misura per le tue esigenze, offrendo funzionalità esclusive. Copia e incolla caratteri invisibili in un attimo per risparmiare tempo!',
@@ -2706,31 +2726,31 @@ export const ui = {
     'why.whyuse.use5': 'Nascondi messaggi in piena vista in modo discreto',
     'why.whyuse.use6': 'Supera le limitazioni di caratteri su alcune piattaforme',
     'why.whyuse.use7': 'Crea effetti speciali nei post sui social media',
-    
+
     'why.features.easyToUse.title': 'Facile da Usare',
     'why.features.easyToUse.description': 'Il nostro strumento per il testo vuoto è intuitivo: basta un clic su "Copia" (Metodo 1) per stupire subito i tuoi amici sui social.',
-    
+
     'why.features.totallyFree.title': 'Completamente Gratuito',
     'why.features.totallyFree.description': 'Usa il nostro generatore di testo invisibile senza costi – disponibile su ogni dispositivo, senza costi nascosti.',
-    
+
     'why.features.unlimitedCharacters.title': 'Caratteri Illimitati',
     'why.features.unlimitedCharacters.description': 'Genera quanti caratteri invisibili desideri. Tweeta messaggi completamente vuoti e sfrutta opzioni uniche difficilmente trovabili altrove.',
-    
+
     'why.features.oneClickCopy.title': 'Copia con Un Solo Clic',
     'why.features.oneClickCopy.description': 'Con un solo clic puoi copiare il testo invisibile. Tre semplici metodi ti permettono di copiare direttamente o di generare il numero desiderato di caratteri.',
-    
+
     'why.features.noSignup.title': 'Nessuna Registrazione Necessaria',
     'why.features.noSignup.description': 'Non è richiesta installazione o registrazione – usa subito il nostro strumento online e risparmia tempo.',
-    
+
     'why.features.accessible.title': 'Accessibile Ovunque',
     'why.features.accessible.description': 'Il nostro generatore funziona su tutti i dispositivi moderni – desktop, tablet o smartphone – basta una connessione Internet.',
-    
+
     'why.features.accuracy.title': 'Precisione Garantita',
     'why.features.accuracy.description': 'Il nostro generatore di testo invisibile offre risultati precisi. Segui le istruzioni, copia il testo e ottieni immediatamente il risultato desiderato.',
-    
+
     'why.features.multipleLanguages.title': 'Multilingue',
     'why.features.multipleLanguages.description': 'Il nostro strumento è disponibile in varie lingue per facilitare l’uso a livello internazionale. Le istruzioni sono tradotte in: EN, DE, ES, FR, ID, IT, NL, PT.',
-    
+
     'why.benefits.title': 'Ulteriori Vantaggi',
     'why.benefits.privacy.title': 'Rispetto della Privacy',
     'why.benefits.privacy.description': 'Non tracciamo i tuoi dati e non li memorizziamo. Il tuo testo invisibile rimane privato.',
@@ -2738,26 +2758,26 @@ export const ui = {
     'why.benefits.creative.description': 'Esprimi la tua creatività in modo unico con caratteri invisibili in messaggi e profili, per design innovativi.',
     'why.benefits.performance.title': 'Prestazioni Veloci',
     'why.benefits.performance.description': 'Genera caratteri invisibili in un attimo, senza ritardi o tempi di attesa.',
-    
+
     // FAQ translations
     'faq.title': 'Domande Frequenti',
     'faq.subtitle': 'Trova le risposte alle domande comuni sul testo invisibile e su come usarlo',
-    
+
     'faq.q1': 'Cos’è il testo invisibile?',
     'faq.a1': 'Il testo invisibile è composto da caratteri Unicode speciali che occupano spazio senza essere visibili. Questi caratteri, conformi allo standard Unicode, possono essere utilizzati nella maggior parte dei campi di testo, sui social network, nelle app di messaggistica e altro ancora.',
-    
+
     'faq.q2': 'I caratteri invisibili sono sicuri da usare?',
     'faq.a2': 'Sì, i caratteri invisibili sono completamente sicuri. Essendo caratteri standard Unicode, non danneggiano il tuo dispositivo o le tue applicazioni; tuttavia, alcune piattaforme potrebbero limitarne l’uso.',
-    
+
     'faq.q3': 'Perché dovrei usare i caratteri invisibili?',
     'faq.a3': 'I caratteri invisibili offrono numerose applicazioni creative, come la creazione di username unici, l’invio di messaggi vuoti, la personalizzazione degli spazi nei post sui social media o la progettazione di layout testuali artistici.',
-    
+
     'faq.q4': 'Funzionano su tutte le piattaforme?',
     'faq.a4': 'La maggior parte dei caratteri invisibili è supportata dalle principali piattaforme, anche se la compatibilità può variare. Alcune piattaforme potrebbero filtrare o sostituire determinati caratteri.',
-    
+
     'faq.q5': 'Posso usarli per le password?',
     'faq.a5': 'Anche se tecnicamente possibile, non consigliamo di utilizzare i caratteri invisibili per le password, poiché possono risultare difficili da ricordare e da digitare, e alcuni sistemi potrebbero rifiutarli.',
-    
+
     'faq.q6': 'Come faccio a sapere se il carattere invisibile è stato copiato?',
     'faq.a6': 'Dopo aver cliccato sul pulsante di copia, apparirà un messaggio di conferma. Puoi anche incollare il testo nell’area di test per verificare che sia stato copiato correttamente.',
 
@@ -2766,40 +2786,40 @@ export const ui = {
     'terms.introduction.title': 'Introduzione',
     'terms.introduction.description': 'Benvenuto su InvisibleText. Accedendo o utilizzando il nostro sito web, accetti di essere vincolato da questi Termini di Servizio.',
     'terms.introduction.agreement': 'Si prega di leggere attentamente questi termini prima di utilizzare il nostro servizio. Se non sei d\'accordo con qualsiasi parte di questi termini, non puoi utilizzare il nostro servizio.',
-    
+
     'terms.usage.title': 'Uso Accettabile',
     'terms.usage.description': 'Quando utilizzi InvisibleText, accetti di seguire queste linee guida:',
     'terms.usage.rule1': 'Utilizzare il servizio solo per scopi legali',
     'terms.usage.rule2': 'Non utilizzare caratteri invisibili per scopi ingannevoli o dannosi',
     'terms.usage.rule3': 'Non tentare di interrompere o interferire con il servizio',
     'terms.usage.rule4': 'Non utilizzare il servizio per distribuire malware o contenuti dannosi',
-    
+
     'terms.intellectual.title': 'Proprietà Intellettuale',
     'terms.intellectual.description': 'Il servizio InvisibleText, inclusi tutti i contenuti, le caratteristiche e le funzionalità, è di nostra proprietà ed è protetto da copyright, marchi e altre leggi sulla proprietà intellettuale.',
     'terms.intellectual.ownership': 'Non puoi riprodurre, distribuire, modificare, creare opere derivate, mostrare pubblicamente, eseguire pubblicamente, ripubblicare, scaricare, memorizzare o trasmettere qualsiasi materiale del nostro sito web senza il nostro previo consenso scritto.',
-    
+
     'terms.disclaimer.title': 'Esclusione di Garanzie',
     'terms.disclaimer.description': 'Il servizio InvisibleText è fornito "così com\'è" e "come disponibile" senza garanzie di alcun tipo, espresse o implicite.',
     'terms.disclaimer.warranty': 'Non garantiamo che il servizio sarà ininterrotto, tempestivo, sicuro o privo di errori, o che i risultati che possono essere ottenuti dall\'uso del servizio saranno accurati o affidabili.',
-    
+
     'terms.limitation.title': 'Limitazione di Responsabilità',
     'terms.limitation.description': 'In nessun caso InvisibleText, i suoi direttori, dipendenti, partner, agenti, fornitori o affiliati saranno responsabili per danni indiretti, incidentali, speciali, consequenziali o punitivi, inclusi, senza limitazione, perdita di profitti, dati, utilizzo, avviamento o altre perdite immateriali.',
-    
+
     'terms.changes.title': 'Modifiche ai Termini',
     'terms.changes.description': 'Ci riserviamo il diritto di modificare o sostituire questi Termini in qualsiasi momento. È tua responsabilità controllare periodicamente questi Termini per verificare eventuali modifiche.',
-    
+
     'terms.contact.title': 'Contattaci',
     'terms.contact.description': 'Se hai domande su questi Termini, contattaci all\'indirizzo contact@invisibletext.example.com.',
-    
+
     'terms.lastUpdated': 'Ultimo Aggiornamento',
     'terms.date': '28 marzo 2023',
-    
+
     // Privacy Page
     'privacy.title': 'Informativa sulla Privacy',
     'privacy.introduction.title': 'Introduzione',
     'privacy.introduction.description': 'In InvisibleText, rispettiamo la tua privacy e ci impegniamo a proteggere i tuoi dati personali.',
     'privacy.introduction.commitment': 'Questa Informativa sulla Privacy spiega come raccogliamo, utilizziamo e salvaguardiamo le tue informazioni quando utilizzi il nostro servizio.',
-    
+
     'privacy.information.title': 'Informazioni che Raccogliamo',
     'privacy.information.description': 'Raccogliamo e utilizziamo diversi tipi di informazioni quando accedi al nostro servizio:',
     'privacy.information.collected.title': 'Informazioni che Potremmo Raccogliere:',
@@ -2810,32 +2830,32 @@ export const ui = {
     'privacy.information.notCollected.item1': 'Informazioni di Identificazione Personale: Non ti chiediamo di fornire il tuo nome, email o altri dettagli personali per utilizzare il nostro servizio di base',
     'privacy.information.notCollected.item2': 'Informazioni di Pagamento: Non raccogliamo né memorizziamo dettagli di pagamento',
     'privacy.information.notCollected.item3': 'Contenuto: Non memorizziamo né monitoriamo il testo invisibile che generi',
-    
+
     'privacy.usage.title': 'Come Utilizziamo le Tue Informazioni',
     'privacy.usage.description': 'Utilizziamo le informazioni che raccogliamo per i seguenti scopi:',
     'privacy.usage.purpose1': 'Per fornire e mantenere il nostro servizio',
     'privacy.usage.purpose2': 'Per migliorare e ottimizzare il nostro servizio',
     'privacy.usage.purpose3': 'Per monitorare l\'utilizzo del nostro servizio e rilevare problemi tecnici',
-    
+
     'privacy.cookies.title': 'Cookie e Tracciamento',
     'privacy.cookies.description': 'Utilizziamo cookie e tecnologie di tracciamento simili per monitorare l\'attività sul nostro servizio e memorizzare determinate informazioni.',
     'privacy.cookies.management': 'Puoi istruire il tuo browser a rifiutare tutti i cookie o a indicare quando viene inviato un cookie. Tuttavia, se non accetti i cookie, potresti non essere in grado di utilizzare alcune parti del nostro servizio.',
-    
+
     'privacy.thirdParty.title': 'Servizi di Terze Parti',
     'privacy.thirdParty.description': 'Il nostro servizio può contenere collegamenti a siti web o servizi di terze parti che non sono di proprietà o controllati da InvisibleText. Non abbiamo alcun controllo su, e non ci assumiamo alcuna responsabilità per, il contenuto, le politiche sulla privacy o le pratiche di siti web o servizi di terze parti.',
-    
+
     'privacy.security.title': 'Sicurezza dei Dati',
     'privacy.security.description': 'La sicurezza dei tuoi dati è importante per noi, ma ricorda che nessun metodo di trasmissione su Internet o metodo di archiviazione elettronica è sicuro al 100%. Mentre ci sforziamo di utilizzare mezzi commercialmente accettabili per proteggere le tue informazioni, non possiamo garantirne la sicurezza assoluta.',
-    
+
     'privacy.changes.title': 'Modifiche a Questa Informativa sulla Privacy',
     'privacy.changes.description': 'Potremmo aggiornare la nostra Informativa sulla Privacy di tanto in tanto. Ti informeremo di eventuali modifiche pubblicando la nuova Informativa sulla Privacy su questa pagina e aggiornando la data di "Ultimo Aggiornamento".',
-    
+
     'privacy.contact.title': 'Contattaci',
     'privacy.contact.description': 'Se hai domande su questa Informativa sulla Privacy, contattaci all\'indirizzo privacy@invisibletext.example.com.',
-    
+
     'privacy.lastUpdated': 'Ultimo Aggiornamento',
     'privacy.date': '28 marzo 2023',
-    
+
     // Contact Page
     'contact.title': 'Contattaci',
     'contact.description': 'Hai domande, suggerimenti o hai bisogno di assistenza? Ci piacerebbe sentirti! Compila il modulo sottostante e ti risponderemo il prima possibile.',
@@ -2848,27 +2868,27 @@ export const ui = {
     'contact.email': 'Email',
     'contact.address': 'Indirizzo',
     'contact.form.success': 'Grazie per il tuo messaggio! Ti risponderemo presto.',
-    
+
     // About Page
     'about.title': 'Chi Siamo',
     'about.story.title': 'La Nostra Storia',
     'about.story.paragraph1': 'InvisibleText è iniziato come una semplice idea nel 2020 quando il nostro fondatore ha notato la crescente necessità di caratteri invisibili nella comunicazione digitale. Ciò che è iniziato come un progetto personale si è rapidamente evoluto in uno strumento completo utilizzato da migliaia di persone in tutto il mondo.',
     'about.story.paragraph2': 'Il nostro team di sviluppatori e designer ha lavorato instancabilmente per creare una piattaforma user-friendly che rende la generazione e l\'utilizzo di caratteri invisibili il più semplice possibile. Abbiamo continuamente migliorato il nostro servizio in base al feedback degli utenti e ai progressi tecnologici.',
     'about.story.paragraph3': 'Oggi, InvisibleText è il principale fornitore di strumenti per la generazione di caratteri invisibili, al servizio di utenti di comunità di gioco, piattaforme di social media e professionisti creativi in tutto il mondo.',
-    
+
     'about.mission.title': 'La Nostra Missione',
     'about.mission.paragraph1': 'In InvisibleText, la nostra missione è fornire strumenti accessibili, affidabili e innovativi per generare e utilizzare caratteri invisibili. Crediamo nel dare potere agli utenti con la capacità di personalizzare la loro presenza digitale in modi unici e creativi.',
     'about.mission.paragraph2': 'Ci impegniamo a mantenere un servizio gratuito e accessibile mentre miglioriamo continuamente i nostri strumenti e ampliamo le nostre offerte per soddisfare le esigenze in evoluzione dei nostri utenti.',
-    
+
     'about.mission.value1.title': 'Accessibilità',
     'about.mission.value1.description': 'Crediamo che tutti dovrebbero avere accesso ai nostri strumenti, indipendentemente dall\'esperienza tecnica o dal background.',
-    
+
     'about.mission.value2.title': 'Innovazione',
     'about.mission.value2.description': 'Esploriamo continuamente nuovi modi per migliorare il nostro servizio e fornire soluzioni innovative.',
-    
+
     'about.mission.value3.title': 'Trasparenza',
     'about.mission.value3.description': 'Manteniamo una comunicazione aperta con i nostri utenti e siamo trasparenti riguardo alle nostre pratiche.',
-    
+
     'about.team.title': 'Il Nostro Team',
     'about.team.description': 'Incontra le persone appassionate dietro InvisibleText che lavorano insieme per fornirti i migliori strumenti di generazione di caratteri invisibili.',
     'about.team.member1.role': 'Fondatore e Sviluppatore Principale',
@@ -2882,7 +2902,7 @@ export const ui = {
     //meta's
     'meta.title': 'Texto Invisível - Pequeno, Médio, & Grande Caractere',
     'meta.description': 'Copie letras invisível para fazer nomes invisíveis no Free Fire com espaços em branco ou texto invisível. Copie e cole espaço invisível para esconder seu nome!',
-    'meta.keywords': 'texto invisível, caracteres invisíveis, espaços em branco, gerador de texto invisível, copiar e colar texto invisível, espaços em branco ilimitados, otimização SEO',      
+    'meta.keywords': 'texto invisível, caracteres invisíveis, espaços em branco, gerador de texto invisível, copiar e colar texto invisível, espaços em branco ilimitados, otimização SEO',
     // Header translations
     'header.brand': 'INVISIBLETEXT',
     'header.blog': 'Blog',
@@ -3072,7 +3092,7 @@ export const ui = {
     'usecases.messaging.title': 'Aplicativos de Mensagens',
     'usecases.messaging.description': 'O texto invisível pode dar um toque divertido às suas conversas. Copie e cole o texto invisível nos chats para enviar mensagens que aparentam estar vazias, mas que contêm informações ocultas.',
     'usecases.messaging.additionalInfo': 'Por exemplo, o WhatsApp não permite enviar mensagens completamente vazias. Nosso site permite que você envie caracteres invisíveis facilmente, revelando mensagens secretas.',
-    
+
     'usecases.whatsapp.title': 'WhatsApp',
     'usecases.whatsapp.description': 'Quer enviar mensagens invisíveis no WhatsApp para confundir seus amigos? É uma brincadeira divertida que certamente surpreenderá. Envie mensagens vazias para criar um ar de mistério.',
     'usecases.whatsapp.instructions': 'Basta copiar o texto vazio do nosso site e colar na conversa do WhatsApp para causar surpresa.',
@@ -3081,7 +3101,7 @@ export const ui = {
     'usecases.whatsapp.use2': 'Crie espaçamentos entre parágrafos em mensagens longas',
     'usecases.whatsapp.use3': 'Faça seu status parecer minimalista',
     'usecases.whatsapp.use4': 'Crie layouts artísticos nos seus textos',
-    
+
     'usecases.twitter.title': 'Tweet em Branco no X (antigo Twitter)',
     'usecases.twitter.description': 'Envie tweets vazios utilizando caracteres invisíveis para demonstrar sua criatividade e personalizar seu perfil de forma única.',
     'usecases.twitter.uses': 'Usos criativos no Twitter:',
@@ -3089,7 +3109,7 @@ export const ui = {
     'usecases.twitter.use2': 'Adicione espaçamentos entre parágrafos em tweets longos',
     'usecases.twitter.use3': 'Personalize seu nome de exibição com caracteres invisíveis',
     'usecases.twitter.use4': 'Desenvolva perfis minimalistas com espaçamentos estratégicos',
-    
+
     'usecases.othermessaging.title': 'Outros Aplicativos de Mensagens',
     'usecases.slack.title': 'Slack',
     'usecases.slack.description': 'Utilize caracteres invisíveis para criar formatações limpas em suas mensagens de trabalho ou para nomear canais de forma original.',
@@ -3097,7 +3117,7 @@ export const ui = {
     'usecases.instagram.description': 'Crie quebras de linha precisas na sua bio ou legendas, e destaque seu username com caracteres invisíveis.',
     'usecases.facebook.title': 'Facebook',
     'usecases.facebook.description': 'Publique status vazios que chamem a atenção ou crie espaçamentos bem definidos em posts mais longos.',
-    
+
     // Other Use Cases section
     'usecases.other.title': 'Outros Usos Criativos',
     'usecases.documents.title': 'Documentos e Formulários',
@@ -3106,21 +3126,21 @@ export const ui = {
     'usecases.documents.use2': 'Ultrapasse o número mínimo de caracteres exigido',
     'usecases.documents.use3': 'Adicione marcadores invisíveis em PDFs',
     'usecases.documents.use4': 'Formate o texto de maneira criativa',
-    
+
     'usecases.programming.title': 'Programação',
     'usecases.programming.description': 'Desenvolvedores às vezes utilizam caracteres invisíveis para necessidades específicas de formatação ou para testar o tratamento de strings.',
     'usecases.programming.use1': 'Teste o tratamento de strings em aplicações',
     'usecases.programming.use2': 'Crie alinhamentos precisos de texto',
     'usecases.programming.use3': 'Verifique a compatibilidade com Unicode',
     'usecases.programming.use4': 'Formate comentários de código de maneira criativa',
-    
+
     'usecases.design.title': 'Design Criativo',
     'usecases.design.description': 'Designers e artistas podem utilizar caracteres invisíveis para criar layouts textuais únicos e efeitos visuais inovadores.',
     'usecases.design.use1': 'Crie layouts artísticos com texto',
     'usecases.design.use2': 'Desenvolva uma tipografia minimalista',
     'usecases.design.use3': 'Gere espaçamentos únicos em seus designs',
     'usecases.design.use4': 'Formate o texto de maneira não convencional',
-    
+
     // Professional Use Cases
     'usecases.professional.title': 'Aplicações Profissionais',
     'usecases.linkedin.title': 'LinkedIn',
@@ -3194,40 +3214,40 @@ export const ui = {
     'terms.introduction.title': 'Introdução',
     'terms.introduction.description': 'Bem-vindo ao InvisibleText. Ao acessar ou usar nosso site, você concorda em estar vinculado a estes Termos de Serviço.',
     'terms.introduction.agreement': 'Por favor, leia estes termos cuidadosamente antes de usar nosso serviço. Se você não concordar com qualquer parte destes termos, você não poderá usar nosso serviço.',
-    
+
     'terms.usage.title': 'Uso Aceitável',
     'terms.usage.description': 'Ao usar o InvisibleText, você concorda em seguir estas diretrizes:',
     'terms.usage.rule1': 'Use o serviço apenas para fins legais',
     'terms.usage.rule2': 'Não use caracteres invisíveis para fins enganosos ou prejudiciais',
     'terms.usage.rule3': 'Não tente interromper ou interferir no serviço',
     'terms.usage.rule4': 'Não use o serviço para distribuir malware ou conteúdo prejudicial',
-    
+
     'terms.intellectual.title': 'Propriedade Intelectual',
     'terms.intellectual.description': 'O serviço InvisibleText, incluindo todo o conteúdo, recursos e funcionalidades, é de nossa propriedade e está protegido por direitos autorais, marcas registradas e outras leis de propriedade intelectual.',
     'terms.intellectual.ownership': 'Você não pode reproduzir, distribuir, modificar, criar trabalhos derivados, exibir publicamente, executar publicamente, republicar, baixar, armazenar ou transmitir qualquer material de nosso site sem nosso consentimento prévio por escrito.',
-    
+
     'terms.disclaimer.title': 'Isenção de Garantias',
     'terms.disclaimer.description': 'O serviço InvisibleText é fornecido "como está" e "conforme disponível" sem garantias de qualquer tipo, expressas ou implícitas.',
     'terms.disclaimer.warranty': 'Não garantimos que o serviço será ininterrupto, oportuno, seguro ou livre de erros, ou que os resultados que possam ser obtidos do uso do serviço serão precisos ou confiáveis.',
-    
+
     'terms.limitation.title': 'Limitação de Responsabilidade',
     'terms.limitation.description': 'Em nenhum caso o InvisibleText, seus diretores, funcionários, parceiros, agentes, fornecedores ou afiliados serão responsáveis por quaisquer danos indiretos, incidentais, especiais, consequenciais ou punitivos, incluindo, sem limitação, perda de lucros, dados, uso, boa vontade ou outras perdas intangíveis.',
-    
+
     'terms.changes.title': 'Alterações nos Termos',
     'terms.changes.description': 'Reservamo-nos o direito de modificar ou substituir estes Termos a qualquer momento. É sua responsabilidade verificar estes Termos periodicamente para alterações.',
-    
+
     'terms.contact.title': 'Contate-nos',
     'terms.contact.description': 'Se você tiver alguma dúvida sobre estes Termos, entre em contato conosco em contact@invisibletext.example.com.',
-    
+
     'terms.lastUpdated': 'Última Atualização',
     'terms.date': '28 de março de 2023',
-    
+
     // Privacy Page
     'privacy.title': 'Política de Privacidade',
     'privacy.introduction.title': 'Introdução',
     'privacy.introduction.description': 'No InvisibleText, respeitamos sua privacidade e estamos comprometidos em proteger seus dados pessoais.',
     'privacy.introduction.commitment': 'Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações quando você usa nosso serviço.',
-    
+
     'privacy.information.title': 'Informações que Coletamos',
     'privacy.information.description': 'Coletamos e usamos diferentes tipos de informações quando você acessa nosso serviço:',
     'privacy.information.collected.title': 'Informações que Podemos Coletar:',
@@ -3238,32 +3258,32 @@ export const ui = {
     'privacy.information.notCollected.item1': 'Informações de Identificação Pessoal: Não exigimos que você forneça seu nome, e-mail ou outros detalhes pessoais para usar nosso serviço básico',
     'privacy.information.notCollected.item2': 'Informações de Pagamento: Não coletamos nem armazenamos detalhes de pagamento',
     'privacy.information.notCollected.item3': 'Conteúdo: Não armazenamos nem monitoramos o texto invisível que você gera',
-    
+
     'privacy.usage.title': 'Como Usamos Suas Informações',
     'privacy.usage.description': 'Usamos as informações que coletamos para os seguintes propósitos:',
     'privacy.usage.purpose1': 'Para fornecer e manter nosso serviço',
     'privacy.usage.purpose2': 'Para melhorar e otimizar nosso serviço',
     'privacy.usage.purpose3': 'Para monitorar o uso de nosso serviço e detectar problemas técnicos',
-    
+
     'privacy.cookies.title': 'Cookies e Rastreamento',
     'privacy.cookies.description': 'Usamos cookies e tecnologias de rastreamento semelhantes para rastrear atividades em nosso serviço e armazenar certas informações.',
     'privacy.cookies.management': 'Você pode instruir seu navegador a recusar todos os cookies ou a indicar quando um cookie está sendo enviado. No entanto, se você não aceitar cookies, poderá não conseguir usar algumas partes de nosso serviço.',
-    
+
     'privacy.thirdParty.title': 'Serviços de Terceiros',
     'privacy.thirdParty.description': 'Nosso serviço pode conter links para sites ou serviços de terceiros que não são de propriedade ou controlados pelo InvisibleText. Não temos controle sobre e não assumimos responsabilidade pelo conteúdo, políticas de privacidade ou práticas de sites ou serviços de terceiros.',
-    
+
     'privacy.security.title': 'Segurança de Dados',
     'privacy.security.description': 'A segurança de seus dados é importante para nós, mas lembre-se de que nenhum método de transmissão pela Internet ou método de armazenamento eletrônico é 100% seguro. Embora nos esforcemos para usar meios comercialmente aceitáveis para proteger suas informações, não podemos garantir sua segurança absoluta.',
-    
+
     'privacy.changes.title': 'Alterações nesta Política de Privacidade',
     'privacy.changes.description': 'Podemos atualizar nossa Política de Privacidade de tempos em tempos. Notificaremos você sobre quaisquer alterações publicando a nova Política de Privacidade nesta página e atualizando a data de "Última Atualização".',
-    
+
     'privacy.contact.title': 'Contate-nos',
     'privacy.contact.description': 'Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco em privacy@invisibletext.example.com.',
-    
+
     'privacy.lastUpdated': 'Última Atualização',
     'privacy.date': '28 de março de 2023',
-    
+
     // Contact Page
     'contact.title': 'Contate-nos',
     'contact.description': 'Tem perguntas, sugestões ou precisa de assistência? Adoraríamos ouvir de você! Preencha o formulário abaixo e entraremos em contato o mais rápido possível.',
@@ -3276,27 +3296,27 @@ export const ui = {
     'contact.email': 'E-mail',
     'contact.address': 'Endereço',
     'contact.form.success': 'Obrigado pela sua mensagem! Entraremos em contato em breve.',
-    
+
     // About Page
     'about.title': 'Sobre Nós',
     'about.story.title': 'Nossa História',
     'about.story.paragraph1': 'O InvisibleText começou como uma ideia simples em 2020 quando nosso fundador notou a crescente necessidade de caracteres invisíveis na comunicação digital. O que começou como um projeto pessoal rapidamente evoluiu para uma ferramenta abrangente usada por milhares de pessoas em todo o mundo.',
     'about.story.paragraph2': 'Nossa equipe de desenvolvedores e designers trabalhou incansavelmente para criar uma plataforma amigável que torna a geração e o uso de caracteres invisíveis o mais simples possível. Melhoramos continuamente nosso serviço com base no feedback dos usuários e avanços tecnológicos.',
     'about.story.paragraph3': 'Hoje, o InvisibleText é o principal fornecedor de ferramentas de geração de caracteres invisíveis, atendendo usuários de comunidades de jogos, plataformas de mídia social e profissionais criativos em todo o mundo.',
-    
+
     'about.mission.title': 'Nossa Missão',
     'about.mission.paragraph1': 'No InvisibleText, nossa missão é fornecer ferramentas acessíveis, confiáveis e inovadoras para gerar e usar caracteres invisíveis. Acreditamos em capacitar os usuários com a habilidade de personalizar sua presença digital de maneiras únicas e criativas.',
     'about.mission.paragraph2': 'Estamos comprometidos em manter um serviço gratuito e acessível enquanto melhoramos continuamente nossas ferramentas e expandimos nossas ofertas para atender às necessidades em evolução de nossos usuários.',
-    
+
     'about.mission.value1.title': 'Acessibilidade',
     'about.mission.value1.description': 'Acreditamos que todos devem ter acesso às nossas ferramentas, independentemente de experiência técnica ou origem.',
-    
+
     'about.mission.value2.title': 'Inovação',
     'about.mission.value2.description': 'Exploramos continuamente novas maneiras de melhorar nosso serviço e fornecer soluções inovadoras.',
-    
+
     'about.mission.value3.title': 'Transparência',
     'about.mission.value3.description': 'Mantemos comunicação aberta com nossos usuários e somos transparentes sobre nossas práticas.',
-    
+
     'about.team.title': 'Nossa Equipe',
     'about.team.description': 'Conheça as pessoas apaixonadas por trás do InvisibleText que trabalham juntas para fornecer as melhores ferramentas de geração de caracteres invisíveis.',
     'about.team.member1.role': 'Fundador e Desenvolvedor Principal',
@@ -3311,7 +3331,7 @@ export const ui = {
     //meta's
     'meta.title': 'Onzichtbare Tekst - Kopieer en Plak Lege Ruimte',
     'meta.description': 'Onzichtbare tekst generator maakt het eenvoudig om lege tekens en ruimte te kopiëren en plakken. Gebruik het voor WhatsApp, Telegram, Instagram, en meer.',
-    'meta.keywords': 'onzichtbare tekst, lege ruimte, Unicode, kopiëren en plakken, generator, WhatsApp, Telegram, Instagram',  
+    'meta.keywords': 'onzichtbare tekst, lege ruimte, Unicode, kopiëren en plakken, generator, WhatsApp, Telegram, Instagram',
     // Header translations
     'header.brand': 'INVISIBLETEXT',
     'header.blog': 'Blog',
@@ -3444,7 +3464,7 @@ export const ui = {
     // Gaming section
     'usecases.gaming.title': 'Gebruikersnamen en Gameprofielen',
     'usecases.gaming.description': 'Gamer gebruiken onzichtbare tekens op een creatieve manier om unieke gebruikersnamen en chatberichten te maken. Deze techniek stelt hen in staat om beperkingen te omzeilen en memorabele identiteiten te creëren – een populaire trend in spellen zoals Fortnite en PUBG.',
-    
+
     'usecases.fortnite.title': 'Gebruik van Onzichtbare Tekst in Fortnite',
     'usecases.fortnite.description': 'Het gebruik van onzichtbare tekst in gaming stelt spelers in staat hun ervaring te personaliseren en discreet te communiceren door berichten te verzenden die onopgemerkt blijven door tegenstanders.',
     'usecases.fortnite.howto': 'Hoe gebruik je onzichtbare tekens in Fortnite:',
@@ -3501,7 +3521,7 @@ export const ui = {
     'usecases.messaging.title': 'Berichtapps',
     'usecases.messaging.description': 'Onzichtbare tekst voegt een speelse toets toe aan je gesprekken. Kopieer en plak de onzichtbare tekst in je chats om berichten te verzenden die leeg lijken maar verborgen informatie bevatten.',
     'usecases.messaging.additionalInfo': 'Bijvoorbeeld, WhatsApp staat geen volledig lege berichten toe. Onze website maakt het eenvoudig om onzichtbare tekens te versturen, waardoor geheime boodschappen worden onthuld.',
-    
+
     'usecases.whatsapp.title': 'WhatsApp',
     'usecases.whatsapp.description': 'Wil je onzichtbare berichten sturen op WhatsApp om je vrienden te verrassen? Het is een leuke grap die zeker de aandacht trekt. Verstuur lege berichten om een mysterieus effect te creëren.',
     'usecases.whatsapp.instructions': 'Kopieer simpelweg de lege tekst van onze website en plak deze in je WhatsApp-chat om een verrassing te veroorzaken.',
@@ -3510,7 +3530,7 @@ export const ui = {
     'usecases.whatsapp.use2': 'Creëer spatiëring tussen paragrafen in lange berichten',
     'usecases.whatsapp.use3': 'Laat je status minimalistisch lijken',
     'usecases.whatsapp.use4': 'Ontwerp artistieke tekstlay-outs in je berichten',
-    
+
     'usecases.twitter.title': 'Lege Tweet op X (voorheen Twitter)',
     'usecases.twitter.description': 'Verstuur lege tweets met onzichtbare tekens om je creativiteit te tonen en je profiel uniek te maken.',
     'usecases.twitter.uses': 'Creatieve toepassingen op Twitter:',
@@ -3518,7 +3538,7 @@ export const ui = {
     'usecases.twitter.use2': 'Voeg spatiëring toe tussen paragrafen in lange tweets',
     'usecases.twitter.use3': 'Personaliseer je weergavenaam met onzichtbare tekens',
     'usecases.twitter.use4': 'Ontwerp minimalistische profielen met strategische spatiëring',
-    
+
     'usecases.othermessaging.title': 'Andere Berichtplatforms',
     'usecases.slack.title': 'Slack',
     'usecases.slack.description': 'Gebruik onzichtbare tekens voor een strakke opmaak in je zakelijke berichten of om originele kanaalnamen te creëren.',
@@ -3526,7 +3546,7 @@ export const ui = {
     'usecases.instagram.description': 'Creëer nette regeleinden in je bio of bij captions, en laat je gebruikersnaam opvallen met onzichtbare tekens.',
     'usecases.facebook.title': 'Facebook',
     'usecases.facebook.description': 'Plaats lege statusupdates die de aandacht trekken of creëer nette spatiëring in langere berichten.',
-    
+
     // Other Use Cases section
     'usecases.other.title': 'Andere Creatieve Toepassingen',
     'usecases.documents.title': 'Documenten & Formulieren',
@@ -3535,21 +3555,21 @@ export const ui = {
     'usecases.documents.use2': 'Overschrijd de minimale tekenvereisten',
     'usecases.documents.use3': 'Voeg onzichtbare bladwijzers toe in PDF\'s',
     'usecases.documents.use4': 'Formatteer tekst op een creatieve manier',
-    
+
     'usecases.programming.title': 'Programmering',
     'usecases.programming.description': 'Ontwikkelaars gebruiken soms onzichtbare tekens voor specifieke opmaakbehoeften of om stringverwerking te testen.',
     'usecases.programming.use1': 'Test stringverwerking in applicaties',
     'usecases.programming.use2': 'Creëer precieze tekstuitlijning',
     'usecases.programming.use3': 'Controleer Unicode-compatibiliteit',
     'usecases.programming.use4': 'Formatteer codecommentaar op een originele manier',
-    
+
     'usecases.design.title': 'Creatief Ontwerp',
     'usecases.design.description': 'Designers en kunstenaars kunnen onzichtbare tekens inzetten om unieke tekstlayouts en opvallende visuele effecten te creëren.',
     'usecases.design.use1': 'Ontwerp artistieke tekstlayouts',
     'usecases.design.use2': 'Creëer een minimalistische typografie',
     'usecases.design.use3': 'Genereer unieke spatiëring in je ontwerpen',
     'usecases.design.use4': 'Formatteer tekst op onconventionele wijze',
-    
+
     // Professional Use Cases
     'usecases.professional.title': 'Professionele Toepassingen',
     'usecases.linkedin.title': 'LinkedIn',
@@ -3618,7 +3638,7 @@ export const ui = {
     'faq.a6': 'Na het klikken op de kopieerknop verschijnt er een bevestigingsbericht. Je kunt ook de tekst in het testgebied plakken om te controleren of deze correct is gekopieerd.',
 
 
-      // Blog section translations
+    // Blog section translations
     'blog.title': 'Het Laatste uit Onze Blog',
     'blog.subtitle': 'Ontdek meer over onzichtbare tekens en hun creatieve toepassingen',
     'blog.readMore': 'Lees Meer',
@@ -3738,7 +3758,7 @@ export const ui = {
     'about.team.member2.bio': "Maria gebruikt haar expertise in gebruikerservaring om ervoor te zorgen dat onze tools intuïtief, toegankelijk en visueel aantrekkelijk zijn.",
     'about.team.member3.role': "Full-Stack Ontwikkelaar",
     'about.team.member3.bio': "David is gespecialiseerd in prestatieoptimalisatie en zorgt ervoor dat onze service soepel en efficiënt draait voor alle gebruikers.",
-    
+
   },
   ru: {
     //meta's
@@ -3877,7 +3897,7 @@ export const ui = {
     // Gaming section
     'usecases.gaming.title': 'Ники и игровые профили',
     'usecases.gaming.description': 'Геймеры творчески используют невидимые символы для создания уникальных ников и чатов. Эта технология позволяет обходить ограничения игр и создавать запоминающиеся идентичности – популярная тенденция в Fortnite и PUBG.',
-    
+
     'usecases.fortnite.title': 'Использование невидимого текста в Fortnite',
     'usecases.fortnite.description': 'Использование невидимого текста позволяет игрокам персонализировать игровой опыт и тайно обмениваться сообщениями, оставаясь незамеченными противниками. Попробуйте наш генератор невидимого текста для создания уникального стиля в Fortnite.',
     'usecases.fortnite.howto': 'Как использовать невидимые символы в Fortnite:',
@@ -3919,7 +3939,7 @@ export const ui = {
     'usecases.messaging.title': 'Мессенджеры',
     'usecases.messaging.description': 'Невидимый текст добавляет игривый штрих вашим сообщениям. Копируйте и вставляйте невидимый текст в чаты, чтобы отправлять сообщения, которые выглядят пустыми, но содержат скрытую информацию.',
     'usecases.messaging.additionalInfo': 'Например, WhatsApp не позволяет отправлять полностью пустые сообщения. Наш сайт позволяет легко отправлять невидимые символы, раскрывая секретные послания.',
-    
+
     'usecases.whatsapp.title': 'WhatsApp',
     'usecases.whatsapp.description': 'Хотите отправить невидимые сообщения в WhatsApp, чтобы удивить друзей? Это забавный трюк, который точно привлечёт внимание. Отправляйте пустые сообщения для создания эффекта загадочности.',
     'usecases.whatsapp.instructions': 'Просто скопируйте пустой текст с нашего сайта и вставьте его в чат WhatsApp, чтобы произвести эффект неожиданности.',
@@ -3928,7 +3948,7 @@ export const ui = {
     'usecases.whatsapp.use2': 'Создавайте пробелы между абзацами в длинных сообщениях',
     'usecases.whatsapp.use3': 'Сделайте статус минималистичным',
     'usecases.whatsapp.use4': 'Разрабатывайте художественные текстовые макеты в сообщениях',
-    
+
     'usecases.twitter.title': 'Пустой твит в X (бывший Twitter)',
     'usecases.twitter.description': 'Отправляйте пустые твиты с невидимыми символами, чтобы продемонстрировать своё творчество и сделать профиль уникальным.',
     'usecases.twitter.uses': 'Креативные применения в Twitter:',
@@ -3936,7 +3956,7 @@ export const ui = {
     'usecases.twitter.use2': 'Добавляйте пробелы между абзацами в длинных твитах',
     'usecases.twitter.use3': 'Персонализируйте отображаемое имя с помощью невидимых символов',
     'usecases.twitter.use4': 'Разрабатывайте минималистичные профили с продуманной спатирацией',
-    
+
     'usecases.othermessaging.title': 'Другие мессенджеры',
     'usecases.slack.title': 'Slack',
     'usecases.slack.description': 'Используйте невидимые символы для чистого оформления деловых сообщений или для создания оригинальных названий каналов.',
@@ -3953,21 +3973,21 @@ export const ui = {
     'usecases.documents.use2': 'Обходите минимальные требования к символам',
     'usecases.documents.use3': 'Добавляйте невидимые закладки в PDF-файлы',
     'usecases.documents.use4': 'Форматируйте текст творчески',
-    
+
     'usecases.programming.title': 'Программирование',
     'usecases.programming.description': 'Разработчики иногда используют невидимые символы для специальных требований форматирования или для тестирования обработки строк.',
     'usecases.programming.use1': 'Тестируйте обработку строк в приложениях',
     'usecases.programming.use2': 'Создавайте точное выравнивание текста',
     'usecases.programming.use3': 'Проверяйте совместимость с Unicode',
     'usecases.programming.use4': 'Форматируйте комментарии к коду творчески',
-    
+
     'usecases.design.title': 'Креативный Дизайн',
     'usecases.design.description': 'Дизайнеры и художники могут использовать невидимые символы для создания уникальных текстовых макетов и запоминающихся визуальных эффектов.',
     'usecases.design.use1': 'Разрабатывайте художественные текстовые макеты',
     'usecases.design.use2': 'Создавайте минималистичную типографику',
     'usecases.design.use3': 'Генерируйте уникальные отступы в дизайне',
     'usecases.design.use4': 'Форматируйте текст нестандартными способами',
-    
+
     // Professional Use Cases
     'usecases.professional.title': 'Профессиональные Применения',
     'usecases.linkedin.title': 'LinkedIn',
@@ -4036,7 +4056,7 @@ export const ui = {
     'faq.a6': 'После нажатия на кнопку копирования вы увидите сообщение с подтверждением. Вы также можете вставить символ в тестовое поле, чтобы убедиться, что он был скопирован правильно.',
 
 
-      // Blog section translations
+    // Blog section translations
     'blog.title': 'Последние новости из нашего блога',
     'blog.subtitle': 'Узнайте больше о невидимых символах и их креативном использовании',
     'blog.readMore': 'Читать далее',
@@ -4170,7 +4190,7 @@ export const ui = {
     "header.contact": "연락처",
     "header.privacy": "개인정보 보호",
     "header.selectLanguage": "언어 선택",
-  
+
     // Invisible Text Generator translations
     "invisibletext.brand": "INVISIBLETEXT",
     "invisibletext.title": "보이지 않는 문자",
@@ -4196,11 +4216,11 @@ export const ui = {
     "invisibletext.generate": "생성",
     "invisibletext.toast.copied": "클립보드에 복사됨!",
     "invisibletext.toast.generated": "생성되어 클립보드에 복사됨!",
-  
+
     // What Is Section
     "whatis.title": "보이지 않는 텍스트란?",
     "whatis.des": "보이지 않는 텍스트는 공간을 차지하지만 표시될 때는 보이지 않는 특수 유니코드 문자들로 구성됩니다.",
-  
+
     // About Invisible Text translations
     "about.introduction.title": "InvisibleText.me 소개",
     "about.introduction.description": "보이지 않는 텍스트는 아무 기호나 공간도 표시하지 않는 특수 유니코드 문자입니다. 이들은 고유한 유니코드 값을 가지며, 눈에 띄지 않으면서 텍스트 내에 공간을 차지합니다. 이러한 문자는 다양한 응용 프로그램에서 비파괴적인 텍스트 서식을 위해 유용합니다.",
@@ -4215,7 +4235,7 @@ export const ui = {
     "about.types.zeroWidthJoiner.description": "제로 폭 조이너(ZWJ)는 두 문자를 보이는 구분 없이 연결하기 위한 빈 문자입니다. 여러 문자를 단일 단위로 표시해야 하는 복합 스크립트나 이모지 시퀀스 생성에 일반적으로 사용됩니다. 예를 들어, 이모지에서는 가족 아이콘이나 기타 복합 기호를 생성하기 위해 서로 다른 이모지를 결합할 수 있습니다.",
     "about.types.zeroWidthNonJoiner.title": "제로 폭 논조이너 (U+200C)",
     "about.types.zeroWidthNonJoiner.description": "제로 폭 조이너와 달리, 제로 폭 논조이너(ZWNJ)는 문자가 서로 결합하지 않도록 방지합니다. 이는 특정 문자 조합을 분리하여 유지해야 하는 스크립트에서 특히 유용합니다. 복잡한 문자 결합 규칙을 가진 페르시아어나 아랍어와 같은 언어에서 보이지 않는 텍스트의 올바른 표시를 유지하는 데 도움을 줍니다.",
-  
+
     // Unicode Table translations
     "unicode.title": "유니코드 보이지 않는 문자",
     "unicode.subtitle": "보이지 않는 유니코드 문자 및 공백의 포괄적 모음",
@@ -4227,7 +4247,7 @@ export const ui = {
     "unicode.copy": "복사",
     "unicode.toast.copiedTitle": "복사됨!",
     "unicode.toast.copiedDescription": "문자가 클립보드에 복사되었습니다",
-  
+
     // Unicode character descriptions
     "unicode.space.description": "공백",
     "unicode.space.notes": "텍스트에 사용되는 표준 공백 문자입니다. 이는 스페이스 바를 눌렀을 때 생성됩니다.",
@@ -4287,10 +4307,10 @@ export const ui = {
     "unicode.mongolianVowelSeparator.notes": "몽골 텍스트에서 모음을 구분하기 위해 사용됩니다. 일부 플랫폼에서는 보이지 않게 렌더링됩니다.",
     "unicode.braillePatternBlank.description": "점자 패턴 빈칸",
     "unicode.braillePatternBlank.notes": "빈 점자 패턴입니다. 많은 플랫폼에서 보이는 공백으로 나타나지만 보이지 않는 문자로 작동합니다.",
-  
+
     // Practical Use Cases translations
     "usecases.title": "보이지 않는 문자의 실용적인 사용 사례",
-  
+
     // Gaming section
     "usecases.gaming.title": "게임용 사용자 이름 및 프로필",
     "usecases.gaming.description": "게이머들은 인게임 이름과 채팅에서 창의적으로 보이지 않는 문자를 사용합니다. 이러한 문자는 게임 규칙으로 인해 제한되는 경우에도 고유하고 종종 유머러스한 이름을 만들 수 있게 해줍니다.",
@@ -4307,7 +4327,7 @@ export const ui = {
     "usecases.fortnite.use2": "이름의 문자 사이에 공백 추가",
     "usecases.fortnite.use3": "킬 피드에서 이름을 독특하게 표시",
     "usecases.fortnite.use4": "두드러진 클랜 태그 생성",
-  
+
     "usecases.pubg.title": "PUBG (플레이어언노운의 배틀그라운드)에서 보이지 않는 텍스트 사용",
     "usecases.pubg.description": "독특한 사용자 이름을 만드는 것은 PUBG에서 매우 인기 있는 재미있고 창의적인 기능입니다. 사용자 이름에 빈 공간이나 공백 문자를 사용하면 진정으로 고유하게 만들고 개인적인 터치를 추가할 수 있습니다. 사용자 이름을 변경하려면 빈 공간을 복사하여 PUBG 설정에서 붙여넣기만 하면 됩니다.",
     "usecases.pubg.howto": "PUBG에서 보이지 않는 문자를 사용하는 방법:",
@@ -4321,7 +4341,7 @@ export const ui = {
     "usecases.pubg.use2": "독특한 클랜 이름 만들기",
     "usecases.pubg.use3": "문자 사이에 공백 추가",
     "usecases.pubg.use4": "미니멀리스트 프로필 연출",
-  
+
     "usecases.othergames.title": "다른 인기 게임",
     "usecases.othergames.description": "보이지 않는 문자는 다른 많은 인기 게임에서 고유한 사용자 이름과 클랜 태그를 만드는 데 사용할 수 있습니다:",
     "usecases.minecraft.title": "Minecraft",
@@ -4330,12 +4350,12 @@ export const ui = {
     "usecases.callofduty.description": "로비와 킬 피드에서 사용자 이름을 돋보이게 하기 위해 전략적으로 보이지 않는 문자를 사용합니다.",
     "usecases.leagueoflegends.title": "League of Legends",
     "usecases.leagueoflegends.description": "눈길을 끄는 독특한 소환사 이름을 생성하거나 클랜 태그를 특별하게 만듭니다.",
-  
+
     // Messaging Apps section
     "usecases.messaging.title": "메시징 앱",
     "usecases.messaging.description": "메시지에 보이지 않는 글꼴을 사용하는 것은 친구들과 상호작용하거나 채팅에 긴장감을 추가하는 재미있는 방법이 될 수 있습니다. 당사의 웹사이트를 통해 메시지 필드에 보이지 않는 텍스트를 복사하여 붙여넣을 수 있으므로, 비어 있는 것처럼 보이지만 실제로는 숨겨진 텍스트가 포함된 메시지를 보낼 수 있습니다.",
     "usecases.messaging.additionalInfo": "예를 들어, WhatsApp은 빈 메시지를 보내는 것을 허용하지 않지만 이 도구를 사용하면 빈 문자를 쉽게 보낼 수 있습니다. 실제로 이러한 보이지 않는 메시지에는 숨겨진 문자가 포함되어 있습니다.",
-  
+
     "usecases.whatsapp.title": "WhatsApp",
     "usecases.whatsapp.description": "친구들을 혼란스럽게 할 빈 보이지 않는 메시지를 WhatsApp에서 보내고 싶으신가요? 이것은 정말로 그들을 혼란스럽게 하는 재미있는 장난입니다. 빈 메시지를 보내는 것은 보이지 않는 텍스트 도구로 인기 있는 트릭이며, 많은 사람들이 이를 흥미롭게 생각합니다.",
     "usecases.whatsapp.instructions": "웹사이트에서 빈 텍스트를 복사하여 WhatsApp 채팅에 붙여넣어 쉽게 친구들을 놀라게 하세요. 메시지에 신비감을 더하는 재미있는 방법입니다.",
@@ -4344,7 +4364,7 @@ export const ui = {
     "usecases.whatsapp.use2": "긴 메시지에서 단락 사이에 공백 생성",
     "usecases.whatsapp.use3": "상태 메시지를 빈 혹은 미니멀하게 보이게 함",
     "usecases.whatsapp.use4": "메시지에서 예술적인 텍스트 레이아웃 생성",
-  
+
     "usecases.twitter.title": "X (이전 Twitter)에서 빈 트윗",
     "usecases.twitter.description": "빈 이모지로 빈 트윗을 보내거나 사용자 이름에 보이지 않는 문자를 사용해 창의력을 발휘할 수 있습니다.",
     "usecases.twitter.uses": "Twitter에서의 창의적인 사용 사례:",
@@ -4352,7 +4372,7 @@ export const ui = {
     "usecases.twitter.use2": "긴 트윗에서 단락 사이에 공백 추가",
     "usecases.twitter.use3": "보이지 않는 문자를 사용하여 독특한 표시 이름 생성",
     "usecases.twitter.use4": "전략적인 공백을 통해 미니멀한 프로필 생성",
-  
+
     "usecases.othermessaging.title": "기타 메시징 플랫폼",
     "usecases.slack.title": "Slack",
     "usecases.slack.description": "업무 메시지에서 깔끔한 서식이나 독특한 채널 이름을 만들기 위해 보이지 않는 문자를 사용합니다.",
@@ -4360,7 +4380,7 @@ export const ui = {
     "usecases.instagram.description": "프로필 설명이나 캡션에서 깔끔한 줄 바꿈을 생성하거나 사용자 이름을 돋보이게 만듭니다.",
     "usecases.facebook.title": "Facebook",
     "usecases.facebook.description": "주의를 끌기 위해 빈 상태 업데이트를 게시하거나 긴 게시물에서 깔끔한 공백을 생성합니다.",
-  
+
     // Other Use Cases section
     "usecases.other.title": "기타 창의적인 사용 사례",
     "usecases.documents.title": "문서 및 양식",
@@ -4369,21 +4389,21 @@ export const ui = {
     "usecases.documents.use2": "최소 문자 요구사항 우회",
     "usecases.documents.use3": "PDF에서 보이지 않는 북마크 생성",
     "usecases.documents.use4": "창의적인 방식으로 텍스트 서식 적용",
-  
+
     "usecases.programming.title": "프로그래밍",
     "usecases.programming.description": "개발자들은 특정 서식 요구사항이나 테스트 목적으로 보이지 않는 문자를 사용할 때가 있습니다.",
     "usecases.programming.use1": "애플리케이션의 문자열 처리 테스트",
     "usecases.programming.use2": "특정 텍스트 정렬 생성",
     "usecases.programming.use3": "애플리케이션의 유니코드 지원 테스트",
     "usecases.programming.use4": "독특한 방식으로 코드 주석 서식 적용",
-  
+
     "usecases.design.title": "창의적 디자인",
     "usecases.design.description": "디자이너와 아티스트는 보이지 않는 문자를 사용하여 독특한 텍스트 레이아웃 및 시각 효과를 만들 수 있습니다.",
     "usecases.design.use1": "예술적인 텍스트 레이아웃 생성",
     "usecases.design.use2": "미니멀한 타이포그래피 디자인",
     "usecases.design.use3": "디자인에서 독특한 공백 생성",
     "usecases.design.use4": "비정형적인 방식으로 텍스트 서식 적용",
-  
+
     // Professional Use Cases
     "usecases.professional.title": "전문적인 응용 사례",
     "usecases.linkedin.title": "LinkedIn",
@@ -4392,14 +4412,14 @@ export const ui = {
     "usecases.linkedin.use2": "시각적으로 매력적인 게시물 생성",
     "usecases.linkedin.use3": "중요한 포인트를 돋보이게 하기 위한 공백 추가",
     "usecases.linkedin.use4": "미니멀하고 세련된 프로필 생성",
-  
+
     "usecases.email.title": "이메일",
     "usecases.email.description": "보이지 않는 문자를 사용하여 깔끔하고 전문적인 이메일 서식을 만듭니다.",
     "usecases.email.use1": "이메일 서명에 깔끔한 공백 생성",
     "usecases.email.use2": "정확한 공백으로 뉴스레터 서식 지정",
     "usecases.email.use3": "미니멀한 이메일 디자인 생성",
     "usecases.email.use4": "중요한 포인트를 돋보이게 하기 위한 미묘한 공백 추가",
-  
+
     // Why Use Invisible Text translations
     "why.title": "왜 우리의 보이지 않는 텍스트 생성기를 사용해야 하나요?",
     "why.intro": "이제 중요한 질문이 떠오릅니다. 빈 문자를 얻기 위해 어떤 웹사이트를 선택해야 할까요? 왜 invisibletext.me를 선택해야 할까요? 우리는 사용자의 필요에 맞춰 이 보이지 않는 텍스트를 디자인했습니다. 우리의 빈 문자 도구는 독점적인 기능을 제공합니다. 우리의 보이지 않는 텍스트 생성기를 사용하면 시간 낭비 없이 빈 문자를 복사하여 붙여넣을 수 있습니다. 그 탁월한 기능들을 자세히 알아보겠습니다.",
@@ -4412,7 +4432,7 @@ export const ui = {
     "why.whyuse.use5": "평범해 보이는 메시지 속에 숨겨진 메시지 생성 (보안 용도로는 아님)",
     "why.whyuse.use6": "일부 플랫폼의 문자 제한 우회",
     "why.whyuse.use7": "소셜 미디어 게시물에 특별 효과 추가",
-  
+
     "why.features.easyToUse.title": "사용하기 쉬움",
     "why.features.easyToUse.description": "빈 텍스트 도구 사용은 간단합니다. 모든 필요한 기능을 갖추었으며, '복사' 버튼(방법 1)을 클릭하고 소셜 앱에 붙여넣기만 하면 됩니다. 이는 온라인에서 친구들에게 인상 깊게 다가갈 수 있도록 해줍니다.",
     "why.features.totallyFree.title": "완전 무료",
@@ -4429,7 +4449,7 @@ export const ui = {
     "why.features.accuracy.description": "정확성은 모든 도구의 핵심 기능이며, 사용자는 생성 도구 사용 시 좋은 결과를 기대합니다. 단계별 지침을 따라 빈 문자를 복사하여 붙여넣으면 원하는 결과를 얻을 수 있습니다. 정말 간단합니다.",
     "why.features.multipleLanguages.title": "다국어 지원",
     "why.features.multipleLanguages.description": "우리 보이지 않는 텍스트 생성기는 다양한 언어를 지원하여 여러 배경의 사용자가 여러 목적으로 보이지 않는 텍스트를 생성할 수 있도록 도와줍니다. 영어, 독일어, 스페인어, 프랑스어, 인도네시아어, 이탈리아어, 네덜란드어, 포르투갈어 등으로 제공됩니다.",
-  
+
     "why.benefits.title": "추가 혜택",
     "why.benefits.privacy.title": "개인정보 보호 친화적",
     "why.benefits.privacy.description": "사용자의 사용을 추적하거나 데이터를 저장하지 않습니다. 당신의 보이지 않는 텍스트는 안전합니다.",
@@ -4437,7 +4457,7 @@ export const ui = {
     "why.benefits.creative.description": "메시지와 프로필에 보이지 않는 문자를 사용하여 온라인에서 자신을 표현할 새로운 방법을 열어줍니다.",
     "why.benefits.performance.title": "빠른 성능",
     "why.benefits.performance.description": "우리 도구는 대기 시간 없이 즉시 보이지 않는 문자를 생성합니다.",
-  
+
     // FAQ translations
     "faq.title": "자주 묻는 질문",
     "faq.subtitle": "보이지 않는 텍스트와 사용 방법에 관한 일반적인 질문에 대한 답변",
@@ -4455,10 +4475,10 @@ export const ui = {
     "faq.a6": "복사 버튼을 클릭하면 확인 메시지가 표시됩니다. 또한 테스트 영역에 보이지 않는 문자를 붙여넣어 제대로 복사되었는지 확인할 수 있습니다."
   },
   tr: {
-      //meta's
-      'meta.title': 'Görünmez Metin ( ) - Boş Metni Kopyala Yapıştır',
-      'meta.description': 'Görünmez karakterleri ve boş metni sosyal medya, oyunlar ve daha fazlası için kopyalayıp yapıştırın. Gizli mesajlar oluşturun.',
-      'meta.keywords': 'Invisible Text, Blank Text, Copy Paste Invisible Characters, Unicode Invisible Characters, Hangul Filler, Zero Width Space',      
+    //meta's
+    'meta.title': 'Görünmez Metin ( ) - Boş Metni Kopyala Yapıştır',
+    'meta.description': 'Görünmez karakterleri ve boş metni sosyal medya, oyunlar ve daha fazlası için kopyalayıp yapıştırın. Gizli mesajlar oluşturun.',
+    'meta.keywords': 'Invisible Text, Blank Text, Copy Paste Invisible Characters, Unicode Invisible Characters, Hangul Filler, Zero Width Space',
     // Header translations
     'header.brand': 'INVISIBLETEXT',
     'header.blog': 'Blog',
@@ -4895,5 +4915,2461 @@ export const ui = {
     'about.team.member3.role': 'Full-Stack Geliştirici',
     'about.team.member3.bio': 'David, performans optimizasyonu konusunda uzman olup, hizmetimizin tüm kullanıcılar için sorunsuz ve verimli çalışmasını sağlıyor.'
 
+  },
+  ja: {
+    // Meta tags for SEO
+    "meta.title": "透明文字 - (ㅤ) 空白スペースのコピー＆ペースト",
+    "meta.description": "当ツールを使用して透明文字を生成します。ソーシャルアプリ、ゲームなどの空白メッセージやユーザー名に使用する透明文字をコピー＆ペーストしてください。今すぐお試しください！",
+    "meta.keywords": "透明文字, 空白文字, 透明文字のコピー＆ペースト, Unicode透明文字, ハングルフィラー, ゼロ幅スペース",
+
+    // Navigation
+    "nav.home": "ホーム",
+    "nav.unicode": "Unicode",
+    "nav.blog": "ブログ",
+    "nav.terms": "利用規約",
+    "nav.about": "概要",
+    "nav.contact": "お問い合わせ",
+    "nav.privacy": "プライバシー",
+
+    // Header
+    "header.brand": "INVISIBLETEXT",
+    "header.home": "透明文字",
+    "header.blog": "ブログ",
+    "header.terms": "利用規約",
+    "header.about": "概要",
+    "header.contact": "お問い合わせ",
+    "header.privacy": "プライバシー",
+    "header.selectLanguage": "言語を選択",
+
+    // Hero section
+    "generator.title": "透明文字",
+    "generator.subtitle": "無制限の空白スペースを生成し、透明文字を素早くコピー＆ペーストします。",
+    "hero.primaryButton": "ジェネレーターを試す",
+    "hero.secondaryButton": "Unicodeについて学ぶ",
+
+    // Invisible Text Generator
+    "invisibletext.brand": "INVISIBLETEXT",
+    "invisibletext.title": "透明文字",
+    "invisibletext.description": "ソーシャルメディア、ゲームなどのために無制限の空白スペースを生成し、透明文字を素早くコピー＆ペーストします。",
+    "invisibletext.method1.title": "方法1：ワンクリックコピー",
+    "invisibletext.method1.button": "ハングルフィラーをコピー",
+    "invisibletext.method1.description": "「コピー」ボタンをクリックするだけで、透明文字をクリップボードに追加し、どこにでも貼り付けることができます。",
+    "invisibletext.method1.fallback": "この方法が機能しない場合は、以下の方法2または3をお試しください。",
+    "invisibletext.method2.title": "方法2：選択してコピー",
+    "invisibletext.method2.description": "選択ボタンをクリックして、以下の透明文字をハイライトします。CTRL+C（Windows）またはCommand+C（Mac）を使用してクリップボードにコピーしてください。",
+    "invisibletext.method2.verification": "テストボックスに貼り付けるか、緑のボタンをクリックして動作を確認してください。",
+    "invisibletext.method3.title": "方法3：カスタムジェネレーター",
+    "invisibletext.method3.description": "必要な透明文字の数を入力し、お好みのUnicode文字を選択して、「生成」をクリックしてください。",
+    "invisibletext.method3.improved": "この拡張版では、特定のニーズに応じて異なるUnicode文字タイプから選択できます。",
+    "invisibletext.method4.title": "方法4：無制限文字",
+    "invisibletext.method4.description": "大量の透明文字を生成 - 複数ページの透明メッセージや特殊な書式効果の作成に最適です。",
+    "invisibletext.method4.more": "より高度な透明文字ツールについては、こちらをご覧ください",
+    "invisibletext.testarea.title": "テストエリア",
+    "invisibletext.testarea.description": "透明文字をここに貼り付けてテストしてください。プレースホルダーテキストが消えれば、透明文字が正常に動作しています。",
+    "invisibletext.testarea.placeholder": "透明文字をここに貼り付けるか生成してテストしてください...",
+    "invisibletext.testarea.characters": "文字",
+    "invisibletext.testarea.empty": "このエリアに透明文字が表示されます",
+    "invisibletext.copy": "コピー",
+    "invisibletext.clear": "クリア",
+    "invisibletext.generate": "生成",
+    "invisibletext.preview": "プレビュー",
+    "invisibletext.count": "カウント：",
+    "invisibletext.toast.copied": "クリップボードにコピーしました！",
+    "invisibletext.toast.generated": "生成してクリップボードにコピーしました！",
+
+    // Method 1 specific options
+    "invisibletext.method1.small": "小さなコピー",
+    "invisibletext.method1.medium": "中程度のコピー",
+    "invisibletext.method1.large": "大きなコピー",
+
+    "invisibletext.method4.mix": "異なる透明文字を混合",
+    "invisibletext.method4.mixInfo": "異なる透明文字タイプのランダムな組み合わせを作成",
+    "invisibletext.method4.pattern": "パターンシーケンスを作成",
+    "invisibletext.method4.patternInfo": "異なる透明文字の繰り返しパターンを作成",
+    "invisibletext.method4.generateAdvanced": "高度なテキストを生成",
+
+    // What Is Section
+    "whatis.title": "透明文字とは何ですか？",
+    "whatis.des": "透明文字は、スペースを占有するが表示時には見えない特殊なUnicode文字で構成されています。これらの文字は、オンラインでさまざまな創造的で実用的な目的に役立ちます。",
+
+    // About Invisible Text
+    "about.introduction.title": "InvisibleText.meの紹介",
+    "about.introduction.description": "透明文字は、目に見える記号を表示しないが、テキスト内でスペースを占有する特殊なUnicode文字です。これらのユニークな文字により、さまざまなデジタルプラットフォームで創造的な書式設定や特殊効果が可能になります。",
+    "about.whatIs.title": "透明文字とは何ですか？",
+    "about.whatIs.description": "透明文字は、人間の目には見えないが重要な機能を果たすUnicodeシンボルです。これらの文字は、標準のスペースキーを使用せずに空白スペースを作成し、ユニークな書式設定の可能性を可能にします。",
+    "about.types.title": "透明Unicode文字の種類",
+    "about.types.zeroWidthSpace.title": "ゼロ幅スペース（U+200B）",
+    "about.types.zeroWidthSpace.description": "ゼロ幅スペース（ZWSP）は、目に見えるスペースを追加せずに単語の区切りを可能にする汎用的な透明文字です。ウェブデザイナーや開発者は、よりクリーンなコードと改善されたテキストレイアウトのためにこれを使用し、ソーシャルメディアユーザーは創造的な書式設定のためにこれを活用します。",
+    "about.types.hangulFiller.title": "ハングルフィラー（U+3164）",
+    "about.types.hangulFiller.description": "もともと韓国語テキストで使用されていたハングルフィラーは、ゲームやソーシャルメディアで透明なユーザー名を作成するために人気になりました。この文字は、ユーザーがユニークな識別子を作成し、特徴的な名前が重視されるデジタルコミュニティで目立つのに役立ちます。",
+    "about.types.zeroWidthJoiner.title": "ゼロ幅結合子（U+200D）",
+    "about.types.zeroWidthJoiner.description": "ゼロ幅結合子（ZWJ）は、目に見える分離なしに文字を結合し、複雑な絵文字シーケンスやスクリプトの作成に不可欠です。この文字により、複数の絵文字を家族の絵文字や職業の絵文字などの単一の統一されたシンボルに組み合わせることができます。",
+    "about.types.zeroWidthNonJoiner.title": "ゼロ幅非結合子（U+200C）",
+    "about.types.zeroWidthNonJoiner.description": "ゼロ幅非結合子（ZWNJ）は、文字が結合することを防ぎ、ペルシア語やアラビア語などの複雑なスクリプトで特に有用です。文字結合ルールが複雑な場所でテキストの正しい表示を維持し、適切な読みやすさを確保します。",
+
+    // Features section
+    "features.title": "当ツールを選ぶ理由",
+    "features.subtitle": "当透明文字ジェネレーターには、あなたの体験をより良くする独占的な機能が付属しています。",
+    "features.feature1.title": "使いやすい",
+    "features.feature1.description": "複雑な手順なしで、シンプルなワンクリックコピー＆ペースト機能。",
+    "features.feature2.title": "サインアップ不要",
+    "features.feature2.description": "アカウントを作成したり個人情報を提供したりすることなく、すぐにツールを使用できます。",
+    "features.feature3.title": "安全でプライベート",
+    "features.feature3.description": "生成されたテキストを保存したり、透明文字の使用方法を追跡したりしません。",
+    "features.feature4.title": "複数の文字タイプ",
+    "features.feature4.description": "さまざまな目的やアプリケーションに応じて、さまざまな透明Unicode文字から選択できます。",
+    "features.feature5.title": "多言語サポート",
+    "features.feature5.description": "世界中のユーザーにサービスを提供するため、複数の言語でツールを利用できます。",
+    "features.feature6.title": "永久無料",
+    "features.feature6.description": "すべての機能は隠れたコストやプレミアム階層なしで完全に無料で使用できます。",
+
+    // Use Cases section
+    "useCases.title": "実用的なアプリケーション",
+    "useCases.subtitle": "透明文字がさまざまなプラットフォームやアプリケーションでどのように使用できるかを発見してください。",
+    "useCases.case1.title": "ソーシャルメディア",
+    "useCases.case1.description": "空の投稿、ユニークなユーザー名を作成したり、ソーシャルメディアコンテンツに透明な書式設定を追加したりできます。",
+    "useCases.case1.example": "このメッセージには、改行を使用せずにスペーシングを作成する透明文字が含まれています。",
+    "useCases.case2.title": "ゲーム",
+    "useCases.case2.description": "透明文字を使用してユニークなユーザー名で目立ったり、ゲームチャットで隠されたメッセージを送信したりできます。",
+    "useCases.case2.example": "プレイヤーは透明文字を使用して、空に見えるか特別に書式設定されたユニークなユーザー名を作成します。",
+    "useCases.learnMore": "詳細を学ぶ",
+
+    // Practical Use Cases
+    "usecases.title": "透明文字の実用的な使用例",
+
+    // Gaming section
+    "usecases.gaming.title": "ゲームのユーザー名とプロフィール",
+    "usecases.gaming.description": "ゲーマーは透明文字を使用して、目立つユニークなゲーム内名前を作成します。FortniteやPUBGなどの人気ゲームでは、これらの文字により、プレイヤーは典型的な命名制限を回避する特徴的なアイデンティティを作成できます。",
+    "usecases.fortnite.title": "Fortniteでの透明文字",
+    "usecases.fortnite.description": "Fortniteプレイヤーは、ゲーム体験をカスタマイズするための創造的なツールとして透明文字を受け入れています。ゼロ幅スペースやその他の透明Unicode文字を使用して、プレイヤーはユニークな表示名を作成し、チームメイトと秘密に通信できます。",
+    "usecases.fortnite.howto": "Fortniteで透明文字を使用する方法：",
+    "usecases.fortnite.step1": "当ツールを使用して透明文字を生成",
+    "usecases.fortnite.step2": "透明文字をクリップボードにコピー",
+    "usecases.fortnite.step3": "Fortniteを開いてアカウント設定に移動",
+    "usecases.fortnite.step4": "表示名に透明文字を貼り付け",
+    "usecases.fortnite.step5": "変更を保存",
+    "usecases.fortnite.uses": "Fortniteでの人気の使用法：",
+    "usecases.fortnite.use1": "完全に透明なユーザー名を作成",
+    "usecases.fortnite.use2": "名前の文字間にスペーシングを追加",
+    "usecases.fortnite.use3": "キルフィードで名前をユニークに見せる",
+    "usecases.fortnite.use4": "目立つクランタグを作成",
+    "usecases.pubg.title": "PUBGでの透明文字",
+    "usecases.pubg.description": "PUBGプレイヤーは透明文字を組み込むことで目立つユーザー名を作成できます。このシンプルなテクニックにより、ゲームアイデンティティに個人的なタッチを加えるユニークなプロフィールカスタマイゼーションが可能になります。",
+    "usecases.pubg.howto": "PUBGで透明文字を使用する方法：",
+    "usecases.pubg.step1": "当ツールを使用して透明文字を生成",
+    "usecases.pubg.step2": "透明文字をクリップボードにコピー",
+    "usecases.pubg.step3": "PUBGを開いてプロフィールに移動",
+    "usecases.pubg.step4": "名前を編集して透明文字を貼り付け",
+    "usecases.pubg.step5": "変更を確認",
+    "usecases.pubg.uses": "PUBGでの人気の使用法：",
+    "usecases.pubg.use1": "神秘的に見えるユーザー名を作成",
+    "usecases.pubg.use2": "クラン名をユニークにする",
+    "usecases.pubg.use3": "文字間にスペーシングを追加",
+    "usecases.pubg.use4": "ミニマリストなプロフィール外観を作成",
+    "usecases.othergames.title": "その他の人気ゲーム",
+    "usecases.othergames.description": "透明文字は、ユニークなユーザー名やクランタグを作成するために、他の多くの人気ゲームで使用できます：",
+    "usecases.minecraft.title": "Minecraft",
+    "usecases.minecraft.description": "サーバー用の透明な名前を作成したり、看板や本で創造的な書式設定のために透明文字を使用したりできます。",
+    "usecases.callofduty.title": "Call of Duty",
+    "usecases.callofduty.description": "戦略的に配置された透明文字で、ロビーやキルフィードでユーザー名を目立たせます。",
+    "usecases.leagueoflegends.title": "League of Legends",
+    "usecases.leagueoflegends.description": "注目を集めるユニークなサモナー名を作成したり、クランタグを特別に見せたりできます。",
+
+    // Messaging Apps section
+    "usecases.messaging.title": "メッセージングアプリ",
+    "usecases.messaging.description": "透明文字はメッセージングアプリに楽しい次元を追加し、一見空のメッセージを送信したり、標準テキストではサポートされない特殊な書式効果を作成したりできます。",
+    "usecases.messaging.additionalInfo": "WhatsAppなどの多くのプラットフォームは完全に空白のメッセージの送信を防ぎますが、当透明文字はこの制限を回避しながら受信者には空に見えます。",
+    "usecases.whatsapp.title": "WhatsApp",
+    "usecases.whatsapp.description": "WhatsAppで空白に見えるメッセージを送信して連絡先を驚かせましょう。この人気のトリックは、透明Unicode文字を使用して空に見えるが実際には隠されたテキストを含むメッセージを作成します。",
+    "usecases.whatsapp.instructions": "当ジェネレーターから透明テキストをコピーしてWhatsAppチャットに貼り付けるだけで、友達を興味深がらせる神秘的な空に見えるメッセージを作成できます。",
+    "usecases.whatsapp.uses": "WhatsAppでの創造的な使用法：",
+    "usecases.whatsapp.use1": "注意を引く空のメッセージを送信",
+    "usecases.whatsapp.use2": "長いメッセージで段落間にスペーシングを作成",
+    "usecases.whatsapp.use3": "ステータスを空またはミニマルに見せる",
+    "usecases.whatsapp.use4": "メッセージで芸術的なテキストレイアウトを作成",
+    "usecases.twitter.title": "X（旧Twitter）での空白ツイート",
+    "usecases.twitter.description": "透明文字を使用してXで空に見えるツイートやユニークなユーザー名を作成します。このテクニックは、混雑したタイムラインでコンテンツを目立たせるのに役立ちます。",
+    "usecases.twitter.uses": "Twitterでの創造的な使用法：",
+    "usecases.twitter.use1": "注意を引く空白ツイートを作成",
+    "usecases.twitter.use2": "長いツイートで段落間にスペーシングを追加",
+    "usecases.twitter.use3": "透明文字で表示名をユニークにする",
+    "usecases.twitter.use4": "戦略的なスペーシングでミニマリストなプロフィールを作成",
+    "usecases.othermessaging.title": "その他のメッセージングプラットフォーム",
+    "usecases.slack.title": "Slack",
+    "usecases.slack.description": "透明文字を使用して仕事のメッセージでクリーンな書式設定を作成したり、ユニークなチャンネル名を作成したりできます。",
+    "usecases.instagram.title": "Instagram",
+    "usecases.instagram.description": "バイオやキャプションでクリーンな改行を作成したり、透明文字でユーザー名を目立たせたりできます。",
+    "usecases.facebook.title": "Facebook",
+    "usecases.facebook.description": "注意を引く空白ステータス更新を投稿したり、長い投稿でクリーンなスペーシングを作成したりできます。",
+
+    // Other Use Cases section
+    "usecases.other.title": "その他の創造的な使用例",
+    "usecases.documents.title": "文書とフォーム",
+    "usecases.documents.description": "透明文字は、特定の書式設定を作成したり、フォームの文字制限を回避したりするために文書で使用できます。",
+    "usecases.documents.use1": "文書でカスタムスペーシングを作成",
+    "usecases.documents.use2": "最小文字要件を回避",
+    "usecases.documents.use3": "PDFで透明ブックマークを作成",
+    "usecases.documents.use4": "創造的な方法でテキストを書式設定",
+    "usecases.programming.title": "プログラミング",
+    "usecases.programming.description": "開発者は特定の書式設定ニーズやテスト目的で透明文字を使用することがあります。",
+    "usecases.programming.use1": "アプリケーションでの文字列処理をテスト",
+    "usecases.programming.use2": "特定のテキスト配置を作成",
+    "usecases.programming.use3": "アプリケーションでのUnicodeサポートをテスト",
+    "usecases.programming.use4": "ユニークな方法でコードコメントを書式設定",
+    "usecases.design.title": "創造的デザイン",
+    "usecases.design.description": "デザイナーやアーティストは、ユニークなテキストレイアウトや視覚効果を作成するために透明文字を使用できます。",
+    "usecases.design.use1": "芸術的なテキストレイアウトを作成",
+    "usecases.design.use2": "ミニマリストなタイポグラフィをデザイン",
+    "usecases.design.use3": "デザインでユニークなスペーシングを作成",
+    "usecases.design.use4": "型破りな方法でテキストを書式設定",
+
+    // Professional Use Cases
+    "usecases.professional.title": "プロフェッショナルなアプリケーション",
+    "usecases.linkedin.title": "LinkedIn",
+    "usecases.linkedin.description": "透明文字を使用してクリーンな書式設定とスペーシングでプロフェッショナルなプロフィールを作成します。",
+    "usecases.linkedin.use1": "クリーンな改行でバイオを書式設定",
+    "usecases.linkedin.use2": "視覚的に魅力的な投稿を作成",
+    "usecases.linkedin.use3": "重要なポイントを目立たせるためにスペーシングを追加",
+    "usecases.linkedin.use4": "ミニマリストで洗練されたプロフィールを作成",
+    "usecases.email.title": "メール",
+    "usecases.email.description": "透明文字を使用してクリーンでプロフェッショナルなメール書式設定を作成します。",
+    "usecases.email.use1": "メール署名でクリーンなスペーシングを作成",
+    "usecases.email.use2": "正確なスペーシングでニュースレターを書式設定",
+    "usecases.email.use3": "ミニマリストなメールデザインを作成",
+    "usecases.email.use4": "重要なポイントを目立たせるために微妙なスペーシングを追加",
+
+    // Why Use Invisible Text
+    "why.title": "当透明文字ジェネレーターを使用する理由",
+    "why.intro": "当透明文字ジェネレーターは、ユーザーフレンドリーなデザインと強力な機能で際立っています。透明文字の生成と使用を迅速かつシンプルにし、特定のニーズに合わせた複数の方法を提供するツールを作成しました。",
+    "why.whyuse.title": "透明文字を使用する理由",
+    "why.whyuse.description": "透明文字は多くの状況で有用です：",
+    "why.whyuse.use1": "ゲームやソーシャルメディアでユニークなユーザー名を作成",
+    "why.whyuse.use2": "通常のスペースが許可されていないテキストに透明スペーシングを追加",
+    "why.whyuse.use3": "創造的な方法でメッセージを書式設定",
+    "why.whyuse.use4": "コンテンツが必要なプラットフォームで空の投稿を作成",
+    "why.whyuse.use5": "テキストに透明マーカーを追加",
+    "why.whyuse.use6": "プロフィールやバイオで特殊なテキスト効果を作成",
+    "why.whyuse.use7": "すぐには見えない隠されたメッセージを送信",
+    "why.features.easyToUse.title": "使いやすい",
+    "why.features.easyToUse.description": "当ツールは可能な限りシンプルに設計されています。ボタンをクリックするだけで（方法1を使用）、どこにでも貼り付け可能な透明文字をコピーできます。",
+    "why.features.totallyFree.title": "完全無料",
+    "why.features.totallyFree.description": "すべての機能は制限、サブスクリプション、隠れたコストなしで完全に無料で使用できます。",
+    "why.features.unlimitedCharacters.title": "無制限文字",
+    "why.features.unlimitedCharacters.description": "制限なしで必要な数の透明文字を生成できます。",
+    "why.features.oneClickCopy.title": "ワ��クリックコピー",
+    "why.features.oneClickCopy.description": "最大の利便性のためにワンクリックで透明文字をクリップボードにコピーできます。",
+    "why.features.noSignup.title": "サインアップ不要",
+    "why.features.noSignup.description": "アカウントを作成したり個人情報を提供したりすることなく、すぐにツールを使用できます。",
+    "why.features.accessible.title": "どこでもアクセス可能",
+    "why.features.accessible.description": "当ツールはすべての現代的なデバイスとブラウザで動作するため、どこにいても使用できます。",
+    "why.features.accuracy.title": "100%正確性",
+    "why.features.accuracy.description": "当ジェネレーターは毎回完璧なUnicode透明文字を生成します。",
+    "why.features.multipleLanguages.title": "複数言語",
+    "why.features.multipleLanguages.description": "世界中のユーザーにサービスを提供するため、複数の言語でツールを利用できます。",
+    "why.benefits.title": "当ツール使用の利点",
+    "why.benefits.privacy.title": "プライバシー重視",
+    "why.benefits.privacy.description": "使用状況を追跡したり、生成したテキストを保存したりしません。",
+    "why.benefits.creative.title": "創造的自由",
+    "why.benefits.creative.description": "プラットフォーム間でのテキスト書式設定とプレゼンテーションの新しい可能性を解放します。",
+    "why.benefits.performance.title": "高速パフォーマンス",
+    "why.benefits.performance.description": "当ツールは迅速に読み込まれ、シームレスな体験のために瞬時に文字を生成します。",
+
+    // Unicode Table
+    "unicode.title": "Unicode文字参照表",
+    "unicode.subtitle": "さまざまなアプリケーション用の透明およびスペースUnicode文字の包括的なリスト",
+    "unicode.table.unicode": "Unicode",
+    "unicode.table.description": "説明",
+    "unicode.table.html": "HTMLエンティティ",
+    "unicode.table.example": "例",
+    "unicode.table.actions": "アクション",
+    "unicode.copy": "コピー",
+    "unicode.toast.copiedTitle": "コピーしました！",
+    "unicode.toast.copiedDescription": "文字をクリップボードにコピーしました",
+
+    // Unicode character descriptions
+    "unicode.space.description": "標準スペース",
+    "unicode.space.notes": "テキストで使用される標準スペース文字。改行を許可し、HTMLで折りたたまれます。",
+    "unicode.noBreakSpace.description": "改行なしスペース",
+    "unicode.noBreakSpace.notes": "通常のスペースに似ていますが、単語間の改行を防ぎます。関連する単語を一緒に保つために一般的に使用されます。",
+    "unicode.enQuad.description": "Enクワッド",
+    "unicode.enQuad.notes": "フォントのen（emの半分）の幅に等しいスペース。",
+    "unicode.emQuad.description": "Emクワッド",
+    "unicode.emQuad.notes": "フォントのemの幅に等しいスペース。",
+    "unicode.enSpace.description": "Enスペース",
+    "unicode.enSpace.notes": "emの半分に等しいスペース。タイポグラフィで一般的に使用されます。",
+    "unicode.emSpace.description": "Emスペース",
+    "unicode.emSpace.notes": "文字「M」の幅に等しいスペース。段落のインデントのためにタイポグラフィで使用されます。",
+    "unicode.threePerEmSpace.description": "3分の1Emスペース",
+    "unicode.threePerEmSpace.notes": "emの3分の1の幅のスペース。",
+    "unicode.fourPerEmSpace.description": "4分の1Emスペース",
+    "unicode.fourPerEmSpace.notes": "emの4分の1の幅のスペース。",
+    "unicode.sixPerEmSpace.description": "6分の1Emスペース",
+    "unicode.sixPerEmSpace.notes": "emの6分の1の幅のスペース。",
+    "unicode.figureSpace.description": "数字スペース",
+    "unicode.figureSpace.notes": "すべての数字が同じ幅を持つフォントで、数字の幅に等しいスペース。",
+    "unicode.punctuationSpace.description": "句読点スペース",
+    "unicode.punctuationSpace.notes": "フォントの句読点文字の幅に等しいスペース。",
+    "unicode.thinSpace.description": "細いスペース",
+    "unicode.thinSpace.notes": "標準スペースより細いスペース。単語と句読点の間のタイポグラフィでよく使用されます。",
+    "unicode.hairSpace.description": "ヘアスペース",
+    "unicode.hairSpace.notes": "タイポグラフィで利用可能な最も細いスペース。微調整に使用されます。",
+    "unicode.zeroWidthSpace.description": "ゼロ幅スペース",
+    "unicode.zeroWidthSpace.notes": "目に見えるスペースを追加せずに改行を許可する透明文字。「空の」コンテンツを作成するために人気です。",
+    "unicode.zeroWidthNonJoiner.description": "ゼロ幅非結合子",
+    "unicode.zeroWidthNonJoiner.notes": "文字が結合することを防ぎます。特定の文字の組み合わせが分離されたままであるべきスクリプトで有用です。",
+    "unicode.zeroWidthJoiner.description": "ゼロ幅結合子",
+    "unicode.zeroWidthJoiner.notes": "目に見える分離なしに文字を結合します。複雑な絵文字の組み合わせを作成するために不可欠です。",
+    "unicode.leftToRightMark.description": "左から右マーク",
+    "unicode.leftToRightMark.notes": "テキストの方向を制御し、文字を左から右に表示するよう強制します。",
+    "unicode.rightToLeftMark.description": "右から左マーク",
+    "unicode.rightToLeftMark.notes": "テキストの方向を制御し、文字を右から左に表示するよう強制します。",
+    "unicode.mediumMathematicalSpace.description": "中程度の数学スペース",
+    "unicode.mediumMathematicalSpace.notes": "数学記法で使用されるスペース。細いスペースよりわずかに広い。",
+    "unicode.wordJoiner.description": "単語結合子",
+    "unicode.wordJoiner.notes": "ゼロ幅改行なしスペースに似ており、文字間の改行を防ぎます。",
+    "unicode.functionApplication.description": "関数適用",
+    "unicode.functionApplication.notes": "数学記法で関数適用を示すために使用されます。",
+    "unicode.invisibleTimes.description": "透明乗算",
+    "unicode.invisibleTimes.notes": "数学記法で目に見える演算子を表示せずに乗算を示すために使用されます。",
+    "unicode.invisibleSeparator.description": "透明セパレーター",
+    "unicode.invisibleSeparator.notes": "数学的または技術的コンテキストで目に見えるマークなしにアイテムを分離するために使用されます。",
+    "unicode.invisiblePlus.description": "透明加算",
+    "unicode.invisiblePlus.notes": "数学記法で目に見える演算子を表示せずに加算を示すために使用されます。",
+    "unicode.ideographicSpace.description": "表意文字スペース",
+    "unicode.ideographicSpace.notes": "東アジアのタイポグラフィで使用されるスペース。表意文字の幅を持ちます。",
+    "unicode.hangulFiller.description": "ハングルフィラー",
+    "unicode.hangulFiller.notes": "もともと韓国語テキストで使用されていたこの透明文字は、ゲームやソーシャルメディアで「空の」ユーザー名を作成するために人気になりました。",
+    "unicode.zeroWidthNoBreakSpace.description": "ゼロ幅改行なしスペース",
+    "unicode.zeroWidthNoBreakSpace.notes": "バイトオーダーマーク（BOM）としても知られています。改行を防ぎ、透明です。エンコーディングを示すためにテキストファイルの先頭でよく使用されます。",
+    "unicode.mongolianVowelSeparator.description": "モンゴル語母音セパレーター",
+    "unicode.mongolianVowelSeparator.notes": "モンゴル語スクリプトで母音を分離するために使用されます。一部のコンテキストで透明文字として表示される場合があります。",
+    "unicode.braillePatternBlank.description": "点字パターン空白",
+    "unicode.braillePatternBlank.notes": "多くのフォントで目に見えるスペースとして表示される空白の点字パターンですが、技術的には通常のスペースとは異なります。",
+
+    // FAQ section
+    "faq.title": "よくある質問",
+    "faq.subtitle": "透明文字とその使用方法に関する一般的な質問への回答を見つけてください",
+    "faq.q1": "透明文字とは何ですか？",
+    "faq.a1": "透明文字は、目に見える記号を表示しないが、テキスト内でスペースを占有するUnicode文字です。これらはユニークなUnicode値を持ち、さまざまな書式設定や創造的な目的に使用できます。",
+    "faq.q2": "透明文字の使用は安全ですか？",
+    "faq.a2": "はい、透明文字は完全に安全です。これらは多くのアプリケーションやウェブサイトで使用される標準のUnicode文字です。ただし、一部のプラットフォームではユーザー名やその他のフィールドでの使用に制限がある場合があります。",
+    "faq.q3": "透明文字はどこでも機能しますか？",
+    "faq.a3": "ほとんどの現代的なアプリケーション、ウェブサイト、オペレーティングシステムは透明文字を含むUnicode文字をサポートしています。ただし、一部の古いシステムや厳格なテキスト検証を持つアプリケーションでは、正しく表示されないかフィルタリングされる場合があります。",
+    "faq.q4": "ユーザー名で透明文字を使用できますか？",
+    "faq.a4": "プラットフォームによります。多くのゲームやソーシャルメディアプラットフォームはユーザー名で透明文字を許可していますが、混乱や悪用を防ぐために制限を実装しているものもあります。使用前に常にプラットフォームのポリシーを確認してください。",
+    "faq.q5": "透明文字が機能しているかどうかはどうやってわかりますか？",
+    "faq.a5": "当テストエリアで透明文字をテストできます。テキストが空に見えるがスペースを占有している場合、透明文字は正しく機能しています。文字数を確認してその存在を確認することもできます。",
+    "faq.q6": "異なるタイプの透明文字を組み合わせることはできますか？",
+    "faq.a6": "はい、異なる透明文字を組み合わせてさまざまな効果を作成できます。当ジェネレーターの高度なオプションでは、異なるタイプの透明文字を混合したり、それらでパターンを作成したりできます。",
+
+    // Footer
+    "footer.about": "InvisibleText.meについて",
+    "footer.description": "InvisibleText.meは、さまざまなアプリケーション用の透明Unicode文字を生成および使用するためのツールを提供します。",
+    "footer.quickLinks": "クイックリンク",
+    "footer.contact": "お問い合わせ",
+    "footer.contactText": "質問や提案がありますか？お気軽にお問い合わせください：",
+    "footer.rights": "すべての権利を保有します。",
+
+    
+  },
+  th: {
+    // Meta tags for SEO
+    "meta.title": "ข้อความล่องหน - (��) คัดลอกและวางช่องว่าง",
+    "meta.description":
+      "สร้างข้อความล่องหนด้วยเครื่องมือของเรา คัดลอกและวางอักขระล่องหนสำหรับใช้ในข้อความว่างเปล่าเป็นชื่อผู้ใช้สำหรับแอปโซเชียล เกม และอื่นๆ ลองใช้เลย!",
+    "meta.keywords": "ข้อความล่องหน, ข้อความว่าง, คัดลอกวางอักขระล่องหน, อักขระ Unicode ล่องหน, Hangul Filler, Zero Width Space",
+  
+    // Navigation
+    "nav.home": "หน้าแรก",
+    "nav.unicode": "Unicode",
+    "nav.blog": "บล็อก",
+    "nav.terms": "เงื่อนไข",
+    "nav.about": "เกี่ยวกับ",
+    "nav.contact": "ติดต่อ",
+    "nav.privacy": "ความเป็นส่วนตัว",
+  
+    // Header
+    "header.brand": "INVISIBLETEXT",
+    "header.home": "ข้อความล่องหน",
+    "header.blog": "บล็อก",
+    "header.terms": "เงื่อนไข",
+    "header.about": "เกี่ยวกับ",
+    "header.contact": "ติดต่อ",
+    "header.privacy": "ความเป็นส่วนตัว",
+    "header.selectLanguage": "เลือกภาษา",
+  
+    // Hero section
+    "generator.title": "ข้อความล่องหน",
+    "generator.subtitle": "สร้างช่องว่างไม่จำกัดและคัดลอกวางข้อความล่องหนอย่างรวดเร็ว",
+    "hero.primaryButton": "ลองใช้เครื่องมือสร้าง",
+    "hero.secondaryButton": "เรียนรู้เกี่ยวกับ Unicode",
+  
+    // Invisible Text Generator
+    "invisibletext.brand": "INVISIBLETEXT",
+    "invisibletext.title": "ข้อความล่องหน",
+    "invisibletext.description": "สร้างช่องว่างไม่จำกัดและคัดลอกวางข้อความล่องหนอย่างรวดเร็วสำหรับโซเชียลมีเดีย เกม และอื่นๆ",
+    "invisibletext.method1.title": "วิธีที่ 1: คัดลอกคลิกเดียว",
+    "invisibletext.method1.button": "คัดลอก Hangul Filler",
+    "invisibletext.method1.description": "เพียงคลิกปุ่ม 'คัดลอก' เพื่อเพิ่มข้อความล่องหนลงในคลิปบอร์ด พร้อมวางได้ทุกที่",
+    "invisibletext.method1.fallback": "หากวิธีนี้ไม่ได้ผล ลองใช้วิธีที่ 2 หรือ 3 ด้านล่าง",
+    "invisibletext.method2.title": "วิธีที่ 2: เลือกและคัดลอก",
+    "invisibletext.method2.description":
+      "คลิกปุ่มเลือกเพื่อไฮไลต์ข้อความล่องหนด้านล่าง ใช้ CTRL+C (Windows) หรือ Command+C (Mac) เพื่อคัดลอกไปยังคลิปบอร์ด",
+    "invisibletext.method2.verification": "ตรวจสอบข้อความล่องหนที่คัดลอกแล้วโดยวางลงในกล่องทดสอบหรือคลิกปุ่มสีเขียวเพื่อดูการทำงาน",
+    "invisibletext.method3.title": "วิธีที่ 3: เครื่องมือสร้างแบบกำหนดเอง",
+    "invisibletext.method3.description": "ใส่จำนวนอักขระล่องหนที่ต้องการ เลือกอักขระ Unicode ที่ต้องการ และคลิก 'สร้าง'",
+    "invisibletext.method3.improved": "เวอร์ชันปรับปรุงนี้ให้คุณเลือกจากประเภทอักขระ Unicode ที่แตกต่างกันสำหรับความต้องการเฉพาะ",
+    "invisibletext.method4.title": "วิธีที่ 4: อักขระไม่จำกัด",
+    "invisibletext.method4.description":
+      "สร้างข้อความล่องหนจำนวนมาก - เหมาะสำหรับสร้างข้อความล่องหนหลายหน้าหรือเอฟเฟกต์การจัดรูปแบบพิเศษ",
+    "invisibletext.method4.more": "สำหรับเครื่องมือข้อความล่องหนขั้นสูงเพิ่มเติม เยี่ยมชม",
+    "invisibletext.testarea.title": "พื้นที่ทดสอบ",
+    "invisibletext.testarea.description":
+      "วางอักขระล่องหนของคุณที่นี่เพื่อทดสอบ หากข้อความตัวอย่างหายไป แสดงว่าข้อความล่องหนของคุณทำงานถูกต้อง",
+    "invisibletext.testarea.placeholder": "วางหรือสร้างอักขระล่องหนที่นี่เพื่อทดสอบ...",
+    "invisibletext.testarea.characters": "อักขระ",
+    "invisibletext.testarea.empty": "พื้นที่นี้จะแสดงอักขระล่องหนของคุณ",
+    "invisibletext.copy": "คัดลอก",
+    "invisibletext.clear": "ล้าง",
+    "invisibletext.generate": "สร้าง",
+    "invisibletext.preview": "ดูตัวอย่าง",
+    "invisibletext.count": "จำนวน:",
+    "invisibletext.toast.copied": "คัดลอกไปยังคลิปบอร์ดแล้ว!",
+    "invisibletext.toast.generated": "สร้างและคัดลอกไปยังคลิปบอร์ดแล้ว!",
+  
+    // Method 1 specific options
+    "invisibletext.method1.small": "คัดลอกขนาดเล็ก",
+    "invisibletext.method1.medium": "คัดลอกขนาดกลาง",
+    "invisibletext.method1.large": "คัดลอกขนาดใหญ่",
+  
+    "invisibletext.method4.mix": "ผสมอักขระล่องหนที่แตกต่างกัน",
+    "invisibletext.method4.mixInfo": "สร้างการผสมแบบสุ่มของประเภทอักขระล่องหนที่แตกต่างกัน",
+    "invisibletext.method4.pattern": "สร้างลำดับรูปแบบ",
+    "invisibletext.method4.patternInfo": "สร้างรูปแบบที่ซ้ำของอักขระล่องหนที่แตกต่างกัน",
+    "invisibletext.method4.generateAdvanced": "สร้างข้อความขั้นสูง",
+  
+    // What Is Section
+    "whatis.title": "ข้อความล่องหนคืออะไร?",
+    "whatis.des":
+      "ข้อความล่องหนประกอบด้วยอักขระ Unicode พิเศษที่ใช้พื้นที่แต่ยังคงมองไม่เห็นเมื่อแสดงผล อักขระเหล่านี้มีจุดประสงค์ที่สร้างสรรค์และใช้งานได้หลากหลายออนไลน์",
+  
+    // About Invisible Text
+    "about.introduction.title": "แนะนำ InvisibleText.me",
+    "about.introduction.description":
+      "ข้อความล่องหนเป็นอักขระ Unicode พิเศษที่ไม่แสดงสัญลักษณ์ที่มองเห็นได้ แต่ใช้พื้นที่ในข้อความ อักขระเฉพาะเหล่านี้ช่วยให้สามารถจัดรูปแบบที่สร้างสรรค์และเอฟเฟกต์พิเศษในแพลตฟอร์มดิจิทัลต่างๆ",
+    "about.whatIs.title": "ข้อความล่องหนคืออะไร?",
+    "about.whatIs.description":
+      "อักขระล่องหนเป็นสัญลักษณ์ Unicode ที่มองไม่เห็นด้วยตาเปล่า แต่มีหน้าที่สำคัญ อักขระเหล่านี้สร้างช่องว่างโดยไม่ใช้ปุ่มเว้นวรรคมาตรฐาน ทำให้เกิดความเป็นไปได้ในการจัดรูปแบบที่เป็นเอกลักษณ์",
+    "about.types.title": "ประเภทของอักขระ Unicode ล่องหน",
+    "about.types.zeroWidthSpace.title": "Zero Width Space (U+200B)",
+    "about.types.zeroWidthSpace.description":
+      "Zero Width Space (ZWSP) เป็นอักขระล่องหนที่หลากหลายซึ่งอนุญาตให้แบ่งคำโดยไม่เพิ่มช่องว่างที่มองเห็น นักออกแบบเว็บและนักพัฒนาใช้มันเพื่อโค้ดที่สะอาดขึ้นและการจัดวางข้อความที่ดีขึ้น ในขณะที่ผู้ใช้โซเชียลมีเดียใช้ประโยชน์จากมันเพื่อการจัดรูปแบบที่สร้างสรรค์",
+    "about.types.hangulFiller.title": "Hangul Filler (U+3164)",
+    "about.types.hangulFiller.description":
+      "เดิมใช้ในข้อความภาษาเกาหลี Hangul Filler ได้กลายเป็นที่นิยมสำหรับการสร้างชื่อผู้ใช้ล่องหนในเกมและโซเชียลมีเดีย อักขระนี้ช่วยให้ผู้ใช้สร้างตัวระบุที่เป็นเอกลักษณ์และโดดเด่นในชุมชนดิจิทัลที่ชื่อที่โดดเด่นมีค่า",
+    "about.types.zeroWidthJoiner.title": "Zero Width Joiner (U+200D)",
+    "about.types.zeroWidthJoiner.description":
+      "Zero Width Joiner (ZWJ) เชื่อมอักขระโดยไม่มีการแยกที่มองเห็น จำเป็นสำหรับการสร้างลำดับอีโมจิและสคริปต์ที่ซับซ้อน อักขระนี้ช่วยให้สามารถรวมอีโมจิหลายตัวเป็นสัญลักษณ์เดียวที่รวมกัน เช่น อีโมจิครอบครัวหรืออีโมจิอาชีพ",
+    "about.types.zeroWidthNonJoiner.title": "Zero Width Non-Joiner (U+200C)",
+    "about.types.zeroWidthNonJoiner.description":
+      "Zero Width Non-Joiner (ZWNJ) ป้องกันไม่ให้อักขระเชื่อมต่อกัน มีประโยชน์โดยเฉพาะในสคริปต์ที่ซับซ้อนเช่นเปอร์เซียและอาหรับ มันรักษาการแสดงข้อความที่ถูกต้องในที่ที่กฎการเชื่อมอักขระซับซ้อน ทำให้มั่นใจในการอ่านที่เหมาะสม",
+  
+    // Features section
+    "features.title": "ทำไมต้องเลือกเครื่องมือของเรา",
+    "features.subtitle": "เครื่องมือสร้างข้อความล่องหนของเรามาพร้อมกับคุณสมบัติพิเศษเพื่อให้ประสบการณ์ของคุณดีขึ้น",
+    "features.feature1.title": "ใช้งานง่าย",
+    "features.feature1.description": "ฟังก์ชันคัดลอกและวางแบบคลิกเดียวที่เรียบง่าย ไม่มีขั้นตอนซับซ้อน",
+    "features.feature2.title": "ไม่ต้องสมัครสมาชิก",
+    "features.feature2.description": "ใช้เครื่องมือของเราได้ทันทีโดยไม่ต้องสร้างบัญชีหรือให้ข้อมูลส่วนตัว",
+    "features.feature3.title": "ปลอดภัยและเป็นส่วนตัว",
+    "features.feature3.description": "เราไม่เก็บข้อความที่คุณสร้างหรือติดตามการใช้งานอักขระล่องหน",
+    "features.feature4.title": "อักขระหลายประเภท",
+    "features.feature4.description": "เลือกจากอักขระ Unicode ล่องหนต่างๆ สำหรับจุดประสงค์และการใช้งานที่แตกต่างกัน",
+    "features.feature5.title": "รองรับหลายภาษา",
+    "features.feature5.description": "เครื่องมือของเรามีให้ใช้ในหลายภาษาเพื่อให้บริการผู้ใช้จากทั่วโลก",
+    "features.feature6.title": "ฟรีตลอดไป",
+    "features.feature6.description": "คุณสมบัติทั้งหมดใช้งานฟรีโดยสมบูรณ์ ไม่มีค่าใช้จ่ายที่ซ่อนอยู่หรือระดับพรีเมียม",
+  
+    // Use Cases section
+    "useCases.title": "การใช้งานจริง",
+    "useCases.subtitle": "ค้นพบว่าอักขระล่องหนสามารถใช้ในแพลตฟอร์มและแอปพลิเคชันต่างๆ ได้อย่างไร",
+    "useCases.case1.title": "โซเชียลมีเดีย",
+    "useCases.case1.description": "สร้างโพสต์ว่าง ชื่อผู้ใช้ที่เป็นเอกลักษณ์ หรือเพิ่มการจัดรูปแบบล่องหนให้กับเนื้อหาโซเชียลมีเดียของคุณ",
+    "useCases.case1.example": "ข้อความนี้มีอักขระล่องหนที่สร้างช่องว่างโดยไม่ใช้การขึ้นบรรทัดใหม่",
+    "useCases.case2.title": "เกม",
+    "useCases.case2.description": "โดดเด่นด้วยชื่อผู้ใช้ที่เป็นเอกลักษณ์หรือส่งข้อความที่ซ่อนอยู่ในแชทเกมโดยใช้อักขระล่องหน",
+    "useCases.case2.example": "ผู้เล่นใช้อักขระล่องหนเพื่อสร้างชื่อผู้ใช้ที่เป็นเอกลักษณ์ที่ดูว่างเปล่าหรือจัดรูปแบบพิเศษ",
+    "useCases.learnMore": "เรียนรู้เพิ่มเติม",
+  
+    // Practical Use Cases
+    "usecases.title": "กรณีการใช้งานจริงสำหรับอักขระล่องหน",
+  
+    // Gaming section
+    "usecases.gaming.title": "ชื่อผู้ใช้และโปรไฟล์เกม",
+    "usecases.gaming.description":
+      "เกมเมอร์ใช้อักขระล่องหนเพื่อสร้างชื่อในเกมที่เป็นเอกลักษณ์ที่โดดเด่น ในเกมยอดนิยมเช่น Fortnite และ PUBG อักขระเหล่านี้ช่วยให้ผู้เล่นสร้างตัวตนที่โดดเด่นซึ่งหลีกเลี่ยงข้อจำกัดการตั้งชื่อทั่วไป",
+    "usecases.fortnite.title": "ข้อความล่องหนใน Fortnite",
+    "usecases.fortnite.description":
+      "ผู้เล่น Fortnite ได้ยอมรับอักขระล่องหนเป็นเครื่องมือสร้างสรรค์สำหรับปรับแต่งประสบการณ์การเล่นเกม การใช้ zero-width spaces และอักขระ Unicode ล่องหนอื่นๆ ผู้เล่นสามารถสร้างชื่อแสดงที่เป็นเอกลักษณ์และสื่อสารอย่างลับๆ กับเพื่อนร่วมทีม",
+    "usecases.fortnite.howto": "วิธีใช้อักขระล่องหนใน Fortnite:",
+    "usecases.fortnite.step1": "สร้างอักขระล่องหนโดยใช้เครื่องมือของเรา",
+    "usecases.fortnite.step2": "คัดลอกอักขระล่องหนไปยังคลิปบอร์ด",
+    "usecases.fortnite.step3": "เปิด Fortnite และไปที่การตั้งค่าบัญชี",
+    "usecases.fortnite.step4": "วางอักขระล่องหนในชื่อแสดงของคุณ",
+    "usecases.fortnite.step5": "บันทึกการเปลี่ยนแปลง",
+    "usecases.fortnite.uses": "การใช้งานยอดนิยมใน Fortnite:",
+    "usecases.fortnite.use1": "สร้างชื่อผู้ใช้ที่ล่องหนสมบูรณ์",
+    "usecases.fortnite.use2": "เพิ่มช่องว่างระหว่างอักขระในชื่อของคุณ",
+    "usecases.fortnite.use3": "ทำให้ชื่อของคุณดูเป็นเอกลักษณ์ใน kill feed",
+    "usecases.fortnite.use4": "สร้างแท็กแคลนที่โดดเด่น",
+    "usecases.pubg.title": "ข้อความล่องหนใน PUBG",
+    "usecases.pubg.description":
+      "ผู้เล่น PUBG สามารถสร้างชื่อผู้ใช้ที่โดดเด่นโดยการรวมอักขระล่องหน เทคนิคง่ายๆ นี้ช่วยให้สามารถปรับแต่งโปรไฟล์ที่เป็นเอกลักษณ์ซึ่งเพิ่มสัมผัสส่วนตัวให้กับตัวตนการเล่นเกมของคุณ",
+    "usecases.pubg.howto": "วิธีใช้อักขระล่องหนใน PUBG:",
+    "usecases.pubg.step1": "สร้างอักขระล่องหนโดยใช้เครื่องมือของเรา",
+    "usecases.pubg.step2": "คัดลอกอักขระล่องหนไปยังคลิปบอร์ด",
+    "usecases.pubg.step3": "เปิด PUBG และไปที่โปรไฟล์ของคุณ",
+    "usecases.pubg.step4": "แก้ไขชื่อของคุณและวางอักขระล่องหน",
+    "usecases.pubg.step5": "ยืนยันการเปลี่ยนแปลง",
+    "usecases.pubg.uses": "การใช้งานยอดนิยมใน PUBG:",
+    "usecases.pubg.use1": "สร้างชื่อผู้ใช้ที่ดูลึกลับ",
+    "usecases.pubg.use2": "ทำให้ชื่อแคลนของคุณเป็นเอกลักษณ์",
+    "usecases.pubg.use3": "เพิ่มช่องว่างระหว่างอักขระ",
+    "usecases.pubg.use4": "สร้างลักษณะโปรไฟล์แบบมินิมอล",
+    "usecases.othergames.title": "เกมยอดนิยมอื่นๆ",
+    "usecases.othergames.description": "อักขระล่องหนสามารถใช้ในเกมยอดนิยมอื่นๆ มากมายเพื่อสร้างชื่อผู้ใช้และแท็กแคลนที่เป็นเอกลักษณ์:",
+    "usecases.minecraft.title": "Minecraft",
+    "usecases.minecraft.description": "สร้างชื่อล่องหนสำหรับเซิร์ฟเวอร์ของคุณหรือใช้อักขระล่องหนในป้ายและหนังสือเพื่อการจัดรูปแบบที่สร้างสรรค์",
+    "usecases.callofduty.title": "Call of Duty",
+    "usecases.callofduty.description": "ทำให้ชื่อผู้ใช้ของคุณโดดเด่นในล็อบบี้และ kill feed ด้วยอักขระล่องหนที่วางอย่างมีกลยุทธ์",
+    "usecases.leagueoflegends.title": "League of Legends",
+    "usecases.leagueoflegends.description": "สร้างชื่อซัมโมเนอร์ที่เป็นเอกลักษณ์ที่ดึงดูดความสนใจหรือทำให้แท็กแคลนของคุณดูพิเศษ",
+  
+    // Messaging Apps section
+    "usecases.messaging.title": "แอปส่งข้อความ",
+    "usecases.messaging.description":
+      "อักขระล่องหนเพิ่มมิติที่สนุกให้กับแอปส่งข้อความ ช่วยให้คุณส่งข้อความที่ดูว่างเปล่าหรือสร้างเอฟเฟกต์การจัดรูปแบบพิเศษที่ข้อความมาตรฐานไม่รองรับ",
+    "usecases.messaging.additionalInfo":
+      "แพลตฟอร์มหลายแห่งเช่น WhatsApp ป้องกันการส่งข้อความที่ว่างเปล่าสมบูรณ์ แต่อักขระล่องหนของเราหลีกเลี่ยงข้อจำกัดนี้ในขณะที่ดูว่างเปล่าสำหรับผู้รับ",
+    "usecases.whatsapp.title": "WhatsApp",
+    "usecases.whatsapp.description":
+      "ส่งข้อความที่ดูว่างเปล่าใน WhatsApp เพื่อทำให้ผู้ติดต่อของคุณประหลาดใจ เทคนิคยอดนิยมนี้ใช้อักขระ Unicode ล่องหนเพื่อสร้างข้อความที่ดูว่างเปล่าแต่จริงๆ แล้วมีข้อความที่ซ่อนอยู่",
+    "usecases.whatsapp.instructions":
+      "เพียงคัดลอกข้อความล่องหนจากเครื่องมือสร้างของเราและวางลงในแชท WhatsApp เพื่อสร้างข้อความลึกลับที่ดูว่างเปล่าซึ่งจะทำให้เพื่อนๆ ของคุณสนใจ",
+    "usecases.whatsapp.uses": "การใช้งานสร้างสรรค์ใน WhatsApp:",
+    "usecases.whatsapp.use1": "ส่งข้อความว่างเปล่าเพื่อดึงดูดความสนใจ",
+    "usecases.whatsapp.use2": "สร้างช่องว่างระหว่างย่อหน้าในข้อความยาว",
+    "usecases.whatsapp.use3": "ทำให้สถานะของคุณดูว่างเปล่าหรือมินิมอล",
+    "usecases.whatsapp.use4": "สร้างเลย์เอาต์ข้อความที่เป็นศิลปะในข้อความของคุณ",
+    "usecases.twitter.title": "ทวีตว่างเปล่าบน X (เดิมชื่อ Twitter)",
+    "usecases.twitter.description":
+      "สร้างทวีตที่ดูว่างเปล่าหรือชื่อผู้ใช้ที่เป็นเอกลักษณ์บน X โดยใช้อักขระล่องหน เทคนิคนี้ช่วยให้เนื้อหาของคุณโดดเด่นในไทม์ไลน์ที่แออัด",
+    "usecases.twitter.uses": "การใช้งานสร้างสรรค์บน Twitter:",
+    "usecases.twitter.use1": "สร้างทวีตว่างเปล่าที่ดึงดูดความสนใจ",
+    "usecases.twitter.use2": "เพิ่มช่องว่างระหว่างย่อหน้าในทวีตยาว",
+    "usecases.twitter.use3": "ทำให้ชื่อแสดงของคุณเป็นเอกลักษณ์ด้วยอักขระล่องหน",
+    "usecases.twitter.use4": "สร้างโปรไฟล์มินิมอลด้วยช่องว่างที่มีกลยุทธ์",
+    "usecases.othermessaging.title": "แพลตฟอร์มส่งข้อความอื่นๆ",
+    "usecases.slack.title": "Slack",
+    "usecases.slack.description": "ใช้อักขระล่องหนเพื่อสร้างการจัดรูปแบบที่สะอาดในข้อความงานของคุณหรือสร้างชื่อช่องที่เป็นเอกลักษณ์",
+    "usecases.instagram.title": "Instagram",
+    "usecases.instagram.description": "สร้างการขึ้นบรรทัดใหม่ที่สะอาดในไบโอหรือแคปชันของคุณ หรือทำให้ชื่อผู้ใช้ของคุณโดดเด่นด้วยอักขระล่องหน",
+    "usecases.facebook.title": "Facebook",
+    "usecases.facebook.description": "โพสต์อัปเดตสถานะว่างเปล่าที่ดึงดูดความสนใจหรือสร้างช่องว่างที่สะอาดในโพสต์ยาว",
+  
+    // Other Use Cases section
+    "usecases.other.title": "กรณีการใช้งานสร้างสรรค์อื่นๆ",
+    "usecases.documents.title": "เอกสารและฟอร์ม",
+    "usecases.documents.description": "อักขระล่องหนสามารถใช้ในเอกสารเพื่อสร้างการจัดรูปแบบเฉพาะหรือหลีกเลี่ยงข้อจำกัดอักขระในฟอร์ม",
+    "usecases.documents.use1": "สร้างช่องว่างแบบกำหนดเองในเอกสาร",
+    "usecases.documents.use2": "หลีกเลี่ยงข้อกำหนดอักขระขั้นต่ำ",
+    "usecases.documents.use3": "สร้างบุ๊กมาร์กล่องหนใน PDF",
+    "usecases.documents.use4": "จัดรูปแบบข้อความในวิธีที่สร้างสรรค์",
+    "usecases.programming.title": "การเขียนโปรแกรม",
+    "usecases.programming.description": "นักพัฒนาบางครั้งใช้อักขระล่องหนสำหรับความต้องการการจัดรูปแบบเฉพาะหรือวัตถุประสงค์ในการทดสอบ",
+    "usecases.programming.use1": "ทดสอบการจัดการสตริงในแอปพลิเคชัน",
+    "usecases.programming.use2": "สร้างการจัดแนวข้อความเฉพาะ",
+    "usecases.programming.use3": "ทดสอบการรองรับ Unicode ในแอปพลิเคชัน",
+    "usecases.programming.use4": "จัดรูปแบบความคิดเห็นโค้ดในวิธีที่เป็นเอกลักษณ์",
+    "usecases.design.title": "การออกแบบสร้างสรรค์",
+    "usecases.design.description": "นักออกแบบและศิลปินสามารถใช้อักขระล่องหนเพื่อสร้างเลย์เอาต์ข้อความที่เป็นเอกลักษณ์และเอฟเฟกต์ภาพ",
+    "usecases.design.use1": "สร้างเลย์เอาต์ข้อความที่เป็นศิลปะ",
+    "usecases.design.use2": "ออกแบบการพิมพ์แบบมินิมอล",
+    "usecases.design.use3": "สร้างช่องว่างที่เป็นเอกลักษณ์ในการออกแบบ",
+    "usecases.design.use4": "จัดรูปแบบข้อความในวิธีที่แปลกใหม่",
+  
+    // Professional Use Cases
+    "usecases.professional.title": "การใช้งานระดับมืออาชีพ",
+    "usecases.linkedin.title": "LinkedIn",
+    "usecases.linkedin.description": "สร้างโปรไฟล์มืออาชีพด้วยการจัดรูปแบบและช่องว่างที่สะอาดโดยใช้อักขระล่องหน",
+    "usecases.linkedin.use1": "จัดรูปแบบไบโอของคุณด้วยการขึ้นบรรทัดใหม่ที่สะอาด",
+    "usecases.linkedin.use2": "สร้างโพสต์ที่ดึงดูดสายตา",
+    "usecases.linkedin.use3": "เพิ่มช่องว่างเพื่อทำให้จุดสำคัญโดดเด่น",
+    "usecases.linkedin.use4": "สร้างโปรไฟล์มินิมอลที่หรูหรา",
+    "usecases.email.title": "อีเมล",
+    "usecases.email.description": "ใช้อักขระล่องหนเพื่อสร้างการจัดรูปแบบอีเมลที่สะอาดและมืออาชีพ",
+    "usecases.email.use1": "สร้างช่องว่างที่สะอาดในลายเซ็นอีเมล",
+    "usecases.email.use2": "จัดรูปแบบจดหมายข่าวด้วยช่องว่างที่แม่นยำ",
+    "usecases.email.use3": "สร้างการออกแบบอีเมลแบบมินิมอล",
+    "usecases.email.use4": "เพิ่มช่องว่างที่ละเอียดอ่อนเพื่อทำให้จุดสำคัญโดดเด่น",
+  
+    // Why Use Invisible Text
+    "why.title": "ทำไมต้องใช้เครื่องมือสร้างข้อความล่องหนของเรา?",
+    "why.intro":
+      "เครื่องมือสร้างข้อความล่องหนของเราโดดเด่นด้วยการออกแบบที่เป็นมิตรกับผู้ใช้และคุณสมบัติที่ทรงพลัง เราได้สร้างเครื่องมือที่ทำให้การสร้างและใช้อักขระล่องหนเป็นเรื่องง่ายและรวดเร็ว พร้อมวิธีการหลายแบบเพื่อให้เหมาะกับความต้องการเฉพาะของคุณ",
+    "why.whyuse.title": "ทำไมต้องใช้อักขระล่องหน?",
+    "why.whyuse.description": "อักขระล่องหนมีประโยชน์ในหลายสถานการณ์:",
+    "why.whyuse.use1": "สร้างชื่อผู้ใช้ที่เป็นเอกลักษณ์ในเกมและโซเชียลมีเดีย",
+    "why.whyuse.use2": "เพิ่มช่องว่างล่องหนในข้อความที่ช่องว่างปกติไม่ได้รับอนุญาต",
+    "why.whyuse.use3": "จัดรูปแบบข้อความในวิธีที่สร้างสรรค์",
+    "why.whyuse.use4": "สร้างโพสต์ว่างเปล่าบนแพลตฟอร์มที่ต้องการเนื้อหา",
+    "why.whyuse.use5": "เพิ่มเครื่องหมายล่องหนในข้อความ",
+    "why.whyuse.use6": "สร้างเอฟเฟกต์ข้อความพิเศษในโปรไฟล์และไบโอ",
+    "why.whyuse.use7": "ส่งข้อความที่ซ่อนอยู่ซึ่งไม่เห็นได้ทันที",
+    "why.features.easyToUse.title": "ใช้งานง่าย",
+    "why.features.easyToUse.description":
+      "เครื่องมือของเราได้รับการออกแบบให้เรียบง่ายที่สุด เพียงคลิกปุ่ม (ใช้วิธีที่ 1) และคุณก็คัดลอกอักขระล่องหนที่พร้อมวางได้ทุกที่",
+    "why.features.totallyFree.title": "ฟรีโดยสมบูรณ์",
+    "why.features.totallyFree.description": "คุณสมบัติทั้งหมดใช้งานฟรีโดยสมบูรณ์ ไม่มีข้อจำกัด การสมัครสมาชิก หรือค่าใช้จ่ายที่ซ่อนอยู่",
+    "why.features.unlimitedCharacters.title": "อักขระไม่จำกัด",
+    "why.features.unlimitedCharacters.description": "สร้างอักขระล่องหนได้มากเท่าที่ต้องการโดยไม่มีข้อจำกัดใดๆ",
+    "why.features.oneClickCopy.title": "คัดลอกคลิกเดียว",
+    "why.features.oneClickCopy.description": "คัดลอกอักขระล่องหนไปยังคลิปบอร์ดด้วยการคลิกเพียงครั้งเดียวเพื่อความสะดวกสูงสุด",
+    "why.features.noSignup.title": "ไม่ต้องสมัครสมาชิก",
+    "why.features.noSignup.description": "ใช้เครื่องมือของเราได้ทันทีโดยไม่ต้องสร้างบัญชีหรือให้ข้อมูลส่วนตัวใดๆ",
+    "why.features.accessible.title": "เข้าถึงได้ทุกที่",
+    "why.features.accessible.description": "เครื่องมือของเราทำงานบนอุปกรณ์และเบราว์เซอร์สมัยใหม่ทั้งหมด ดังนั้นคุณสามารถใช้งานได้ทุกที่",
+    "why.features.accuracy.title": "ความแม่นยำ 100%",
+    "why.features.accuracy.description": "เครื่องมือสร้างของเราผลิตอักขระ Unicode ล่องหนที่สมบูรณ์แบบทุกครั้ง",
+    "why.features.multipleLanguages.title": "หลายภาษา",
+    "why.features.multipleLanguages.description": "เครื่องมือของเรามีให้ใช้ในหลายภาษาเพื่อให้บริการผู้ใช้จากทั่วโลก",
+    "why.benefits.title": "ประโยชน์ของการใช้เครื่องมือของเรา",
+    "why.benefits.privacy.title": "เน้นความเป็นส่วนตัว",
+    "why.benefits.privacy.description": "เราไม่ติดตามการใช้งานของคุณหรือเก็บข้อความที่คุณสร้าง",
+    "why.benefits.creative.title": "อิสรภาพในการสร้างสรรค์",
+    "why.benefits.creative.description": "ปลดล็อกความเป็นไปได้ใหม่สำหรับการจัดรูปแบบข้อความและการนำเสนอข้ามแพลตฟอร์ม",
+    "why.benefits.performance.title": "ประสิทธิภาพที่รวดเร็ว",
+    "why.benefits.performance.description": "เครื่องมือของเราโหลดอย่างรวดเร็วและสร้างอักขระได้ทันทีเพื่อประสบการณ์ที่ราบรื่น",
+  
+    // Unicode Table
+    "unicode.title": "ตารางอ้างอิงอักขระ Unicode",
+    "unicode.subtitle": "รายการที่ครอบคลุมของอักขระ Unicode ล่องหนและช่องว่างสำหรับการใช้งานต่างๆ",
+    "unicode.table.unicode": "Unicode",
+    "unicode.table.description": "คำอธิบาย",
+    "unicode.table.html": "HTML Entity",
+    "unicode.table.example": "ตัวอย่าง",
+    "unicode.table.actions": "การดำเนินการ",
+    "unicode.copy": "คัดลอก",
+    "unicode.toast.copiedTitle": "คัดลอกแล้ว!",
+    "unicode.toast.copiedDescription": "คัดลอกอักขระไปยังคลิปบอร์ดแล้ว",
+  
+    // Unicode character descriptions
+    "unicode.space.description": "ช่องว่างมาตรฐาน",
+    "unicode.space.notes": "อักขระช่องว่างมาตรฐานที่ใช้ในข้อความ อนุญาต���ห้ขึ้นบรรทัดใหม่และถูกยุบใน HTML",
+    "unicode.noBreakSpace.description": "ช่องว่างไม่ขึ้นบรรทัดใหม่",
+    "unicode.noBreakSpace.notes": "คล้ายกับช่องว่างปกติ แต่ป้องกันการขึ้นบรรทัดใหม่ระหว่างคำ ใช้กันทั่วไปเพื่อรักษาคำที่เกี่ยวข้องไว้ด้วยกัน",
+    "unicode.enQuad.description": "En Quad",
+    "unicode.enQuad.notes": "ช่องว่างที่เท่ากับความกว้างของ en ของฟอนต์ (ครึ่งหนึ่งของ em)",
+    "unicode.emQuad.description": "Em Quad",
+    "unicode.emQuad.notes": "ช่องว่างที่เท่ากับความกว้างของ em ของฟอนต์",
+    "unicode.enSpace.description": "En Space",
+    "unicode.enSpace.notes": "ช่องว่างที่เท่ากับครึ่งหนึ่งของ em ใช้กันทั่วไปในการพิมพ์",
+    "unicode.emSpace.description": "Em Space",
+    "unicode.emSpace.notes": "ช่องว่างที่เท่ากับความกว้างของตัวอักษร 'M' ใช้ในการพิมพ์สำหรับการเยื้องย่อหน้า",
+    "unicode.threePerEmSpace.description": "Three-Per-Em Space",
+    "unicode.threePerEmSpace.notes": "ช่องว่างที่กว้างหนึ่งในสามของ em",
+    "unicode.fourPerEmSpace.description": "Four-Per-Em Space",
+    "unicode.fourPerEmSpace.notes": "ช่องว่างที่กว้างหนึ่งในสี่ของ em",
+    "unicode.sixPerEmSpace.description": "Six-Per-Em Space",
+    "unicode.sixPerEmSpace.notes": "ช่องว่างที่กว้างหนึ่งในหกของ em",
+    "unicode.figureSpace.description": "Figure Space",
+    "unicode.figureSpace.notes": "ช่องว่างที่เท่ากับความกว้างของตัวเลขในฟอนต์ที่ตัวเลขทั้งหมดมีความกว้างเท่ากัน",
+    "unicode.punctuationSpace.description": "Punctuation Space",
+    "unicode.punctuationSpace.notes": "ช่องว่างที่เท่ากับความกว้างของอักขระเครื่องหมายวรรคตอนในฟอนต์",
+    "unicode.thinSpace.description": "Thin Space",
+    "unicode.thinSpace.notes": "ช่องว่างที่บางกว่าช่องว่างมาตรฐาน มักใช้ในการพิมพ์ระหว่างคำและเครื่องหมายวรรคตอน",
+    "unicode.hairSpace.description": "Hair Space",
+    "unicode.hairSpace.notes": "ช่องว่างที่บางที่สุดที่มีในการพิมพ์ ใช้สำหรับการปรับแต่งละเอียด",
+    "unicode.zeroWidthSpace.description": "Zero Width Space",
+    "unicode.zeroWidthSpace.notes": "อักขระล่องหนที่อนุญาตให้ขึ้นบรรทัดใหม่โดยไม่เพิ่มช่องว่างที่มองเห็น นิยมสำหรับการสร้างเนื้อหา 'ว่างเปล่า'",
+    "unicode.zeroWidthNonJoiner.description": "Zero Width Non-Joiner",
+    "unicode.zeroWidthNonJoiner.notes": "ป้องกันไม่ให้อักขระเชื่อมต่อกัน มีประโยชน์ในสคริปต์ที่การรวมอักขระบางอย่างควรแยกออกจากกัน",
+    "unicode.zeroWidthJoiner.description": "Zero Width Joiner",
+    "unicode.zeroWidthJoiner.notes": "เชื่อมอักขระโดยไม่มีการแยกที่มองเห็น จำเป็นสำหรับการสร้างการรวมอีโมจิที่ซับซ้อน",
+    "unicode.leftToRightMark.description": "Left-to-Right Mark",
+    "unicode.leftToRightMark.notes": "ควบคุมทิศทางข้อความ บังคับให้อักขระแสดงจากซ้ายไปขวา",
+    "unicode.rightToLeftMark.description": "Right-to-Left Mark",
+    "unicode.rightToLeftMark.notes": "ควบคุมทิศทางข้อความ บังคับให้อักขระแสดงจากขวาไปซ้าย",
+    "unicode.mediumMathematicalSpace.description": "Medium Mathematical Space",
+    "unicode.mediumMathematicalSpace.notes": "ช่องว่างที่ใช้ในสัญลักษณ์ทางคณิตศาสตร์ กว้างกว่า thin space เล็กน้อย",
+    "unicode.wordJoiner.description": "Word Joiner",
+    "unicode.wordJoiner.notes": "คล้ายกับ Zero Width No-Break Space ป้องกันการขึ้นบรรทัดใหม่ระหว่างอักขระ",
+    "unicode.functionApplication.description": "Function Application",
+    "unicode.functionApplication.notes": "ใช้ในสัญลักษณ์ทางคณิตศาสตร์เพื่อระบุการใช้ฟังก์ชัน",
+    "unicode.invisibleTimes.description": "Invisible Times",
+    "unicode.invisibleTimes.notes": "ใช้ในสัญลักษณ์ทางคณิตศาสตร์เพื่อระบุการคูณโดยไม่แสดงตัวดำเนินการที่มองเห็น",
+    "unicode.invisibleSeparator.description": "Invisible Separator",
+    "unicode.invisibleSeparator.notes": "ใช้เพื่อแยกรายการในบริบททางคณิตศาสตร์หรือเทคนิคโดยไม่มีเครื่องหมายที่มองเห็น",
+    "unicode.invisiblePlus.description": "Invisible Plus",
+    "unicode.invisiblePlus.notes": "ใช้ในสัญลักษณ์ทางคณิตศาสตร์เพื่อระบุการบวกโดยไม่แสดงตัวดำเนินการที่มองเห็น",
+    "unicode.ideographicSpace.description": "Ideographic Space",
+    "unicode.ideographicSpace.notes": "ช่องว่างที่ใช้ในการพิมพ์เอเชียตะวันออก มีความกว้างของอักขระอุดมคติ",
+    "unicode.hangulFiller.description": "Hangul Filler",
+    "unicode.hangulFiller.notes":
+      "เดิมใช้ในข้อความภาษาเกาหลี อักขระล่องหนนี้ได้กลายเป็นที่นิยมสำหรับการสร้างชื่อผู้ใช้ 'ว่างเปล่า' ในเกมและโซเชียลมีเดีย",
+    "unicode.zeroWidthNoBreakSpace.description": "Zero Width No-Break Space",
+    "unicode.zeroWidthNoBreakSpace.notes":
+      "เรียกอีกอย่างว่า Byte Order Mark (BOM) ป้องกันการขึ้นบรรทัดใหม่และล่องหน มักใช้ที่จุดเริ่มต้นของไฟล์ข้อความเพื่อระบุการเข้ารหัส",
+    "unicode.mongolianVowelSeparator.description": "Mongolian Vowel Separator",
+    "unicode.mongolianVowelSeparator.notes": "ใช้ในสคริปต์มองโกเลียเพื่อแยกสระ อาจปรากฏเป็นอักขระล่องหนในบางบริบท",
+    "unicode.braillePatternBlank.description": "Braille Pattern Blank",
+    "unicode.braillePatternBlank.notes":
+      "รูปแบบเบรลล์ว่างเปล่าที่ปรากฏเป็นช่องว่างที่มองเห็นในฟอนต์หลายตัว แต่ในทางเทคนิคแตกต่างจากช่องว่างปกติ",
+  
+    // FAQ section
+    "faq.title": "คำถามที่พบบ่อย",
+    "faq.subtitle": "ค้นหาคำตอบสำหรับคำถามทั่วไปเกี่ยวกับข้อความล่องหนและวิธีใช้งาน",
+    "faq.q1": "อักขระล่องหนคืออะไร?",
+    "faq.a1":
+      "อักขระล่องหนคืออักขระ Unicode ที่ไม่แสดงสัญลักษณ์ที่มองเห็นได้ แต่ยังคงใช้พื้นที่ในข้อความ พวกมันมีค่า Unicode ที่เป็นเอกลักษณ์และสามารถใช้สำหรับการจัดรูปแบบและจุดประสงค์สร้างสรรค์ต่างๆ",
+    "faq.q2": "การใช้อักขระล่องหนปลอดภัยหรือไม่?",
+    "faq.a2":
+      "ใช่ อักขระล่องหนปลอดภัยโดยสมบูรณ์ พวกมันเป็นอักขระ Unicode มาตรฐานที่ใช้ในแอปพลิเคชันและเว็บไซต์หลายแห่ง อย่างไรก็ตาม แพลตฟอร์มบางแห่งอาจมีข้อจำกัดในการใช้งานในชื่อผู้ใช้หรือฟิลด์อื่นๆ",
+    "faq.q3": "อักขระล่องหนจะทำงานได้ทุกที่หรือไม่?",
+    "faq.a3":
+      "แอปพลิเคชัน เว็บไซต์ และระบบปฏิบัติการสมัยใหม่ส่วนใหญ่รองรับอักขระ Unicode รวมถึงอักขระล่องหน อย่างไรก็ตาม ระบบเก่าบางระบบหรือแอปพลิเคชันที่มีการตรวจสอบข้อความที่เข้มงวดอาจไม่แสดงอย่างถูกต้องหรืออาจกรองออก",
+    "faq.q4": "ฉันสามารถใช้อักขระล่องหนในชื่อผู้ใช้ได้หรือไม่?",
+    "faq.a4":
+      "ขึ้นอยู่กับแพลตฟอร์ม เกมและแพลตฟอร์มโซเชียลมีเดียหลายแห่งอนุญาตให้ใช้อักขระล่องหนในชื่อผู้ใช้ แต่บางแห่งได้ใช้ข้อจำกัดเพื่อป้องกันความสับสนหรือการใช้ในทางที่ผิด ตรวจสอบนโยบายของแพลตฟอร์มก่อนใช้งานเสมอ",
+    "faq.q5": "ฉันจะรู้ได้อย่างไรว่าอักขระล่องหนทำงานอยู่?",
+    "faq.a5":
+      "คุณสามารถทดสอบอักขระล่องหนในพื้นที่ทดสอบของเรา หากข้อความดูว่างเปล่าแต่ยังคงใช้พื้นที่ แสดงว่าอักขระล่องหนทำงานถูกต้อง คุณยังสามารถตรวจสอบจำนวนอักขระเพื่อยืนยันการมีอยู่ของมัน",
+    "faq.q6": "ฉันสามารถรวมอักขระล่องหนประเภทต่างๆ ได้หรือไม่?",
+    "faq.a6":
+      "ใช่ คุณสามารถรวมอักขระล่องหนที่แตกต่างกันเพื่อสร้างเอฟเฟกต์ต่างๆ ตัวเลือกขั้นสูงในเครื่องมือสร้างของเราช่วยให้คุณผสมอักขระล่องหนประเภทต่างๆ หรือสร้างรูปแบบด้วยมัน",
+  
+    // Footer
+    "footer.about": "เกี่ยวกับ InvisibleText.me",
+    "footer.description": "InvisibleText.me ให้เครื่องมือสำหรับการสร้างและใช้อักขระ Unicode ล่องหนสำหรับการใช้งานต่างๆ",
+    "footer.quickLinks": "ลิงก์ด่วน",
+    "footer.contact": "ติดต่อ",
+    "footer.contactText": "มีคำถามหรือข้อเสนอแนะ? ติดต่อเรา:",
+    "footer.rights": "สงวนลิขสิทธิ์ทั้งหมด",
+        
+  },
+  vi: {
+    // Meta tags for SEO
+    "meta.title": "Văn Bản Vô Hình - (ㅤ) Sao Chép và Dán Khoảng Trống",
+    "meta.description":
+      "Tạo văn bản vô hình bằng công cụ của chúng tôi. Sao chép và dán các ký tự vô hình để sử dụng trong tin nhắn trống làm tên người dùng cho ứng dụng xã hội, game và nhiều hơn nữa. Thử ngay!",
+    "meta.keywords":
+      "Văn Bản Vô Hình, Văn Bản Trống, Sao Chép Dán Ký Tự Vô Hình, Ký Tự Unicode Vô Hình, Hangul Filler, Zero Width Space",
+
+    // Navigation
+    "nav.home": "Trang Chủ",
+    "nav.unicode": "Unicode",
+    "nav.blog": "Blog",
+    "nav.terms": "Điều Khoản",
+    "nav.about": "Giới Thiệu",
+    "nav.contact": "Liên Hệ",
+    "nav.privacy": "Riêng Tư",
+
+    // Header
+    "header.brand": "INVISIBLETEXT",
+    "header.home": "Văn Bản Vô Hình",
+    "header.blog": "Blog",
+    "header.terms": "Điều Khoản",
+    "header.about": "Giới Thiệu",
+    "header.contact": "Liên Hệ",
+    "header.privacy": "Riêng Tư",
+    "header.selectLanguage": "Chọn Ngôn Ngữ",
+
+    // Hero section
+    "generator.title": "Văn Bản Vô Hình",
+    "generator.subtitle": "Tạo khoảng trống không giới hạn và nhanh chóng sao chép dán văn bản vô hình.",
+    "hero.primaryButton": "Thử Trình Tạo",
+    "hero.secondaryButton": "Tìm Hiểu Về Unicode",
+
+    // Invisible Text Generator
+    "invisibletext.brand": "INVISIBLETEXT",
+    "invisibletext.title": "Văn Bản Vô Hình",
+    "invisibletext.description":
+      "Tạo khoảng trống không giới hạn và nhanh chóng sao chép dán văn bản vô hình cho mạng xã hội, game và nhiều hơn nữa.",
+    "invisibletext.method1.title": "Phương Pháp 1: Sao Chép Một Cú Nhấp",
+    "invisibletext.method1.button": "Sao Chép Hangul Filler",
+    "invisibletext.method1.description":
+      "Chỉ cần nhấp vào nút 'Sao Chép' để thêm văn bản vô hình vào clipboard, sẵn sàng dán ở bất kỳ đâu.",
+    "invisibletext.method1.fallback": "Nếu phương pháp này không hoạt động, hãy thử Phương pháp 2 hoặc 3 bên dưới.",
+    "invisibletext.method2.title": "Phương Pháp 2: Chọn và Sao Chép",
+    "invisibletext.method2.description":
+      "Nhấp vào nút Chọn để làm nổi bật văn bản vô hình bên dưới. Sử dụng CTRL+C (Windows) hoặc Command+C (Mac) để sao chép vào clipboard.",
+    "invisibletext.method2.verification":
+      "Xác minh văn bản vô hình đã sao chép bằng cách dán vào hộp Kiểm tra hoặc nhấp vào nút xanh để xem hoạt động.",
+    "invisibletext.method3.title": "Phương Pháp 3: Trình Tạo Tùy Chỉnh",
+    "invisibletext.method3.description":
+      "Nhập số lượng ký tự vô hình bạn cần, chọn ký tự Unicode ưa thích và nhấp 'Tạo'.",
+    "invisibletext.method3.improved":
+      "Phiên bản nâng cao này cho phép bạn chọn từ các loại ký tự Unicode khác nhau cho nhu cầu cụ thể.",
+    "invisibletext.method4.title": "Phương Pháp 4: Ký Tự Không Giới Hạn",
+    "invisibletext.method4.description":
+      "Tạo lượng lớn văn bản vô hình - hoàn hảo để tạo tin nhắn vô hình nhiều trang hoặc hiệu ứng định dạng đặc biệt.",
+    "invisibletext.method4.more": "Để có thêm công cụ văn bản vô hình nâng cao, hãy truy cập",
+    "invisibletext.testarea.title": "Khu Vực Kiểm Tra",
+    "invisibletext.testarea.description":
+      "Dán các ký tự vô hình của bạn vào đây để kiểm tra. Nếu văn bản placeholder biến mất, văn bản vô hình của bạn đang hoạt động đúng.",
+    "invisibletext.testarea.placeholder": "Dán hoặc tạo ký tự vô hình ở đây để kiểm tra...",
+    "invisibletext.testarea.characters": "Ký Tự",
+    "invisibletext.testarea.empty": "Khu vực này sẽ hiển thị các ký tự vô hình của bạn",
+    "invisibletext.copy": "Sao Chép",
+    "invisibletext.clear": "Xóa",
+    "invisibletext.generate": "Tạo",
+    "invisibletext.preview": "Xem Trước",
+    "invisibletext.count": "Đếm:",
+    "invisibletext.toast.copied": "Đã sao chép vào clipboard!",
+    "invisibletext.toast.generated": "Đã tạo và sao chép vào clipboard!",
+
+    // Method 1 specific options
+    "invisibletext.method1.small": "Sao Chép Nhỏ",
+    "invisibletext.method1.medium": "Sao Chép Trung Bình",
+    "invisibletext.method1.large": "Sao Chép Lớn",
+
+    "invisibletext.method4.mix": "Trộn các ký tự vô hình khác nhau",
+    "invisibletext.method4.mixInfo": "Tạo hỗn hợp ngẫu nhiên các loại ký tự vô hình khác nhau",
+    "invisibletext.method4.pattern": "Tạo chuỗi mẫu",
+    "invisibletext.method4.patternInfo": "Tạo mẫu lặp lại của các ký tự vô hình khác nhau",
+    "invisibletext.method4.generateAdvanced": "Tạo Văn Bản Nâng Cao",
+
+    // What Is Section
+    "whatis.title": "Văn Bản Vô Hình Là Gì?",
+    "whatis.des":
+      "Văn bản vô hình bao gồm các ký tự Unicode đặc biệt chiếm không gian nhưng vẫn không nhìn thấy khi hiển thị. Những ký tự này phục vụ nhiều mục đích sáng tạo và thực tế trực tuyến.",
+
+    // About Invisible Text
+    "about.introduction.title": "Giới Thiệu Về InvisibleText.me",
+    "about.introduction.description":
+      "Văn bản vô hình là các ký tự Unicode đặc biệt không hiển thị bất kỳ ký hiệu nào có thể nhìn thấy nhưng chiếm không gian trong văn bản. Những ký tự độc đáo này cho phép định dạng sáng tạo và hiệu ứng đặc biệt trên các nền tảng kỹ thuật số khác nhau.",
+    "about.whatIs.title": "Văn Bản Vô Hình Là Gì?",
+    "about.whatIs.description":
+      "Ký tự vô hình là các ký hiệu Unicode không thể nhìn thấy bằng mắt thường nhưng phục vụ các chức năng quan trọng. Những ký tự này tạo khoảng trống mà không sử dụng phím space tiêu chuẩn, cho phép khả năng định dạng độc đáo.",
+    "about.types.title": "Các Loại Ký Tự Unicode Vô Hình",
+    "about.types.zeroWidthSpace.title": "Zero Width Space (U+200B)",
+    "about.types.zeroWidthSpace.description":
+      "Zero Width Space (ZWSP) là một ký tự vô hình đa năng cho phép ngắt từ mà không thêm khoảng trống có thể nhìn thấy. Các nhà thiết kế web và nhà phát triển sử dụng nó để có mã sạch hơn và bố cục văn bản được cải thiện, trong khi người dùng mạng xã hội tận dụng nó để định dạng sáng tạo.",
+    "about.types.hangulFiller.title": "Hangul Filler (U+3164)",
+    "about.types.hangulFiller.description":
+      "Ban đầu được sử dụng trong văn bản tiếng Hàn, Hangul Filler đã trở nên phổ biến để tạo tên người dùng vô hình trong game và mạng xã hội. Ký tự này giúp người dùng tạo ra các định danh độc đáo và nổi bật trong các cộng đồng kỹ thuật số nơi tên đặc biệt được đánh giá cao.",
+    "about.types.zeroWidthJoiner.title": "Zero Width Joiner (U+200D)",
+    "about.types.zeroWidthJoiner.description":
+      "Zero Width Joiner (ZWJ) nối các ký tự mà không có sự tách biệt có thể nhìn thấy, cần thiết để tạo các chuỗi emoji và script phức tạp. Ký tự này cho phép kết hợp nhiều emoji thành các ký hiệu thống nhất duy nhất, chẳng hạn như emoji gia đình hoặc emoji nghề nghiệp.",
+    "about.types.zeroWidthNonJoiner.title": "Zero Width Non-Joiner (U+200C)",
+    "about.types.zeroWidthNonJoiner.description":
+      "Zero Width Non-Joiner (ZWNJ) ngăn các ký tự nối với nhau, đặc biệt hữu ích trong các script phức tạp như tiếng Ba Tư và tiếng Ả Rập. Nó duy trì hiển thị đúng của văn bản nơi các quy tắc nối ký tự phức tạp, đảm bảo khả năng đọc phù hợp.",
+
+    // Features section
+    "features.title": "Tại Sao Chọn Công Cụ Của Chúng Tôi",
+    "features.subtitle":
+      "Trình tạo văn bản vô hình của chúng tôi đi kèm với các tính năng độc quyền để làm cho trải nghiệm của bạn tốt hơn.",
+    "features.feature1.title": "Dễ Sử Dụng",
+    "features.feature1.description": "Chức năng sao chép và dán một cú nhấp đơn giản không có các bước phức tạp.",
+    "features.feature2.title": "Không Cần Đăng Ký",
+    "features.feature2.description":
+      "Sử dụng công cụ của chúng tôi ngay lập tức mà không cần tạo tài khoản hoặc cung cấp thông tin cá nhân.",
+    "features.feature3.title": "An Toàn & Riêng Tư",
+    "features.feature3.description":
+      "Chúng tôi không lưu trữ bất kỳ văn bản nào bạn tạo hoặc theo dõi cách bạn sử dụng các ký tự vô hình.",
+    "features.feature4.title": "Nhiều Loại Ký Tự",
+    "features.feature4.description":
+      "Chọn từ các ký tự Unicode vô hình khác nhau cho các mục đích và ứng dụng khác nhau.",
+    "features.feature5.title": "Hỗ Trợ Đa Ngôn Ngữ",
+    "features.feature5.description":
+      "Công cụ của chúng tôi có sẵn bằng nhiều ngôn ngữ để phục vụ người dùng từ khắp nơi trên thế giới.",
+    "features.feature6.title": "Miễn Phí Mãi Mãi",
+    "features.feature6.description":
+      "Tất cả các tính năng hoàn toàn miễn phí sử dụng không có chi phí ẩn hoặc tầng cao cấp.",
+
+    // Use Cases section
+    "useCases.title": "Ứng Dụng Thực Tế",
+    "useCases.subtitle": "Khám phá cách các ký tự vô hình có thể được sử dụng trong các nền tảng và ứng dụng khác nhau.",
+    "useCases.case1.title": "Mạng Xã Hội",
+    "useCases.case1.description":
+      "Tạo bài đăng trống, tên người dùng độc đáo hoặc thêm định dạng vô hình vào nội dung mạng xã hội của bạn.",
+    "useCases.case1.example": "Tin nhắn này chứa các ký tự vô hình tạo khoảng cách mà không sử dụng ngắt dòng.",
+    "useCases.case2.title": "Game",
+    "useCases.case2.description":
+      "Nổi bật với tên người dùng độc đáo hoặc gửi tin nhắn ẩn trong chat game bằng các ký tự vô hình.",
+    "useCases.case2.example":
+      "Người chơi sử dụng ký tự vô hình để tạo tên người dùng độc đáo trông trống hoặc được định dạng đặc biệt.",
+    "useCases.learnMore": "Tìm hiểu thêm",
+
+    // Practical Use Cases
+    "usecases.title": "Các Trường Hợp Sử Dụng Thực Tế Cho Ký Tự Vô Hình",
+
+    // Gaming section
+    "usecases.gaming.title": "Tên Người Dùng và Hồ Sơ Game",
+    "usecases.gaming.description":
+      "Các game thủ sử dụng ký tự vô hình để tạo tên trong game độc đáo nổi bật. Trong các game phổ biến như Fortnite và PUBG, những ký tự này cho phép người chơi tạo ra danh tính đặc biệt vượt qua các hạn chế đặt tên thông thường.",
+    "usecases.fortnite.title": "Văn Bản Vô Hình Trong Fortnite",
+    "usecases.fortnite.description":
+      "Người chơi Fortnite đã chấp nhận ký tự vô hình như một công cụ sáng tạo để tùy chỉnh trải ngh iệm game của họ. Sử dụng zero-width spaces và các ký tự Unicode vô hình khác, người chơi có thể tạo tên hiển thị độc đáo và giao tiếp bí mật với đồng đội.",
+    "usecases.fortnite.howto": "Cách sử dụng ký tự vô hình trong Fortnite:",
+    "usecases.fortnite.step1": "Tạo ký tự vô hình bằng công cụ của chúng tôi",
+    "usecases.fortnite.step2": "Sao chép ký tự vô hình vào clipboard",
+    "usecases.fortnite.step3": "Mở Fortnite và đi đến cài đặt tài khoản",
+    "usecases.fortnite.step4": "Dán ký tự vô hình vào tên hiển thị của bạn",
+    "usecases.fortnite.step5": "Lưu thay đổi",
+    "usecases.fortnite.uses": "Cách sử dụng phổ biến trong Fortnite:",
+    "usecases.fortnite.use1": "Tạo tên người dùng hoàn toàn vô hình",
+    "usecases.fortnite.use2": "Thêm khoảng cách giữa các ký tự trong tên",
+    "usecases.fortnite.use3": "Làm cho tên của bạn xuất hiện độc đáo trong kill feed",
+    "usecases.fortnite.use4": "Tạo thẻ clan nổi bật",
+    "usecases.pubg.title": "Văn Bản Vô Hình Trong PUBG",
+    "usecases.pubg.description":
+      "Người chơi PUBG có thể tạo tên người dùng nổi bật bằng cách kết hợp ký tự vô hình. Kỹ thuật đơn giản này cho phép tùy chỉnh hồ sơ độc đáo thêm nét cá nhân vào danh tính game của bạn.",
+    "usecases.pubg.howto": "Cách sử dụng ký tự vô hình trong PUBG:",
+    "usecases.pubg.step1": "Tạo ký tự vô hình bằng công cụ của chúng tôi",
+    "usecases.pubg.step2": "Sao chép ký tự vô hình vào clipboard",
+    "usecases.pubg.step3": "Mở PUBG và điều hướng đến hồ sơ của bạn",
+    "usecases.pubg.step4": "Chỉnh sửa tên và dán ký tự vô hình",
+    "usecases.pubg.step5": "Xác nhận thay đổi",
+    "usecases.pubg.uses": "Cách sử dụng phổ biến trong PUBG:",
+    "usecases.pubg.use1": "Tạo tên người dùng trông bí ẩn",
+    "usecases.pubg.use2": "Làm cho tên clan của bạn độc đáo",
+    "usecases.pubg.use3": "Thêm khoảng cách giữa các ký tự",
+    "usecases.pubg.use4": "Tạo giao diện hồ sơ tối giản",
+    "usecases.othergames.title": "Các Game Phổ Biến Khác",
+    "usecases.othergames.description":
+      "Ký tự vô hình có thể được sử dụng trong nhiều game phổ biến khác để tạo tên người dùng và thẻ clan độc đáo:",
+    "usecases.minecraft.title": "Minecraft",
+    "usecases.minecraft.description":
+      "Tạo tên vô hình cho server của bạn hoặc sử dụng ký tự vô hình trong biển báo và sách để định dạng sáng tạo.",
+    "usecases.callofduty.title": "Call of Duty",
+    "usecases.callofduty.description":
+      "Làm cho tên người dùng của bạn nổi bật trong lobby và kill feed với các ký tự vô hình được đặt một cách chiến lược.",
+    "usecases.leagueoflegends.title": "League of Legends",
+    "usecases.leagueoflegends.description":
+      "Tạo tên summoner độc đáo thu hút sự chú ý hoặc làm cho thẻ clan của bạn trông đặc biệt.",
+
+    // Messaging Apps section
+    "usecases.messaging.title": "Ứng Dụng Nhắn Tin",
+    "usecases.messaging.description":
+      "Ký tự vô hình thêm một chiều vui vào các ứng dụng nhắn tin, cho phép bạn gửi tin nhắn có vẻ trống hoặc tạo hiệu ứng định dạng đặc biệt mà văn bản tiêu chuẩn không hỗ trợ.",
+    "usecases.messaging.additionalInfo":
+      "Nhiều nền tảng như WhatsApp ngăn gửi tin nhắn hoàn toàn trống, nhưng ký tự vô hình của chúng tôi vượt qua hạn chế này trong khi vẫn xuất hiện trống với người nhận.",
+    "usecases.whatsapp.title": "WhatsApp",
+    "usecases.whatsapp.description":
+      "Gửi tin nhắn trông trống trên WhatsApp để làm bất ngờ các liên hệ của bạn. Thủ thuật phổ biến này sử dụng ký tự Unicode vô hình để tạo tin nhắn có vẻ trống nhưng thực sự chứa văn bản ẩn.",
+    "usecases.whatsapp.instructions":
+      "Chỉ cần sao chép văn bản vô hình từ trình tạo của chúng tôi và dán vào chat WhatsApp để tạo tin nhắn bí ẩn trông trống sẽ khiến bạn bè tò mò.",
+    "usecases.whatsapp.uses": "Cách sử dụng sáng tạo trong WhatsApp:",
+    "usecases.whatsapp.use1": "Gửi tin nhắn trống để thu hút sự chú ý",
+    "usecases.whatsapp.use2": "Tạo khoảng cách giữa các đoạn trong tin nhắn dài",
+    "usecases.whatsapp.use3": "Làm cho trạng thái của bạn xuất hiện trống hoặc tối giản",
+    "usecases.whatsapp.use4": "Tạo bố cục văn bản nghệ thuật trong tin nhắn",
+    "usecases.twitter.title": "Tweet Trống Trên X (Trước Đây Là Twitter)",
+    "usecases.twitter.description":
+      "Tạo tweet trông trống hoặc tên người dùng độc đáo trên X bằng ký tự vô hình. Kỹ thuật này giúp nội dung của bạn nổi bật trong timeline đông đúc.",
+    "usecases.twitter.uses": "Cách sử dụng sáng tạo trên Twitter:",
+    "usecases.twitter.use1": "Tạo tweet trống thu hút sự chú ý",
+    "usecases.twitter.use2": "Thêm khoảng cách giữa các đoạn trong tweet dài",
+    "usecases.twitter.use3": "Làm cho tên hiển thị của bạn độc đáo với ký tự vô hình",
+    "usecases.twitter.use4": "Tạo hồ sơ tối giản với khoảng cách chiến lược",
+    "usecases.othermessaging.title": "Các Nền Tảng Nhắn Tin Khác",
+    "usecases.slack.title": "Slack",
+    "usecases.slack.description":
+      "Sử dụng ký tự vô hình để tạo định dạng sạch trong tin nhắn công việc hoặc tạo tên kênh độc đáo.",
+    "usecases.instagram.title": "Instagram",
+    "usecases.instagram.description":
+      "Tạo ngắt dòng sạch trong bio hoặc caption, hoặc làm cho tên người dùng nổi bật với ký tự vô hình.",
+    "usecases.facebook.title": "Facebook",
+    "usecases.facebook.description":
+      "Đăng cập nhật trạng thái trống thu hút sự chú ý hoặc tạo khoảng cách sạch trong bài đăng dài.",
+
+    // Other Use Cases section
+    "usecases.other.title": "Các Trường Hợp Sử Dụng Sáng Tạo Khác",
+    "usecases.documents.title": "Tài Liệu & Biểu Mẫu",
+    "usecases.documents.description":
+      "Ký tự vô hình có thể được sử dụng trong tài liệu để tạo định dạng cụ thể hoặc vượt qua hạn chế ký tự trong biểu mẫu.",
+    "usecases.documents.use1": "Tạo khoảng cách tùy chỉnh trong tài liệu",
+    "usecases.documents.use2": "Vượt qua yêu cầu ký tự tối thiểu",
+    "usecases.documents.use3": "Tạo bookmark vô hình trong PDF",
+    "usecases.documents.use4": "Định dạng văn bản theo cách sáng tạo",
+    "usecases.programming.title": "Lập Trình",
+    "usecases.programming.description":
+      "Các nhà phát triển đôi khi sử dụng ký tự vô hình cho nhu cầu định dạng cụ thể hoặc mục đích kiểm tra.",
+    "usecases.programming.use1": "Kiểm tra xử lý chuỗi trong ứng dụng",
+    "usecases.programming.use2": "Tạo căn chỉnh văn bản cụ thể",
+    "usecases.programming.use3": "Kiểm tra hỗ trợ Unicode trong ứng dụng",
+    "usecases.programming.use4": "Định dạng comment code theo cách độc đáo",
+    "usecases.design.title": "Thiết Kế Sáng Tạo",
+    "usecases.design.description":
+      "Các nhà thiết kế và nghệ sĩ có thể sử dụng ký tự vô hình để tạo bố cục văn bản độc đáo và hiệu ứng hình ảnh.",
+    "usecases.design.use1": "Tạo bố cục văn bản nghệ thuật",
+    "usecases.design.use2": "Thiết kế typography tối giản",
+    "usecases.design.use3": "Tạo khoảng cách độc đáo trong thiết kế",
+    "usecases.design.use4": "Định dạng văn bản theo cách không thông thường",
+
+    // Professional Use Cases
+    "usecases.professional.title": "Ứng Dụng Chuyên Nghiệp",
+    "usecases.linkedin.title": "LinkedIn",
+    "usecases.linkedin.description": "Tạo hồ sơ chuyên nghiệp với định dạng và khoảng cách sạch bằng ký tự vô hình.",
+    "usecases.linkedin.use1": "Định dạng bio với ngắt dòng sạch",
+    "usecases.linkedin.use2": "Tạo bài đăng hấp dẫn về mặt hình ảnh",
+    "usecases.linkedin.use3": "Thêm khoảng cách để làm nổi bật các điểm quan trọng",
+    "usecases.linkedin.use4": "Tạo hồ sơ tối giản, thanh lịch",
+    "usecases.email.title": "Email",
+    "usecases.email.description": "Sử dụng ký tự vô hình để tạo định dạng email sạch, chuyên nghiệp.",
+    "usecases.email.use1": "Tạo khoảng cách sạch trong chữ ký email",
+    "usecases.email.use2": "Định dạng newsletter với khoảng cách chính xác",
+    "usecases.email.use3": "Tạo thiết kế email tối giản",
+    "usecases.email.use4": "Thêm khoảng cách tinh tế để làm nổi bật các điểm quan trọng",
+
+    // Why Use Invisible Text
+    "why.title": "Tại Sao Sử Dụng Trình Tạo Văn Bản Vô Hình Của Chúng Tôi?",
+    "why.intro":
+      "Trình tạo văn bản vô hình của chúng tôi nổi bật với thiết kế thân thiện với người dùng và các tính năng mạnh mẽ. Chúng tôi đã tạo ra một công cụ làm cho việc tạo và sử dụng ký tự vô hình nhanh chóng và đơn giản, với nhiều phương pháp phù hợp với nhu cầu cụ thể của bạn.",
+    "why.whyuse.title": "Tại Sao Sử Dụng Ký Tự Vô Hình?",
+    "why.whyuse.description": "Ký tự vô hình có thể hữu ích trong nhiều tình huống:",
+    "why.whyuse.use1": "Tạo tên người dùng độc đáo trong game và mạng xã hội",
+    "why.whyuse.use2": "Thêm khoảng cách vô hình trong văn bản nơi khoảng trống thông thường không được phép",
+    "why.whyuse.use3": "Định dạng tin nhắn theo cách sáng tạo",
+    "why.whyuse.use4": "Tạo bài đăng trống trên các nền tảng yêu cầu nội dung",
+    "why.whyuse.use5": "Thêm dấu hiệu vô hình trong văn bản",
+    "why.whyuse.use6": "Tạo hiệu ứng văn bản đặc biệt trong hồ sơ và bio",
+    "why.whyuse.use7": "Gửi tin nhắn ẩn không thể nhìn thấy ngay lập tức",
+    "why.features.easyToUse.title": "Dễ Sử Dụng",
+    "why.features.easyToUse.description":
+      "Công cụ của chúng tôi được thiết kế đơn giản nhất có thể. Chỉ cần nhấp vào một nút (sử dụng phương pháp 1) và bạn đã sao chép một ký tự vô hình sẵn sàng dán ở bất kỳ đâu.",
+    "why.features.totallyFree.title": "Hoàn Toàn Miễn Phí",
+    "why.features.totallyFree.description":
+      "Tất cả các tính năng hoàn toàn miễn phí sử dụng không có hạn chế, đăng ký hoặc chi phí ẩn.",
+    "why.features.unlimitedCharacters.title": "Ký Tự Không Giới Hạn",
+    "why.features.unlimitedCharacters.description":
+      "Tạo bao nhiêu ký tự vô hình tùy thích mà không có bất kỳ hạn chế nào.",
+    "why.features.oneClickCopy.title": "Sao Chép Một Cú Nhấp",
+    "why.features.oneClickCopy.description":
+      "Sao chép ký tự vô hình vào clipboard chỉ với một cú nhấp để thuận tiện tối đa.",
+    "why.features.noSignup.title": "Không Cần Đăng Ký",
+    "why.features.noSignup.description":
+      "Sử dụng công cụ của chúng tôi ngay lập tức mà không cần tạo tài khoản hoặc cung cấp bất kỳ thông tin cá nhân nào.",
+    "why.features.accessible.title": "Truy Cập Mọi Nơi",
+    "why.features.accessible.description":
+      "Công cụ của chúng tôi hoạt động trên tất cả các thiết bị và trình duyệt hiện đại, vì vậy bạn có thể sử dụng nó ở bất cứ đâu.",
+    "why.features.accuracy.title": "Độ Chính Xác 100%",
+    "why.features.accuracy.description": "Trình tạo của chúng tôi tạo ra các ký tự Unicode vô hình hoàn hảo mỗi lần.",
+    "why.features.multipleLanguages.title": "Nhiều Ngôn Ngữ",
+    "why.features.multipleLanguages.description":
+      "Công cụ của chúng tôi có sẵn bằng nhiều ngôn ngữ để phục vụ người dùng từ khắp nơi trên thế giới.",
+    "why.benefits.title": "Lợi Ích Của Việc Sử Dụng Công Cụ Của Chúng Tôi",
+    "why.benefits.privacy.title": "Tập Trung Vào Quyền Riêng Tư",
+    "why.benefits.privacy.description":
+      "Chúng tôi không theo dõi việc sử dụng của bạn hoặc lưu trữ bất kỳ văn bản nào bạn tạo.",
+    "why.benefits.creative.title": "Tự Do Sáng Tạo",
+    "why.benefits.creative.description": "Mở khóa khả năng mới cho định dạng văn bản và trình bày trên các nền tảng.",
+    "why.benefits.performance.title": "Hiệu Suất Nhanh",
+    "why.benefits.performance.description":
+      "Công cụ của chúng tôi tải nhanh và tạo ký tự ngay lập tức để có trải nghiệm mượt mà.",
+
+    // Unicode Table
+    "unicode.title": "Bảng Tham Khảo Ký Tự Unicode",
+    "unicode.subtitle": "Danh sách toàn diện các ký tự Unicode vô hình và khoảng trống cho các ứng dụng khác nhau",
+    "unicode.table.unicode": "Unicode",
+    "unicode.table.description": "Mô Tả",
+    "unicode.table.html": "HTML Entity",
+    "unicode.table.example": "Ví Dụ",
+    "unicode.table.actions": "Hành Động",
+    "unicode.copy": "Sao Chép",
+    "unicode.toast.copiedTitle": "Đã Sao Chép!",
+    "unicode.toast.copiedDescription": "Ký tự đã được sao chép vào clipboard",
+
+    // Unicode character descriptions
+    "unicode.space.description": "Khoảng Trống Tiêu Chuẩn",
+    "unicode.space.notes":
+      "Ký tự khoảng trống tiêu chuẩn được sử dụng trong văn bản. Nó cho phép ngắt dòng và được thu gọn trong HTML.",
+    "unicode.noBreakSpace.description": "Khoảng Trống Không Ngắt",
+    "unicode.noBreakSpace.notes":
+      "Tương tự như khoảng trống thông thường, nhưng ngăn ngắt dòng giữa các từ. Thường được sử dụng để giữ các từ liên quan với nhau.",
+    "unicode.enQuad.description": "En Quad",
+    "unicode.enQuad.notes": "Khoảng trống bằng độ rộng của en của font (một nửa em).",
+    "unicode.emQuad.description": "Em Quad",
+    "unicode.emQuad.notes": "Khoảng trống bằng độ rộng của em của font.",
+    "unicode.enSpace.description": "En Space",
+    "unicode.enSpace.notes": "Khoảng trống bằng một nửa em. Thường được sử dụng trong typography.",
+    "unicode.emSpace.description": "Em Space",
+    "unicode.emSpace.notes": "Khoảng trống bằng độ rộng của chữ 'M'. Được sử dụng trong typography để thụt lề đoạn văn.",
+    "unicode.threePerEmSpace.description": "Three-Per-Em Space",
+    "unicode.threePerEmSpace.notes": "Khoảng trống rộng một phần ba em.",
+    "unicode.fourPerEmSpace.description": "Four-Per-Em Space",
+    "unicode.fourPerEmSpace.notes": "Khoảng trống rộng một phần tư em.",
+    "unicode.sixPerEmSpace.description": "Six-Per-Em Space",
+    "unicode.sixPerEmSpace.notes": "Khoảng trống rộng một phần sáu em.",
+    "unicode.figureSpace.description": "Figure Space",
+    "unicode.figureSpace.notes": "Khoảng trống bằng độ rộng của một chữ số trong font mà tất cả chữ số có cùng độ rộng.",
+    "unicode.punctuationSpace.description": "Punctuation Space",
+    "unicode.punctuationSpace.notes": "Khoảng trống bằng độ rộng của ký tự dấu câu trong font.",
+    "unicode.thinSpace.description": "Thin Space",
+    "unicode.thinSpace.notes":
+      "Khoảng trống mỏng hơn khoảng trống tiêu chuẩn, thường được sử dụng trong typography giữa từ và dấu câu.",
+    "unicode.hairSpace.description": "Hair Space",
+    "unicode.hairSpace.notes": "Khoảng trống mỏng nhất có sẵn trong typography, được sử dụng để điều chỉnh tinh.",
+    "unicode.zeroWidthSpace.description": "Zero Width Space",
+    "unicode.zeroWidthSpace.notes":
+      "Ký tự vô hình cho phép ngắt dòng mà không thêm khoảng trống có thể nhìn thấy. Phổ biến để tạo nội dung 'trống'.",
+    "unicode.zeroWidthNonJoiner.description": "Zero Width Non-Joiner",
+    "unicode.zeroWidthNonJoiner.notes":
+      "Ngăn các ký tự nối với nhau. Hữu ích trong các script mà một số kết hợp ký tự nhất định nên tách biệt.",
+    "unicode.zeroWidthJoiner.description": "Zero Width Joiner",
+    "unicode.zeroWidthJoiner.notes":
+      "Nối các ký tự mà không có sự tách biệt có thể nhìn thấy. Cần thiết để tạo các kết hợp emoji phức tạp.",
+    "unicode.leftToRightMark.description": "Left-to-Right Mark",
+    "unicode.leftToRightMark.notes": "Kiểm soát hướng văn bản, buộc các ký tự hiển thị từ trái sang phải.",
+    "unicode.rightToLeftMark.description": "Right-to-Left Mark",
+    "unicode.rightToLeftMark.notes": "Kiểm soát hướng văn bản, buộc các ký tự hiển thị từ phải sang trái.",
+    "unicode.mediumMathematicalSpace.description": "Medium Mathematical Space",
+    "unicode.mediumMathematicalSpace.notes": "Khoảng trống được sử dụng trong ký hiệu toán học, hơi rộng hơn thin space.",
+    "unicode.wordJoiner.description": "Word Joiner",
+    "unicode.wordJoiner.notes": "Tương tự như Zero Width No-Break Space, ngăn ngắt dòng giữa các ký tự.",
+    "unicode.functionApplication.description": "Function Application",
+    "unicode.functionApplication.notes": "Được sử dụng trong ký hiệu toán học để chỉ ra ứng dụng hàm.",
+    "unicode.invisibleTimes.description": "Invisible Times",
+    "unicode.invisibleTimes.notes":
+      "Được sử dụng trong ký hiệu toán học để chỉ ra phép nhân mà không hiển thị toán tử có thể nhìn thấy.",
+    "unicode.invisibleSeparator.description": "Invisible Separator",
+    "unicode.invisibleSeparator.notes":
+      "Được sử dụng để tách các mục trong bối cảnh toán học hoặc kỹ thuật mà không có dấu hiệu có thể nhìn thấy.",
+    "unicode.invisiblePlus.description": "Invisible Plus",
+    "unicode.invisiblePlus.notes":
+      "Được sử dụng trong ký hiệu toán học để chỉ ra phép cộng mà không hiển thị toán tử có thể nhìn thấy.",
+    "unicode.ideographicSpace.description": "Ideographic Space",
+    "unicode.ideographicSpace.notes":
+      "Khoảng trống được sử dụng trong typography Đông Á, với độ rộng của một ký tự biểu tượng.",
+    "unicode.hangulFiller.description": "Hangul Filler",
+    "unicode.hangulFiller.notes":
+      "Ban đầu được sử dụng trong văn bản tiếng Hàn, ký tự vô hình này đã trở nên phổ biến để tạo tên người dùng 'trống' trong game và mạng xã hội.",
+    "unicode.zeroWidthNoBreakSpace.description": "Zero Width No-Break Space",
+    "unicode.zeroWidthNoBreakSpace.notes":
+      "Còn được gọi là Byte Order Mark (BOM). Ngăn ngắt dòng và vô hình. Thường được sử dụng ở đầu tệp văn bản để chỉ ra mã hóa.",
+    "unicode.mongolianVowelSeparator.description": "Mongolian Vowel Separator",
+    "unicode.mongolianVowelSeparator.notes":
+      "Được sử dụng trong script Mông Cổ để tách nguyên âm. Có thể xuất hiện như một ký tự vô hình trong một số bối cảnh.",
+    "unicode.braillePatternBlank.description": "Braille Pattern Blank",
+    "unicode.braillePatternBlank.notes":
+      "Mẫu Braille trống xuất hiện như khoảng trống có thể nhìn thấy trong nhiều font nhưng về mặt kỹ thuật khác với khoảng trống thông thường.",
+
+    // FAQ section
+    "faq.title": "Câu Hỏi Thường Gặp",
+    "faq.subtitle": "Tìm câu trả lời cho các câu hỏi phổ biến về văn bản vô hình và cách sử dụng",
+    "faq.q1": "Ký tự vô hình là gì?",
+    "faq.a1":
+      "Ký tự vô hình là các ký tự Unicode không hiển thị bất kỳ ký hiệu nào có thể nhìn thấy nhưng vẫn chiếm không gian trong văn bản. Chúng có giá trị Unicode độc đáo và có thể được sử dụng cho các mục đích định dạng và sáng tạo khác nhau.",
+    "faq.q2": "Ký tự vô hình có an toàn để sử dụng không?",
+    "faq.a2":
+      "Có, ký tự vô hình hoàn toàn an toàn. Chúng là các ký tự Unicode tiêu chuẩn được sử dụng trong nhiều ứng dụng và trang web. Tuy nhiên, một số nền tảng có thể có hạn chế về việc sử dụng chúng trong tên người dùng hoặc các trường khác.",
+    "faq.q3": "Ký tự vô hình có hoạt động ở mọi nơi không?",
+    "faq.a3":
+      "Hầu hết các ứng dụng, trang web và hệ điều hành hiện đại đều hỗ trợ ký tự Unicode, bao gồm cả ký tự vô hình. Tuy nhiên, một số hệ thống cũ hoặc ứng dụng có xác thực văn bản nghiêm ngặt có thể không hiển thị chúng đúng cách hoặc có thể lọc chúng ra.",
+    "faq.q4": "Tôi có thể sử dụng ký tự vô hình trong tên người dùng không?",
+    "faq.a4":
+      "Tùy thuộc vào nền tảng. Nhiều game và nền tảng mạng xã hội cho phép ký tự vô hình trong tên người dùng, nhưng một số đã thực hiện hạn chế để ngăn nhầm lẫn hoặc lạm dụng. Luôn kiểm tra chính sách của nền tảng trước khi sử dụng.",
+    "faq.q5": "Làm thế nào để biết ký tự vô hình có hoạt động không?",
+    "faq.a5":
+      "Bạn có thể kiểm tra ký tự vô hình trong Khu vực Kiểm tra của chúng tôi. Nếu văn bản xuất hiện trống nhưng vẫn chiếm không gian, ký tự vô hình đang hoạt động đúng. Bạn cũng có thể kiểm tra số lượng ký tự để xác nhận sự hiện diện của chúng.",
+    "faq.q6": "Tôi có thể kết hợp các loại ký tự vô hình khác nhau không?",
+    "faq.a6":
+      "Có, bạn có thể kết hợp các ký tự vô hình khác nhau để tạo ra các hiệu ứng khác nhau. Tùy chọn Nâng cao trong trình tạo của chúng tôi cho phép bạn trộn các loại ký tự vô hình khác nhau hoặc tạo mẫu với chúng.",
+
+    // Footer
+    "footer.about": "Về InvisibleText.me",
+    "footer.description":
+      "InvisibleText.me cung cấp công cụ để tạo và sử dụng ký tự Unicode vô hình cho các ứng dụng khác nhau.",
+    "footer.quickLinks": "Liên Kết Nhanh",
+    "footer.contact": "Liên Hệ",
+    "footer.contactText": "Có câu hỏi hoặc đề xuất? Liên hệ với chúng tôi:",
+    "footer.rights": "Tất cả quyền được bảo lưu.",
+    
+  },
+  hu: {
+  
+    // Meta tags for SEO
+    "meta.title": "Láthatatlan Szöveg - (ㅤ) Üres Hely Másolás és Beillesztés",
+    "meta.description":
+      "Generálj láthatatlan szöveget az eszközünkkel. Másold és illeszd be a láthatatlan karaktereket üres üzenetek felhasználóneveként közösségi alkalmazásokhoz, játékokhoz és többhöz. Próbáld ki most!",
+    "meta.keywords":
+      "Láthatatlan Szöveg, Üres Szöveg, Láthatatlan Karakterek Másolása Beillesztése, Unicode Láthatatlan Karakterek, Hangul Filler, Zero Width Space",
+  
+    // Navigation
+    "nav.home": "Főoldal",
+    "nav.unicode": "Unicode",
+    "nav.blog": "Blog",
+    "nav.terms": "Feltételek",
+    "nav.about": "Rólunk",
+    "nav.contact": "Kapcsolat",
+    "nav.privacy": "Adatvédelem",
+  
+    // Header
+    "header.brand": "INVISIBLETEXT",
+    "header.home": "Láthatatlan Szöveg",
+    "header.blog": "Blog",
+    "header.terms": "Feltételek",
+    "header.about": "Rólunk",
+    "header.contact": "Kapcsolat",
+    "header.privacy": "Adatvédelem",
+    "header.selectLanguage": "Nyelv Kiválasztása",
+  
+    // Hero section
+    "generator.title": "Láthatatlan Szöveg",
+    "generator.subtitle": "Generálj korlátlan üres helyet és gyorsan másold és illeszd be a láthatatlan szöveget.",
+    "hero.primaryButton": "Generátor Kipróbálása",
+    "hero.secondaryButton": "Unicode Megismerése",
+  
+    // Invisible Text Generator
+    "invisibletext.brand": "INVISIBLETEXT",
+    "invisibletext.title": "Láthatatlan Szöveg",
+    "invisibletext.description":
+      "Generálj korlátlan üres helyet és gyorsan másold és illeszd be a láthatatlan szöveget közösségi médiához, játékokhoz és többhöz.",
+    "invisibletext.method1.title": "1. Módszer: Egy Kattintásos Másolás",
+    "invisibletext.method1.button": "Hangul Filler Másolása",
+    "invisibletext.method1.description":
+      "Egyszerűen kattints a 'Másolás' gombra a láthatatlan szöveg vágólapra helyezéséhez, bárhová beilleszthető.",
+    "invisibletext.method1.fallback": "Ha ez a módszer nem működik, próbáld a 2. vagy 3. módszert alább.",
+    "invisibletext.method2.title": "2. Módszer: Kijelölés és Másolás",
+    "invisibletext.method2.description":
+      "Kattints a Kijelölés gombra az alábbi láthatatlan szöveg kiemelésére. Használd a CTRL+C (Windows) vagy Command+C (Mac) billentyűket a vágólapra másoláshoz.",
+    "invisibletext.method2.verification":
+      "Ellenőrizd a másolt láthatatlan szöveget a Teszt dobozba beillesztve vagy kattints a zöld gombra a működés megtekintéséhez.",
+    "invisibletext.method3.title": "3. Módszer: Egyedi Generátor",
+    "invisibletext.method3.description":
+      "Add meg a szükséges láthatatlan karakterek számát, válaszd ki a kívánt Unicode karaktert, és kattints a 'Generálás' gombra.",
+    "invisibletext.method3.improved":
+      "Ez a továbbfejlesztett verzió lehetővé teszi különböző Unicode karakter típusok közötti választást specifikus igényekhez.",
+    "invisibletext.method4.title": "4. Módszer: Korlátlan Karakterek",
+    "invisibletext.method4.description":
+      "Nagy mennyiségű láthatatlan szöveg generálása - tökéletes többoldalas láthatatlan üzenetek vagy speciális formázási effektek létrehozásához.",
+    "invisibletext.method4.more": "További fejlett láthatatlan szöveg eszközökért látogass el",
+    "invisibletext.testarea.title": "Teszt Terület",
+    "invisibletext.testarea.description":
+      "Illeszd be ide a láthatatlan karaktereidet teszteléshez. Ha a helyőrző szöveg eltűnik, a láthatatlan szöveged megfelelően működik.",
+    "invisibletext.testarea.placeholder": "Illeszd be vagy generálj láthatatlan karaktereket ide teszteléshez...",
+    "invisibletext.testarea.characters": "Karakterek",
+    "invisibletext.testarea.empty": "Ez a terület fogja megjeleníteni a láthatatlan karaktereidet",
+    "invisibletext.copy": "Másolás",
+    "invisibletext.clear": "Törlés",
+    "invisibletext.generate": "Generálás",
+    "invisibletext.preview": "Előnézet",
+    "invisibletext.count": "Darabszám:",
+    "invisibletext.toast.copied": "Vágólapra másolva!",
+    "invisibletext.toast.generated": "Generálva és vágólapra másolva!",
+  
+    // Method 1 specific options
+    "invisibletext.method1.small": "Kis Másolás",
+    "invisibletext.method1.medium": "Közepes Másolás",
+    "invisibletext.method1.large": "Nagy Másolás",
+  
+    "invisibletext.method4.mix": "Különböző láthatatlan karakterek keverése",
+    "invisibletext.method4.mixInfo": "Különböző láthatatlan karakter típusok véletlenszerű keverékét hozza létre",
+    "invisibletext.method4.pattern": "Minta szekvencia létrehozása",
+    "invisibletext.method4.patternInfo": "Különböző láthatatlan karakterek ismétlődő mintáját hozza létre",
+    "invisibletext.method4.generateAdvanced": "Fejlett Szöveg Generálása",
+  
+    // What Is Section
+    "whatis.title": "Mi a Láthatatlan Szöveg?",
+    "whatis.des":
+      "A láthatatlan szöveg speciális Unicode karakterekből áll, amelyek helyet foglalnak, de láthatatlanok maradnak megjelenítéskor. Ezek a karakterek különféle kreatív és gyakorlati célokat szolgálnak online.",
+  
+    // About Invisible Text
+    "about.introduction.title": "Az InvisibleText.me Bemutatása",
+    "about.introduction.description":
+      "A láthatatlan szövegek speciális Unicode karakterek, amelyek nem jelenítenek meg látható szimbólumot, de helyet foglalnak a szövegben. Ezek az egyedi karakterek kreatív formázást és speciális effekteket tesznek lehetővé különböző digitális platformokon.",
+    "about.whatIs.title": "Mi a Láthatatlan Szöveg?",
+    "about.whatIs.description":
+      "A láthatatlan karakterek olyan Unicode szimbólumok, amelyek nem láthatók emberi szemmel, de fontos funkciókat látnak el. Ezek a karakterek üres helyeket hoznak létre a szabványos szóköz billentyű használata nélkül, egyedi formázási lehetőségeket biztosítva.",
+    "about.types.title": "Láthatatlan Unicode Karakterek Típusai",
+    "about.types.zeroWidthSpace.title": "Zero Width Space (U+200B)",
+    "about.types.zeroWidthSpace.description":
+      "A Zero Width Space (ZWSP) egy sokoldalú láthatatlan karakter, amely lehetővé teszi a szótörést látható hely hozzáadása nélkül. A webdesignerek és fejlesztők tisztább kódért és javított szövegelrendezésért használják, míg a közösségi média felhasználók kreatív formázásra alkalmazzák.",
+    "about.types.hangulFiller.title": "Hangul Filler (U+3164)",
+    "about.types.hangulFiller.description":
+      "Eredetileg koreai szövegben használt, a Hangul Filler népszerűvé vált láthatatlan felhasználónevek létrehozására játékokban és közösségi médiában. Ez a karakter segít a felhasználóknak egyedi azonosítókat létrehozni és kitűnni olyan digitális közösségekben, ahol a megkülönböztető nevek értékesek.",
+    "about.types.zeroWidthJoiner.title": "Zero Width Joiner (U+200D)",
+    "about.types.zeroWidthJoiner.description":
+      "A Zero Width Joiner (ZWJ) karaktereket köt össze látható elválasztás nélkül, elengedhetetlen összetett emoji szekvenciák és szkriptek létrehozásához. Ez a karakter lehetővé teszi több emoji kombinálását egyetlen egységes szimbólummá, mint például családi emojik vagy foglalkozási emojik.",
+    "about.types.zeroWidthNonJoiner.title": "Zero Width Non-Joiner (U+200C)",
+    "about.types.zeroWidthNonJoiner.description":
+      "A Zero Width Non-Joiner (ZWNJ) megakadályozza a karakterek összekapcsolódását, különösen hasznos összetett szkriptekben, mint a perzsa és arab. Fenntartja a szöveg helyes megjelenítését, ahol a karakterkapcsolási szabályok bonyolultak, biztosítva a megfelelő olvashatóságot.",
+  
+    // Features section
+    "features.title": "Miért Válaszd Az Eszközünket",
+    "features.subtitle":
+      "A láthatatlan szöveg generátorunk exkluzív funkciókkal rendelkezik, hogy jobb legyen az élményed.",
+    "features.feature1.title": "Könnyű Használat",
+    "features.feature1.description": "Egyszerű egy kattintásos másolás és beillesztés funkció bonyolult lépések nélkül.",
+    "features.feature2.title": "Regisztráció Nem Szükséges",
+    "features.feature2.description":
+      "Használd az eszközünket azonnal fiók létrehozása vagy személyes adatok megadása nélkül.",
+    "features.feature3.title": "Biztonságos és Privát",
+    "features.feature3.description":
+      "Nem tároljuk a generált szövegeidet és nem követjük nyomon a láthatatlan karakterek használatát.",
+    "features.feature4.title": "Többféle Karakter Típus",
+    "features.feature4.description":
+      "Válassz különböző láthatatlan Unicode karakterek közül különböző célokra és alkalmazásokra.",
+    "features.feature5.title": "Többnyelvű Támogatás",
+    "features.feature5.description": "Az eszközünk több nyelven elérhető, hogy világszerte szolgálja a felhasználókat.",
+    "features.feature6.title": "Örökké Ingyenes",
+    "features.feature6.description":
+      "Minden funkció teljesen ingyenesen használható rejtett költségek vagy prémium szintek nélkül.",
+  
+    // Use Cases section
+    "useCases.title": "Gyakorlati Alkalmazások",
+    "useCases.subtitle":
+      "Fedezd fel, hogyan használhatók a láthatatlan karakterek különböző platformokon és alkalmazásokban.",
+    "useCases.case1.title": "Közösségi Média",
+    "useCases.case1.description":
+      "Hozz létre üres bejegyzéseket, egyedi felhasználóneveket, vagy adj láthatatlan formázást a közösségi média tartalmaidhoz.",
+    "useCases.case1.example":
+      "Ez az üzenet láthatatlan karaktereket tartalmaz, amelyek térközt hoznak létre sortörés használata nélkül.",
+    "useCases.case2.title": "Játékok",
+    "useCases.case2.description":
+      "Tűnj ki egyedi felhasználónevekkel vagy küldj rejtett üzeneteket játék chatekben láthatatlan karakterek használatával.",
+    "useCases.case2.example":
+      "A játékosok láthatatlan karaktereket használnak egyedi felhasználónevek létrehozására, amelyek üresnek vagy speciálisan formázottnak tűnnek.",
+    "useCases.learnMore": "Tudj meg többet",
+  
+    // Practical Use Cases
+    "usecases.title": "Gyakorlati Használati Esetek Láthatatlan Karakterekhez",
+  
+    // Gaming section
+    "usecases.gaming.title": "Játék Felhasználónevek és Profilok",
+    "usecases.gaming.description":
+      "A játékosok láthatatlan karaktereket használnak egyedi játékbeli nevek létrehozására, amelyek kitűnnek. Olyan népszerű játékokban, mint a Fortnite és PUBG, ezek a karakterek lehetővé teszik a játékosoknak, hogy megkülönböztető identitásokat alkossanak, amelyek megkerülik a tipikus névadási korlátozásokat.",
+    "usecases.fortnite.title": "Láthatatlan Szöveg a Fortnite-ban",
+    "usecases.fortnite.description":
+      "A Fortnite játékosok elfogadták a láthatatlan karaktereket mint kreatív eszközt játékélményük testreszabására. Zero-width space-ek és más láthatatlan Unicode karakterek használatával a játékosok egyedi megjelenítési neveket hozhatnak létre és titokban kommunikálhatnak csapattársakkal.",
+    "usecases.fortnite.howto": "Hogyan használj láthatatlan karaktereket a Fortnite-ban:",
+    "usecases.fortnite.step1": "Generálj láthatatlan karaktereket az eszközünkkel",
+    "usecases.fortnite.step2": "Másold a láthatatlan karaktereket a vágólapra",
+    "usecases.fortnite.step3": "Nyisd meg a Fortnite-ot és menj a fiók beállításokhoz",
+    "usecases.fortnite.step4": "Illeszd be a láthatatlan karaktereket a megjelenítési nevedbe",
+    "usecases.fortnite.step5": "Mentsd el a változtatásokat",
+    "usecases.fortnite.uses": "Népszerű használatok a Fortnite-ban:",
+    "usecases.fortnite.use1": "Teljesen láthatatlan felhasználónév létrehozása",
+    "usecases.fortnite.use2": "Térköz hozzáadása a nevedben lévő karakterek között",
+    "usecases.fortnite.use3": "A neved egyedivé tétele a kill feed-ben",
+    "usecases.fortnite.use4": "Kitűnő klán tagek létrehozása",
+    "usecases.pubg.title": "Láthatatlan Szöveg a PUBG-ban",
+    "usecases.pubg.description":
+      "A PUBG játékosok kitűnő felhasználóneveket hozhatnak létre láthatatlan karakterek beépítésével. Ez az egyszerű technika egyedi profil testreszabást tesz lehetővé, amely személyes érintést ad a játék identitásodhoz.",
+    "usecases.pubg.howto": "Hogyan használj láthatatlan karaktereket a PUBG-ban:",
+    "usecases.pubg.step1": "Generálj láthatatlan karaktereket az eszközünkkel",
+    "usecases.pubg.step2": "Másold a láthatatlan karaktereket a vágólapra",
+    "usecases.pubg.step3": "Nyisd meg a PUBG-t és navigálj a profilodhoz",
+    "usecases.pubg.step4": "Szerkeszd a nevedet és illeszd be a láthatatlan karaktereket",
+    "usecases.pubg.step5": "Erősítsd meg a változtatásokat",
+    "usecases.pubg.uses": "Népszerű használatok a PUBG-ban:",
+    "usecases.pubg.use1": "Rejtélyes kinézetű felhasználónevek létrehozása",
+    "usecases.pubg.use2": "A klán neved egyedivé tétele",
+    "usecases.pubg.use3": "Térköz hozzáadása karakterek között",
+    "usecases.pubg.use4": "Minimalista profil megjelenés létrehozása",
+    "usecases.othergames.title": "Más Népszerű Játékok",
+    "usecases.othergames.description":
+      "A láthatatlan karakterek sok más népszerű játékban használhatók egyedi felhasználónevek és klán tagek létrehozására:",
+    "usecases.minecraft.title": "Minecraft",
+    "usecases.minecraft.description":
+      "Hozz létre láthatatlan neveket a szervereidhez vagy használj láthatatlan karaktereket táblákban és könyvekben kreatív formázáshoz.",
+    "usecases.callofduty.title": "Call of Duty",
+    "usecases.callofduty.description":
+      "Tedd a felhasználónevedet kitűnővé a lobbiban és kill feed-ben stratégiailag elhelyezett láthatatlan karakterekkel.",
+    "usecases.leagueoflegends.title": "League of Legends",
+    "usecases.leagueoflegends.description":
+      "Hozz létre egyedi summoner neveket, amelyek felkeltik a figyelmet, vagy tedd a klán tagedet különlegessé.",
+  
+    // Messaging Apps section
+    "usecases.messaging.title": "Üzenetküldő Alkalmazások",
+    "usecases.messaging.description":
+      "A láthatatlan karakterek szórakoztató dimenziót adnak az üzenetküldő alkalmazásokhoz, lehetővé téve látszólag üres üzenetek küldését vagy speciális formázási effektek létrehozását, amelyeket a szabványos szöveg nem támogat.",
+    "usecases.messaging.additionalInfo":
+      "Sok platform, mint a WhatsApp, megakadályozza a teljesen üres üzenetek küldését, de a láthatatlan karaktereink megkerülik ezt a korlátozást, miközben üresnek tűnnek a címzettek számára.",
+    "usecases.whatsapp.title": "WhatsApp",
+    "usecases.whatsapp.description":
+      "Küldj üresnek tűnő üzeneteket WhatsApp-on, hogy meglepd a kapcsolataidat. Ez a népszerű trükk láthatatlan Unicode karaktereket használ olyan üzenetek létrehozására, amelyek üresnek tűnnek, de valójában rejtett szöveget tartalmaznak.",
+    "usecases.whatsapp.instructions":
+      "Egyszerűen másold a láthatatlan szöveget a generátorunkból és illeszd be a WhatsApp chatbe, hogy rejtélyes, üresnek tűnő üzeneteket hozz létre, amelyek érdeklik a barátaidat.",
+    "usecases.whatsapp.uses": "Kreatív használatok WhatsApp-ban:",
+    "usecases.whatsapp.use1": "Üres üzenet küldése a figyelem felkeltésére",
+    "usecases.whatsapp.use2": "Térköz létrehozása bekezdések között hosszú üzenetekben",
+    "usecases.whatsapp.use3": "Az állapotod üresnek vagy minimálisnak tüntetése",
+    "usecases.whatsapp.use4": "Művészi szövegelrendezések létrehozása az üzeneteidben",
+    "usecases.twitter.title": "Üres Tweet-ek X-en (Korábban Twitter)",
+    "usecases.twitter.description":
+      "Hozz létre üresnek tűnő tweet-eket vagy egyedi felhasználóneveket X-en láthatatlan karakterek használatával. Ez a technika segít a tartalmadnak kitűnni a zsúfolt idővonalon.",
+    "usecases.twitter.uses": "Kreatív használatok Twitter-en:",
+    "usecases.twitter.use1": "Üres tweet-ek létrehozása, amelyek felkeltik a figyelmet",
+    "usecases.twitter.use2": "Térköz hozzáadása bekezdések között hosszabb tweet-ekben",
+    "usecases.twitter.use3": "A megjelenítési neved egyedivé tétele láthatatlan karakterekkel",
+    "usecases.twitter.use4": "Minimalista profilok létrehozása stratégiai térközökkel",
+    "usecases.othermessaging.title": "Más Üzenetküldő Platformok",
+    "usecases.slack.title": "Slack",
+    "usecases.slack.description":
+      "Használj láthatatlan karaktereket tiszta formázás létrehozására a munkaüzeneteidben vagy egyedi csatornanevek létrehozására.",
+    "usecases.instagram.title": "Instagram",
+    "usecases.instagram.description":
+      "Hozz létre tiszta sortöréseket a biódban vagy feliratokban, vagy tedd a felhasználónevedet kitűnővé láthatatlan karakterekkel.",
+    "usecases.facebook.title": "Facebook",
+    "usecases.facebook.description":
+      "Tegyél közzé üres státusz frissítéseket, amelyek felkeltik a figyelmet, vagy hozz létre tiszta térközöket hosszabb bejegyzésekben.",
+  
+    // Other Use Cases section
+    "usecases.other.title": "Más Kreatív Használati Esetek",
+    "usecases.documents.title": "Dokumentumok és Űrlapok",
+    "usecases.documents.description":
+      "A láthatatlan karakterek használhatók dokumentumokban specifikus formázás létrehozására vagy karakter korlátozások megkerülésére űrlapokban.",
+    "usecases.documents.use1": "Egyedi térközök létrehozása dokumentumokban",
+    "usecases.documents.use2": "Minimális karakter követelmények megkerülése",
+    "usecases.documents.use3": "Láthatatlan könyvjelzők létrehozása PDF-ekben",
+    "usecases.documents.use4": "Szöveg formázása kreatív módokon",
+    "usecases.programming.title": "Programozás",
+    "usecases.programming.description":
+      "A fejlesztők néha láthatatlan karaktereket használnak specifikus formázási igényekhez vagy tesztelési célokra.",
+    "usecases.programming.use1": "String kezelés tesztelése alkalmazásokban",
+    "usecases.programming.use2": "Specifikus szövegigazítások létrehozása",
+    "usecases.programming.use3": "Unicode támogatás tesztelése alkalmazásokban",
+    "usecases.programming.use4": "Kód kommentek formázása egyedi módokon",
+    "usecases.design.title": "Kreatív Tervezés",
+    "usecases.design.description":
+      "A tervezők és művészek láthatatlan karaktereket használhatnak egyedi szövegelrendezések és vizuális effektek létrehozására.",
+    "usecases.design.use1": "Művészi szövegelrendezések létrehozása",
+    "usecases.design.use2": "Minimalista tipográfia tervezése",
+    "usecases.design.use3": "Egyedi térközök létrehozása tervezésekben",
+    "usecases.design.use4": "Szöveg formázása szokatlan módokon",
+  
+    // Professional Use Cases
+    "usecases.professional.title": "Professzionális Alkalmazások",
+    "usecases.linkedin.title": "LinkedIn",
+    "usecases.linkedin.description":
+      "Hozz létre professzionális profilokat tiszta formázással és térközökkel láthatatlan karakterek használatával.",
+    "usecases.linkedin.use1": "A biód formázása tiszta sortörésekkel",
+    "usecases.linkedin.use2": "Vizuálisan vonzó bejegyzések létrehozása",
+    "usecases.linkedin.use3": "Térköz hozzáadása a fontos pontok kiemelésére",
+    "usecases.linkedin.use4": "Minimalista, elegáns profilok létrehozása",
+    "usecases.email.title": "Email",
+    "usecases.email.description":
+      "Használj láthatatlan karaktereket tiszta, professzionális email formázás létrehozására.",
+    "usecases.email.use1": "Tiszta térközök létrehozása email aláírásokban",
+    "usecases.email.use2": "Hírlevelek formázása pontos térközökkel",
+    "usecases.email.use3": "Minimalista email tervezések létrehozása",
+    "usecases.email.use4": "Finom térközök hozzáadása a fontos pontok kiemelésére",
+  
+    // Why Use Invisible Text
+    "why.title": "Miért Használd A Láthatatlan Szöveg Generátorunkat?",
+    "why.intro":
+      "A láthatatlan szöveg generátorunk kiemelkedik felhasználóbarát tervezésével és erőteljes funkcióival. Olyan eszközt hoztunk létre, amely gyorssá és egyszerűvé teszi a láthatatlan karakterek generálását és használatát, több módszerrel a specifikus igényeidhez.",
+    "why.whyuse.title": "Miért Használj Láthatatlan Karaktereket?",
+    "why.whyuse.description": "A láthatatlan karakterek sok helyzetben hasznosak lehetnek:",
+    "why.whyuse.use1": "Egyedi felhasználónevek létrehozása játékokban és közösségi médiában",
+    "why.whyuse.use2": "Láthatatlan térközök hozzáadása szöveghez, ahol normál szóközök nem engedélyezettek",
+    "why.whyuse.use3": "Üzenetek formázása kreatív módokon",
+    "why.whyuse.use4": "Üres bejegyzések létrehozása olyan platformokon, amelyek tartalmat igényelnek",
+    "why.whyuse.use5": "Láthatatlan jelölők hozzáadása szöveghez",
+    "why.whyuse.use6": "Speciális szövegeffektek létrehozása profilokban és biókban",
+    "why.whyuse.use7": "Rejtett üzenetek küldése, amelyek nem azonnal láthatók",
+    "why.features.easyToUse.title": "Könnyű Használat",
+    "why.features.easyToUse.description":
+      "Az eszközünk a lehető legegyszerűbbre van tervezve. Csak kattints egy gombra (1. módszer használatával) és már másoltál egy láthatatlan karaktert, amely bárhová beilleszthető.",
+    "why.features.totallyFree.title": "Teljesen Ingyenes",
+    "why.features.totallyFree.description":
+      "Minden funkció teljesen ingyenesen használható korlátozások, előfizetések vagy rejtett költségek nélkül.",
+    "why.features.unlimitedCharacters.title": "Korlátlan Karakterek",
+    "why.features.unlimitedCharacters.description":
+      "Generálj annyi láthatatlan karaktert, amennyire szükséged van, korlátozások nélkül.",
+    "why.features.oneClickCopy.title": "Egy Kattintásos Másolás",
+    "why.features.oneClickCopy.description":
+      "Másold a láthatatlan karaktereket a vágólapra egyetlen kattintással a maximális kényelem érdekében.",
+    "why.features.noSignup.title": "Regisztráció Nem Szükséges",
+    "why.features.noSignup.description":
+      "Használd az eszközünket azonnal fiók létrehozása vagy személyes adatok megadása nélkül.",
+    "why.features.accessible.title": "Bárhol Elérhető",
+    "why.features.accessible.description":
+      "Az eszközünk minden modern eszközön és böngészőn működik, így bárhol használhatod.",
+    "why.features.accuracy.title": "100% Pontosság",
+    "why.features.accuracy.description":
+      "A generátorunk minden alkalommal tökéletes Unicode láthatatlan karaktereket állít elő.",
+    "why.features.multipleLanguages.title": "Több Nyelv",
+    "why.features.multipleLanguages.description":
+      "Az eszközünk több nyelven elérhető, hogy világszerte szolgálja a felhasználókat.",
+    "why.benefits.title": "Az Eszközünk Használatának Előnyei",
+    "why.benefits.privacy.title": "Adatvédelem Központú",
+    "why.benefits.privacy.description": "Nem követjük nyomon a használatodat és nem tároljuk a generált szövegeidet.",
+    "why.benefits.creative.title": "Kreatív Szabadság",
+    "why.benefits.creative.description":
+      "Új lehetőségeket nyit meg a szövegformázásban és bemutatásban a platformok között.",
+    "why.benefits.performance.title": "Gyors Teljesítmény",
+    "why.benefits.performance.description":
+      "Az eszközünk gyorsan betöltődik és azonnal generál karaktereket a zökkenőmentes élményért.",
+  
+    // Unicode Table
+    "unicode.title": "Unicode Karakter Referencia Táblázat",
+    "unicode.subtitle": "Átfogó lista a láthatatlan és szóköz Unicode karakterekről különböző alkalmazásokhoz",
+    "unicode.table.unicode": "Unicode",
+    "unicode.table.description": "Leírás",
+    "unicode.table.html": "HTML Entitás",
+    "unicode.table.example": "Példa",
+    "unicode.table.actions": "Műveletek",
+    "unicode.copy": "Másolás",
+    "unicode.toast.copiedTitle": "Másolva!",
+    "unicode.toast.copiedDescription": "Karakter másolva a vágólapra",
+  
+    // Unicode character descriptions
+    "unicode.space.description": "Szabványos Szóköz",
+    "unicode.space.notes":
+      "A szövegben használt szabványos szóköz karakter. Lehetővé teszi a sortörést és összecsukódik HTML-ben.",
+    "unicode.noBreakSpace.description": "Nem Törő Szóköz",
+    "unicode.noBreakSpace.notes":
+      "Hasonló a normál szóközhöz, de megakadályozza a sortörést szavak között. Általában a kapcsolódó szavak együtt tartására használják.",
+    "unicode.enQuad.description": "En Quad",
+    "unicode.enQuad.notes": "Szóköz, amely egyenlő a betűtípus en szélességével (em fele).",
+    "unicode.emQuad.description": "Em Quad",
+    "unicode.emQuad.notes": "Szóköz, amely egyenlő a betűtípus em szélességével.",
+    "unicode.enSpace.description": "En Space",
+    "unicode.enSpace.notes": "Szóköz, amely egyenlő az em felével. Általában a tipográfiában használják.",
+    "unicode.emSpace.description": "Em Space",
+    "unicode.emSpace.notes":
+      "Szóköz, amely egyenlő az 'M' betű szélességével. A tipográfiában bekezdés behúzásra használják.",
+    "unicode.threePerEmSpace.description": "Three-Per-Em Space",
+    "unicode.threePerEmSpace.notes": "Szóköz, amely egy em harmadának szélességű.",
+    "unicode.fourPerEmSpace.description": "Four-Per-Em Space",
+    "unicode.fourPerEmSpace.notes": "Szóköz, amely egy em negyedének szélességű.",
+    "unicode.sixPerEmSpace.description": "Six-Per-Em Space",
+    "unicode.sixPerEmSpace.notes": "Szóköz, amely egy em hatodának szélességű.",
+    "unicode.figureSpace.description": "Figure Space",
+    "unicode.figureSpace.notes":
+      "Szóköz, amely egyenlő egy számjegy szélességével olyan betűtípusokban, ahol minden számjegy azonos szélességű.",
+    "unicode.punctuationSpace.description": "Punctuation Space",
+    "unicode.punctuationSpace.notes": "Szóköz, amely egyenlő a betűtípus írásjelek szélességével.",
+    "unicode.thinSpace.description": "Thin Space",
+    "unicode.thinSpace.notes":
+      "Szóköz, amely vékonyabb a szabványos szóköznél, gyakran használják a tipográfiában szavak és írásjelek között.",
+    "unicode.hairSpace.description": "Hair Space",
+    "unicode.hairSpace.notes": "A legvékonyabb elérhető szóköz a tipográfiában, finomhangolásra használják.",
+    "unicode.zeroWidthSpace.description": "Zero Width Space",
+    "unicode.zeroWidthSpace.notes":
+      "Láthatatlan karakter, amely lehetővé teszi a sortörést látható szóköz hozzáadása nélkül. Népszerű 'üres' tartalom létrehozására.",
+    "unicode.zeroWidthNonJoiner.description": "Zero Width Non-Joiner",
+    "unicode.zeroWidthNonJoiner.notes":
+      "Megakadályozza a karakterek összekapcsolódását. Hasznos olyan szkriptekben, ahol bizonyos karakterkombinációknak külön kell maradniuk.",
+    "unicode.zeroWidthJoiner.description": "Zero Width Joiner",
+    "unicode.zeroWidthJoiner.notes":
+      "Karaktereket köt össze látható elválasztás nélkül. Elengedhetetlen összetett emoji kombinációk létrehozásához.",
+    "unicode.leftToRightMark.description": "Left-to-Right Mark",
+    "unicode.leftToRightMark.notes":
+      "Szövegirány vezérlése, karakterek balról jobbra történő megjelenítésének kényszerítése.",
+    "unicode.rightToLeftMark.description": "Right-to-Left Mark",
+    "unicode.rightToLeftMark.notes":
+      "Szövegirány vezérlése, karakterek jobbról balra történő megjelenítésének kényszerítése.",
+    "unicode.mediumMathematicalSpace.description": "Medium Mathematical Space",
+    "unicode.mediumMathematicalSpace.notes": "Matematikai jelölésben használt szóköz, kissé szélesebb a thin space-nél.",
+    "unicode.wordJoiner.description": "Word Joiner",
+    "unicode.wordJoiner.notes": "Hasonló a Zero Width No-Break Space-hez, megakadályozza a sortörést karakterek között.",
+    "unicode.functionApplication.description": "Function Application",
+    "unicode.functionApplication.notes": "Matematikai jelölésben használják függvényalkalmazás jelzésére.",
+    "unicode.invisibleTimes.description": "Invisible Times",
+    "unicode.invisibleTimes.notes":
+      "Matematikai jelölésben használják szorzás jelzésére látható operátor megjelenítése nélkül.",
+    "unicode.invisibleSeparator.description": "Invisible Separator",
+    "unicode.invisibleSeparator.notes":
+      "Elemek elválasztására használják matematikai vagy technikai kontextusban látható jel nélkül.",
+    "unicode.invisiblePlus.description": "Invisible Plus",
+    "unicode.invisiblePlus.notes":
+      "Matematikai jelölésben használják összeadás jelzésére látható operátor megjelenítése nélkül.",
+    "unicode.ideographicSpace.description": "Ideographic Space",
+    "unicode.ideographicSpace.notes": "Kelet-ázsiai tipográfiában használt szóköz, ideografikus karakter szélességével.",
+    "unicode.hangulFiller.description": "Hangul Filler",
+    "unicode.hangulFiller.notes":
+      "Eredetileg koreai szövegben használt, ez a láthatatlan karakter népszerűvé vált 'üres' felhasználónevek létrehozására játékokban és közösségi médiában.",
+    "unicode.zeroWidthNoBreakSpace.description": "Zero Width No-Break Space",
+    "unicode.zeroWidthNoBreakSpace.notes":
+      "Más néven Byte Order Mark (BOM). Megakadályozza a sortörést és láthatatlan. Gyakran használják szövegfájlok elején a kódolás jelzésére.",
+    "unicode.mongolianVowelSeparator.description": "Mongolian Vowel Separator",
+    "unicode.mongolianVowelSeparator.notes":
+      "Mongol írásban használják magánhangzók elválasztására. Bizonyos kontextusokban láthatatlan karakterként jelenhet meg.",
+    "unicode.braillePatternBlank.description": "Braille Pattern Blank",
+    "unicode.braillePatternBlank.notes":
+      "Üres Braille minta, amely látható szóközként jelenik meg sok betűtípusban, de technikailag különbözik a normál szóköztől.",
+  
+    // FAQ section
+    "faq.title": "Gyakran Ismételt Kérdések",
+    "faq.subtitle": "Találj válaszokat a láthatatlan szöveggel és használatával kapcsolatos gyakori kérdésekre",
+    "faq.q1": "Mik a láthatatlan karakterek?",
+    "faq.a1":
+      "A láthatatlan karakterek olyan Unicode karakterek, amelyek nem jelenítenek meg látható szimbólumot, de még mindig helyet foglalnak a szövegben. Egyedi Unicode értékekkel rendelkeznek és különféle formázási és kreatív célokra használhatók.",
+    "faq.q2": "Biztonságos a láthatatlan karakterek használata?",
+    "faq.a2":
+      "Igen, a láthatatlan karakterek teljesen biztonságosak. Szabványos Unicode karakterek, amelyeket sok alkalmazásban és weboldalon használnak. Azonban egyes platformok korlátozásokat alkalmazhatnak a felhasználónevekben vagy más mezőkben való használatukra.",
+    "faq.q3": "A láthatatlan karakterek mindenhol működnek?",
+    "faq.a3":
+      "A legtöbb modern alkalmazás, weboldal és operációs rendszer támogatja a Unicode karaktereket, beleértve a láthatatlan karaktereket is. Azonban néhány régebbi rendszer vagy szigorú szövegvalidációval rendelkező alkalmazás esetleg nem jeleníti meg őket megfelelően vagy kiszűrheti őket.",
+    "faq.q4": "Használhatok láthatatlan karaktereket felhasználónevekben?",
+    "faq.a4":
+      "Ez platformfüggő. Sok játék és közösségi média platform engedélyezi a láthatatlan karaktereket a felhasználónevekben, de néhány korlátozásokat vezetett be a zavar vagy visszaélés megelőzésére. Mindig ellenőrizd a platform szabályzatát használat előtt.",
+    "faq.q5": "Honnan tudhatom, hogy a láthatatlan karakterek működnek?",
+    "faq.a5":
+      "Tesztelheted a láthatatlan karaktereket a Teszt Területünkön. Ha a szöveg üresnek tűnik, de még mindig helyet foglal, a láthatatlan karaktereid megfelelően működnek. A karakterszámot is ellenőrizheted a jelenlétük megerősítésére.",
+    "faq.q6": "Kombinálhatok különböző típusú láthatatlan karaktereket?",
+    "faq.a6":
+      "Igen, kombinálhatsz különböző láthatatlan karaktereket különféle effektek létrehozására. A generátorunk Fejlett opciói lehetővé teszik különböző láthatatlan karakter típusok keverését vagy minták létrehozását velük.",
+  
+    // Footer
+    "footer.about": "Az InvisibleText.me-ről",
+    "footer.description":
+      "Az InvisibleText.me eszközöket biztosít láthatatlan Unicode karakterek generálásához és használatához különféle alkalmazásokhoz.",
+    "footer.quickLinks": "Gyors Linkek",
+    "footer.contact": "Kapcsolat",
+    "footer.contactText": "Kérdésed vagy javaslatod van? Lépj kapcsolatba velünk:",
+    "footer.rights": "Minden jog fenntartva.",
+  },
+  fi: {
+    // Meta tags for SEO
+    "meta.title": "Näkymätön Teksti - (ㅤ) Tyhjän Tilan Kopiointi ja Liittäminen",
+    "meta.description":
+      "Luo näkymätöntä tekstiä työkalullamme. Kopioi ja liitä näkymättömiä merkkejä käytettäväksi tyhjinä viesteinä käyttäjäniminä sosiaalisiin sovelluksiin, peleihin ja muuhun. Kokeile nyt!",
+    "meta.keywords":
+      "Näkymätön Teksti, Tyhjä Teksti, Kopioi Liitä Näkymättömät Merkit, Unicode Näkymättömät Merkit, Hangul Filler, Zero Width Space",
+  
+    // Navigation
+    "nav.home": "Etusivu",
+    "nav.unicode": "Unicode",
+    "nav.blog": "Blogi",
+    "nav.terms": "Ehdot",
+    "nav.about": "Tietoja",
+    "nav.contact": "Yhteystiedot",
+    "nav.privacy": "Yksityisyys",
+  
+    // Header
+    "header.brand": "INVISIBLETEXT",
+    "header.home": "Näkymätön Teksti",
+    "header.blog": "Blogi",
+    "header.terms": "Ehdot",
+    "header.about": "Tietoja",
+    "header.contact": "Yhteystiedot",
+    "header.privacy": "Yksityisyys",
+    "header.selectLanguage": "Valitse Kieli",
+  
+    // Hero section
+    "generator.title": "Näkymätön Teksti",
+    "generator.subtitle": "Luo rajatonta tyhjää tilaa ja kopioi ja liitä näkymätöntä tekstiä nopeasti.",
+    "hero.primaryButton": "Kokeile Generaattoria",
+    "hero.secondaryButton": "Opi Unicodesta",
+  
+    // Invisible Text Generator
+    "invisibletext.brand": "INVISIBLETEXT",
+    "invisibletext.title": "Näkymätön Teksti",
+    "invisibletext.description":
+      "Luo rajatonta tyhjää tilaa ja kopioi ja liitä näkymätöntä tekstiä nopeasti sosiaaliseen mediaan, peleihin ja muuhun.",
+    "invisibletext.method1.title": "Menetelmä 1: Yhden Klikkauksen Kopiointi",
+    "invisibletext.method1.button": "Kopioi Hangul Filler",
+    "invisibletext.method1.description":
+      "Klikkaa yksinkertaisesti 'Kopioi' -painiketta lisätäksesi näkymätöntä tekstiä leikepöydälle, valmiina liitettäväksi mihin tahansa.",
+    "invisibletext.method1.fallback": "Jos tämä menetelmä ei toimi, kokeile Menetelmää 2 tai 3 alla.",
+    "invisibletext.method2.title": "Menetelmä 2: Valitse ja Kopioi",
+    "invisibletext.method2.description":
+      "Klikkaa Valitse-painiketta korostaaksesi alla olevan näkymättömän tekstin. Käytä CTRL+C (Windows) tai Command+C (Mac) kopioidaksesi leikepöydälle.",
+    "invisibletext.method2.verification":
+      "Vahvista kopioitu näkymätön teksti liittämällä se Testi-laatikkoon tai klikkaa vihreää painiketta nähdäksesi toiminnan.",
+    "invisibletext.method3.title": "Menetelmä 3: Mukautettu Generaattori",
+    "invisibletext.method3.description":
+      "Syötä tarvitsemiesi näkymättömien merkkien määrä, valitse haluamasi Unicode-merkki ja klikkaa 'Luo'.",
+    "invisibletext.method3.improved":
+      "Tämä parannettu versio antaa sinun valita eri Unicode-merkki tyypeistä erityistarpeisiin.",
+    "invisibletext.method4.title": "Menetelmä 4: Rajattomat Merkit",
+    "invisibletext.method4.description":
+      "Luo suuria määriä näkymätöntä tekstiä - täydellinen monisivuisten näkymättömien viestien tai erikoismuotoilutehosten luomiseen.",
+    "invisibletext.method4.more": "Lisää kehittyneitä näkymättömän tekstin työkaluja varten, vieraile",
+    "invisibletext.testarea.title": "Testialue",
+    "invisibletext.testarea.description":
+      "Liitä näkymättömät merkkisi tähän testataksesi niitä. Jos paikkamerkkiteksti katoaa, näkymätön tekstisi toimii oikein.",
+    "invisibletext.testarea.placeholder": "Liitä tai luo näkymättömiä merkkejä tähän testataksesi niitä...",
+    "invisibletext.testarea.characters": "Merkkiä",
+    "invisibletext.testarea.empty": "Tämä alue näyttää näkymättömät merkkisi",
+    "invisibletext.copy": "Kopioi",
+    "invisibletext.clear": "Tyhjennä",
+    "invisibletext.generate": "Luo",
+    "invisibletext.preview": "Esikatselu",
+    "invisibletext.count": "Määrä:",
+    "invisibletext.toast.copied": "Kopioitu leikepöydälle!",
+    "invisibletext.toast.generated": "Luotu ja kopioitu leikepöydälle!",
+  
+    // Method 1 specific options
+    "invisibletext.method1.small": "Pieni Kopiointi",
+    "invisibletext.method1.medium": "Keskikokoinen Kopiointi",
+    "invisibletext.method1.large": "Suuri Kopiointi",
+  
+    "invisibletext.method4.mix": "Sekoita erilaisia näkymättömiä merkkejä",
+    "invisibletext.method4.mixInfo": "Luo satunnainen sekoitus erilaisia näkymättömiä merkki tyyppejä",
+    "invisibletext.method4.pattern": "Luo kuvio sekvenssi",
+    "invisibletext.method4.patternInfo": "Luo toistuva kuvio erilaisista näkymättömistä merkeistä",
+    "invisibletext.method4.generateAdvanced": "Luo Kehittynyt Teksti",
+  
+    // What Is Section
+    "whatis.title": "Mikä On Näkymätön Teksti?",
+    "whatis.des":
+      "Näkymätön teksti koostuu erityisistä Unicode-merkeistä, jotka vievät tilaa mutta pysyvät näkymättöminä näytettäessä. Nämä merkit palvelevat erilaisia luovia ja käytännöllisiä tarkoituksia verkossa.",
+  
+    // About Invisible Text
+    "about.introduction.title": "InvisibleText.me:n Esittely",
+    "about.introduction.description":
+      "Näkymätön teksti on erityisiä Unicode-merkkejä, jotka eivät näytä mitään näkyvää symbolia mutta vievät tilaa tekstissä. Nämä ainutlaatuiset merkit mahdollistavat luovan muotoilun ja erikoistehosteet eri digitaalisilla alustoilla.",
+    "about.whatIs.title": "Mikä On Näkymätön Teksti?",
+    "about.whatIs.description":
+      "Näkymättömät merkit ovat Unicode-symboleja, jotka eivät ole näkyvissä paljaalle silmälle mutta palvelevat tärkeitä toimintoja. Nämä merkit luovat tyhjiä tiloja käyttämättä tavallista välilyönti-näppäintä, mahdollistaen ainutlaatuisia muotoilumahdollisuuksia.",
+    "about.types.title": "Näkymättömien Unicode-merkkien Tyypit",
+    "about.types.zeroWidthSpace.title": "Zero Width Space (U+200B)",
+    "about.types.zeroWidthSpace.description":
+      "Zero Width Space (ZWSP) on monipuolinen näkymätön merkki, joka mahdollistaa sanojen katkeamisen lisäämättä näkyvää tilaa. Websuunnittelijat ja kehittijät käyttävät sitä puhtaampaan koodiin ja parannettuun tekstin asetteluun, kun taas sosiaalisen median käyttäjät hyödyntävät sitä luovaan muotoiluun.",
+    "about.types.hangulFiller.title": "Hangul Filler (U+3164)",
+    "about.types.hangulFiller.description":
+      "Alun perin korean tekstissä käytetty Hangul Filler on tullut suosituksi näkymättömien käyttäjänimien luomiseen peleissä ja sosiaalisessa mediassa. Tämä merkki auttaa käyttäjiä luomaan ainutlaatuisia tunnuksia ja erottumaan digitaalisissa yhteisöissä, joissa erottuvat nimet ovat arvokkaita.",
+    "about.types.zeroWidthJoiner.title": "Zero Width Joiner (U+200D)",
+    "about.types.zeroWidthJoiner.description":
+      "Zero Width Joiner (ZWJ) yhdistää merkkejä ilman näkyvää erotusta, välttämätön monimutkaisten emoji-sekvenssien ja skriptien luomiseen. Tämä merkki mahdollistaa useiden emojien yhdistämisen yhdeksi yhtenäiseksi symboliksi, kuten perhe-emojit tai ammatti-emojit.",
+    "about.types.zeroWidthNonJoiner.title": "Zero Width Non-Joiner (U+200C)",
+    "about.types.zeroWidthNonJoiner.description":
+      "Zero Width Non-Joiner (ZWNJ) estää merkkejä yhdistymästä, erityisen hyödyllinen monimutkaisissa skripteissä kuten persiassa ja arabiassa. Se ylläpitää tekstin oikeaa näyttöä siellä, missä merkkien yhdistämissäännöt ovat monimutkaisia, varmistaen asianmukaisen luettavuuden.",
+  
+    // Features section
+    "features.title": "Miksi Valita Työkalumme",
+    "features.subtitle":
+      "Näkymättömän tekstin generaattorimme sisältää eksklusiivisia ominaisuuksia parantamaan kokemustasi.",
+    "features.feature1.title": "Helppo Käyttää",
+    "features.feature1.description":
+      "Yksinkertainen yhden klikkauksen kopioi ja liitä -toiminto ilman monimutkaisia vaiheita.",
+    "features.feature2.title": "Ei Rekisteröitymistä",
+    "features.feature2.description":
+      "Käytä työkaluamme välittömästi luomatta tiliä tai antamatta henkilökohtaisia tietoja.",
+    "features.feature3.title": "Turvallinen ja Yksityinen",
+    "features.feature3.description": "Emme tallenna luomaasi tekstiä tai seuraa näkymättömien merkkien käyttöäsi.",
+    "features.feature4.title": "Useita Merkki Tyyppejä",
+    "features.feature4.description":
+      "Valitse erilaisista näkymättömistä Unicode-merkeistä eri tarkoituksiin ja sovelluksiin.",
+    "features.feature5.title": "Monikielinen Tuki",
+    "features.feature5.description": "Työkalumme on saatavilla useilla kielillä palvellakseen käyttäjiä ympäri maailmaa.",
+    "features.feature6.title": "Ikuisesti Ilmainen",
+    "features.feature6.description":
+      "Kaikki ominaisuudet ovat täysin ilmaisia käyttää ilman piilokustannuksia tai premium-tasoja.",
+  
+    // Use Cases section
+    "useCases.title": "Käytännölliset Sovellukset",
+    "useCases.subtitle": "Tutustu siihen, miten näkymättömiä merkkejä voidaan käyttää eri alustoilla ja sovelluksissa.",
+    "useCases.case1.title": "Sosiaalinen Media",
+    "useCases.case1.description":
+      "Luo tyhjiä julkaisuja, ainutlaatuisia käyttäjänimiä tai lisää näkymätöntä muotoilua sosiaalisen median sisältöösi.",
+    "useCases.case1.example":
+      "Tämä viesti sisältää näkymättömiä merkkejä, jotka luovat välistystä käyttämättä rivinvaihtoja.",
+    "useCases.case2.title": "Pelit",
+    "useCases.case2.description":
+      "Erotu ainutlaatuisilla käyttäjänimillä tai lähetä piilotettuja viestejä pelichateissa käyttämällä näkymättömiä merkkejä.",
+    "useCases.case2.example":
+      "Pelaajat käyttävät näkymättömiä merkkejä luodakseen ainutlaatuisia käyttäjänimiä, jotka näyttävät tyhjiltä tai erikoisesti muotoilluilta.",
+    "useCases.learnMore": "Opi lisää",
+  
+    // Practical Use Cases
+    "usecases.title": "Käytännölliset Käyttötapaukset Näkymättömille Merkeille",
+  
+    // Gaming section
+    "usecases.gaming.title": "Peli Käyttäjänimet ja Profiilit",
+    "usecases.gaming.description":
+      "Pelaajat käyttävät näkymättömiä merkkejä luodakseen ainutlaatuisia pelin sisäisiä nimiä, jotka erottuvat. Suosituissa peleissä kuten Fortnite ja PUBG, nämä merkit mahdollistavat pelaajien luoda erottuvia identiteettejä, jotka kiertävät tyypilliset nimeämisrajoitukset.",
+    "usecases.fortnite.title": "Näkymätön Teksti Fortnitessa",
+    "usecases.fortnite.description":
+      "Fortnite-pelaajat ovat omaksuneet näkymättömät merkit luovana työkaluna pelikokemuksensa mukauttamiseen. Käyttämällä zero-width space -merkkejä ja muita näkymättömiä Unicode-merkkejä, pelaajat voivat luoda ainutlaatuisia näyttönimiä ja kommunikoida salaa joukkuetovereidensa kanssa.",
+    "usecases.fortnite.howto": "Kuinka käyttää näkymättömiä merkkejä Fortnitessa:",
+    "usecases.fortnite.step1": "Luo näkymättömiä merkkejä työkalullamme",
+    "usecases.fortnite.step2": "Kopioi näkymättömät merkit leikepöydälle",
+    "usecases.fortnite.step3": "Avaa Fortnite ja siirry tilin asetuksiin",
+    "usecases.fortnite.step4": "Liitä näkymättömät merkit näyttönimeesi",
+    "usecases.fortnite.step5": "Tallenna muutokset",
+    "usecases.fortnite.uses": "Suositut käytöt Fortnitessa:",
+    "usecases.fortnite.use1": "Täysin näkymättömän käyttäjänimen luominen",
+    "usecases.fortnite.use2": "Välistyksen lisääminen nimesi merkkien väliin",
+    "usecases.fortnite.use3": "Nimesi näyttäminen ainutlaatuisena kill feedissä",
+    "usecases.fortnite.use4": "Erottuvien klaani-tagien luominen",
+    "usecases.pubg.title": "Näkymätön Teksti PUBG:ssa",
+    "usecases.pubg.description":
+      "PUBG-pelaajat voivat luoda erottuvia käyttäjänimiä sisällyttämällä näkymättömiä merkkejä. Tämä yksinkertainen tekniikka mahdollistaa ainutlaatuisen profiilin mukauttamisen, joka lisää henkilökohtaisen kosketuksen peliidentiteettiisi.",
+    "usecases.pubg.howto": "Kuinka käyttää näkymättömiä merkkejä PUBG:ssa:",
+    "usecases.pubg.step1": "Luo näkymättömiä merkkejä työkalullamme",
+    "usecases.pubg.step2": "Kopioi näkymättömät merkit leikepöydälle",
+    "usecases.pubg.step3": "Avaa PUBG ja siirry profiiliisi",
+    "usecases.pubg.step4": "Muokkaa nimeäsi ja liitä näkymättömät merkit",
+    "usecases.pubg.step5": "Vahvista muutokset",
+    "usecases.pubg.uses": "Suositut käytöt PUBG:ssa:",
+    "usecases.pubg.use1": "Salaperäisen näköisten käyttäjänimien luominen",
+    "usecases.pubg.use2": "Klaani-nimesi tekeminen ainutlaatuiseksi",
+    "usecases.pubg.use3": "Välistyksen lisääminen merkkien väliin",
+    "usecases.pubg.use4": "Minimalistisen profiilin ulkoasun luominen",
+    "usecases.othergames.title": "Muut Suositut Pelit",
+    "usecases.othergames.description":
+      "Näkymättömiä merkkejä voidaan käyttää monissa muissa suosituissa peleissä ainutlaatuisten käyttäjänimien ja klaani-tagien luomiseen:",
+    "usecases.minecraft.title": "Minecraft",
+    "usecases.minecraft.description":
+      "Luo näkymättömiä nimiä palvelimillesi tai käytä näkymättömiä merkkejä kylteissä ja kirjoissa luovaan muotoiluun.",
+    "usecases.callofduty.title": "Call of Duty",
+    "usecases.callofduty.description":
+      "Tee käyttäjänimestäsi erottuva lobbyssä ja kill feedissä strategisesti sijoitetuilla näkymättömillä merkeillä.",
+    "usecases.leagueoflegends.title": "League of Legends",
+    "usecases.leagueoflegends.description":
+      "Luo ainutlaatuisia summoner-nimiä, jotka herättävät huomiota tai tee klaani-tagistäsi erikoinen.",
+  
+    // Messaging Apps section
+    "usecases.messaging.title": "Viestisovellukset",
+    "usecases.messaging.description":
+      "Näkymättömät merkit lisäävät hauskan ulottuvuuden viestisovelluksiin, mahdollistaen näennäisesti tyhjien viestien lähettämisen tai erikoismuotoilutehosten luomisen, joita tavallinen teksti ei tue.",
+    "usecases.messaging.additionalInfo":
+      "Monet alustat kuten WhatsApp estävät täysin tyhjien viestien lähettämisen, mutta näkymättömät merkkimme kiertävät tämän rajoituksen samalla kun ne näyttävät tyhjiltä vastaanottajille.",
+    "usecases.whatsapp.title": "WhatsApp",
+    "usecases.whatsapp.description":
+      "Lähetä tyhjiltä näyttäviä viestejä WhatsAppissa yllättääksesi yhteystietojasi. Tämä suosittu temppu käyttää näkymättömiä Unicode-merkkejä luodakseen viestejä, jotka näyttävät tyhjiltä mutta sisältävät itse asiassa piilotettua tekstiä.",
+    "usecases.whatsapp.instructions":
+      "Kopioi yksinkertaisesti näkymätön teksti generaattoristamme ja liitä se WhatsApp-chattiin luodaksesi salaperäisiä, tyhjiltä näyttäviä viestejä, jotka saavat ystäväsi uteliaaksi.",
+    "usecases.whatsapp.uses": "Luovat käytöt WhatsAppissa:",
+    "usecases.whatsapp.use1": "Tyhjien viestien lähettäminen huomion herättämiseksi",
+    "usecases.whatsapp.use2": "Välistyksen luominen kappaleiden väliin pitkissä viesteissä",
+    "usecases.whatsapp.use3": "Tilasi näyttäminen tyhjältä tai minimalistiselta",
+    "usecases.whatsapp.use4": "Taiteellisten tekstiasettelujen luominen viesteissäsi",
+    "usecases.twitter.title": "Tyhjät Twiitit X:ssä (Entinen Twitter)",
+    "usecases.twitter.description":
+      "Luo tyhjiltä näyttäviä twiittejä tai ainutlaatuisia käyttäjänimiä X:ssä käyttämällä näkymättömiä merkkejä. Tämä tekniikka auttaa sisältöäsi erottumaan ruuhkaisessa aikajanassa.",
+    "usecases.twitter.uses": "Luovat käytöt Twitterissä:",
+    "usecases.twitter.use1": "Tyhjien twiittien luominen, jotka herättävät huomiota",
+    "usecases.twitter.use2": "Välistyksen lisääminen kappaleiden väliin pidemmissä twiiteissä",
+    "usecases.twitter.use3": "Näyttönimesi tekeminen ainutlaatuiseksi näkymättömillä merkeillä",
+    "usecases.twitter.use4": "Minimalististen profiilien luominen strategisella välistyksellä",
+    "usecases.othermessaging.title": "Muut Viestialustat",
+    "usecases.slack.title": "Slack",
+    "usecases.slack.description":
+      "Käytä näkymättömiä merkkejä luodaksesi siistiä muotoilua työviesteihin tai luodaksesi ainutlaatuisia kanavanimiä.",
+    "usecases.instagram.title": "Instagram",
+    "usecases.instagram.description":
+      "Luo siistejä rivinvaihtoja biossasi tai kuvateksteissä, tai tee käyttäjänimestäsi erottuva näkymättömillä merkeillä.",
+    "usecases.facebook.title": "Facebook",
+    "usecases.facebook.description":
+      "Julkaise tyhjiä tilapäivityksiä, jotka herättävät huomiota tai luo siistiä välistystä pidempiin julkaisuihin.",
+  
+    // Other Use Cases section
+    "usecases.other.title": "Muut Luovat Käyttötapaukset",
+    "usecases.documents.title": "Asiakirjat ja Lomakkeet",
+    "usecases.documents.description":
+      "Näkymättömiä merkkejä voidaan käyttää asiakirjoissa tietyn muotoilun luomiseen tai merkkirajoitusten kiertämiseen lomakkeissa.",
+    "usecases.documents.use1": "Mukautetun välistyksen luominen asiakirjoissa",
+    "usecases.documents.use2": "Vähimmäismerkkivaatimusten kiertäminen",
+    "usecases.documents.use3": "Näkymättömien kirjanmerkkien luominen PDF:eihin",
+    "usecases.documents.use4": "Tekstin muotoilu luovilla tavoilla",
+    "usecases.programming.title": "Ohjelmointi",
+    "usecases.programming.description":
+      "Kehittäjät käyttävät joskus näkymättömiä merkkejä tiettyihin muotoilutarpeisiin tai testaustarkoituksiin.",
+    "usecases.programming.use1": "Merkkijonokäsittelyn testaaminen sovelluksissa",
+    "usecases.programming.use2": "Tiettyjen tekstin kohdistusten luominen",
+    "usecases.programming.use3": "Unicode-tuen testaaminen sovelluksissa",
+    "usecases.programming.use4": "Koodikommenttien muotoilu ainutlaatuisilla tavoilla",
+    "usecases.design.title": "Luova Suunnittelu",
+    "usecases.design.description":
+      "Suunnittelijat ja taiteilijat voivat käyttää näkymättömiä merkkejä luodakseen ainutlaatuisia tekstiasetteluja ja visuaalisia tehosteita.",
+    "usecases.design.use1": "Taiteellisten tekstiasettelujen luominen",
+    "usecases.design.use2": "Minimalistisen typografian suunnittelu",
+    "usecases.design.use3": "Ainutlaatuisen välistyksen luominen suunnitelmissa",
+    "usecases.design.use4": "Tekstin muotoilu epätavanomaisilla tavoilla",
+  
+    // Professional Use Cases
+    "usecases.professional.title": "Ammatilliset Sovellukset",
+    "usecases.linkedin.title": "LinkedIn",
+    "usecases.linkedin.description":
+      "Luo ammatillisia profiileja siistillä muotoilulla ja välistyksellä käyttämällä näkymättömiä merkkejä.",
+    "usecases.linkedin.use1": "Biosi muotoilu siistillä rivinvaihdolla",
+    "usecases.linkedin.use2": "Visuaalisesti houkuttelevien julkaisujen luominen",
+    "usecases.linkedin.use3": "Välistyksen lisääminen tärkeiden kohtien korostamiseksi",
+    "usecases.linkedin.use4": "Minimalististen, tyylikkäiden profiilien luominen",
+    "usecases.email.title": "Sähköposti",
+    "usecases.email.description": "Käytä näkymättömiä merkkejä luodaksesi siistiä, ammatillista sähköpostin muotoilua.",
+    "usecases.email.use1": "Siistin välistyksen luominen sähköpostiallekirjoituksiin",
+    "usecases.email.use2": "Uutiskirjeiden muotoilu tarkalla välistyksellä",
+    "usecases.email.use3": "Minimalististen sähköpostimallien luominen",
+    "usecases.email.use4": "Hienovaraisen välistyksen lisääminen tärkeiden kohtien korostamiseksi",
+  
+    // Why Use Invisible Text
+    "why.title": "Miksi Käyttää Näkymättömän Tekstin Generaattoriamme?",
+    "why.intro":
+      "Näkymättömän tekstin generaattorimme erottuu käyttäjäystävällisellä suunnittelullaan ja tehokkailla ominaisuuksillaan. Olemme luoneet työkalun, joka tekee näkymättömien merkkien luomisesta ja käyttämisestä nopeaa ja yksinkertaista, useilla menetelmillä erityistarpeisiisi.",
+    "why.whyuse.title": "Miksi Käyttää Näkymättömiä Merkkejä?",
+    "why.whyuse.description": "Näkymättömät merkit voivat olla hyödyllisiä monissa tilanteissa:",
+    "why.whyuse.use1": "Ainutlaatuisten käyttäjänimien luominen peleissä ja sosiaalisessa mediassa",
+    "why.whyuse.use2": "Näkymättömän välistyksen lisääminen tekstiin, jossa normaalit välilyönnit eivät ole sallittuja",
+    "why.whyuse.use3": "Viestien muotoilu luovilla tavoilla",
+    "why.whyuse.use4": "Tyhjien julkaisujen luominen alustoilla, jotka vaativat sisältöä",
+    "why.whyuse.use5": "Näkymättömien merkkien lisääminen tekstiin",
+    "why.whyuse.use6": "Erikoistekstitehosten luominen profiileissa ja bioissa",
+    "why.whyuse.use7": "Piilotettujen viestien lähettäminen, jotka eivät ole heti näkyvissä",
+    "why.features.easyToUse.title": "Helppo Käyttää",
+    "why.features.easyToUse.description":
+      "Työkalumme on suunniteltu mahdollisimman yksinkertaiseksi. Klikkaa vain painiketta (käyttäen Menetelmää 1) ja olet kopioinut näkymättömän merkin, joka on valmis liitettäväksi mihin tahansa.",
+    "why.features.totallyFree.title": "Täysin Ilmainen",
+    "why.features.totallyFree.description":
+      "Kaikki ominaisuudet ovat täysin ilmaisia käyttää ilman rajoituksia, tilauksia tai piilokustannuksia.",
+    "why.features.unlimitedCharacters.title": "Rajattomat Merkit",
+    "why.features.unlimitedCharacters.description":
+      "Luo niin monta näkymätöntä merkkiä kuin tarvitset ilman rajoituksia.",
+    "why.features.oneClickCopy.title": "Yhden Klikkauksen Kopiointi",
+    "why.features.oneClickCopy.description":
+      "Kopioi näkymättömät merkit leikepöydälle yhdellä klikkauksella maksimaalisen mukavuuden vuoksi.",
+    "why.features.noSignup.title": "Ei Rekisteröitymistä",
+    "why.features.noSignup.description":
+      "Käytä työkaluamme välittömästi luomatta tiliä tai antamatta henkilökohtaisia tietoja.",
+    "why.features.accessible.title": "Saatavilla Kaikkialla",
+    "why.features.accessible.description":
+      "Työkalumme toimii kaikilla nykyaikaisilla laitteilla ja selaimilla, joten voit käyttää sitä missä tahansa.",
+    "why.features.accuracy.title": "100% Tarkkuus",
+    "why.features.accuracy.description": "Generaattorimme tuottaa täydellisiä Unicode-näkymättömiä merkkejä joka kerta.",
+    "why.features.multipleLanguages.title": "Useita Kieliä",
+    "why.features.multipleLanguages.description":
+      "Työkalumme on saatavilla useilla kielillä palvellakseen käyttäjiä ympäri maailmaa.",
+    "why.benefits.title": "Työkalumme Käytön Edut",
+    "why.benefits.privacy.title": "Yksityisyys Keskiössä",
+    "why.benefits.privacy.description": "Emme seuraa käyttöäsi tai tallenna luomaasi tekstiä.",
+    "why.benefits.creative.title": "Luova Vapaus",
+    "why.benefits.creative.description": "Avaa uusia mahdollisuuksia tekstin muotoiluun ja esittämiseen eri alustoilla.",
+    "why.benefits.performance.title": "Nopea Suorituskyky",
+    "why.benefits.performance.description":
+      "Työkalumme latautuu nopeasti ja luo merkkejä välittömästi sujuvan kokemuksen vuoksi.",
+  
+    // Unicode Table
+    "unicode.title": "Unicode Merkki Viitetaulukko",
+    "unicode.subtitle": "Kattava lista näkymättömistä ja välilyönti Unicode-merkeistä eri sovelluksiin",
+    "unicode.table.unicode": "Unicode",
+    "unicode.table.description": "Kuvaus",
+    "unicode.table.html": "HTML Entiteetti",
+    "unicode.table.example": "Esimerkki",
+    "unicode.table.actions": "Toiminnot",
+    "unicode.copy": "Kopioi",
+    "unicode.toast.copiedTitle": "Kopioitu!",
+    "unicode.toast.copiedDescription": "Merkki kopioitu leikepöydälle",
+  
+    // Unicode character descriptions
+    "unicode.space.description": "Tavallinen Välilyönti",
+    "unicode.space.notes":
+      "Tekstissä käytetty tavallinen välilyöntimerkki. Se sallii rivinvaihdon ja tiivistyy HTML:ssä.",
+    "unicode.noBreakSpace.description": "Katkaisematon Välilyönti",
+    "unicode.noBreakSpace.notes":
+      "Samankaltainen kuin tavallinen välilyönti, mutta estää rivinvaihdon sanojen välillä. Yleisesti käytetty pitämään liittyvät sanat yhdessä.",
+    "unicode.enQuad.description": "En Quad",
+    "unicode.enQuad.notes": "Välilyönti, joka on yhtä leveä kuin fontin en (puolet em:stä).",
+    "unicode.emQuad.description": "Em Quad",
+    "unicode.emQuad.notes": "Välilyönti, joka on yhtä leveä kuin fontin em.",
+    "unicode.enSpace.description": "En Space",
+    "unicode.enSpace.notes": "Välilyönti, joka on yhtä suuri kuin puolet em:stä. Yleisesti käytetty typografiassa.",
+    "unicode.emSpace.description": "Em Space",
+    "unicode.emSpace.notes":
+      "Välilyönti, joka on yhtä leveä kuin 'M'-kirjain. Käytetty typografiassa kappaleiden sisennyksissä.",
+    "unicode.threePerEmSpace.description": "Three-Per-Em Space",
+    "unicode.threePerEmSpace.notes": "Välilyönti, joka on kolmasosa em:stä leveä.",
+    "unicode.fourPerEmSpace.description": "Four-Per-Em Space",
+    "unicode.fourPerEmSpace.notes": "Välilyönti, joka on neljäsosa em:stä leveä.",
+    "unicode.sixPerEmSpace.description": "Six-Per-Em Space",
+    "unicode.sixPerEmSpace.notes": "Välilyönti, joka on kuudesosa em:stä leveä.",
+    "unicode.figureSpace.description": "Figure Space",
+    "unicode.figureSpace.notes":
+      "Välilyönti, joka on yhtä leveä kuin numero fonteissa, joissa kaikki numerot ovat yhtä leveitä.",
+    "unicode.punctuationSpace.description": "Punctuation Space",
+    "unicode.punctuationSpace.notes": "Välilyönti, joka on yhtä leveä kuin fontin välimerkkimerkki.",
+    "unicode.thinSpace.description": "Thin Space",
+    "unicode.thinSpace.notes":
+      "Välilyönti, joka on ohuempi kuin tavallinen välilyönti, usein käytetty typografiassa sanojen ja välimerkkien välillä.",
+    "unicode.hairSpace.description": "Hair Space",
+    "unicode.hairSpace.notes": "Ohuin saatavilla oleva välilyönti typografiassa, käytetty hienosäätöön.",
+    "unicode.zeroWidthSpace.description": "Zero Width Space",
+    "unicode.zeroWidthSpace.notes":
+      "Näkymätön merkki, joka sallii rivinvaihdon lisäämättä näkyvää välilyöntiä. Suosittu 'tyhjän' sisällön luomiseen.",
+    "unicode.zeroWidthNonJoiner.description": "Zero Width Non-Joiner",
+    "unicode.zeroWidthNonJoiner.notes":
+      "Estää merkkejä yhdistymästä. Hyödyllinen skripteissä, joissa tiettyjen merkkiyhdistelmien tulisi pysyä erillään.",
+    "unicode.zeroWidthJoiner.description": "Zero Width Joiner",
+    "unicode.zeroWidthJoiner.notes":
+      "Yhdistää merkkejä ilman näkyvää erotusta. Välttämätön monimutkaisten emoji-yhdistelmien luomiseen.",
+    "unicode.leftToRightMark.description": "Left-to-Right Mark",
+    "unicode.leftToRightMark.notes": "Ohjaa tekstin suuntaa, pakottaa merkit näyttämään vasemmalta oikealle.",
+    "unicode.rightToLeftMark.description": "Right-to-Left Mark",
+    "unicode.rightToLeftMark.notes": "Ohjaa tekstin suuntaa, pakottaa merkit näyttämään oikealta vasemmalle.",
+    "unicode.mediumMathematicalSpace.description": "Medium Mathematical Space",
+    "unicode.mediumMathematicalSpace.notes":
+      "Matemaattisessa merkinnässä käytetty välilyönti, hieman leveämpi kuin thin space.",
+    "unicode.wordJoiner.description": "Word Joiner",
+    "unicode.wordJoiner.notes": "Samankaltainen kuin Zero Width No-Break Space, estää rivinvaihdon merkkien välillä.",
+    "unicode.functionApplication.description": "Function Application",
+    "unicode.functionApplication.notes": "Käytetty matemaattisessa merkinnässä osoittamaan funktiosovellusta.",
+    "unicode.invisibleTimes.description": "Invisible Times",
+    "unicode.invisibleTimes.notes":
+      "Käytetty matemaattisessa merkinnässä osoittamaan kertolaskua näyttämättä näkyvää operaattoria.",
+    "unicode.invisibleSeparator.description": "Invisible Separator",
+    "unicode.invisibleSeparator.notes":
+      "Käytetty erottamaan kohteita matemaattisessa tai teknisessä kontekstissa ilman näkyvää merkkiä.",
+    "unicode.invisiblePlus.description": "Invisible Plus",
+    "unicode.invisiblePlus.notes":
+      "Käytetty matemaattisessa merkinnässä osoittamaan yhteenlaskua näyttämättä näkyvää operaattoria.",
+    "unicode.ideographicSpace.description": "Ideographic Space",
+    "unicode.ideographicSpace.notes": "Itä-Aasian typografiassa käytetty välilyönti, ideografisen merkin levyinen.",
+    "unicode.hangulFiller.description": "Hangul Filler",
+    "unicode.hangulFiller.notes":
+      "Alun perin korean tekstissä käytetty, tämä näkymätön merkki on tullut suosituksi 'tyhjien' käyttäjänimien luomiseen peleissä ja sosiaalisessa mediassa.",
+    "unicode.zeroWidthNoBreakSpace.description": "Zero Width No-Break Space",
+    "unicode.zeroWidthNoBreakSpace.notes":
+      "Tunnetaan myös nimellä Byte Order Mark (BOM). Estää rivinvaihdon ja on näkymätön. Usein käytetty tekstitiedostojen alussa osoittamaan koodausta.",
+    "unicode.mongolianVowelSeparator.description": "Mongolian Vowel Separator",
+    "unicode.mongolianVowelSeparator.notes":
+      "Käytetty mongolian kirjoituksessa vokaalien erottamiseen. Saattaa näkyä näkymättömänä merkkinä joissakin konteksteissa.",
+    "unicode.braillePatternBlank.description": "Braille Pattern Blank",
+    "unicode.braillePatternBlank.notes":
+      "Tyhjä braille-kuvio, joka näkyy näkyvänä välilyöntinä monissa fonteissa, mutta on teknisesti erilainen kuin tavallinen välilyönti.",
+  
+    // FAQ section
+    "faq.title": "Usein Kysytyt Kysymykset",
+    "faq.subtitle": "Löydä vastauksia yleisiin kysymyksiin näkymättömästä tekstistä ja sen käytöstä",
+    "faq.q1": "Mitä ovat näkymättömät merkit?",
+    "faq.a1":
+      "Näkymättömät merkit ovat Unicode-merkkejä, jotka eivät näytä mitään näkyvää symbolia mutta vievät silti tilaa tekstissä. Niillä on ainutlaatuiset Unicode-arvot ja niitä voidaan käyttää erilaisiin muotoilu- ja luoviin tarkoituksiin.",
+    "faq.q2": "Onko näkymättömien merkkien käyttö turvallista?",
+    "faq.a2":
+      "Kyllä, näkymättömät merkit ovat täysin turvallisia. Ne ovat tavallisia Unicode-merkkejä, joita käytetään monissa sovelluksissa ja verkkosivustoissa. Kuitenkin jotkut alustat saattavat asettaa rajoituksia niiden käytölle käyttäjänimissä tai muissa kentissä.",
+    "faq.q3": "Toimivatko näkymättömät merkit kaikkialla?",
+    "faq.a3":
+      "Useimmat nykyaikaiset sovellukset, verkkosivustot ja käyttöjärjestelmät tukevat Unicode-merkkejä, mukaan lukien näkymättömät merkit. Kuitenkin jotkut vanhemmat järjestelmät tai sovellukset, joissa on tiukka tekstin validointi, eivät välttämättä näytä niitä oikein tai saattavat suodattaa ne pois.",
+    "faq.q4": "Voinko käyttää näkymättömiä merkkejä käyttäjänimissä?",
+    "faq.a4":
+      "Se riippuu alustasta. Monet pelit ja sosiaalisen median alustat sallivat näkymättömät merkit käyttäjänimissä, mutta jotkut ovat ottaneet käyttöön rajoituksia estääkseen sekaannuksen tai väärinkäytön. Tarkista aina alustan käytännöt ennen käyttöä.",
+    "faq.q5": "Miten tiedän, toimivatko näkymättömät merkit?",
+    "faq.a5":
+      "Voit testata näkymättömiä merkkejä Testialueellamme. Jos teksti näyttää tyhjältä mutta vie silti tilaa, näkymättömät merkkisi toimivat oikein. Voit myös tarkistaa merkkimäärän vahvistaaksesi niiden läsnäolon.",
+    "faq.q6": "Voinko yhdistää erilaisia näkymättömiä merkkejä?",
+    "faq.a6":
+      "Kyllä, voit yhdistää erilaisia näkymättömiä merkkejä luodaksesi erilaisia tehosteita. Generaattorimme Kehittyneet vaihtoehdot antavat sinun sekoittaa erilaisia näkymättömiä merkki tyyppejä tai luoda kuvioita niillä.",
+  
+    // Footer
+    "footer.about": "Tietoja InvisibleText.me:stä",
+    "footer.description":
+      "InvisibleText.me tarjoaa työkaluja näkymättömien Unicode-merkkien luomiseen ja käyttämiseen erilaisiin sovelluksiin.",
+    "footer.quickLinks": "Pikalinkit",
+    "footer.contact": "Yhteystiedot",
+    "footer.contactText": "Onko sinulla kysymyksiä tai ehdotuksia? Ota yhteyttä:",
+    "footer.rights": "Kaikki oikeudet pidätetään.",    
+  },
+  my: {
+    // Meta tags for SEO
+    "meta.title": "မမြင်ရသောစာသား - (ㅤ) ကွက်လပ်နေရာ ကူးယူ၍ ကပ်ထည့်ရန်",
+    "meta.description":
+      "ကျွန်ုပ်တို့၏ကိရိယာဖြင့် မမြင်ရသောစာသားများ ဖန်တီးပါ။ လူမှုကွန်ယက်အက်ပ်များ၊ ဂိမ်းများနှင့် အခြားအရာများအတွက် အသုံးပြုရန် မမြင်ရသောအက္ခရာများကို ကူးယူ၍ ကပ်ထည့်ပါ။ ယခုပင် စမ်းကြည့်ပါ!",
+    "meta.keywords":
+      "မမြင်ရသောစာသား, ကွက်လပ်စာသား, မမြင်ရသောအက္ခရာများ ကူးယူကပ်ထည့်ခ, Unicode မမြင်ရသောအက္ခရာများ, Hangul Filler, Zero Width Space",
+  
+    // Navigation
+    "nav.home": "ပင်မစာမျက်နှာ",
+    "nav.unicode": "Unicode",
+    "nav.blog": "ဘလော့ဂ်",
+    "nav.terms": "စည်းကမ်းများ",
+    "nav.about": "အကြောင်း",
+    "nav.contact": "ဆက်သွယ်ရန်",
+    "nav.privacy": "ကိုယ်ရေးကိုယ်တာ",
+  
+    // Header
+    "header.brand": "INVISIBLETEXT",
+    "header.home": "မမြင်ရသောစာသား",
+    "header.blog": "ဘလော့ဂ်",
+    "header.terms": "စည်းကမ်းများ",
+    "header.about": "အကြောင်း",
+    "header.contact": "ဆက်သွယ်ရန်",
+    "header.privacy": "ကိုယ်ရေးကိုယ်တာ",
+    "header.selectLanguage": "ဘာသာစကားရွေးချယ်ပါ",
+  
+    // Hero section
+    "generator.title": "မမြင်ရသောစာသား",
+    "generator.subtitle": "အကန့်အသတ်မရှိ ကွက်လပ်နေရာများ ဖန်တီး၍ မမြင်ရသောစာသားများကို လျင်မြန်စွာ ကူးယူကပ်ထည့်ပါ။",
+    "hero.primaryButton": "ဖန်တီးကိရိယာ စမ်းကြည့်ပါ",
+    "hero.secondaryButton": "Unicode အကြောင်း လေ့လာပါ",
+  
+    // Invisible Text Generator
+    "invisibletext.brand": "INVISIBLETEXT",
+    "invisibletext.title": "မမြင်ရသောစာသား",
+    "invisibletext.description":
+      "လူမှုကွန်ယက်၊ ဂိမ်းများနှင့် အခြားအရာများအတွက် အကန့်အသတ်မရှိ ကွက်လပ်နေရာများ ဖန်တီး၍ မမြင်ရသောစာသားများကို လျင်မြန်စွာ ကူးယူကပ်ထည့်ပါ။",
+    "invisibletext.method1.title": "နည်းလမ်း ၁: တစ်ကလစ်ဖြင့် ကူးယူခြင်း",
+    "invisibletext.method1.button": "Hangul Filler ကူးယူပါ",
+    "invisibletext.method1.description": "'ကူးယူပါ' ခလုတ်ကို နှိပ်ရုံဖြင့် မမြင်ရသောစာသားကို clipboard သို့ ထည့်၍ မည်သည့်နေရာတွင်မဆို ကပ်ထည့်နိုင်ပါသည်။",
+    "invisibletext.method1.fallback": "ဤနည်းလမ်းမအလုပ်မလုပ်ပါက အောက်ပါ နည်းလမ်း ၂ သို့မဟုတ် ၃ ကို စမ်းကြည့်ပါ။",
+    "invisibletext.method2.title": "နည်းလမ်း ၂: ရွေးချယ်၍ ကူးယူခြင်း",
+    "invisibletext.method2.description":
+      "အောက်ပါ မမြင်ရသောစာသားကို မီးမောင်းထိုးရန် ရွေးချယ်ပါ ခလုတ်ကို နှိပ်ပါ။ clipboard သို့ ကူးယူရန် CTRL+C (Windows) သို့မဟုတ် Command+C (Mac) ကို အသုံးပြုပါ။",
+    "invisibletext.method2.verification":
+      "စမ်းသပ်သေတ္တာထဲသို့ ကပ်ထည့်ခြင်း သို့မဟုတ် လုပ်ဆောင်မှုကို ကြည့်ရန် အစိမ်းရောင်ခလုတ်ကို နှိပ်ခြင်းဖြင့် ကူးယူထားသော မမြင်ရသောစာသားကို အတည်ပြုပါ။",
+    "invisibletext.method3.title": "နည်းလမ်း ၃: စိတ်ကြိုက်ဖန်တီးကိရိယာ",
+    "invisibletext.method3.description":
+      "လိုအပ်သော မမြင်ရသောအက္ခရာများ အရေအတွက်ကို ထည့်သွင်း၍ နှစ်သက်သော Unicode အက္ခရာကို ရွေးချယ်ပြီး 'ဖန်တီးပါ' ကို နှိပ်ပါ။",
+    "invisibletext.method3.improved":
+      "ဤတိုးတက်သောဗားရှင်းသည် သီးခြားလိုအပ်ချက်များအတွက် မတူညီသော Unicode အက္ခရာ အမျိုးအစားများမှ ရွေးချယ်နိုင်စေပါသည်။",
+    "invisibletext.method4.title": "နည်းလမ်း ၄: အကန့်အသတ်မရှိ အက္ခရာများ",
+    "invisibletext.method4.description":
+      "မမြင်ရသောစာသား အများအပြားကို ဖန်တီးပါ - စာမျက်နှာများစွာရှိ မမြင်ရသောစာများ သို့မဟုတ် အထူးပုံစံပြင်ဆင်မှု အကျိုးသက်ရောက်မှုများ ဖန်တီးရန် ပြီးပြည့်စုံပါသည်။",
+    "invisibletext.method4.more": "ပိုမိုအဆင့်မြင့်သော မမြင်ရသောစာသား ကိရိယာများအတွက် လည်ပတ်ကြည့်ပါ",
+    "invisibletext.testarea.title": "စမ်းသပ်နေရာ",
+    "invisibletext.testarea.description":
+      "မမြင်ရသောအက္ခရာများကို ဤနေရာတွင် ကပ်ထည့်၍ စမ်းသပ်ပါ။ placeholder စာသားများ ပျောက်သွားပါက သင်၏ မမြင်ရသောစာသားများ မှန်ကန်စွာ အလုပ်လုပ်နေပါသည်။",
+    "invisibletext.testarea.placeholder": "မမြင်ရသောအက္ခရာများကို ဤနေရာတွင် ကပ်ထည့်၍ စမ်းသပ်ပါ...",
+    "invisibletext.testarea.characters": "အက္ခရာများ",
+    "invisibletext.testarea.empty": "ဤနေရာသည် သင်၏ မမြင်ရသောအက္ခရာများကို ပြသမည်ဖြစ်သည်",
+    "invisibletext.copy": "ကူးယူပါ",
+    "invisibletext.clear": "ရှင်းလင်းပါ",
+    "invisibletext.generate": "ဖန်တီးပါ",
+    "invisibletext.preview": "ကြိုတင်ကြည့်ရှုပါ",
+    "invisibletext.count": "အရေအတွက်:",
+    "invisibletext.toast.copied": "Clipboard သို့ ကူးယူပြီးပါပြီ!",
+    "invisibletext.toast.generated": "ဖန်တီး၍ clipboard သို့ ကူးယူပြီးပါပြီ!",
+  
+    // Method 1 specific options
+    "invisibletext.method1.small": "သေးငယ်သော ကူးယူခြင်း",
+    "invisibletext.method1.medium": "အလယ်အလတ် ကူးယူခြင်း",
+    "invisibletext.method1.large": "ကြီးမားသော ကူးယူခြင်း",
+  
+    "invisibletext.method4.mix": "မတူညီသော မမြင်ရသောအက္ခရာများကို ရောစပ်ပါ",
+    "invisibletext.method4.mixInfo": "မတူညီသော မမြင်ရသောအက္ခရာ အမျိုးအစားများ၏ ကျပန်းရောစပ်မှုကို ဖန်တီးပါ",
+    "invisibletext.method4.pattern": "ပုံစံ အစီအစဉ်ကို ဖန်တီးပါ",
+    "invisibletext.method4.patternInfo": "မတူညီသော မမြင်ရသောအက္ခရာများ၏ ထပ်ခါတလဲလဲ ပုံစံကို ဖန်တီးပါ",
+    "invisibletext.method4.generateAdvanced": "အဆင့်မြင့် စာသားကို ဖန်တီးပါ",
+  
+    // What Is Section
+    "whatis.title": "မမြင်ရသောစာသားဆိုသည်မှာ အဘယ်နည်း?",
+    "whatis.des":
+      "မမြင်ရသောစာသားများသည် နေရာယူသော်လည်း ပြသသောအခါတွင် မမြင်ရသော အထူး Unicode အက္ခရာများဖြင့် ဖွဲ့စည်းထားပါသည်။ ဤအက္ခရာများသည် အွန်လိုင်းတွင် မတူညီသော ဖန်တီးမှုနှင့် လက်တွေ့ရည်ရွယ်ချက်များကို ဆောင်ရွက်ပါသည်။",
+  
+    // About Invisible Text
+    "about.introduction.title": "InvisibleText.me ၏ မိတ်ဆက်",
+    "about.introduction.description":
+      "မမြင်ရသောစာသားများသည် မြင်နိုင်သော သင်္ကေတများကို မပြသသော်လည်း စာသားအတွင်း နေရာယူသော အထူး Unicode အက္ခရာများဖြစ်သည်။ ဤထူးခြားသော အက္ခရာများသည် မတူညီသော ဒစ်ဂျစ်တယ် ပလပ်ဖောင်းများတွင် ဖန်တီးမှုပုံစံပြင်ဆင်မှုနှင့် အထူးအကျိုးသက်ရောက်မှုများကို ဖြစ်စေပါသည်။",
+    "about.whatIs.title": "မမြင်ရသောစာသားဆိုသည်မှာ အဘယ်နည်း?",
+    "about.whatIs.description":
+      "မမြင်ရသောအက္ခရာများသည် လူ့မျက်လုံးဖြင့် မမြင်နိုင်သော်လည်း အရေးကြီးသော လုပ်ဆောင်ချက်များကို ဆောင်ရွက်သော Unicode သင်္ကေတများဖြစ်သည်။ ဤအက္ခရာများသည် ပုံမှန် space key ကို အသုံးမပြုဘဲ ကွက်လပ်နေရာများကို ဖန်တီး၍ ထူးခြားသော ပုံစံပြင်ဆင်မှု ဖြစ်နိုင်ချေများကို ဖြစ်စေပါသည်။",
+    "about.types.title": "မမြင်ရသော Unicode အက္ခရာများ၏ အမျိုးအစားများ",
+    "about.types.zeroWidthSpace.title": "Zero Width Space (U+200B)",
+    "about.types.zeroWidthSpace.description":
+      "Zero Width Space (ZWSP) သည် မြင်နိုင်သော နေရာမထည့်ဘဲ စကားလုံးများ ကွဲခြားစေနိုင်သော ဘက်စုံအသုံးပြုနိုင်သော မမြင်ရသောအက္ခရာဖြစ်သည်။ ဝဘ်ဒီဇိုင်နာများနှင့် developer များသည် ပိုမိုသန့်ရှင်းသော ကုဒ်နှင့် တိုးတက်သော စာသားအစီအစဉ်အတွက် ၎င်းကို အသုံးပြုကြပြီး လူမှုကွန်ယက် အသုံးပြုသူများသည် ဖန်တီးမှုပုံစံပြင်ဆင်မှုအတွက် ၎င်းကို အသုံးချကြသည်။",
+    "about.types.hangulFiller.title": "Hangul Filler (U+3164)",
+    "about.types.hangulFiller.description":
+      "မူလက ကိုရီးယားစာသားတွင် အသုံးပြုခဲ့သော Hangul Filler သည် ဂိမ်းများနှင့် လူမှုကွန်ယက်တွင် မမြင်ရသော အသုံးပြုသူအမည်များ ဖန်တီးရန်အတွက် လူကြိုက်များလာခဲ့သည်။ ဤအက္ခရာသည် အသုံးပြုသူများကို ထူးခြားသော အမှတ်အသားများ ဖန်တီးရန်နှင့် ထူးခြားသော အမည်များ တန်ဖိုးရှိသော ဒစ်ဂျစ်တယ် အသိုင်းအဝိုင်းများတွင် ထင်ရှားစေရန် ကူညီပါသည်။",
+    "about.types.zeroWidthJoiner.title": "Zero Width Joiner (U+200D)",
+    "about.types.zeroWidthJoiner.description":
+      "Zero Width Joiner (ZWJ) သည် မြင်နိုင်သော ခွဲခြားမှုမရှိဘဲ အက္ခရာများကို ချိတ်ဆက်ပေးပြီး ရှုပ်ထွေးသော emoji အစီအစဉ်များနှင့် script များ ဖန်တီးရန် မရှိမဖြစ်လိုအပ်သည်။ ဤအက္ခရာသည် emoji များစွာကို မိသားစု emoji များ သို့မဟုတ် အလုပ်အကိုင် emoji များကဲ့သို့ တစ်ခုတည်းသော ပေါင်းစပ်သင်္ကေတအဖြစ် ပေါင်းစပ်နိုင်စေပါသည်။",
+    "about.types.zeroWidthNonJoiner.title": "Zero Width Non-Joiner (U+200C)",
+    "about.types.zeroWidthNonJoiner.description":
+      "Zero Width Non-Joiner (ZWNJ) သည် အက္ခရာများ ချိတ်ဆက်ခြင်းကို တားဆီးပြီး ပါရှန်နှင့် အာရဗီကဲ့သို့ ရှုပ်ထွေးသော script များတွင် အထူးအသုံးဝင်သည်။ ၎င်းသည် အက္ခရာချိတ်ဆက်မှု စည်းမျဉ်းများ ရှုပ်ထွေးသော နေရာများတွင် စာသား၏ မှန်ကန်သော ပြသမှုကို ထိန်းသိမ်း၍ သင့်လျော်သော ဖတ်နိုင်မှုကို သေချာစေပါသည်။",
+  
+    // Features section
+    "features.title": "ကျွန်ုပ်တို့၏ကိရိယာကို အဘယ်ကြောင့် ရွေးချယ်သင့်သနည်း",
+    "features.subtitle": "ကျွန်ုပ်တို့၏ မမြင်ရသောစာသား ဖန်တီးကိရိယာတွင် သင်၏အတွေ့အကြုံကို ပိုမိုကောင်းမွန်စေမည့် သီးသန့်လုပ်ဆောင်ချက်များ ပါဝင်ပါသည်။",
+    "features.feature1.title": "အသုံးပြုရလွယ်ကူ",
+    "features.feature1.description": "ရှုပ်ထွေးသောအဆင့်များမရှိဘဲ ရိုးရှင်းသော တစ်ကလစ်ဖြင့် ကူးယူကပ်ထည့်နိုင်သည်။",
+    "features.feature2.title": "မှတ်ပုံတင်ရန် မလိုအပ်",
+    "features.feature2.description": "အကောင့်ဖွင့်ခြင်း သို့မဟုတ် ကိုယ်ရေးကိုယ်တာ အချက်အလက်များ ပေးခြင်းမရှိဘဲ ကျွန်ုပ်တို့၏ကိရိယာကို ချက်ချင်း အသုံးပြုပါ။",
+    "features.feature3.title": "ဘေးကင်းပြီး ကိုယ်ရေးကိုယ်တာ",
+    "features.feature3.description":
+      "ကျွန်ုပ်တို့သည် သင်ဖန်တီးသော စာသားများကို သိမ်းဆည်းခြင်း သို့မဟုတ် မမြင်ရသောအက္ခရာများ အသုံးပြုမှုကို ခြေရာခံခြင်း မပြုပါ။",
+    "features.feature4.title": "အက္ခရာ အမျိုးအစား များစွာ",
+    "features.feature4.description": "မတူညီသော ရည်ရွယ်ချက်များနှင့် အသုံးချမှုများအတွက် မတူညီသော မမြင်ရသော Unicode အက္ခရာများမှ ရွေးချယ်ပါ။",
+    "features.feature5.title": "ဘာသာစကား များစွာ ပံ့ပိုးမှု",
+    "features.feature5.description": "ကမ္ဘာတစ်ဝှမ်းရှိ အသုံးပြုသူများကို ဝန်ဆောင်မှုပေးရန် ကျွန်ုပ်တို့၏ကိရိယာကို ဘာသာစကားများစွာဖြင့် ရရှိနိုင်ပါသည်။",
+    "features.feature6.title": "အမြဲတမ်း အခမဲ့",
+    "features.feature6.description": "လုပ်ဆောင်ချက်အားလုံးကို ဝှက်ထားသော ကုန်ကျစရိတ်များ သို့မဟုတ် premium အဆင့်များမရှိဘဲ လုံးဝအခမဲ့ အသုံးပြုနိုင်ပါသည်။",
+  
+    // Use Cases section
+    "useCases.title": "လက်တွေ့အသုံးချမှုများ",
+    "useCases.subtitle": "မမြင်ရသောအက္ခရာများကို မတူညီသော ပလပ်ဖောင်းများနှင့် အသုံးချမှုများတွင် မည်သို့အသုံးပြုနိုင်သည်ကို ရှာဖွေကြည့်ပါ။",
+    "useCases.case1.title": "လူမှုကွန်ယက်",
+    "useCases.case1.description":
+      "ကွက်လပ်ပို့စ်များ၊ ထူးခြားသော အသုံးပြုသူအမည်များ ဖန်တီးခြင်း သို့မဟုတ် သင်၏လူမှုကွန်ယက် အကြောင်းအရာများတွင် မမြင်ရသော ပုံစံပြင်ဆင်မှု ထည့်သွင်းခြင်း။",
+    "useCases.case1.example": "ဤစာတွင် စာကြောင်းအသစ်များ မအသုံးပြုဘဲ နေရာခြားမှုကို ဖန်တီးသော မမြင်ရသောအက္ခရာများ ပါဝင်ပါသည်။",
+    "useCases.case2.title": "ဂိမ်းများ",
+    "useCases.case2.description":
+      "ထူးခြားသော အသုံးပြုသူအမည်များဖြင့် ထင်ရှားစေခြင်း သို့မဟုတ် မမြင်ရသောအက္ခရာများကို အသုံးပြု၍ ဂိမ်းချတ်များတွင် ဝှက်ထားသော စာများ ပို့ခြင်း။",
+    "useCases.case2.example":
+      "ကစားသမားများသည် ကွက်လပ် သို့မဟုတ် အထူးပုံစံပြင်ဆင်ထားသော ထူးခြားသော အသုံးပြုသူအမည်များ ဖန်တီးရန် မမြင်ရသောအက္ခရာများကို အသုံးပြုကြသည်။",
+    "useCases.learnMore": "ပိုမိုလေ့လာပါ",
+  
+    // Practical Use Cases
+    "usecases.title": "မမြင်ရသောအက္ခရာများအတွက် လက်တွေ့အသုံးချမှု ဖြစ်ရပ်များ",
+  
+    // Gaming section
+    "usecases.gaming.title": "ဂိမ်း အသုံးပြုသူအမည်များနှင့် ပရိုဖိုင်များ",
+    "usecases.gaming.description":
+      "ဂိမ်းကစားသမားများသည် ထင်ရှားသော ထူးခြားသော ဂိမ်းအတွင်းအမည်များ ဖန်တီးရန် မမြင်ရသောအက္ခရာများကို အသုံးပြုကြသည်။ Fortnite နှင့် PUBG ကဲ့သို့ လူကြိုက်များသော ဂိမ်းများတွင် ဤအက္ခရာများသည် ကစားသမားများကို ပုံမှန်အမည်ပေးခြင်း ကန့်သတ်ချက်များကို ရှောင်လွှဲသော ထူးခြားသော အမှတ်အသားများ ဖန်တီးနိုင်စေပါသည်။",
+    "usecases.fortnite.title": "Fortnite တွင် မမြင်ရသောစာသား",
+    "usecases.fortnite.description":
+      "Fortnite ကစားသမားများသည် ၎င်းတို့၏ ဂိမ်းအတွေ့အကြုံကို စိတ်ကြိုက်ပြင်ဆင်ရန်အတွက် ဖန်တီးမှုကိရိယာအဖြစ် မမြင်ရသောအက္ခရာများကို လက်ခံကြသည်။ zero-width spaces နှင့် အခြား မမြင်ရသော Unicode အက္ခရာများကို အသုံးပြု၍ ကစားသမားများသည် ထူးခြားသော ပြသအမည်များ ဖန်တီးနိုင်ပြီး အဖွဲ့ဝင်များနှင့် လျှို့ဝှက်စွာ ဆက်သွယ်နိုင်ပါသည်။",
+    "usecases.fortnite.howto": "Fortnite တွင် မမြင်ရသောအက္ခရာများကို မည်သို့အသုံးပြုရမည်:",
+    "usecases.fortnite.step1": "ကျွန်ုပ်တို့၏ကိရိယာဖြင့် မမြင်ရသောအက္ခရာများကို ဖန်တီးပါ",
+    "usecases.fortnite.step2": "မမြင်ရသောအက္ခရာများကို clipboard သို့ ကူးယူပါ",
+    "usecases.fortnite.step3": "Fortnite ကို ဖွင့်၍ အကောင့်ဆက်တင်များသို့ သွားပါ",
+    "usecases.fortnite.step4": "သင်၏ပြသအမည်တွင် မမြင်ရသောအက္ခရာများကို ကပ်ထည့်ပါ",
+    "usecases.fortnite.step5": "ပြောင်းလဲမှုများကို သိမ်းဆည်းပါ",
+    "usecases.fortnite.uses": "Fortnite တွင် လူကြိုက်များသော အသုံးပြုမှုများ:",
+    "usecases.fortnite.use1": "လုံးဝမမြင်ရသော အသုံးပြုသူအမည် ဖန်တီးခြင်း",
+    "usecases.fortnite.use2": "သင်၏အမည်ရှိ အက္ခရာများကြား နေရာခြားမှု ထည့်သွင်းခြင်း",
+    "usecases.fortnite.use3": "kill feed တွင် သင်၏အမည်ကို ထူးခြားစေခြင်း",
+    "usecases.fortnite.use4": "ထင်ရှားသော clan tag များ ဖန်တီးခြင်း",
+    "usecases.pubg.title": "PUBG တွင် မမြင်ရသောစာသား",
+    "usecases.pubg.description":
+      "PUBG ကစားသမားများသည် မမြင်ရသောအက္ခရာများကို ထည့်သွင်း၍ ထင်ရှားသော အသုံးပြုသူအမည်များ ဖန်တီးနိုင်ပါသည်။ ဤရိုးရှင်းသော နည်းပညာသည် သင်၏ဂိမ်းအမှတ်အသားတွင် ကိုယ်ပိုင်ထိတွေ့မှုကို ထည့်သွင်းသော ထူးခြားသော ပရိုဖိုင်း စိတ်ကြိုက်ပြင်ဆင်မှုကို ဖြစ်စေပါသည်။",
+    "usecases.pubg.howto": "PUBG တွင် မမြင်ရသောအက္ခရာများကို မည်သို့အသုံးပြုရမည်:",
+    "usecases.pubg.step1": "ကျွန်ုပ်တို့၏ကိရိယာဖြင့် မမြင်ရသောအက္ခရာများကို ဖန်တီးပါ",
+    "usecases.pubg.step2": "မမြင်ရသောအက္ခရာများကို clipboard သို့ ကူးယူပါ",
+    "usecases.pubg.step3": "PUBG ကို ဖွင့်၍ သင်၏ပရိုဖိုင်းသို့ သွားပါ",
+    "usecases.pubg.step4": "သင်၏အမည်ကို တည်းဖြတ်၍ မမြင်ရသောအက္ခရာများကို ကပ်ထည့်ပါ",
+    "usecases.pubg.step5": "ပြောင်းလဲမှုများကို အတည်ပြုပါ",
+    "usecases.pubg.uses": "PUBG တွင် လူကြိုက်များသော အသုံးပြုမှုများ:",
+    "usecases.pubg.use1": "လျှို့ဝှက်ဆန်သော အသုံးပြုသူအမည်များ ဖန်တီးခြင်း",
+    "usecases.pubg.use2": "သင်၏ clan အမည်ကို ထူးခြားစေခြင်း",
+    "usecases.pubg.use3": "အက္ခရာများကြား နေရာခြားမှု ထည့်သွင်းခြင်း",
+    "usecases.pubg.use4": "အနည်းဆုံးဝါဒီ ပရိုဖိုင်း အသွင်အပြင် ဖန်တီးခြင်း",
+    "usecases.othergames.title": "အခြား လူကြိုက်များသော ဂိမ်းများ",
+    "usecases.othergames.description":
+      "မမြင်ရသောအက္ခရာများကို အခြား လူကြိုက်များသော ဂိမ်းများစွာတွင် ထူးခြားသော အသုံးပြုသူအမည်များနှင့် clan tag များ ဖန်တီးရန် အသုံးပြုနိုင်ပါသည်:",
+    "usecases.minecraft.title": "Minecraft",
+    "usecases.minecraft.description":
+      "သင်၏ server များအတွက် မမြင်ရသောအမည်များ ဖန်တီးခြင်း သို့မဟုတ် ဖန်တီးမှုပုံစံပြင်ဆင်မှုအတွက် ဆိုင်းဘုတ်များနှင့် စာအုပ်များတွင် မမြင်ရသောအက္ခရာများကို အသုံးပြုခြင်း။",
+    "usecases.callofduty.title": "Call of Duty",
+    "usecases.callofduty.description":
+      "ဗျူဟာမြောက်စွာ နေရာချထားသော မမြင်ရသောအက္ခရာများဖြင့် lobby နှင့် kill feed တွင် သင်၏အသုံးပြုသူအမည်ကို ထင်ရှားစေပါ။",
+    "usecases.leagueoflegends.title": "League of Legends",
+    "usecases.leagueoflegends.description":
+      "အာရုံစိုက်မှုကို ဆွဲဆောင်သော ထူးခြားသော summoner အမည်များ ဖန်တီးခြင်း သို့မဟုတ် သင်၏ clan tag ကို အထူးဖြစ်စေခြင်း။",
+  
+    // Messaging Apps section
+    "usecases.messaging.title": "စာပို့အက်ပ်များ",
+    "usecases.messaging.description":
+      "မမြင်ရသောအက္ခရာများသည် စာပို့အက်ပ်များတွင် ပျော်ရွှင်ဖွယ် အတိုင်းအတာတစ်ခုကို ထည့်သွင်းပေး၍ ကွက်လပ်ဟန်ဆောင်သော စာများ ပို့ခြင်း သို့မဟုတ် ပုံမှန်စာသားများ မပံ့ပိုးသော အထူးပုံစံပြင်ဆင်မှု အကျိုးသက်ရောက်မှုများ ဖန်တီးခြင်းကို ဖြစ်စေပါသည်။",
+    "usecases.messaging.additionalInfo":
+      "WhatsApp ကဲ့သို့ ပလပ်ဖောင်းများစွာသည် လုံးဝကွက်လပ်သော စာများ ပို့ခြင်းကို တားဆီးသော်လည်း ကျွန်ုပ်တို့၏ မမြင်ရသောအက္ခရာများသည် လက်ခံသူများအတွက် ကွက်လပ်ပုံရနေစဉ် ဤကန့်သတ်ချက်ကို ရှောင်လွှဲပါသည်။",
+    "usecases.whatsapp.title": "WhatsApp",
+    "usecases.whatsapp.description":
+      "သင်၏အဆက်အသွယ်များကို အံ့အားသင့်စေရန် WhatsApp တွင် ကွက်လပ်ဟန်ဆောင်သော စာများကို ပို့ပါ။ ဤလူကြိုက်များသော လှည့်ကွက်သည် ကွက်လပ်ဟန်ဆောင်သော်လည်း အမှန်တကယ်တွင် ဝှက်ထားသော စာသားများ ပါဝင်သော စာများကို ဖန်တီးရန် မမြင်ရသော Unicode အက္ခရာများကို အသုံးပြုပါသည်။",
+    "usecases.whatsapp.instructions":
+      "ကျွန်ုပ်တို့၏ဖန်တီးကိရိယာမှ မမြင်ရသောစာသားကို ကူးယူ၍ WhatsApp chat တွင် ကပ်ထည့်ရုံဖြင့် သင်၏မိတ်ဆွေများကို စပ်စုစေမည့် လျှို့ဝှက်ဆန်သော ကွက်လပ်ဟန်ဆောင်သော စာများကို ဖန်တီးနိုင်ပါသည်။",
+    "usecases.whatsapp.uses": "WhatsApp တွင် ဖန်တီးမှုအသုံးပြုမှုများ:",
+    "usecases.whatsapp.use1": "အာရုံစိုက်မှုကို ဆွဲဆောင်ရန် ကွက်လပ်စာများ ပို့ခြင်း",
+    "usecases.whatsapp.use2": "ရှည်လျားသော စာများတွင် စာပိုဒ်များကြား နေရာခြားမှု ဖန်တီးခြင်း",
+    "usecases.whatsapp.use3": "သင်၏အခြေအနေကို ကွက်လပ် သို့မဟုတ် အနည်းဆုံးဝါဒီ ဟန်ဆောင်စေခြင်း",
+    "usecases.whatsapp.use4": "သင်၏စာများတွင် အနုပညာဆန်သော စာသားအစီအစဉ်များ ဖန်တီးခြင်း",
+    "usecases.twitter.title": "X (ယခင် Twitter) တွင် ကွက်လပ် Tweet များ",
+    "usecases.twitter.description":
+      "မမြင်ရသောအက္ခရာများကို အသုံးပြု၍ X တွင် ကွက်လပ်ဟန်ဆောင်သော tweet များ သို့မဟုတ် ထူးခြားသော အသုံးပြုသူအမည်များ ဖန်တီးပါ။ ဤနည်းပညာသည် ရှုပ်ထွေးသော timeline တွင် သင်၏အကြောင်းအရာကို ထင်ရှားစေရန် ကူညီပါသည်။",
+    "usecases.twitter.uses": "Twitter တွင် ဖန်တီးမှုအသုံးပြုမှုများ:",
+    "usecases.twitter.use1": "အာရုံစိုက်မှုကို ဆွဲဆောင်သော ကွက်လပ် tweet များ ဖန်တီးခြင်း",
+    "usecases.twitter.use2": "ရှည်လျားသော tweet များတွင် စာပိုဒ်���ျားကြား နေရာခြားမှု ထည့်သွင်းခြင်း",
+    "usecases.twitter.use3": "မမြင်ရသောအက္ခရာများဖြင့် သင်၏ပြသအမည်ကို ထူးခြားစေခြင်း",
+    "usecases.twitter.use4": "ဗျူဟာမြောက် နေရာခြားမှုဖြင့် အနည်းဆုံးဝါဒီ ပရိုဖိုင်များ ဖန်တီးခြင်း",
+    "usecases.othermessaging.title": "အခြား စာပို့ပလပ်ဖောင်းများ",
+    "usecases.slack.title": "Slack",
+    "usecases.slack.description":
+      "သင်၏အလုပ်စာများတွင် သန့်ရှင်းသော ပုံစံပြင်ဆင်မှု ဖန်တီးရန် သို့မဟုတ် ထူးခြားသော channel အမည်များ ဖန်တီးရန် မမြင်ရသောအက္ခရာများကို အသုံးပြုပါ။",
+    "usecases.instagram.title": "Instagram",
+    "usecases.instagram.description":
+      "သင်၏ bio သို့မဟုတ် caption များတွင် သန့်ရှင်းသော စာကြောင်းအသစ်များ ဖန်တီးခြင်း သို့မဟုတ် မမြင်ရသောအက္ခရာများဖြင့် သင်၏အသုံးပြုသူအမည်ကို ထင်ရှားစေခြင်း။",
+    "usecases.facebook.title": "Facebook",
+    "usecases.facebook.description":
+      "အာရုံစိုက်မှုကို ဆွဲဆောင်သော ကွက်လပ်အခြေအနေ အပ်ဒိတ်များ ပို့စ်တင်ခြင်း သို့မဟုတ် ရှည်လျားသော ပို့စ်များတွင် သန့်ရှင်းသော နေရာခြားမှု ဖန်တီးခြင်း။",
+  
+    // Other Use Cases section
+    "usecases.other.title": "အခြား ဖန်တီးမှုအသုံးချမှု ဖြစ်ရပ်များ",
+    "usecases.documents.title": "စာရွက်စာတမ်းများနှင့် ပုံစံများ",
+    "usecases.documents.description":
+      "မမြင်ရသောအက္ခရာများကို စာရွက်စာတမ်းများတွင် သီးခြားပုံစံပြင်ဆင်မှု ဖန်တီးရန် သို့မဟုတ် ပုံစံများတွင် အက္ခရာကန့်သတ်ချက်များကို ရှောင်လွှဲရန် အသုံးပြုနိုင်ပါသည်။",
+    "usecases.documents.use1": "စာရွက်စာတမ်းများတွင် စိတ်ကြိုက်နေရာခြားမှု ဖန်တီးခြင်း",
+    "usecases.documents.use2": "အနည်းဆုံးအက္ခရာ လိုအပ်ချက်များကို ရှောင်လွှဲခြင်း",
+    "usecases.documents.use3": "PDF များတွင် မမြင်ရသော bookmark များ ဖန်တီးခြင်း",
+    "usecases.documents.use4": "ဖန်တီးမှုနည်းလမ်းများဖြင့် စာသားကို ပုံစံပြင်ဆင်ခြင်း",
+    "usecases.programming.title": "ပရိုဂရမ်ရေးခြင်း",
+    "usecases.programming.description":
+      "developer များသည် တစ်ခါတစ်ရံ သီးခြားပုံစံပြင်ဆင်မှု လိုအပ်ချက်များ သို့မဟုတ် စမ်းသပ်မှုရည်ရွယ်ချက်များအတွက် မမြင်ရသောအက္ခရာများကို အသုံးပြုကြသည်။",
+    "usecases.programming.use1": "အက်ပ်လီကေးရှင်းများတွင် string ကိုင်တွယ်မှုကို စမ်းသပ်ခြင်း",
+    "usecases.programming.use2": "သီးခြားစာသား ညှိခြင်းများ ဖန်တီးခြင်း",
+    "usecases.programming.use3": "အက်ပ်လီကေးရှင်းများတွင် Unicode ပံ့ပိုးမှုကို စမ်းသပ်ခြင်း",
+    "usecases.programming.use4": "ထူးခြားသောနည်းလမ်းများဖြင့် ကုဒ် မှတ်ချက်များကို ပုံစံပြင်ဆင်ခြင်း",
+    "usecases.design.title": "ဖန်တီးမှုဒီဇိုင်း",
+    "usecases.design.description":
+      "ဒီဇိုင်နာများနှင့် အနုပညာရှင်များသည် ထူးခြားသော စာသားအစီအစဉ်များနှင့် မြင်ကွင်းဆိုင်ရာ အကျိုးသက်ရောက်မှုများ ဖန်တီးရန် မမြင်ရသောအက္ခရာများကို အသုံးပြုနိုင်ပါသည်။",
+    "usecases.design.use1": "အနုပညာဆန်သော စာသားအစီအစဉ်များ ဖန်တီးခြင်း",
+    "usecases.design.use2": "အနည်းဆုံးဝါဒီ typography ဒီဇိုင်းပြုလုပ်ခြင်း",
+    "usecases.design.use3": "ဒီဇိုင်းများတွင် ထူးခြားသော နေရာခြားမှု ဖန်တီးခြင်း",
+    "usecases.design.use4": "ပုံမှန်မဟုတ်သော နည်းလမ်းများဖြင့် စာသားကို ပုံစံပြင်ဆင်ခြင်း",
+  
+    // Professional Use Cases
+    "usecases.professional.title": "ပရော်ဖက်ရှင်နယ် အသုံးချမှုများ",
+    "usecases.linkedin.title": "LinkedIn",
+    "usecases.linkedin.description":
+      "မမြင်ရသောအက္ခရာများကို အသုံးပြု၍ သန့်ရှင်းသော ပုံစံပြင်ဆင်မှုနှင့် နေရာခြားမှုဖြင့် ပရော်ဖက်ရှင်နယ် ပရိုဖိုင်များ ဖန်တီးပါ။",
+    "usecases.linkedin.use1": "သန့်ရှင်းသော စာကြောင်းအသစ်များဖြင့် သင်၏ bio ကို ပုံစံပြင်ဆင်ခြင်း",
+    "usecases.linkedin.use2": "မြင်ကွင်းဆိုင်ရာ ဆွဲဆောင်မှုရှိသော ပို့စ်များ ဖန်တီးခြင်း",
+    "usecases.linkedin.use3": "အရေးကြီးသော အချက်များကို မီးမောင်းထိုးရန် နေရာခြားမှု ထည့်သွင်းခြင်း",
+    "usecases.linkedin.use4": "အနည်းဆုံးဝါဒီ၊ ကြော့ရှင်းသော ပရိုဖိုင်များ ဖန်တီးခြင်း",
+    "usecases.email.title": "အီးမေးလ်",
+    "usecases.email.description": "သန့်ရှင်းပြီး ပရော်ဖက်ရှင်နယ် အီးမေးလ် ပုံစံပြင်ဆင်မှု ဖန်တီးရန် မမြင်ရသောအက္ခရာများကို အသုံးပြုပါ။",
+    "usecases.email.use1": "အီးမေးလ် လက်မှတ်များတွင် သန့်ရှင်းသော နေရာခြားမှု ဖန်တီးခြင်း",
+    "usecases.email.use2": "တိကျသော နေရာခြားမှုဖြင့် သတင်းလွှာများကို ပုံစံပြင်ဆင်ခြင်း",
+    "usecases.email.use3": "အနည်းဆုံးဝါဒီ အီးမေးလ် ဒီဇိုင်းများ ဖန်တီးခြင်း",
+    "usecases.email.use4": "အရေးကြီးသော အချက်များကို မီးမောင်းထိုးရန် သိမ်မွေ့သော နေရာခြားမှု ထည့်သွင်းခြင်း",
+  
+    // Why Use Invisible Text
+    "why.title": "ကျွန်ုပ်တို့၏ မမြင်ရသောစာသား ဖန်တီးကိရိယာကို အဘယ်ကြောင့် အသုံးပြုသင့်သနည်း?",
+    "why.intro":
+      "ကျွန်ုပ်တို့၏ မမြင်ရသောစာသား ဖန်တီးကိရိယာသည် အသုံးပြုသူ-ဖော်ရွေသော ဒီဇိုင်းနှင့် အားကောင်းသော လုပ်ဆောင်ချက်များဖြင့် ထင်ရှားပါသည်။ မမြင်ရသောအက္ခရာများ ဖန်တီးခြင်းနှင့် အသုံးပြုခြင်းကို လျင်မြန်ပြီး ရိုးရှင်းစေသော ကိရိယာတစ်ခုကို ကျွန်ုပ်တို့ ဖန်တီးခဲ့ပြီး သင်၏ သီးခြားလိုအပ်ချက်များနှင့် ကိုက်ညီသော နည်းလမ်းများစွာ ပါဝင်ပါသည်။",
+    "why.whyuse.title": "မမြင်ရသောအက္ခရာများကို အဘယ်ကြောင့် အသုံးပြုသင့်သနည်း?",
+    "why.whyuse.description": "မမြင်ရသောအက္ခရာများသည် အခြေအနေများစွာတွင် အသုံးဝင်နိုင်ပါသည်:",
+    "why.whyuse.use1": "ဂိမ်းများနှင့် လူမှုကွန်ယက်တွင် ထူးခြားသော အသုံးပြုသူအမည်များ ဖန်တီးခြင်း",
+    "why.whyuse.use2": "ပုံမှန်နေရာခြားမှုများ ခွင့်မပြုသော စာသားတွင် မမြင်ရသော နေရာခြားမှု ထည့်သွင်းခြင်း",
+    "why.whyuse.use3": "ဖန်တီးမှုနည်းလမ်းများဖြင့် စာများကို ပုံစံပြင်ဆင်ခြင်း",
+    "why.whyuse.use4": "အကြောင်းအရာ လိုအပ်သော ပလပ်ဖောင်းများတွင် ကွက်လပ်ပို့စ်များ ဖန်တီးခြင်း",
+    "why.whyuse.use5": "စာသားတွင် မမြင်ရသော အမှတ်အသားများ ထည့်သွင်းခြင်း",
+    "why.whyuse.use6": "ပရိုဖိုင်များနှင့် bio များတွင် အထူးစာသား အကျိုးသက်ရောက်မှုများ ဖန်တီးခြင်း",
+    "why.whyuse.use7": "ချက်ချင်း မမြင်နိုင်သော ဝှက်ထားသော စာများ ပို့ခြင်း",
+    "why.features.easyToUse.title": "အသုံးပြုရလွယ်ကူ",
+    "why.features.easyToUse.description":
+      "ကျွန်ုပ်တို့၏ကိရိယာကို တတ်နိုင်သမျှ ရိုးရှင်းအောင် ဒီဇိုင်းပြုလုပ်ထားပါသည်။ ခလုတ်တစ်ခုကို နှိပ်ရုံဖြင့် (နည်းလမ်း ၁ ကို အသုံးပြု၍) မည်သည့်နေရာတွင်မဆို ကပ်ထည့်ရန် အသင့်ရှိသော မမြင်ရသောအက္ခရာတစ်ခုကို ကူးယူပြီးပါပြီ။",
+    "why.features.totallyFree.title": "လုံးဝအခမဲ့",
+    "why.features.totallyFree.description":
+      "လုပ်ဆော င်ချက်အားလုံးကို ကန့်သတ်ချက်များ၊ စာရင်းသွင်းမှုများ သို့မဟုတ် ဝှက်ထားသော ကုန်ကျစရိတ်များမရှိဘဲ လုံးဝအခမဲ့ အသုံးပြုနိုင်ပါသည်။",
+    "why.features.unlimitedCharacters.title": "အကန့်အသတ်မရှိ အက္ခရာများ",
+    "why.features.unlimitedCharacters.description": "ကန့်သတ်ချက်များမရှိဘဲ လိုအပ်သလောက် မမြင်ရသောအက္ခရာများကို ဖန်တီးပါ။",
+    "why.features.oneClickCopy.title": "တစ်ကလစ်ဖြင့် ကူးယူခြင်း",
+    "why.features.oneClickCopy.description": "အမြင့်ဆုံး အဆင်ပြေမှုအတွက် တစ်ကလစ်ဖြင့် မမြင်ရသောအက္ခရာများကို clipboard သို့ ကူးယူပါ။",
+    "why.features.noSignup.title": "မှတ်ပုံတင်ရန် မလိုအပ်",
+    "why.features.noSignup.description": "အကောင့်ဖွင့်ခြင်း သို့မဟုတ် ကိုယ်ရေးကိုယ်တာ အချက်အလက်များ ပေးခြင်းမရှိဘဲ ကျွန်ုပ်တို့၏ကိရိယာကို ချက်ချင်း အသုံးပြုပါ။",
+    "why.features.accessible.title": "နေရာတိုင်းတွင် အသုံးပြုနိုင်",
+    "why.features.accessible.description":
+      "ကျွန်ုပ်တို့၏ကိရိယာသည် ခေတ်မီ စက်ပစ္စည်းများနှင့် browser များအားလုံးတွင် အလုပ်လုပ်သောကြောင့် မည်သည့်နေရာတွင်မဆို အသုံးပြုနိုင်ပါသည်။",
+    "why.features.accuracy.title": "၁၀၀% တိကျမှု",
+    "why.features.accuracy.description": "ကျွန်ုပ်တို့၏ဖန်တီးကိရိယာသည် အကြိမ်တိုင်း ပြီးပြည့်စုံသော Unicode မမြင်ရသောအက္ခရာများကို ထုတ်လုပ်ပါသည်။",
+    "why.features.multipleLanguages.title": "ဘာသာစကားများစွာ",
+    "why.features.multipleLanguages.description":
+      "ကမ္ဘာတစ်ဝှမ်းရှိ အသုံးပြုသူများကို ဝန်ဆောင်မှုပေးရန် ကျွန်ုပ်တို့၏ကိရိယာကို ဘာသာစကားများစွာဖြင့် ရရှိနိုင်ပါသည်။",
+    "why.benefits.title": "ကျွန်ုပ်တို့၏ကိရိယာ အသုံးပြုခြင်း၏ အကျိုးကျေးဇူးများ",
+    "why.benefits.privacy.title": "ကိုယ်ရေးကိုယ်တာကို ဗဟိုပြု",
+    "why.benefits.privacy.description": "ကျွန်ုပ်တို့သည် သင်၏အသုံးပြုမှုကို ခြေရာမခံပြီး သင်ဖန်တီးသော စာသားများကို သိမ်းဆည်းခြင်းမပြုပါ။",
+    "why.benefits.creative.title": "ဖန်တီးမှု လွတ်လပ်မှု",
+    "why.benefits.creative.description": "ပလပ်ဖောင်းများကြား စာသားပုံစံပြင်ဆင်မှုနှင့် တင်ပြမှုအတွက် ဖြစ်နိုင်ချေအသစ်များကို ဖွင့်လှစ်ပါ။",
+    "why.benefits.performance.title": "လျင်မြန်သော စွမ်းဆောင်ရည်",
+    "why.benefits.performance.description":
+      "ကျွန်ုပ်တို့၏ကိရိယာသည် လျင်မြန်စွာ load ဖြစ်ပြီး ချောမွေ့သော အတွေ့အကြုံအတွက် ချက်ချင်း အက္ခရာများကို ဖန်တီးပါသည်။",
+  
+    // Unicode Table
+    "unicode.title": "Unicode အက္ခရာ ရည်ညွှန်းဇယား",
+    "unicode.subtitle": "မတူညီသော အသုံးချမှုများအတွက် မမြင်ရသောနှင့် နေရာခြားမှု Unicode အက္ခရာများ၏ ပြည့်စုံသော စာရင်း",
+    "unicode.table.unicode": "Unicode",
+    "unicode.table.description": "ဖော်ပြချက်",
+    "unicode.table.html": "HTML Entity",
+    "unicode.table.example": "ဥပမာ",
+    "unicode.table.actions": "လုပ်ဆောင်ချက်များ",
+    "unicode.copy": "ကူးယူပါ",
+    "unicode.toast.copiedTitle": "ကူးယူပြီးပါပြီ!",
+    "unicode.toast.copiedDescription": "အက္ခရာကို clipboard သို့ ကူးယူပြီးပါပြီ",
+  
+    // Unicode character descriptions
+    "unicode.space.description": "ပုံမှန် နေရာခြားမှု",
+    "unicode.space.notes": "စာသားတွင် အသုံးပြုသော ပုံမှန် နေရာခြားမှု အက္ခရာ။ ၎င်းသည် စာကြောင်းအသစ်ကို ခွင့်ပြုပြီး HTML တွင် ခြုံ့သွားပါသည်။",
+    "unicode.noBreakSpace.description": "မကွဲသော နေရာခြားမှု",
+    "unicode.noBreakSpace.notes":
+      "ပုံမှန်နေရာခြားမှုနှင့် ဆင်တူသော်လည်း စကားလုံးများကြား စာကြောင်းအသစ်ကို တားဆီးပါသည်။ ဆက်စပ်သော စကားလုံးများကို အတူတကွ ထားရှိရန် အများအားဖြင့် အသုံးပြုပါသည်။",
+    "unicode.enQuad.description": "En Quad",
+    "unicode.enQuad.notes": "font ၏ en အကျယ် (em ၏ တစ်ဝက်) နှင့် ညီမျှသော နေရာခြားမှု။",
+    "unicode.emQuad.description": "Em Quad",
+    "unicode.emQuad.notes": "font ၏ em အကျယ်နှင့် ညီမျှသော နေရာခြားမှု။",
+    "unicode.enSpace.description": "En Space",
+    "unicode.enSpace.notes": "em ၏ တစ်ဝက်နှင့် ညီမျှသော နေရာခြားမှု။ typography တွင် အများအားဖြင့် အသုံးပြုပါသည်။",
+    "unicode.emSpace.description": "Em Space",
+    "unicode.emSpace.notes": "'M' အက္ခရာ၏ အကျယ်နှင့် ညီမျှသော နေရာခြားမှု။ စာပိုဒ် အဝင်အတွက် typography တွင် အသုံးပြုပါသည်။",
+    "unicode.threePerEmSpace.description": "Three-Per-Em Space",
+    "unicode.threePerEmSpace.notes": "em ၏ သုံးပုံတစ်ပုံ အကျယ်ရှိသော နေရာခြားမှု။",
+    "unicode.fourPerEmSpace.description": "Four-Per-Em Space",
+    "unicode.fourPerEmSpace.notes": "em ၏ လေးပုံတစ်ပုံ အကျယ်ရှိသော နေရာခြားမှု။",
+    "unicode.sixPerEmSpace.description": "Six-Per-Em Space",
+    "unicode.sixPerEmSpace.notes": "em ၏ ခြောက်ပုံတစ်ပုံ အကျယ်ရှိသော နေရာခြားမှု။",
+    "unicode.figureSpace.description": "Figure Space",
+    "unicode.figureSpace.notes": "ဂဏန်းအားလုံး အကျယ်တူညီသော font များတွင် ဂဏန်းတစ်လုံး၏ အကျယ်နှင့် ညီမျှသော နေရာခြားမှု။",
+    "unicode.punctuationSpace.description": "Punctuation Space",
+    "unicode.punctuationSpace.notes": "font ၏ ပုဒ်ဖြတ်ပုဒ်ရပ် အက္ခရာ၏ အကျယ်နှင့် ညီမျှသော နေရာခြားမှု။",
+    "unicode.thinSpace.description": "Thin Space",
+    "unicode.thinSpace.notes":
+      "ပုံမှန်နေရာခြားမှုထက် ပိုမိုပါးသော နေရာခြားမှု၊ စကားလုံးများနှင့် ပုဒ်ဖြတ်ပုဒ်ရပ်များကြား typography တွင် မကြာခဏ အသုံးပြုပါသည်။",
+    "unicode.hairSpace.description": "Hair Space",
+    "unicode.hairSpace.notes": "typography တွင် ရရှိနိုင်သော အပါးဆုံး နေရာခြားမှု၊ အသေးစိတ် ညှိခြင်းအတွက် အသုံးပြုပါသည်။",
+    "unicode.zeroWidthSpace.description": "Zero Width Space",
+    "unicode.zeroWidthSpace.notes":
+      "မြင်နိုင်သော နေရာခြားမှု မထည့်ဘဲ စာကြောင်းအသစ်ကို ခွင့်ပြုသော မမြင်ရသောအက္ခရာ။ 'ကွက်လပ်' အကြောင်းအရာ ဖန်တီးရန်အတွက် လူကြိုက်များပါသည်။",
+    "unicode.zeroWidthNonJoiner.description": "Zero Width Non-Joiner",
+    "unicode.zeroWidthNonJoiner.notes":
+      "အက္ခရာများ ချိတ်ဆက်ခြင်းကို တားဆီးပါသည်။ အချို့သော အက္ခရာပေါင်းစပ်မှုများ ခွဲခြားထားရမည့် script များတွင် အသုံးဝင်ပါသည်။",
+    "unicode.zeroWidthJoiner.description": "Zero Width Joiner",
+    "unicode.zeroWidthJoiner.notes":
+      "မြင်နိုင်သော ခွဲခြားမှုမရှိဘဲ အက္ခရာများကို ချိတ်ဆက်ပါသည်။ ရှုပ်ထွေးသော emoji ပေါင်းစပ်မှုများ ဖန်တီးရန် မရှိမဖြစ်လိုအပ်ပါသည်။",
+    "unicode.leftToRightMark.description": "Left-to-Right Mark",
+    "unicode.leftToRightMark.notes": "စာသားဦးတည်ချက်ကို ထိန်းချုပ်ပြီး အက္ခရာများကို ဘယ်မှ ညာသို့ ပြသရန် အတင်းအကြပ် ပြုလုပ်ပါသည်။",
+    "unicode.rightToLeftMark.description": "Right-to-Left Mark",
+    "unicode.rightToLeftMark.notes": "စာသားဦးတည်ချက်ကို ထိန်းချုပ်ပြီး အက္ခရာများကို ညာမှ ဘယ်သို့ ပြသရန် အတင်းအကြပ် ပြုလုပ်ပါသည်။",
+    "unicode.mediumMathematicalSpace.description": "Medium Mathematical Space",
+    "unicode.mediumMathematicalSpace.notes": "သင်္ချာ သင်္ကေတများတွင် အသုံးပြုသော နေရာခြားမှု၊ thin space ထက် အနည်းငယ် ပိုကျယ်ပါသည်။",
+    "unicode.wordJoiner.description": "Word Joiner",
+    "unicode.wordJoiner.notes": "Zero Width No-Break Space နှင့် ဆင်တူပြီး အက္ခရာများကြား စာကြောင်းအသစ်ကို တားဆီးပါသည်။",
+    "unicode.functionApplication.description": "Function Application",
+    "unicode.functionApplication.notes": "သင်္ချာ သင်္ကေတများတွင် function အသုံးချမှုကို ညွှန်ပြရန် အသုံးပြုပါသည်။",
+    "unicode.invisibleTimes.description": "Invisible Times",
+    "unicode.invisibleTimes.notes": "မြင်နိုင်သော operator မပြသဘဲ မြှောက်ခြင်းကို ညွှန်ပြရန် သင်္ချာ သင်္ကေတများတွင် အသုံးပြုပါသည်။",
+    "unicode.invisibleSeparator.description": "Invisible Separator",
+    "unicode.invisibleSeparator.notes":
+      "မြင်နိုင်သော အမှတ်အသားမရှိဘဲ သင်္ချာ သို့မဟုတ် နည်းပညာဆိုင်ရာ အကြောင်းအရာများတွင် အရာများကို ခွဲခြားရန် အသုံးပြုပါသည်။",
+    "unicode.invisiblePlus.description": "Invisible Plus",
+    "unicode.invisiblePlus.notes": "မြင်နိုင်သော operator မပြသဘဲ ပေါင်းခြင်းကို ညွှန်ပြရန် သင်္ချာ သင်္ကေတများတွင် အသုံးပြုပါသည်။",
+    "unicode.ideographicSpace.description": "Ideographic Space",
+    "unicode.ideographicSpace.notes": "အရှေ့အာရှ typography တွင် အသုံးပြုသော နေရာခြားမှု၊ ideographic အက္ခရာ၏ အကျယ်ရှိပါသည်။",
+    "unicode.hangulFiller.description": "Hangul Filler",
+    "unicode.hangulFiller.notes":
+      "မူလက ကိုရီးယားစာသားတွင် အသုံးပြုခဲ့သော ဤမမြင်ရသောအက္ခရာသည် ဂိမ်းများနှင့် လူမှုကွန်ယက်တွင် 'ကွက်လပ်' အသုံးပြုသူအမည်များ ဖန်တီးရန်အတွက် လူကြိုက်များလာခဲ့သည်။",
+    "unicode.zeroWidthNoBreakSpace.description": "Zero Width No-Break Space",
+    "unicode.zeroWidthNoBreakSpace.notes":
+      "Byte Order Mark (BOM) ဟုလည်း လူသိများပါသည်။ စာကြောင်းအသစ်ကို တားဆီးပြီး မမြင်ရပါ။ encoding ကို ညွှန်ပြရန် စာသားဖိုင်များ၏ အစတွင် မကြာခဏ အသုံးပြုပါသည်။",
+    "unicode.mongolianVowelSeparator.description": "Mongolian Vowel Separator",
+    "unicode.mongolianVowelSeparator.notes":
+      "မွန်ဂိုလီးယား script တွင် သရများကို ခွဲခြားရန် အသုံးပြုပါသည်။ အချို့ အကြောင်းအရာများတွင် မမြင်ရသောအက္ခရာအဖြစ် ပေါ်လာနိုင်ပါသည်။",
+    "unicode.braillePatternBlank.description": "Braille Pattern Blank",
+    "unicode.braillePatternBlank.notes":
+      "font များစွာတွင် မြင်နိုင်သော နေရာခြားမှုအဖြစ် ပေါ်လာသော ကွက်လပ် braille ပုံစံ၊ သို့သော် နည်းပညာအရ ပုံမှန်နေရာခြားမှုနှင့် ကွဲပြားပါသည်။",
+  
+    // FAQ section
+    "faq.title": "မကြာခဏမေးလေ့ရှိသောမေးခွန်းများ",
+    "faq.subtitle": "မမြင်ရသောစာသားနှင့် ၎င်း၏အသုံးပြုမှုအကြောင်း အများအားဖြင့် မေးလေ့ရှိသော မေးခွန်းများအတွက် အဖြေများကို ရှာဖွေပါ",
+    "faq.q1": "မမြင်ရသောအက္ခရာများဆိုသည်မှာ အဘယ်နည်း?",
+    "faq.a1":
+      "မမြင်ရသောအက္ခရာများသည် မြင်နိုင်သော သင်္ကေတများကို မပြသသော်လည်း စာသားအတွင်း နေရာယူနေသော Unicode အက္ခရာများဖြစ်သည်။ ၎င်းတို့တွင် ထူးခြားသော Unicode တန်ဖိုးများရှိပြီး မတူညီသော ပုံစံပြင်ဆင်မှုနှင့် ဖန်တီးမှုရည်ရွယ်ချက်များအတွက် အသုံးပြုနိုင်ပါသည်။",
+    "faq.q2": "မမြင်ရသောအက္ခရာများ အသုံးပြုခြင်းသည် ဘေးကင်းပါသလား?",
+    "faq.a2":
+      "ဟုတ်ကဲ့၊ မမြင်ရသောအက္ခရာများသည် လုံးဝဘေးကင်းပါသည်။ ၎င်းတို့သည် အက်ပ်လီကေးရှင်းများနှင့် ဝဘ်ဆိုဒ်များစွာတွင် အသုံးပြုသော ပုံမှန် Unicode အက္ခရာများဖြစ်သည်။ သို့သော် အချို့ ပလပ်ဖောင်းများတွင် အသုံးပြုသူအမည်များ သို့မဟုတ် အခြားနယ်ပယ်များတွင် အသုံးပြုခြင်းအတွက် ကန့်သတ်ချက်များ ရှိနိုင်ပါသည်။",
+    "faq.q3": "မမြင်ရသောအက္ခရာများသည် နေရာတိုင်းတွင် အလုပ်လုပ်ပါသလား?",
+    "faq.a3":
+      "ခေတ်မီ အက်ပ်လီကေးရှင်းများ၊ ဝဘ်ဆိုဒ်များနှင့် operating system များအများစုသည် မမြင်ရသောအက္ခရာများ အပါအဝင် Unicode အက္ခရာများကို ပံ့ပိုးပါသည်။ သို့သော် အချို့ ဟောင်းနွမ်းသော စနစ်များ သို့မဟုတ် တင်းကြပ်သော စာသားစစ်ဆေးမှုရှိသော အက်ပ်လီကေးရှင်းများတွင် ၎င်းတို့ကို မှန်ကန်စွာ မပြသနိုင် သို့မဟုတ် စစ်ထုတ်နိုင်ပါသည်။",
+    "faq.q4": "အသုံးပြုသူအမည်များတွင် မမြင်ရသောအက္ခရာများကို အသုံးပြုနိုင်ပါသလား?",
+    "faq.a4":
+      "ပလပ်ဖောင်းပေါ် မူတည်ပါသည်။ ဂိမ်းများနှင့် လူမှုကွန်ယက် ပလပ်ဖောင်းများစွာသည် အသုံးပြုသူအမည်များတွင် မမြင်ရသောအက္ခရာများကို ခွင့်ပြုသော်လည်း အချို့တို့သည် ရှုပ်ထွေးမှု သို့မဟုတ် အလွဲသုံးမှုကို တားဆီးရန် ကန့်သတ်ချက်များ ချမှတ်ထားပါသည်။ အသုံးပြုမီ ပလပ်ဖောင်း၏ မူဝါဒများကို အမြဲတမ်း စစ်ဆေးပါ။",
+    "faq.q5": "မမြင်ရသောအက္ခရာများ အလုပ်လုပ်နေသည်ကို မည်သို့သိနိုင်မည်နည်း?",
+    "faq.a5":
+      "ကျွန်ုပ်တို့၏ စမ်းသပ်နေရာတွင် မမြင်ရသောအက္ခရာများကို စမ်းသပ်နိုင်ပါသည်။ စာသားသည် ကွက်လပ်ပုံရသော်လည်း နေရာယူနေပါက သင်၏ မမြင်ရသောအက္ခရာများ မှန်ကန်စွာ အလုပ်လုပ်နေပါသည်။ ၎င်းတို့၏ တည်ရှိမှုကို အတည်ပြုရန် အက္ခရာအရေအတွက်ကိုလည်း စစ်ဆေးနိုင်ပါသည်။",
+    "faq.q6": "မတူညီသော မမြင်ရသောအက္ခရာ အမျိုးအစားများကို ပေါင်းစပ်နိုင်ပါသလား?",
+    "faq.a6":
+      "ဟုတ်ကဲ့၊ မတူညီသော အကျိုးသက်ရောက်မှုများ ဖန်တီးရန် မတူညီသော မမြင်ရသောအက္ခရာများကို ပေါင်းစပ်နိုင်ပါသည်။ ကျွန်ုပ်တို့၏ဖန်တီးကိရိယာရှိ အဆင့်မြင့် ရွေးချယ်စရာများသည် မတူညီသော မမြင်ရသောအက္ခရာ အမျိုးအစားများကို ရောစပ်ခြင်း သို့မဟုတ် ၎င်းတို့ဖြင့် ပုံစံများ ဖန်တီးခြင်းကို ခွင့်ပြုပါသည်။",
+  
+    // Footer
+    "footer.about": "InvisibleText.me အကြောင်း",
+    "footer.description":
+      "InvisibleText.me သည် မတူညီသော အသုံးချမှုများအတွက် မမြင်ရသော Unicode အက္ခရာများ ဖန်တီးခြင်းနှင့် အသုံးပြုခြင်းအတွက် ကိရိယာများကို ပေးပါသည်။",
+    "footer.quickLinks": "လျင်မြန်သော လင့်ခ်များ",
+    "footer.contact": "ဆက်သွယ်ရန်",
+    "footer.contactText": "မေးခွန်းများ သို့မဟုတ် အကြံပြုချက်များ ရှိပါသလား? ကျွန်ုပ်တို့ကို ဆက်သွယ်ပါ:",
+    "footer.rights": "��ူပိုင်ခွင့်အားလုံး ကြိုတင်သိမ်းဆည်းထားပါသည်။",
+    
   }
 }
