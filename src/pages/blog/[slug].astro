@@ -71,19 +71,19 @@ const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
         
         <div class="blog-post-body">
           <Content />
-          <LazyAdSlot
-            client:visible
-            adClient={CA_PUB_ID}
-            adSlot={ARTICLE_AD_SLOT}
-            format={DISPLAY_AD_FORMAT}
-            style={{ display: 'block', textAlign: 'center', margin: '2rem 0' }}
-          />
         </div>
+        <LazyAdSlot
+          client:visible
+          adClient={CA_PUB_ID}
+          adSlot={ARTICLE_AD_SLOT}
+          format={DISPLAY_AD_FORMAT}
+          style={{ display: 'block', textAlign: 'center', margin: '2rem 0' }}
+        />
         
         {entry.data.tags && entry.data.tags.length > 0 && (
           <div class="blog-post-tags">
             {entry.data.tags.map(tag => (
-              <a href={`/blog/tag/${tag}`} class="blog-post-tag">#{tag}</a>
+              <a href="#" class="blog-post-tag">#{tag}</a>
             ))}
           </div>
         )}

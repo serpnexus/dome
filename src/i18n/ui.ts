@@ -17,7 +17,7 @@ export const languages = {
   },
   my: {
     name: "Myanmar",
-    flag: "",
+    flag: "🇲🇲",
   },
   it: {
     name: "Italian",
@@ -49,23 +49,23 @@ export const languages = {
   },
   ja: {
     name: "Japanese",
-    flag: "",
+    flag: "🇯🇵",
   },
   th: {
     name: "Thai",
-    flag: "",
+    flag: "🇹🇭",
   },
   vi: {
     name: "Vitenam",
-    flag: "",
+    flag: "🇻🇳",
   },
   hu: {
     name: "Hungary",
-    flag: "",
+    flag: "🇭🇺",
   },
   fi: {
     name: "Finnish",
-    flag: "",
+    flag: "🇫🇮",
   }
 }
 
@@ -122,14 +122,15 @@ export const ui = {
     "invisibletext.method2.title": "Method 2: Select and Copy",
     "invisibletext.method2.description":
       "Click the Select button to highlight the invisible text below. Use CTRL+C (Windows) or Command+C (Mac) to copy it to your clipboard.",
-    "invisibletext.method2.verification":
-      "Verify your copied invisible text by pasting it into the Test box or click the green button to see it in action.",
+    "invisibletext.method2.verification": "Verify your copied invisible text by pasting it into the Test box or click the green button to see it in action.",
+    "invisibletext.method2.selectLabel": "Select character using method 2",
 
     "invisibletext.method3.title": "Method 3: Custom Generator",
     "invisibletext.method3.description":
       "Enter the number of invisible characters you need, select your preferred Unicode character, and click 'Generate'.",
     "invisibletext.method3.improved":
       "This enhanced version lets you choose from different Unicode character types for specific needs.",
+    "invisibletext.method3.selectLabel": "Select character to generate unlimited characters",
 
     "invisibletext.method4.title": "Method 4: Unlimited Characters",
     "invisibletext.method4.description":

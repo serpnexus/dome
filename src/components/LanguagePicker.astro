@@ -1,0 +1,325 @@
+---
+import { languages, defaultLang } from '../i18n/ui';
+import { getLangFromUrl } from '../i18n/utils';
+
+const currentLang = getLangFromUrl(Astro.url);
+const currentPath = Astro.url.pathname;
+
+// Remove the language prefix from the current path to get the base path
+const getBasePath = (path: string, lang: string) => {
+  if (lang === defaultLang) {
+    return path === `/${lang}` ? '/' : path.replace(`/${lang}/`, '/').replace(`/${lang}`, '/');
+  }
+  return path.replace(`/${lang}/`, '/').replace(`/${lang}`, '/');
+};
+
+const basePath = getBasePath(currentPath, currentLang);
+
+// Generate URLs for each language
+const generateLanguageUrl = (langCode: string) => {
+  if (langCode === defaultLang) {
+    return basePath === '/' ? '/' : basePath;
+  }
+  return basePath === '/' ? `/${langCode}` : `/${langCode}${basePath}`;
+};
+---
+
+<div class="language-switcher">
+  <button class="language-button" aria-label="Change language" aria-haspopup="true" aria-expanded="false">
+    <span class="current-language">
+      {languages[currentLang].flag && <span class="flag">{languages[currentLang].flag}</span>}
+      <span class="language-name">{languages[currentLang].name}</span>
+    </span>
+    <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  
+  <div class="language-dropdown">
+    <div class="language-list">
+      {Object.entries(languages).map(([code, lang]) => (
+        <a 
+          href={generateLanguageUrl(code)}
+          class={`language-option ${code === currentLang ? 'active' : ''}`}
+          hreflang={code}
+          aria-current={code === currentLang ? 'page' : undefined}
+        >
+          {lang.flag && <span class="flag">{lang.flag}</span>}
+          <span class="language-name">{lang.name}</span>
+          {code === currentLang && <span class="checkmark">✓</span>}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .language-switcher {
+    position:relative;
+    display: inline-block;
+  }
+
+  .language-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--color-bg-secondary, #f8f9fa);
+    border: 1px solid var(--color-border, #e1e5e9);
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-primary, #1a202c);
+    transition: all 0.2s ease;
+  }
+
+  .language-button:hover {
+    background: var(--color-bg-hover, #e2e8f0);
+    border-color: var(--color-border-hover, #cbd5e0);
+  }
+
+  .language-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-focus-ring, #3182ce);
+  }
+
+  .current-language {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+
+  .flag {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .language-name {
+    white-space: nowrap;
+  }
+
+  .chevron {
+    transition: transform 0.2s ease;
+    color: var(--color-text-secondary, #718096);
+  }
+
+  .language-switcher:hover .chevron {
+    transform: rotate(180deg);
+  }
+
+    .language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.25rem;
+    background: var(--color-bg-primary, #ffffff);
+    border: 1px solid var(--color-border, #e1e5e9);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 50;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.5rem);
+    transition: all 0.2s ease;
+    min-width: 200px;
+    scroll-behavior: auto;
+  }
+
+  .language-switcher:hover .language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .language-list {
+    padding: 0.5rem 0;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .language-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    color: var(--color-text-primary, #1a202c);
+    font-size: 0.875rem;
+    transition: background-color 0.2s ease;
+    position: relative;
+  }
+
+  .language-option:hover {
+    background: var(--color-bg-hover, #f7fafc);
+  }
+
+  .language-option.active {
+    background: var(--color-bg-active, #ebf8ff);
+    color: var(--color-text-active, #2b6cb0);
+  }
+
+  .checkmark {
+    margin-left: auto;
+    color: var(--color-success, #38a169);
+    font-weight: 600;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .language-button {
+      padding: 0.375rem 0.5rem;
+    }
+    
+    .language-name {
+      display: flex;
+    }
+    
+    .language-dropdown {
+      min-width: 150px;
+    }
+  }
+
+  /* RTL support */
+  [dir="rtl"] .language-dropdown {
+    left: auto;
+    right: 0;
+  }
+
+  [dir="rtl"] .checkmark {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    .language-button {
+      border-width: 2px;
+    }
+    
+    .language-dropdown {
+      border-width: 2px;
+    }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .language-button,
+    .language-dropdown,
+    .language-option,
+    .chevron {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  // Enhanced keyboard navigation and accessibility
+  document.addEventListener('DOMContentLoaded', () => {
+    const languageSwitchers = document.querySelectorAll('.language-switcher');
+    
+    languageSwitchers.forEach(switcher => {
+      const button = switcher.querySelector('.language-button');
+      const dropdown = switcher.querySelector('.language-dropdown');
+      const options = switcher.querySelectorAll('.language-option');
+      
+      let isOpen = false;
+      let focusedIndex = -1;
+      
+      // Toggle dropdown with click
+      button?.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleDropdown();
+      });
+      
+      // Handle keyboard navigation
+      button?.addEventListener('keydown', (e) => {
+        switch (e.key) {
+          case 'Enter':
+          case ' ':
+          case 'ArrowDown':
+            e.preventDefault();
+            if (!isOpen) {
+              openDropdown();
+            }
+            focusFirstOption();
+            break;
+          case 'ArrowUp':
+            e.preventDefault();
+            if (!isOpen) {
+              openDropdown();
+            }
+            focusLastOption();
+            break;
+          case 'Escape':
+            closeDropdown();
+            break;
+        }
+      });
+      
+      // Handle option navigation
+      options.forEach((option, index) => {
+        option.addEventListener('keydown', (e) => {
+          switch (e.key) {
+            case 'ArrowDown':
+              e.preventDefault();
+              focusedIndex = (index + 1) % options.length;
+              options[focusedIndex].focus();
+              break;
+            case 'ArrowUp':
+              e.preventDefault();
+              focusedIndex = index === 0 ? options.length - 1 : index - 1;
+              options[focusedIndex].focus();
+              break;
+            case 'Escape':
+              closeDropdown();
+              button?.focus();
+              break;
+            case 'Tab':
+              if (e.shiftKey && index === 0) {
+                closeDropdown();
+              } else if (!e.shiftKey && index === options.length - 1) {
+                closeDropdown();
+              }
+              break;
+          }
+        });
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!switcher.contains(e.target as Node)) {
+          closeDropdown();
+        }
+      });
+      
+      function toggleDropdown() {
+        isOpen ? closeDropdown() : openDropdown();
+      }
+      
+      function openDropdown() {
+        isOpen = true;
+        button?.setAttribute('aria-expanded', 'true');
+        dropdown?.classList.add('open');
+      }
+      
+      function closeDropdown() {
+        isOpen = false;
+        button?.setAttribute('aria-expanded', 'false');
+        dropdown?.classList.remove('open');
+        focusedIndex = -1;
+      }
+      
+      function focusFirstOption() {
+        focusedIndex = 0;
+        options[0]?.focus();
+      }
+      
+      function focusLastOption() {
+        focusedIndex = options.length - 1;
+        options[focusedIndex]?.focus();
+      }
+    });
+  });
+</script>

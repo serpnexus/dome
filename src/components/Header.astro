@@ -1,6 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import LanguageSwitcher from "./LanguageSwitcher.astro";
+import LanguageSwitcher from "./LanguagePicker.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -9,7 +9,7 @@ const t = useTranslations(lang);
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="site-header">
+<header class="container site-header">
   <div class="header-container">
     <div class="logo-container">
       <a href="/" class="logo-link">

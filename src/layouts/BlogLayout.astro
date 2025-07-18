@@ -2,7 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import "../styles/global.css";
-// import AdSenseAd from '../components/ads/AdSenseAd';
+import AdSenseAd from '../components/ads/AdSenseAd';
 import BaseHead from '../components/BaseHead.astro';
 
 interface Props {
@@ -19,12 +19,15 @@ const { title, description } = Astro.props;
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1370487049277752" crossorigin="anonymous"></script>
   </head>
   <body>
     <Header />
     <main>
-      <!-- <AdSenseAd client:visible/> -->
         <slot />
+        <section>
+          <AdSenseAd client:visible/>
+        </section>
     </main>
     <Footer />
   </body>
