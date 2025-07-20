@@ -3,11 +3,10 @@ title: "How to Move Down a Line on Instagram: A Complete Guide to Using Blank Sp
 description: "Discover how the Zero Width Joiner makes complex emoji combinations possible."
 pubDate: 2025-04-01
 author: "Jane Smith"
-image: "/placeholder.svg?height=600&width=1200"
+image: "/images/line-breaks-insta.png?height=600&width=1200"
 tags: ["unicode", "emoji", "zero width joiner"]
 featured: true
 ---
-# 
 
 Instagram, as a leading social media platform, is constantly evolving to provide users with a variety of ways to express themselves visually and creatively. Whether it’s posting photos, videos, stories, or captions, Instagram allows you to share your thoughts and moments with the world. However, as simple as the platform seems, there are often small nuances that can elevate your posts or comments and make them stand out.
 

@@ -1,125 +1,116 @@
 ---
-import BlogPostCard from './BlogPostCard.astro';
 import { getCollection } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+import { Image } from 'astro:assets';
 
-// Get blog posts and sort by date
-const allPosts = await getCollection('blog');
-const sortedPosts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-// Get the latest 3 posts for homepage
-const latestPosts = sortedPosts.slice(0, 3);
+const posts = (await getCollection('blog'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 6);
 ---
 
-<section class="blog-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Latest Articles</h2>
-      <p class="section-description">Discover tips, tricks, and insights about invisible characters and Unicode</p>
-      <a href="/blog" class="view-all-link">
-        View All Articles
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="m9 18 6-6-6-6"></path>
-        </svg>
+<section class="blog-showcase-section">
+  <h2 class="blog-showcase-title">Latest Blog Posts</h2>
+  <div class="blog-showcase-grid">
+    {posts.map((post) => (
+      <a href={`/blog/${post.slug}`} class="blog-showcase-card">
+        {post.data.image && (
+          <Image src={post.data.image} alt={post.data.title} width={400} height={200} class="blog-showcase-image" />
+        )}
+        <div class="blog-showcase-card-content">
+          <h3 class="blog-showcase-card-title">{post.data.title}</h3>
+          <p class="blog-showcase-card-date"><FormattedDate date={post.data.pubDate} /></p>
+          <p class="blog-showcase-card-desc">{post.data.description || ''}</p>
+        </div>
       </a>
-    </div>
-    
-    <div class="blog-grid">
-      {latestPosts.map(post => (
-        <BlogPostCard
-          title={post.data.title}
-          description={post.data.description}
-          pubDate={post.data.pubDate}
-          slug={post.slug}
-          image={post.data.image}
-          tags={post.data.tags}
-          featured={post.data.featured}
-        />
-      ))}
-    </div>
+    ))}
   </div>
 </section>
 
 <style>
-  .blog-section {
-    padding: 4rem 0;
-    background-color: var(--navy-900);
+.blog-showcase-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 20px;
+}
+.blog-showcase-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--foreground, #fff275);
+}
+.blog-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 640px) {
+  .blog-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+}
+@media (min-width: 1024px) {
+  .blog-showcase-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
-  .section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--yellow-400);
-    margin-bottom: 1rem;
-  }
-  
-  .section-description {
-    font-size: 1.125rem;
-    color: var(--gray-400);
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .view-all-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--yellow-400);
-    font-weight: 500;
-    text-decoration: none;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid var(--yellow-400);
-    border-radius: 0.5rem;
-    transition: all 0.2s ease;
-  }
-  
-  .view-all-link:hover {
-    background-color: var(--yellow-400);
-    color: var(--navy-900);
-    transform: translateY(-2px);
-  }
-  
-  .blog-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  @media (min-width: 768px) {
-    .blog-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .blog-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  @media (max-width: 767px) {
-    .section-title {
-      font-size: 2rem;
-    }
-    
-    .section-description {
-      font-size: 1rem;
-    }
-    
-    .blog-section {
-      padding: 3rem 0;
-    }
-  }
+}
+.blog-showcase-card {
+  background-color: var(--card, #ffffff);
+  border: 1px solid var(--border, #fff275);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  color: inherit;
+}
+.blog-showcase-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  border-color: var(--accent, yellow);
+}
+.blog-showcase-image {
+  width: 100%;
+  height: 192px;
+  object-fit: cover;
+  transition: transform 0.2s;
+  display: block;
+  background-color: #2c4081;
+}
+.blog-showcase-card:hover .blog-showcase-image {
+  transform: scale(1.04);
+}
+.blog-showcase-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #142253;
+}
+.blog-showcase-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--foreground, #ddd);
+  transition: color 0.2s;
+}
+.blog-showcase-card:hover .blog-showcase-card-title {
+  color: var(--accent, #ffd329);
+}
+.blog-showcase-card-date {
+  font-size: 0.95rem;
+  color: var(--muted-foreground, #ffd329);
+  margin-bottom: 1rem;
+}
+.blog-showcase-card-desc {
+  color: var(--muted-foreground, #a8a8a8);
+  line-clamp: 3;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
 </style> 

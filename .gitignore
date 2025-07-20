@@ -23,3 +23,6 @@ TestResults.xml
 node_modules
 .DS_Store
 .astro/
+/dist
+.netlify/
+netlify.toml

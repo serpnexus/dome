@@ -3,12 +3,10 @@ title: "Zero Width Joiner: The Hidden Character Behind Emoji Combinations"
 description: "Discover how the Zero Width Joiner makes complex emoji combinations possible."
 pubDate: 2025-01-25
 author: "Jane Smith"
-image: "/placeholder.svg?height=600&width=1200"
+image: "/images/zeroo-width-joiner.png?height=600&width=1200"
 tags: ["unicode", "emoji", "zero width joiner"]
 featured: false
 ---
-
-# Zero Width Joiner: The Hidden Character Behind Emoji Combinations
 
 Have you ever wondered how emoji combinations like the family emoji or the couple emoji work? The secret lies in a special invisible character called the Zero Width Joiner (ZWJ).
 
