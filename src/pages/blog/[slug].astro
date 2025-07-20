@@ -33,11 +33,9 @@ const currentIndex = sortedPosts.findIndex(post => post.slug === entry.slug);
 const prevPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null;
 const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
 ---
-
-<StaticPageLayout >
+<StaticPageLayout title={entry.data.title} description={entry.data.description}>
   <div class="blog-post-container">
     <div class="blog-post-header">
-      <h1 class="blog-post-title">{entry.data.title}</h1>
       <div class="blog-post-meta">
         <div class="blog-post-meta-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -75,7 +73,7 @@ const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
         {entry.data.tags && entry.data.tags.length > 0 && (
           <div class="blog-post-tags">
             {entry.data.tags.map(tag => (
-              <a href={`/blog/tag/${tag}`} class="blog-post-tag">#{tag}</a>
+              <a href="#" class="blog-post-tag">#{tag}</a>
             ))}
           </div>
         )}
@@ -102,7 +100,7 @@ const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
           <div class="sidebar-content">
             <div class="sidebar-tags">
               {Array.from(new Set(sortedPosts.flatMap(post => post.data.tags || []))).slice(0, 10).map(tag => (
-                <a href={`/blog/tag/${tag}`} class="sidebar-tag">#{tag}</a>
+                <a href="#" class="sidebar-tag">#{tag}</a>
               ))}
             </div>
           </div>

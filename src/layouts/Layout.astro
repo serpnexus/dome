@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { getLangFromUrl } from '../i18n/utils';
+
 import "../styles/global.css";
 
 interface Props {
@@ -10,11 +11,8 @@ interface Props {
 	image?: string;
 }
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
-const { title, description, image = '/images/og-image.webp' } = Astro.props;
-
-// const { title, description = "Generate and use invisible Unicode characters for various applications." } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
+const { title, description, image='og-image.webp' } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -54,22 +52,24 @@ const lang = getLangFromUrl(Astro.url);
     <link rel="alternate" hreflang="ru" href="https://www.invisibletext.me/ru">
     <link rel="alternate" hreflang="tr" href="https://www.invisibletext.me/tr">
     <link rel="alternate" hreflang="ko" href="https://www.invisibletext.me/ko">
+    <link rel="alternate" hreflang="fi" href="https://www.invisibletext.me/fi">
+    <link rel="alternate" hreflang="hu" href="https://www.invisibletext.me/hu">
+    <link rel="alternate" hreflang="ja" href="https://www.invisibletext.me/ja">
+    <link rel="alternate" hreflang="my" href="https://www.invisibletext.me/my">
+    <link rel="alternate" hreflang="th" href="https://www.invisibletext.me/th">
+    <link rel="alternate" hreflang="vi" href="https://www.invisibletext.me/vi">
     <link rel="alternate" hreflang="x-default" href="https://www.invisibletext.me/">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1370487049277752"
-     crossorigin="anonymous"></script>
-	<!-- Google tag (gtag.js) -->
-	<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-K5YY1JW4YH"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	
-	  gtag('config', 'G-K5YY1JW4YH');
-	</script>
-
-
+      crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-K5YY1JW4YH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
     
-    
+      gtag('config', 'G-K5YY1JW4YH');
+    </script>
   </head>
   <body>
     <Header />
@@ -102,30 +102,6 @@ const lang = getLangFromUrl(Astro.url);
             "position": 1,
             "name": "Home",
             "item": "https://www.invisibletext.me/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "About Us",
-            "item": "https://www.invisibletext.me/about"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Contact Us",
-            "item": "https://www.invisibletext.me/contact"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "Privacy Policy",
-            "item": "https://www.invisibletext.me/privacy"
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "name": "Terms and Condition",
-            "item": "https://www.invisibletext.me/terms-and-conditions"
           }
         ]
       }
@@ -133,7 +109,7 @@ const lang = getLangFromUrl(Astro.url);
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Invisible Text - English",
+        "name": "Invisible Text",
         "url": "https://www.invisibletext.me/",
         "inLanguage": "en",
         "isPartOf": {
@@ -196,20 +172,6 @@ const lang = getLangFromUrl(Astro.url);
           }
         ]
       }
-      </script> 
-      <script type="text/partytown" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1370487049277752"
-        crossorigin="anonymous"></script>
-      <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-format="autorelaxed"
-          data-ad-client="ca-pub-1370487049277752"
-          data-ad-slot="9121887528"></ins>
-      <script type="text/partytown">
-        (adsbygoogle = window.adsbygoogle || []).push({
-          google_ad_client: "ca-pub-1370487049277752",
-          enable_page_level_ads: true
-        });
-          (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
   </body>
 </html>
