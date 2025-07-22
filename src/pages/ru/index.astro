@@ -9,6 +9,8 @@ import TypesOfInvisibleText from '../../components/Types.astro';
 import FAQSection from '../../components/FAQ.astro';
 import UnicodeTable from '../../components/UnicodeTable.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import BlogSection from '../../components/BlogSection.astro';
+
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -23,6 +25,6 @@ export const prerender = true;
   <UnicodeTable />
   <WhySection />
   <PracticalUseCasesSection />
+  <BlogSection />
   <FAQSection />
 </Layout>
-
