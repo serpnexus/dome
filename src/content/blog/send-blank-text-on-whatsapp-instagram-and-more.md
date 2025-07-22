@@ -39,6 +39,9 @@ This is where an invisble text generator comes in handy. These tools let you cop
 On WhatsApp, Instagram, Facebook, etc.:
 
 * Visit an <u>[invisble text generator](https://www.duplichecker.com/invisible-text.php)</u>.
+
+![invisible text genertaor](/images/invisible-text.webp "blank text")
+
 * Click the button to copy the invisible text.
 * Open your app (e.g., WhatsApp or Instagram).
 * Paste the invisible character into the message or caption field.
@@ -50,7 +53,7 @@ That’s it—you’ve just sent a blank message!
 There are several online tools that offer invisible characters, but for the most reliable results, we recommend:
 invisble text generator – A user-friendly website where you can generate and copy invisible characters instantly.
 
-Try this _<u>[best invisible text tool](https://invisiblesymbol.com)</u>_ – Ideal for more advanced needs like multiple invisible characters, custom lengths, and more.
+Try this [best invisible text tool](https://invisiblesymbol.com) – Ideal for more advanced needs like multiple invisible characters, custom lengths, and so many text generator tools.
 
 
 These tools ensure compatibility across most platforms and devices, including iOS, Android, Windows, and macOS.
