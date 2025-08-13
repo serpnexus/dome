@@ -9,10 +9,6 @@ import vercel from '@astrojs/vercel';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), sitemap({
-      changefreq: 'monthly',
-      priority: 1,
-      lastmod: new Date(),
-      filter: (page) => !page.includes('/404') && !page.includes('/sitemap.xml'),
       i18n: {
         defaultLocale: 'en',
         locales: {
