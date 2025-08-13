@@ -38,7 +38,7 @@ export default defineConfig({
     }), tailwind(), mdx()
   ],
 
-  output: 'static',
+  output: 'server',
   site: 'https://www.invisibletext.me/',
 
   i18n: {
