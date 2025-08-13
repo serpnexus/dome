@@ -1,0 +1,218 @@
+/* Font Definitions */
+@font-face {
+  font-family: 'Atkinson';
+  src: url('/fonts/atkinson-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson';
+  src: url('/fonts/atkinson-bold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base Styles */
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Atkinson', system-ui, sans-serif;
+  @apply bg-navy-900 text-white leading-relaxed min-h-screen flex flex-col;
+  padding: 0 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  @apply text-yellow-400;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold leading-tight;
+}
+
+h1 {
+  @apply text-4xl mb-6;
+}
+
+h2 {
+  @apply text-3xl mb-5 text-yellow-400;
+}
+
+h3 {
+  @apply text-2xl font-semibold mb-4 text-white;
+}
+
+h4 {
+  @apply text-xl mb-3;
+}
+
+h5 {
+  @apply text-lg mb-2;
+}
+
+p {
+  @apply mb-4 text-[16px]  text-white/80;
+}
+ul, ol {
+  @apply mb-4 text-[16px]  text-white list-inside list-disc;
+}
+
+/* Custom Components that can't be easily replicated with Tailwind */
+.test-area {
+  @apply w-full h-32 bg-yellow-50 text-white p-3 rounded-md border border-navy-600 resize-y font-mono;
+}
+
+.test-area:focus {
+  @apply outline-none border-yellow-400 ring-2 ring-yellow-400 ring-opacity-20;
+}
+
+.character-select {
+  @apply flex-1 bg-white text-black py-2 px-3 rounded-md border border-gray-600;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23D1D5DB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+.character-select:focus {
+  @apply outline-none border-black;
+}
+
+.app-image {
+  @apply bg-white bg-opacity-5 p-2 shadow-lg rounded-2xl border border-white border-opacity-10 opacity-80;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Language Dropdown */
+.language-dropdown {
+  @apply absolute top-full right-0 bg-navy-800 rounded shadow-lg py-2 min-w-120 z-10 hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.language-dropdown.open {
+  @apply block;
+}
+
+/* Toast Notifications */
+.toast {
+  @apply fixed bottom-8 right-8 bg-yellow-200 text-black py-3 px-6 rounded-md shadow-xl z-50;
+  transform: translateY(1rem);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Active Navigation States */
+.nav-link.active::after {
+  content: "";
+  @apply absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400;
+}
+
+/* Hover States for Complex Elements */
+.card:hover {
+  @apply border-yellow-400;
+}
+
+.blog-card:hover {
+  @apply border-yellow-400;
+}
+
+.blog-card:hover .blog-card-title {
+  @apply text-yellow-400;
+}
+
+.unicode-card:hover {
+  @apply border-yellow-400;
+}
+
+.unicode-card:hover .unicode-card-title {
+  @apply text-yellow-400;
+}
+
+/* Mobile Menu Animation */
+.nav-links.open {
+  @apply flex flex-col absolute top-16 left-0 right-0 bg-navy-900 p-4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Utility Classes for Complex Layouts */
+.min-w-120 {
+  min-width: 120px;
+}
+
+/* Blog Content Specific Styles */
+.blog-content code {
+  @apply bg-navy-700 px-1.5 py-0.5 rounded text-sm font-mono;
+}
+
+.blog-content pre {
+  @apply bg-navy-700 p-4 rounded-lg overflow-x-auto mb-5;
+}
+
+.blog-content pre code {
+  @apply bg-transparent p-0 rounded-none;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-yellow-400 pl-4 ml-0 mr-0 mb-5 italic text-gray-400;
+}
+
+/* Unicode Example Display */
+.unicode-example-display {
+  @apply bg-navy-600 p-4 rounded-md font-mono min-h-12 flex items-center justify-center mb-4 text-gray-300;
+}
+
+/* Character Grid Responsive */
+@media (min-width: 768px) {
+  .games-grid,
+  .messaging-apps-grid,
+  .other-games-grid,
+  .other-apps-grid,
+  .other-usecases-grid,
+  .professional-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .other-games-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .other-usecases-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Sidebar responsive behavior */
+@media (max-width: 1024px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Mobile sidebar toggle (optional) */
+.sidebar-mobile-toggle {
+  @apply lg:hidden fixed top-20 right-4 z-50 bg-navy-700 border border-navy-600 rounded-lg p-3 text-white hover:bg-navy-600 transition-colors duration-200;
+}

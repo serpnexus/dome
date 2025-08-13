@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../layouts/StaticPageLayout.astro';
 import { getCollection } from 'astro:content';
 
 export const prerender = true;
@@ -7,18 +7,13 @@ export const prerender = true;
 // Get all Unicode characters
 const allUnicodeChars = await getCollection('unicode');
 
-// Group by category
-const categories = {
+// Group by category with proper typing
+const categories: Record<string, { title: string; description: string; characters: typeof allUnicodeChars }> = {
   'zero-width': {
     title: 'Zero Width Characters',
     description: 'Characters that have no width when rendered but still exist in the text.',
     characters: []
   },
-//'space': {
-//  title: 'Space Characters',
-//  description: 'Various types of space characters with different widths and behaviors.',
-//  characters: []
-//  },
   'braille': {
     title: 'Space Characters',
     description: 'Various types of space characters with different widths and behaviors.',
@@ -29,11 +24,6 @@ const categories = {
     description: 'Special characters with unique properties that are not visible when rendered.',
     characters: []
   },
-//'formatting': {
-//  title: 'Formatting Characters',
-//  description: 'Characters that control text direction and formatting.',
-//  characters: []
-//}
 };
 
 // Sort characters by order and populate categories
@@ -46,37 +36,39 @@ allUnicodeChars.forEach(char => {
 ---
 
 <Layout title="Unicode Invisible Characters - InvisibleText.me" description=''>
-  <div class="content-container">
-    <div class="content-header">
-      <h1 class="content-title">Unicode Invisible Characters</h1>
-      <p class="content-description">
+  <div class="max-w-1200 mx-auto px-4 py-8">
+    <div class="text-center mb-8">
+      <h1 class="text-5xl font-bold text-yellow-400 mb-4">Unicode Invisible Characters</h1>
+      <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
         Explore the world of invisible Unicode characters and learn how they can be used in various applications.
       </p>
     </div>
     
-    <div class="unicode-categories">
+    <div class="space-y-12">
       {Object.entries(categories).map(([categoryId, category]) => (
-        <div class="category-section">
-          <h2 class="category-title">{category.title}</h2>
-          <p class="category-description">{category.description}</p>
+        <div class="space-y-6">
+          <div>
+            <h2 class="text-3xl font-bold text-white mb-2 pb-2 border-b-2 border-yellow-400 inline-block">{category.title}</h2>
+            <p class="text-gray-300">{category.description}</p>
+          </div>
           
-          <div class="unicode-list">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {category.characters.map(character => (
-              <div class="unicode-card">
-                <div class="unicode-card-header">
-                  <h3 class="unicode-card-title">{character.data.title}</h3>
-                  <div class="unicode-card-code">{character.data.code}</div>
+              <div class="bg-navy-800 border border-navy-700 rounded-xl p-6 transition-all duration-200 hover:border-yellow-400">
+                <div class="mb-4">
+                  <h3 class="text-xl font-semibold text-white mb-2 transition-colors duration-200 group-hover:text-yellow-400">{character.data.title}</h3>
+                  <div class="inline-block bg-navy-700 text-yellow-400 font-mono px-3 py-1 rounded text-sm">{character.data.code}</div>
                 </div>
-                <p class="unicode-card-description">{character.data.description}</p>
-                <div class="unicode-card-actions">
-                  <a href={`/unicode/${character.slug}`} class="unicode-card-link">
+                <p class="text-gray-300 mb-6 line-clamp-3">{character.data.description}</p>
+                <div class="flex justify-between items-center">
+                  <a href={`/unicode/${character.slug}`} class="inline-flex items-center gap-1 text-yellow-400 font-medium transition-all duration-200 hover:underline">
                     View Details
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 12h14"></path>
                       <path d="m12 5 7 7-7 7"></path>
                     </svg>
                   </a>
-                  <button class="unicode-card-copy" data-copy={character.slug} title="Copy Character">
+                  <button class="bg-transparent border-none text-gray-300 cursor-pointer p-2 rounded transition-all duration-200 hover:text-white hover:bg-navy-700 flex items-center justify-center" data-copy={character.slug} title="Copy Character">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                       <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
@@ -90,50 +82,50 @@ allUnicodeChars.forEach(char => {
       ))}
     </div>
     
-    <div class="unicode-usage">
-      <h2 class="usage-title">How to Use Invisible Characters</h2>
-      <p class="usage-description">
+    <div class="mt-16">
+      <h2 class="text-3xl font-bold text-white text-center mb-6">How to Use Invisible Characters</h2>
+      <p class="text-gray-300 text-center max-w-4xl mx-auto mb-8 leading-relaxed">
         Invisible characters can be used in various ways across different platforms and applications:
       </p>
-      <ul class="usage-list">
-        <li class="usage-item">
-          <div class="usage-icon">
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <li class="flex items-start gap-3">
+          <div class="text-yellow-400 mt-1 flex-shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 6L9 17l-5-5"></path>
             </svg>
           </div>
-          <span>
-            <strong>Social Media:</strong> Create unique usernames, empty posts, or add invisible formatting to your content.
+          <span class="text-gray-300">
+            <strong class="text-white">Social Media:</strong> Create unique usernames, empty posts, or add invisible formatting to your content.
           </span>
         </li>
-        <li class="usage-item">
-          <div class="usage-icon">
+        <li class="flex items-start gap-3">
+          <div class="text-yellow-400 mt-1 flex-shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 6L9 17l-5-5"></path>
             </svg>
           </div>
-          <span>
-            <strong>Gaming:</strong> Create distinctive usernames or send hidden messages in game chats.
+          <span class="text-gray-300">
+            <strong class="text-white">Gaming:</strong> Create distinctive usernames or send hidden messages in game chats.
           </span>
         </li>
-        <li class="usage-item">
-          <div class="usage-icon">
+        <li class="flex items-start gap-3">
+          <div class="text-yellow-400 mt-1 flex-shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 6L9 17l-5-5"></path>
             </svg>
           </div>
-          <span>
-            <strong>Web Development:</strong> Format text without visible spaces or create special layouts.
+          <span class="text-gray-300">
+            <strong class="text-white">Web Development:</strong> Format text without visible spaces or create special layouts.
           </span>
         </li>
-        <li class="usage-item">
-          <div class="usage-icon">
+        <li class="flex items-start gap-3">
+          <div class="text-yellow-400 mt-1 flex-shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 6L9 17l-5-5"></path>
             </svg>
           </div>
-          <span>
-            <strong>Messaging:</strong> Send blank messages or create special formatting in messaging apps.
+          <span class="text-gray-300">
+            <strong class="text-white">Messaging:</strong> Send blank messages or create special formatting in messaging apps.
           </span>
         </li>
       </ul>
@@ -142,8 +134,8 @@ allUnicodeChars.forEach(char => {
 </Layout>
 
 <script>
-  // Character codes
-  const characters = {
+  // Character codes with proper typing
+  const characters: Record<string, string> = {
     'zero-width-space': '\u200B',
     'zero-width-joiner': '\u200D',
     'zero-width-non-joiner': '\u200C',
@@ -162,7 +154,7 @@ allUnicodeChars.forEach(char => {
   };
 
   // Copy buttons
-  document.querySelectorAll('.unicode-card-copy').forEach(button => {
+  document.querySelectorAll('[data-copy]').forEach(button => {
     button.addEventListener('click', () => {
       const copyData = button.getAttribute('data-copy');
       let textToCopy = '';
@@ -199,20 +191,20 @@ allUnicodeChars.forEach(char => {
   });
   
   // Toast notification
-  function showToast(message) {
+  function showToast(message: string) {
     const toast = document.createElement('div');
-    toast.className = 'toast';
+    toast.className = 'fixed bottom-8 right-8 bg-yellow-200 text-black px-6 py-3 rounded-lg shadow-lg z-50 transform translate-y-4 opacity-0 transition-all duration-300';
     toast.textContent = message;
     document.body.appendChild(toast);
     
     // Trigger animation
     setTimeout(() => {
-      toast.classList.add('show');
+      toast.classList.remove('translate-y-4', 'opacity-0');
     }, 10);
     
     // Remove after animation
     setTimeout(() => {
-      toast.classList.remove('show');
+      toast.classList.add('translate-y-4', 'opacity-0');
       setTimeout(() => {
         document.body.removeChild(toast);
       }, 300);

@@ -1,7 +1,7 @@
 ---
 title: "Using Invisible Text in Gaming: Tips and Tricks [2025]"
 excerpt: "Gamers are always looking for ways to stand out in their favorite games, and how invisibletext.me can help!"
-description: "Gamers are always looking for ways to stand out in their favorite games, and invisible characters offer a unique opportunity to create distinctive usernames, send hidden messages, and add a touch of mystery to your gaming experience."
+description: "Learn how invisibletext.me can help gamers, who are always looking for ways to stand out for their favorite games."
 pubDate: 2025-04-01
 author: "Jane Smith"
 image: "/images/invisible-text-gaming.png?height=600&width=1200"
@@ -61,10 +61,10 @@ Always use invisible characters responsibly and within the rules of the game you
 
 ## How to implement invisible characters in games
 
-1. Generate the invisible characters you need from InvisibleText.me
-2. Copy them to your clipboard
-3. Paste them into your game's username field or chat box
-4. Test to make sure they work as expected (some games may filter them out)
+- 1. Generate the invisible characters you need from InvisibleText.me
+- 2. Copy them to your clipboard
+- 3. Paste them into your game's username field or chat box
+- 4. Test to make sure they work as expected (some games may filter them out)
 
 ## The future of invisible characters in gaming
 

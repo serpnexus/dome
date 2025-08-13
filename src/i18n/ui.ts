@@ -74,9 +74,9 @@ export const defaultLang = "en"
 export const ui = {
   en: {
     // Meta tags for SEO
-    "meta.title": "Invisible Text - (ㅤ) Blank Space Copy and Paste",
+    "meta.title": "Invisible Character - (ㅤ) Blank Space Copy Paste",
     "meta.description":
-      "Generate invisible text using our tool. Copy and paste invisible characters for use in empty messages as usernames for social apps, gaming & more. Try it now!",
+      "Use our Invisible Text Tool to create blank or empty space easily. Perfect for invisible names, usernames, or hidden messages. 100% free & copy-paste ready.",
     "meta.keywords":
       "Invisible Text, Blank Text, Copy Paste Invisible Characters, Unicode Invisible Characters, Hangul Filler, Zero Width Space",
 
@@ -101,11 +101,10 @@ export const ui = {
 
     // Hero section
     "generator.title": "Invisible Text",
-    "generator.subtitle": "Generate unlimited blank space and quickly copy and paste invisible text.",
+    "generator.subtitle":
+      "Generate unlimited blank space and quickly copy and paste invisible text.",
     "hero.primaryButton": "Try Generator",
     "hero.secondaryButton": "Learn About Unicode",
-
-
 
     // Invisible Text Generator
     "invisibletext.brand": "INVISIBLETEXT",
@@ -117,12 +116,14 @@ export const ui = {
     "invisibletext.method1.button": "Copy Hangul Filler",
     "invisibletext.method1.description":
       "Simply click the 'Copy' button to add invisible text to your clipboard, ready to paste anywhere.",
-    "invisibletext.method1.fallback": "If this method doesn't work, try Method 2 or 3 below.",
+    "invisibletext.method1.fallback":
+      "If this method doesn't work, try Method 2 or 3 below.",
 
     "invisibletext.method2.title": "Method 2: Select and Copy",
     "invisibletext.method2.description":
       "Click the Select button to highlight the invisible text below. Use CTRL+C (Windows) or Command+C (Mac) to copy it to your clipboard.",
-    "invisibletext.method2.verification": "Verify your copied invisible text by pasting it into the Test box or click the green button to see it in action.",
+    "invisibletext.method2.verification":
+      "Verify your copied invisible text by pasting it into the Test box or click the green button to see it in action.",
     "invisibletext.method2.selectLabel": "Select character using method 2",
 
     "invisibletext.method3.title": "Method 3: Custom Generator",
@@ -130,19 +131,23 @@ export const ui = {
       "Enter the number of invisible characters you need, select your preferred Unicode character, and click 'Generate'.",
     "invisibletext.method3.improved":
       "This enhanced version lets you choose from different Unicode character types for specific needs.",
-    "invisibletext.method3.selectLabel": "Select character to generate unlimited characters",
+    "invisibletext.method3.selectLabel":
+      "Select character to generate unlimited characters",
 
     "invisibletext.method4.title": "Method 4: Unlimited Characters",
     "invisibletext.method4.description":
       "Generate large amounts of invisible text - perfect for creating multi-page invisible messages or special formatting effects.",
-    "invisibletext.method4.more": "For more advanced invisible text tools, visit",
+    "invisibletext.method4.more":
+      "For more advanced invisible text tools, visit",
 
     "invisibletext.testarea.title": "Test Area",
     "invisibletext.testarea.description":
       "Paste your invisible characters here to test them. If the placeholder text disappears, your invisible text is working correctly.",
-    "invisibletext.testarea.placeholder": "Paste or generate invisible characters here to test them...",
+    "invisibletext.testarea.placeholder":
+      "Paste or generate invisible characters here to test them...",
     "invisibletext.testarea.characters": "Characters",
-    "invisibletext.testarea.empty": "This area will show your invisible characters",
+    "invisibletext.testarea.empty":
+      "This area will show your invisible characters",
 
     "invisibletext.copy": "Copy",
     "invisibletext.clear": "Clear",
@@ -172,10 +177,13 @@ export const ui = {
     // "invisibletext.method4.title": "Advanced Options",
     // "invisibletext.method4.description": "Create more complex invisible text with special patterns and combinations.",
     "invisibletext.method4.mix": "Mix different invisible characters",
-    "invisibletext.method4.mixInfo": "Creates a random mix of different invisible character types",
+    "invisibletext.method4.mixInfo":
+      "Creates a random mix of different invisible character types",
     "invisibletext.method4.pattern": "Create pattern sequence",
-    "invisibletext.method4.patternInfo": "Creates a repeating pattern of different invisible characters",
+    "invisibletext.method4.patternInfo":
+      "Creates a repeating pattern of different invisible characters",
     "invisibletext.method4.generateAdvanced": "Generate Advanced Text",
+    "about.types.wordJoiner.title": "Word Joiner (U+2060)",
     // "invisibletext.method4.more": "For even more options, visit:",
 
     // What Is Section
@@ -212,9 +220,11 @@ export const ui = {
 
     // Features section
     "features.title": "Why Choose Our Tool",
-    "features.subtitle": "Our invisible text generator comes with exclusive features to make your experience better.",
+    "features.subtitle":
+      "Our invisible text generator comes with exclusive features to make your experience better.",
     "features.feature1.title": "Easy to Use",
-    "features.feature1.description": "Simple one-click copy and paste functionality with no complicated steps.",
+    "features.feature1.description":
+      "Simple one-click copy and paste functionality with no complicated steps.",
     "features.feature2.title": "No Signup Required",
     "features.feature2.description":
       "Use our tool instantly without creating an account or providing personal information.",
@@ -228,11 +238,13 @@ export const ui = {
     "features.feature5.description":
       "Our tool is available in multiple languages to serve users from around the world.",
     "features.feature6.title": "Free Forever",
-    "features.feature6.description": "All features are completely free to use with no hidden costs or premium tiers.",
+    "features.feature6.description":
+      "All features are completely free to use with no hidden costs or premium tiers.",
 
     // Use Cases section
     "useCases.title": "Practical Applications",
-    "useCases.subtitle": "Discover how invisible characters can be used in various platforms and applications.",
+    "useCases.subtitle":
+      "Discover how invisible characters can be used in various platforms and applications.",
     "useCases.case1.title": "Social Media",
     "useCases.case1.description":
       "Create empty posts, unique usernames, or add invisible formatting to your social media content.",
@@ -258,9 +270,11 @@ export const ui = {
       "Fortnite players have embraced invisible characters as a creative tool for customizing their gaming experience. Using zero-width spaces and other invisible Unicode characters, players can create unique display names and communicate secretly with teammates.",
     "usecases.fortnite.howto": "How to use invisible characters in Fortnite:",
     "usecases.fortnite.step1": "Generate invisible characters using our tool",
-    "usecases.fortnite.step2": "Copy the invisible characters to your clipboard",
+    "usecases.fortnite.step2":
+      "Copy the invisible characters to your clipboard",
     "usecases.fortnite.step3": "Open Fortnite and go to your account settings",
-    "usecases.fortnite.step4": "Paste the invisible characters in your display name",
+    "usecases.fortnite.step4":
+      "Paste the invisible characters in your display name",
     "usecases.fortnite.step5": "Save your changes",
     "usecases.fortnite.uses": "Popular uses in Fortnite:",
     "usecases.fortnite.use1": "Create a completely invisible username",
@@ -310,18 +324,21 @@ export const ui = {
       "Simply copy invisible text from our generator and paste it into your WhatsApp chat to create mysterious empty-looking messages that will intrigue your friends.",
     "usecases.whatsapp.uses": "Creative uses in WhatsApp:",
     "usecases.whatsapp.use1": "Send an empty message to grab attention",
-    "usecases.whatsapp.use2": "Create spacing between paragraphs in long messages",
+    "usecases.whatsapp.use2":
+      "Create spacing between paragraphs in long messages",
     "usecases.whatsapp.use3": "Make your status appear empty or minimal",
     "usecases.whatsapp.use4": "Create artistic text layouts in your messages",
 
-    "usecases.twitter.title": "Blank Tweets on X (Formerly Twitter)",
+    "usecases.twitter.title": "Blank Tweets on Twitter",
     "usecases.twitter.description":
       "Create empty-looking tweets or unique usernames on X using invisible characters. This technique helps your content stand out in a crowded timeline.",
     "usecases.twitter.uses": "Creative uses on Twitter:",
     "usecases.twitter.use1": "Create blank tweets that grab attention",
     "usecases.twitter.use2": "Add spacing between paragraphs in longer tweets",
-    "usecases.twitter.use3": "Make your display name unique with invisible characters",
-    "usecases.twitter.use4": "Create minimalist profiles with strategic spacing",
+    "usecases.twitter.use3":
+      "Make your display name unique with invisible characters",
+    "usecases.twitter.use4":
+      "Create minimalist profiles with strategic spacing",
 
     "usecases.othermessaging.title": "Other Messaging Platforms",
     "usecases.slack.title": "Slack",
@@ -373,11 +390,13 @@ export const ui = {
     "usecases.linkedin.use4": "Create minimalist, elegant profiles",
 
     "usecases.email.title": "Email",
-    "usecases.email.description": "Use invisible characters to create clean, professional email formatting.",
+    "usecases.email.description":
+      "Use invisible characters to create clean, professional email formatting.",
     "usecases.email.use1": "Create clean spacing in email signatures",
     "usecases.email.use2": "Format newsletters with precise spacing",
     "usecases.email.use3": "Create minimalist email designs",
-    "usecases.email.use4": "Add subtle spacing to make important points stand out",
+    "usecases.email.use4":
+      "Add subtle spacing to make important points stand out",
 
     // Why Use Invisible Text
     "why.title": "Why Use Our Invisible Text Generator?",
@@ -385,9 +404,11 @@ export const ui = {
       "Our invisible text generator stands out with its user-friendly design and powerful features. We've created a tool that makes generating and using invisible characters quick and simple, with multiple methods to suit your specific needs.",
 
     "why.whyuse.title": "Why Use Invisible Characters?",
-    "why.whyuse.description": "Invisible characters can be useful in many situations:",
+    "why.whyuse.description":
+      "Invisible characters can be useful in many situations:",
     "why.whyuse.use1": "Create unique usernames in games and social media",
-    "why.whyuse.use2": "Add invisible spacing in text where normal spaces aren't allowed",
+    "why.whyuse.use2":
+      "Add invisible spacing in text where normal spaces aren't allowed",
     "why.whyuse.use3": "Format messages in creative ways",
     "why.whyuse.use4": "Create empty posts on platforms that require content",
     "why.whyuse.use5": "Add invisible markers in text",
@@ -419,7 +440,8 @@ export const ui = {
       "Our tool works on all modern devices and browsers, so you can use it wherever you are.",
 
     "why.features.accuracy.title": "100% Accuracy",
-    "why.features.accuracy.description": "Our generator produces perfect Unicode invisible characters every time.",
+    "why.features.accuracy.description":
+      "Our generator produces perfect Unicode invisible characters every time.",
 
     "why.features.multipleLanguages.title": "Multiple Languages",
     "why.features.multipleLanguages.description":
@@ -427,7 +449,8 @@ export const ui = {
 
     "why.benefits.title": "Benefits of Using Our Tool",
     "why.benefits.privacy.title": "Privacy Focused",
-    "why.benefits.privacy.description": "We don't track your usage or store any of the text you generate.",
+    "why.benefits.privacy.description":
+      "We don't track your usage or store any of the text you generate.",
 
     "why.benefits.creative.title": "Creative Freedom",
     "why.benefits.creative.description":
@@ -439,7 +462,8 @@ export const ui = {
 
     // Unicode Table
     "unicode.title": "Unicode Character Reference Table",
-    "unicode.subtitle": "A comprehensive list of invisible and space Unicode characters for various applications",
+    "unicode.subtitle":
+      "A comprehensive list of invisible and space Unicode characters for various applications",
     "unicode.table.unicode": "Unicode",
     "unicode.table.description": "Description",
     "unicode.table.html": "HTML Entity",
@@ -451,20 +475,23 @@ export const ui = {
 
     // Unicode character descriptions
     "unicode.space.description": "Standard Space",
-    "unicode.space.notes": "The standard space character used in text. It allows line breaks and is collapsed in HTML.",
+    "unicode.space.notes":
+      "The standard space character used in text. It allows line breaks and is collapsed in HTML.",
 
     "unicode.noBreakSpace.description": "No-Break Space",
     "unicode.noBreakSpace.notes":
       "Similar to a regular space, but prevents line breaks between words. Commonly used to keep related words together.",
 
     "unicode.enQuad.description": "En Quad",
-    "unicode.enQuad.notes": "A space equal to the width of the font's en (half an em).",
+    "unicode.enQuad.notes":
+      "A space equal to the width of the font's en (half an em).",
 
     "unicode.emQuad.description": "Em Quad",
     "unicode.emQuad.notes": "A space equal to the width of the font's em.",
 
     "unicode.enSpace.description": "En Space",
-    "unicode.enSpace.notes": "A space equal to half of an em. Commonly used in typography.",
+    "unicode.enSpace.notes":
+      "A space equal to half of an em. Commonly used in typography.",
 
     "unicode.emSpace.description": "Em Space",
     "unicode.emSpace.notes":
@@ -480,17 +507,20 @@ export const ui = {
     "unicode.sixPerEmSpace.notes": "A space that is one-sixth of an em wide.",
 
     "unicode.figureSpace.description": "Figure Space",
-    "unicode.figureSpace.notes": "A space equal to the width of a digit in fonts where all digits have the same width.",
+    "unicode.figureSpace.notes":
+      "A space equal to the width of a digit in fonts where all digits have the same width.",
 
     "unicode.punctuationSpace.description": "Punctuation Space",
-    "unicode.punctuationSpace.notes": "A space equal to the width of a punctuation character in the font.",
+    "unicode.punctuationSpace.notes":
+      "A space equal to the width of a punctuation character in the font.",
 
     "unicode.thinSpace.description": "Thin Space",
     "unicode.thinSpace.notes":
       "A space thinner than a standard space, often used in typography between words and punctuation.",
 
     "unicode.hairSpace.description": "Hair Space",
-    "unicode.hairSpace.notes": "The thinnest space available in typography, used for fine adjustments.",
+    "unicode.hairSpace.notes":
+      "The thinnest space available in typography, used for fine adjustments.",
 
     "unicode.zeroWidthSpace.description": "Zero Width Space",
     "unicode.zeroWidthSpace.notes":
@@ -505,19 +535,24 @@ export const ui = {
       "Joins characters without visible separation. Essential for creating complex emoji combinations.",
 
     "unicode.leftToRightMark.description": "Left-to-Right Mark",
-    "unicode.leftToRightMark.notes": "Controls text direction, forcing characters to be displayed left-to-right.",
+    "unicode.leftToRightMark.notes":
+      "Controls text direction, forcing characters to be displayed left-to-right.",
 
     "unicode.rightToLeftMark.description": "Right-to-Left Mark",
-    "unicode.rightToLeftMark.notes": "Controls text direction, forcing characters to be displayed right-to-left.",
+    "unicode.rightToLeftMark.notes":
+      "Controls text direction, forcing characters to be displayed right-to-left.",
 
     "unicode.mediumMathematicalSpace.description": "Medium Mathematical Space",
-    "unicode.mediumMathematicalSpace.notes": "A space used in mathematical notation, slightly wider than a thin space.",
+    "unicode.mediumMathematicalSpace.notes":
+      "A space used in mathematical notation, slightly wider than a thin space.",
 
     "unicode.wordJoiner.description": "Word Joiner",
-    "unicode.wordJoiner.notes": "Similar to Zero Width No-Break Space, prevents line breaks between characters.",
+    "unicode.wordJoiner.notes":
+      "Similar to Zero Width No-Break Space, prevents line breaks between characters.",
 
     "unicode.functionApplication.description": "Function Application",
-    "unicode.functionApplication.notes": "Used in mathematical notation to indicate function application.",
+    "unicode.functionApplication.notes":
+      "Used in mathematical notation to indicate function application.",
 
     "unicode.invisibleTimes.description": "Invisible Times",
     "unicode.invisibleTimes.notes":
@@ -553,7 +588,8 @@ export const ui = {
 
     // FAQ section
     "faq.title": "Frequently Asked Questions",
-    "faq.subtitle": "Find answers to common questions about invisible text and how to use it",
+    "faq.subtitle":
+      "Find answers to common questions about invisible text and how to use it",
 
     "faq.q1": "What are invisible characters?",
     "faq.a1":
@@ -591,8 +627,9 @@ export const ui = {
   },
   // es: {
   //   "nav.home": "Inicio",
-  //   "nav.unicode": "Unicode",
-  //   "nav.blog": "Blog",
+//   "nav.tools": "Herramientas",
+//   "nav.unicode": "Unicode",
+//   "nav.blog": "Blog",
 
   //   "hero.title": "Texto Invisible",
   //   "hero.subtitle": "Genera espacios en blanco ilimitados y copia y pega texto invisible rápidamente.",
@@ -4925,6 +4962,7 @@ export const ui = {
 
     // Navigation
     "nav.home": "ホーム",
+    "nav.tools": "ツール",
     "nav.unicode": "Unicode",
     "nav.blog": "ブログ",
     "nav.terms": "利用規約",
@@ -5282,6 +5320,7 @@ export const ui = {
   
     // Navigation
     "nav.home": "หน้าแรก",
+    "nav.tools": "เครื่องมือ",
     "nav.unicode": "Unicode",
     "nav.blog": "บล็อก",
     "nav.terms": "เงื่อนไข",
@@ -5668,6 +5707,7 @@ export const ui = {
 
     // Navigation
     "nav.home": "Trang Chủ",
+    "nav.tools": "Công Cụ",
     "nav.unicode": "Unicode",
     "nav.blog": "Blog",
     "nav.terms": "Điều Khoản",
@@ -6099,6 +6139,7 @@ export const ui = {
   
     // Navigation
     "nav.home": "Főoldal",
+    "nav.tools": "Eszközök",
     "nav.unicode": "Unicode",
     "nav.blog": "Blog",
     "nav.terms": "Feltételek",
@@ -6535,6 +6576,7 @@ export const ui = {
   
     // Navigation
     "nav.home": "Etusivu",
+    "nav.tools": "Työkalut",
     "nav.unicode": "Unicode",
     "nav.blog": "Blogi",
     "nav.terms": "Ehdot",
@@ -6966,6 +7008,7 @@ export const ui = {
   
     // Navigation
     "nav.home": "ပင်မစာမျက်နှာ",
+    "nav.tools": "ကိရိယာများ",
     "nav.unicode": "Unicode",
     "nav.blog": "ဘလော့ဂ်",
     "nav.terms": "စည်းကမ်းများ",

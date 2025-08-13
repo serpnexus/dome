@@ -6,6 +6,10 @@ export const prerender = true;
 
 <StaticPageLayout title="About InvisibleText.me" description="Learn about InvisibleText.me, our mission, and how we help users generate and use invisible Unicode characters.">
   <div class="about-container">
+    
+    <h1 class="page-title">About Us</h1>
+    <p class="about-updated">Last Updated: April 6, 2025</p>
+
     <section class="about-section">
       <h2 class="section-title">Our Mission</h2>
       <p class="section-content">
@@ -106,9 +110,33 @@ export const prerender = true;
 
 <style>
   .about-container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: var(--gray-100, #f3f4f6);
+  }
+
+  .page-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--white, #ffffff);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .about-updated {
+    color: var(--gray-400, #9ca3af);
+    font-style: italic;
+    text-align: center;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--navy-700, #374151);
   }
   
   .about-section {

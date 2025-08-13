@@ -7,6 +7,7 @@ import PracticalUseCasesSection from '../../components/PracticalUseCasesSection.
 import InvisibleTextGenerator from '../../components/InvisibleTextGenerator.astro';
 import TypesOfInvisibleText from '../../components/Types.astro';
 import FAQSection from '../../components/FAQ.astro';
+import ButtonExamples from '../../components/ButtonExamples.astro';
 import UnicodeTable from '../../components/UnicodeTable.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import BlogSection from '../../components/BlogSection.astro';
@@ -19,6 +20,7 @@ export const prerender = true;
 
 <Layout title={t('meta.title')} description={t('meta.description')}>
   <InvisibleTextGenerator />
+  <ButtonExamples />
   <Intro />
   <WhtIsInvisibleTxt />
   <TypesOfInvisibleText />

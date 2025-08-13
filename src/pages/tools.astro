@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/StaticPageLayout.astro';
+
+// const lang = getLangFromUrl(Astro.url);
+// const t = useTranslations(lang);
+---
+
+<Layout title="Text Tools - Free Online Text Utilities" description="Free online text tools including fancy text generator, bold italic converter, High Valyrian translator, case converter, and text counter. Transform your text instantly!">
+  <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 text-white">
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 px-4">
+      <div class="max-w-6xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+          Text Tools
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Transform your text with our collection of powerful tools. Generate fancy text, convert to bold/italic, translate to High Valyrian, and much more!
+        </p>
+      </div>
+    </section>
+
+    <!-- Tools Grid -->
+    <section class="px-4 pb-20">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Fancy Text Generator -->
+          <a href="/tools/fancy-text-generator" class="group">
+            <div class="bg-navy-800/50 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 hover:border-purple-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-400/10 hover:scale-105">
+              <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-2xl">✨</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Fancy Text Generator</h3>
+                <p class="text-gray-400 text-sm">Transform text into fancy, stylized characters</p>
+              </div>
+              <div class="text-center">
+                <div class="text-sm text-purple-400 font-medium">Click to open tool →</div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Bold Italic Converter -->
+          <a href="/tools/bold-italic-converter" class="group">
+            <div class="bg-navy-800/50 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-6 hover:border-blue-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-400/10 hover:scale-105">
+              <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-2xl">🔤</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Bold & Italic Converter</h3>
+                <p class="text-gray-400 text-sm">Convert text to bold and italic styles</p>
+              </div>
+              <div class="text-center">
+                <div class="text-sm text-blue-400 font-medium">Click to open tool →</div>
+              </div>
+            </div>
+          </a>
+
+          <!-- High Valyrian Translator -->
+          <a href="/tools/high-valyrian-translator" class="group">
+            <div class="bg-navy-800/50 backdrop-blur-sm border border-red-400/20 rounded-2xl p-6 hover:border-red-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-red-400/10 hover:scale-105">
+              <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-red-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-2xl">🐉</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">High Valyrian Translator</h3>
+                <p class="text-gray-400 text-sm">Translate text to the language of dragons</p>
+              </div>
+              <div class="text-center">
+                <div class="text-sm text-red-400 font-medium">Click to open tool →</div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Case Converter -->
+          <a href="/tools/case-converter" class="group">
+            <div class="bg-navy-800/50 backdrop-blur-sm border border-green-400/20 rounded-2xl p-6 hover:border-green-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-green-400/10 hover:scale-105">
+              <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-2xl">🔄</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Case Converter</h3>
+                <p class="text-gray-400 text-sm">Convert text between different cases</p>
+              </div>
+              <div class="text-center">
+                <div class="text-sm text-green-400 font-medium">Click to open tool →</div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Text Counter -->
+          <a href="/tools/text-counter" class="group">
+            <div class="bg-navy-800/50 backdrop-blur-sm border border-indigo-400/20 rounded-2xl p-6 hover:border-indigo-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-400/10 hover:scale-105">
+              <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-violet-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-2xl">📊</span>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-2">Text Counter</h3>
+                <p class="text-gray-400 text-sm">Count characters, words, and lines</p>
+              </div>
+              <div class="text-center">
+                <div class="text-sm text-indigo-400 font-medium">Click to open tool →</div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Coming Soon -->
+          <div class="bg-navy-800/30 backdrop-blur-sm border border-gray-600/20 rounded-2xl p-6 opacity-60">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-gradient-to-br from-gray-400 to-gray-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">🚧</span>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">More Tools Coming</h3>
+              <p class="text-gray-400 text-sm">We're working on more amazing text tools</p>
+            </div>
+            <div class="text-center">
+              <div class="text-sm text-gray-400 font-medium">Stay tuned!</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="px-4 pb-20">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-navy-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+          <h2 class="text-3xl font-bold text-white mb-8 text-center">Why Choose Our Text Tools?</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">⚡</span>
+              </div>
+              <h3 class="text-lg font-semibold text-yellow-400 mb-2">Lightning Fast</h3>
+              <p class="text-gray-300 text-sm">All tools work instantly with no waiting time</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">🔒</span>
+              </div>
+              <h3 class="text-lg font-semibold text-blue-400 mb-2">100% Free</h3>
+              <p class="text-gray-300 text-sm">No registration, no fees, no limitations</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">📱</span>
+              </div>
+              <h3 class="text-lg font-semibold text-green-400 mb-2">Mobile Friendly</h3>
+              <p class="text-gray-300 text-sm">Works perfectly on all devices and screen sizes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

@@ -9,108 +9,22 @@ const posts = (await getCollection('blog'))
   .slice(0, 6);
 ---
 
-<section class="blog-showcase-section">
-  <h2 class="blog-showcase-title">Latest Blog Posts</h2>
-  <div class="blog-showcase-grid">
+<section class="max-w-1200 mx-auto py-16 px-6">
+  <h2 class=" mb-8 text-center text-yellow-400">Latest Blog Posts</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {posts.map((post) => (
-      <a href={`/blog/${post.slug}`} class="blog-showcase-card">
+      <a href={`/blog/${post.slug}`} class="bg-white border border-yellow-400 rounded-2xl shadow-sm overflow-hidden flex flex-col no-underline text-inherit transition-all duration-200 hover:shadow-lg hover:border-yellow-300">
         {post.data.image && (
-          <Image src={post.data.image} alt={post.data.title} width={400} height={200} class="blog-showcase-image" />
+          <Image src={post.data.image} alt={post.data.title} width={400} height={200} class="w-full h-48 object-cover transition-transform duration-200 block bg-navy-600 hover:scale-105" />
         )}
-        <div class="blog-showcase-card-content">
-          <h3 class="blog-showcase-card-title">{post.data.title}</h3>
-          <p class="blog-showcase-card-date"><FormattedDate date={post.data.pubDate} /></p>
-          <p class="blog-showcase-card-desc">{post.data.description || ''}</p>
+        <div class="p-6 flex flex-col flex-1 bg-navy-700">
+          <h3 class=" mb-2 text-gray-200 transition-colors duration-200 hover:text-yellow-400">{post.data.title}</h3>
+          <p class="text-base text-yellow-400 mb-4"><FormattedDate date={post.data.pubDate} /></p>
+          <p class="text-gray-400 line-clamp-3 flex-1">{post.data.description || ''}</p>
         </div>
       </a>
     ))}
   </div>
 </section>
 
-<style>
-.blog-showcase-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 64px 20px;
-}
-.blog-showcase-title {
-  font-size: 2.25rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: var(--foreground, #fff275);
-}
-.blog-showcase-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 2rem;
-}
-@media (min-width: 640px) {
-  .blog-showcase-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (min-width: 1024px) {
-  .blog-showcase-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.blog-showcase-card {
-  background-color: var(--card, #ffffff);
-  border: 1px solid var(--border, #fff275);
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  transition: box-shadow 0.2s, border-color 0.2s;
-  color: inherit;
-}
-.blog-showcase-card:hover {
-  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
-  border-color: var(--accent, yellow);
-}
-.blog-showcase-image {
-  width: 100%;
-  height: 192px;
-  object-fit: cover;
-  transition: transform 0.2s;
-  display: block;
-  background-color: #2c4081;
-}
-.blog-showcase-card:hover .blog-showcase-image {
-  transform: scale(1.04);
-}
-.blog-showcase-card-content {
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  background-color: #142253;
-}
-.blog-showcase-card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: var(--foreground, #ddd);
-  transition: color 0.2s;
-}
-.blog-showcase-card:hover .blog-showcase-card-title {
-  color: var(--accent, #ffd329);
-}
-.blog-showcase-card-date {
-  font-size: 0.95rem;
-  color: var(--muted-foreground, #ffd329);
-  margin-bottom: 1rem;
-}
-.blog-showcase-card-desc {
-  color: var(--muted-foreground, #a8a8a8);
-  line-clamp: 3;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  flex: 1;
-}
-</style> 
+ 

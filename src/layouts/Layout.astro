@@ -2,8 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { getLangFromUrl } from '../i18n/utils';
-
-import "../styles/global.css";
+import "../styles/custom.css";
 
 interface Props {
 	title: string;
@@ -59,17 +58,6 @@ const { title, description, image='og-image.webp' } = Astro.props;
     <link rel="alternate" hreflang="th" href="https://www.invisibletext.me/th">
     <link rel="alternate" hreflang="vi" href="https://www.invisibletext.me/vi">
     <link rel="alternate" hreflang="x-default" href="https://www.invisibletext.me/">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1370487049277752"
-      crossorigin="anonymous"></script>
-    <!-- Google tag (gtag.js) -->
-    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-K5YY1JW4YH"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-K5YY1JW4YH');
-    </script>
   </head>
   <body>
     <Header />

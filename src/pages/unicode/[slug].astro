@@ -27,102 +27,104 @@ const nextChar = currentIndex < sortedChars.length - 1 ? sortedChars[currentInde
 ---
 
 <Layout title={`${entry.data.title} - InvisibleText.me`} description={entry.data.description}>
-  <div class="content-container">
-    <div class="unicode-container">
-      <div class="unicode-header">
-        <a href="/unicode" class="back-link">
+  <div class="max-w-1200 mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-8">
+        <a href="/unicode" class="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-200 mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m15 18-6-6 6-6"></path>
           </svg>
           Back to Unicode Characters
         </a>
         
-        <h1 class="unicode-title">{entry.data.title}</h1>
+        <h1 class="text-4xl font-bold text-yellow-400 mb-4">{entry.data.title}</h1>
         
-        <p class="unicode-description">
+        <p class="text-gray-300 text-lg leading-relaxed">
           {entry.data.description}
         </p>
       </div>
       
-      <div class="unicode-details">
-        <div class="unicode-content">
-          <Content />
-          
-          {entry.data.useCases && entry.data.useCases.length > 0 && (
-            <div class="unicode-use-cases">
-              <h3 class="unicode-use-cases-title">Common Use Cases</h3>
-              <ul class="unicode-use-cases-list">
-                {entry.data.useCases.map(useCase => (
-                  <li class="unicode-use-cases-item">{useCase}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2">
+          <div class="bg-navy-800 border border-navy-700 rounded-xl p-8 mb-8">
+            <Content />
+            
+            {entry.data.useCases && entry.data.useCases.length > 0 && (
+              <div class="mt-8 pt-8 border-t border-navy-700">
+                <h3 class="text-2xl font-semibold text-white mb-4">Common Use Cases</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                  {entry.data.useCases.map(useCase => (
+                    <li>{useCase}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
         </div>
         
-        <div class="unicode-info">
-          <div class="unicode-info-header">
-            <h2 class="unicode-info-title">{entry.data.title}</h2>
-            <div class="unicode-info-code">{entry.data.code}</div>
-          </div>
-          
-          <p class="unicode-info-description">{entry.data.description}</p>
-          
-          <div class="unicode-examples">
-            <div class="unicode-example">
-              <h3 class="unicode-example-title">HTML Entity</h3>
-              <div class="unicode-example-display">
-                {entry.data.html}
-              </div>
-              <button 
-                class="unicode-copy-button" 
-                data-copy="html"
-              >
-                Copy HTML Entity
-              </button>
+        <div class="lg:col-span-1">
+          <div class="bg-navy-800 border border-navy-700 rounded-xl p-6 sticky top-8">
+            <div class="mb-6 pb-4 border-b border-navy-700">
+              <h2 class="text-2xl font-bold text-white mb-3">{entry.data.title}</h2>
+              <div class="inline-block bg-navy-700 text-yellow-400 font-mono px-3 py-2 rounded text-sm">{entry.data.code}</div>
             </div>
             
-            <div class="unicode-example">
-              <h3 class="unicode-example-title">Character</h3>
-              <div class="unicode-example-display">
-                <span class="invisible-char" id="characterDisplay"></span>
-                <span class="unicode-example-label">[{entry.data.title}]</span>
-              </div>
-              <button 
-                class="unicode-copy-button" 
-                data-copy="char"
-              >
-                Copy Character
-              </button>
-            </div>
-          </div>
-          
-          <div class="unicode-navigation">
-            {prevChar && (
-              <a href={`/unicode/${prevChar.slug}`} class="blog-nav-link prev">
-                <span>Previous</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m15 18-6-6 6-6"></path>
-                </svg>
-              </a>
-            )}
+            <p class="text-gray-300 mb-6 leading-relaxed">{entry.data.description}</p>
             
-            {nextChar && (
-              <a href={`/unicode/${nextChar.slug}`} class="blog-nav-link next">
-                <span>Next</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="m9 18 6-6-6-6"></path>
-                </svg>
-              </a>
-            )}
+            <div class="space-y-6">
+              <div class="bg-navy-700 rounded-lg p-4">
+                <h3 class="text-lg font-semibold text-white mb-3">HTML Entity</h3>
+                <div class="bg-navy-600 p-4 rounded font-mono min-h-12 flex items-center justify-center text-gray-300 mb-3">
+                  {entry.data.html}
+                </div>
+                <button 
+                  class="w-full bg-yellow-400 text-navy-900 px-4 py-3 rounded font-medium flex items-center justify-center gap-2 cursor-pointer transition-colors duration-200 hover:bg-yellow-500" 
+                  data-copy="html"
+                >
+                  Copy HTML Entity
+                </button>
+              </div>
+              
+              <div class="bg-navy-700 rounded-lg p-4">
+                <h3 class="text-lg font-semibold text-white mb-3">Character</h3>
+                <div class="bg-navy-600 p-4 rounded font-mono min-h-12 flex items-center justify-center text-gray-300 mb-3">
+                  <span class="invisible-char" id="characterDisplay"></span>
+                  <span class="text-gray-500 italic ml-2">[{entry.data.title}]</span>
+                </div>
+                <button 
+                  class="w-full bg-yellow-400 text-navy-900 px-4 py-3 rounded font-medium flex items-center justify-center gap-2 cursor-pointer transition-colors duration-200 hover:bg-yellow-500" 
+                  data-copy="char"
+                >
+                  Copy Character
+                </button>
+              </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-navy-700">
+              {prevChar && (
+                <a href={`/unicode/${prevChar.slug}`} class="flex items-center gap-3 bg-navy-800 border border-navy-700 rounded-lg p-4 text-gray-300 transition-all duration-200 hover:border-yellow-400 hover:text-white hover:-translate-y-1 mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m15 18-6-6 6-6"></path>
+                  </svg>
+                  <span>Previous</span>
+                </a>
+              )}
+              
+              {nextChar && (
+                <a href={`/unicode/${nextChar.slug}`} class="flex items-center justify-end gap-3 bg-navy-800 border border-navy-700 rounded-lg p-4 text-gray-300 transition-all duration-200 hover:border-yellow-400 hover:text-white hover:-translate-y-1">
+                  <span>Next</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m9 18 6-6-6-6"></path>
+                  </svg>
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </Layout>
-
-
 
 <script define:vars={{ slug: entry.slug, html: entry.data.html }}>
   // Character codes
@@ -151,7 +153,7 @@ const nextChar = currentIndex < sortedChars.length - 1 ? sortedChars[currentInde
   }
 
   // Copy buttons
-  document.querySelectorAll('.unicode-copy-button').forEach(button => {
+  document.querySelectorAll('[data-copy]').forEach(button => {
     button.addEventListener('click', () => {
       const copyType = button.getAttribute('data-copy');
       let textToCopy = '';
@@ -188,18 +190,18 @@ const nextChar = currentIndex < sortedChars.length - 1 ? sortedChars[currentInde
   // Toast notification
   function showToast(message) {
     const toast = document.createElement('div');
-    toast.className = 'toast';
+    toast.className = 'fixed bottom-8 right-8 bg-yellow-200 text-black px-6 py-3 rounded-lg shadow-lg z-50 transform translate-y-4 opacity-0 transition-all duration-300';
     toast.textContent = message;
     document.body.appendChild(toast);
     
     // Trigger animation
     setTimeout(() => {
-      toast.classList.add('show');
+      toast.classList.remove('translate-y-4', 'opacity-0');
     }, 10);
     
     // Remove after animation
     setTimeout(() => {
-      toast.classList.remove('show');
+      toast.classList.add('translate-y-4', 'opacity-0');
       setTimeout(() => {
         document.body.removeChild(toast);
       }, 300);

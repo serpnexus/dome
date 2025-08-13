@@ -1,8 +1,10 @@
+@import 'tailwindcss';
+
 /* 
 Main CSS File for InvisibleText.me
 This file combines all component CSS into a single file
 */
-@font-face {
+/* @font-face {
 font-family: 'Atkinson';
 src: url('/fonts/atkinson-regular.woff') format('woff');
 font-weight: 400;
@@ -24,18 +26,18 @@ font-display: swap;
   --navy-600: #1b3668; 
   --navy-500: #0f2657;
   --navy-400: #0f2657;
-  --yellow-500: #d9c43d; /* Kept the same */
+  --yellow-500: #d9c43d;
   --yellow-400: hsl(54, 84%, 67%); 
   --yellow-400: hsl(54, 100%, 73%); 
   --yellow-200: #ffe88c; 
-  --yellow-100: #fff387; /* Kept the same */
-  --white: #ffffff; /* Kept the same */
-  --black: #000000; /* Kept the same */
-  --gray-300: #d1d5db; /* Kept the same */
-  --gray-400: #9ca3af; /* Kept the same */
-  --gray-500: #6b7280; /* Kept the same */
-  --gray-600: hwb(220 12% 85%); /* Kept the same */
-  --yellow-50: #fffac2; /* Kept the same */
+  --yellow-100: #fff387; 
+  --white: #ffffff; 
+  --black: #000000; 
+  --gray-300: #d1d5db; 
+  --gray-400: #9ca3af; 
+  --gray-500: #6b7280; 
+  --gray-600: hwb(220 12% 85%);
+  --yellow-50: #fffac2;
 }
 
 * {
@@ -45,8 +47,7 @@ font-display: swap;
 }
 
 html {
-  /* font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-    "Open Sans", "Helvetica Neue", sans-serif; */
+  
   font-size: 1rem;
   scroll-behavior: smooth;
 }
@@ -85,7 +86,7 @@ img {
   display: block;
 }
 
-/* ===== Layout Utilities ===== */
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -161,7 +162,7 @@ img {
   border-width: 0;
 }
 
-/* ===== Typography ===== */
+
 h1,
 h2,
 h3,
@@ -251,7 +252,7 @@ p {
   font-size: 3.75rem;
 }
 
-/* ===== Common Components ===== */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -362,7 +363,7 @@ p {
   box-shadow: 0 0 0 2px rgba(234, 217, 76, 0.2);
 }
 
-/* ===== Header Styles ===== */
+
 .header {
   width: 100%;
   padding: 1rem 0;
@@ -539,7 +540,7 @@ p {
   background-color: var(--yellow-400);
 }
 
-/* ===== Language Switcher Styles ===== */
+
 .language-switcher {
   position: relative;
   margin-left: 2rem;
@@ -613,7 +614,7 @@ p {
   color: var(--yellow-400);
 }
 
-/* ===== Hero Section ===== */
+
 .hero {
   padding: 4rem 0;
   text-align: center;
@@ -643,7 +644,7 @@ p {
   flex-wrap: wrap;
 }
 
-/* ===== About Section Styles ===== */
+
 .about-section-container {
   width: 100%;
   max-width: 1200px;
@@ -695,7 +696,7 @@ p {
   color: var(--white);
 }
 
-/* ===== Generator Section ===== */
+
 
 .generator {
   padding: 4rem 0;
@@ -1178,7 +1179,7 @@ p {
   opacity: 1;
 }
 
-/* ===== Features Section ===== */
+
 .features {
   padding: 4rem 0;
   background-color: var(--navy-800);
@@ -1207,7 +1208,7 @@ p {
   margin-bottom: 1rem;
 }
 
-/* ===== Use Cases Section ===== */
+
 .use-cases {
   padding: 4rem 0;
 }
@@ -1242,7 +1243,7 @@ p {
   text-decoration: underline;
 }
 
-/* ===== Why Section Styles ===== */
+
 
 
 .why-section .container {
@@ -1305,7 +1306,7 @@ p {
   text-decoration: underline;
 }
 
-/* Features Grid */
+
 .features-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1337,7 +1338,7 @@ p {
   margin-bottom: 0.5rem;
 }
 
-/* Benefits Section */
+
 .benefits-section {
   margin-top: 3rem;
   background-color: rgba(255, 255, 255, 0.05);
@@ -1387,7 +1388,7 @@ p {
   color: var(--gray-300);
 }
 
-/* Practical Use Cases Section Styles */
+
 .practical-usecases {
   margin: 0 auto;
   padding: 2rem 0rem;
@@ -1444,7 +1445,7 @@ p {
   color: var(--gray-300);
 }
 
-/* Gaming Section */
+
 .games-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1540,7 +1541,7 @@ p {
   color: var(--gray-300);
 }
 
-/* Messaging Apps Section */
+
 .messaging-apps-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1641,7 +1642,7 @@ p {
   color: var(--gray-300);
 }
 
-/* Other Use Cases Section */
+
 .other-usecases-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1688,7 +1689,7 @@ p {
   margin-bottom: 0.25rem;
 }
 
-/* Professional Use Cases */
+
 .professional-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1735,7 +1736,7 @@ p {
   margin-bottom: 0.25rem;
 }
 
-/* Responsive Styles */
+
 @media (min-width: 768px) {
   .games-grid,
   .messaging-apps-grid,
@@ -1773,7 +1774,7 @@ p {
 }
 
 
-/* ===== Footer Styles ===== */
+
 .footer {
   margin-top: auto;
   padding: 4rem 0;
@@ -1835,7 +1836,7 @@ p {
   color: var(--gray-400);
 }
 
-/* ===== Responsive Styles ===== */
+
 @media (min-width: 640px) {
   .language-name {
     display: inline;
@@ -2065,9 +2066,7 @@ p {
 }
 
 
-/* Content Styles */
 
-/* Common Content Styles */
 .content-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -2093,7 +2092,7 @@ p {
   margin: 0 auto;
 }
 
-/* Blog Styles */
+
 .blog-container {
   max-width: 800px;
   margin: 0 auto;
@@ -2267,7 +2266,6 @@ p {
   flex-direction: row-reverse;
 }
 
-/* Blog List Styles */
 .blog-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -2323,7 +2321,6 @@ p {
   font-size: 1rem;
 }
 
-/* Unicode Styles */
 .unicode-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -2504,7 +2501,7 @@ p {
   color: var(--gray-300);
 }
 
-/* Unicode List Styles */
+
 .unicode-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -2598,7 +2595,7 @@ p {
   background-color: var(--navy-700);
 }
 
-/* Category Sections */
+
 .category-section {
   margin-bottom: 3rem;
 }
@@ -2619,7 +2616,7 @@ p {
   margin-bottom: 1.5rem;
 }
 
-/* Responsive Styles */
+
 @media (min-width: 768px) {
   .blog-list {
     grid-template-columns: repeat(2, 1fr);
@@ -2654,4 +2651,4 @@ p {
 }
 .text-center {
   align-text: center;
-}
+} */

@@ -1,0 +1,37 @@
+---
+import ToolCard from './ToolCard.astro';
+
+const tools = [
+  { href: '/tool/fancy-text-generator', icon: '✨', title: 'Fancy Text Generator', description: 'Transform text into fancy, stylized characters', gradient: 'bg-gradient-to-br from-purple-400 to-pink-500' },
+  { href: '/tool/bold-italic-converter', icon: '🔤', title: 'Bold & Italic Converter', description: 'Convert text to bold and italic styles', gradient: 'bg-gradient-to-br from-blue-400 to-cyan-500' },
+  { href: '/tool/high-valyrian-translator', icon: '��', title: 'High Valyrian Translator', description: 'Translate English to High Valyrian', gradient: 'bg-gradient-to-br from-green-400 to-emerald-500' },
+  { href: '/tool/case-converter', icon: '🔄', title: 'Case Converter', description: 'Convert text between different cases', gradient: 'bg-gradient-to-br from-green-400 to-teal-500' },
+  { href: '/tool/text-counter', icon: '📊', title: 'Text Counter', description: 'Count characters, words, and lines', gradient: 'bg-gradient-to-br from-orange-400 to-red-500' },
+  { href: '/tools', icon: '🛠️', title: 'View All Tools', description: 'Explore our complete collection', gradient: 'bg-gradient-to-br from-yellow-400 to-orange-500' }
+];
+---
+
+<section class="max-w-1200 mx-auto py-16 px-6 bg-navy-800/30">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold text-yellow-400 mb-4">Text Tools & Resources</h2>
+    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+      Discover our collection of free online text tools
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {tools.map(tool => <ToolCard {...tool} />)}
+  </div>
+
+  <div class="mt-12 text-center">
+    <h3 class="text-2xl font-bold text-yellow-400 mb-6">More Resources</h3>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="/blog" class="bg-navy-700 border border-navy-600 rounded-xl px-6 py-3 text-white hover:border-yellow-400 hover:text-yellow-400 transition-all duration-200">
+        📝 Blog & Articles
+      </a>
+      <a href="/unicode" class="bg-navy-700 border border-navy-600 rounded-xl px-6 py-3 text-white hover:border-yellow-400 hover:text-yellow-400 transition-all duration-200">
+        �� Unicode Reference
+      </a>
+    </div>
+  </div>
+</section>

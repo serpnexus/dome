@@ -1,0 +1,223 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Text Counter - Count Characters, Words, and Lines" description="Free online text counter tool. Count characters, words, and lines in your text instantly. Perfect for content creators and writers!">
+  <div class="min-h-screen bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 text-white">
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
+          Text Counter
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Count characters, words, and lines in your text with our free online counter. Perfect for content creators, writers, and anyone who needs to track text length!
+        </p>
+      </div>
+    </section>
+
+    <!-- Tool Section -->
+    <section class="px-4 pb-20">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-navy-800/50 backdrop-blur-sm border border-indigo-400/20 rounded-2xl p-8">
+          <div class="space-y-6">
+            <!-- Input Section -->
+            <div>
+              <label for="counter-input" class="block text-lg font-semibold text-white mb-3">Enter or Paste Your Text</label>
+              <textarea 
+                id="counter-input" 
+                placeholder="Type or paste your text here..." 
+                class="w-full h-48 px-6 py-4 bg-navy-700/50 border border-gray-600/30 rounded-xl text-white placeholder-gray-400 resize-none focus:outline-none focus:border-indigo-400/50 focus:ring-2 focus:ring-indigo-400/20 text-lg"
+              ></textarea>
+            </div>
+
+            <!-- Counter Display -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="bg-navy-700/30 rounded-xl p-6 text-center">
+                <div class="text-4xl font-bold text-yellow-400 mb-2" id="char-count">0</div>
+                <div class="text-lg text-white font-semibold">Characters</div>
+                <div class="text-sm text-gray-400 mt-1">Including spaces</div>
+              </div>
+              <div class="bg-navy-700/30 rounded-xl p-6 text-center">
+                <div class="text-4xl font-bold text-blue-400 mb-2" id="word-count">0</div>
+                <div class="text-lg text-white font-semibold">Words</div>
+                <div class="text-sm text-gray-400 mt-1">Separated by spaces</div>
+              </div>
+              <div class="bg-navy-700/30 rounded-xl p-6 text-center">
+                <div class="text-4xl font-bold text-green-400 mb-2" id="line-count">0</div>
+                <div class="text-lg text-white font-semibold">Lines</div>
+                <div class="text-sm text-gray-400 mt-1">Including empty lines</div>
+              </div>
+            </div>
+
+            <!-- Additional Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-navy-700/30 rounded-xl p-6">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-purple-400 mb-2" id="char-no-spaces">0</div>
+                  <div class="text-white font-semibold">Characters (No Spaces)</div>
+                  <div class="text-sm text-gray-400 mt-1">Excluding spaces</div>
+                </div>
+              </div>
+              <div class="bg-navy-700/30 rounded-xl p-6">
+                <div class="text-center">
+                  <div class="text-2xl font-bold text-pink-400 mb-2" id="sentence-count">0</div>
+                  <div class="text-white font-semibold">Sentences</div>
+                  <div class="text-sm text-gray-400 mt-1">Ending with .!?</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex gap-4">
+              <button 
+                onclick="clearCounter()" 
+                class="flex-1 px-6 py-4 bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-semibold text-lg rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg"
+              >
+                Clear Text
+              </button>
+              <button 
+                onclick="copyText()" 
+                class="flex-1 px-6 py-4 bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 text-white font-semibold text-lg rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg"
+              >
+                Copy Text
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="mt-12 bg-navy-800/30 backdrop-blur-sm border border-gray-600/20 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-6 text-center">Features</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center">
+              <div class="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">⚡</span>
+              </div>
+              <h3 class="text-lg font-semibold text-yellow-400 mb-2">Real-time Counting</h3>
+              <p class="text-gray-300 text-sm">Counts update automatically as you type or paste text</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">📊</span>
+              </div>
+              <h3 class="text-lg font-semibold text-blue-400 mb-2">Multiple Metrics</h3>
+              <p class="text-gray-300 text-sm">Track characters, words, lines, and sentences</p>
+            </div>
+            <div class="text-center">
+              <div class="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">💾</span>
+              </div>
+              <h3 class="text-lg font-semibold text-green-400 mb-2">Easy Copy</h3>
+              <p class="text-gray-300 text-sm">Copy your text with one click</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Use Cases -->
+        <div class="mt-12 bg-navy-800/30 backdrop-blur-sm border border-gray-600/20 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-6 text-center">Perfect For</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-navy-700/30 p-4 rounded-lg text-center">
+              <h4 class="font-semibold text-yellow-400 mb-2">Content Writers</h4>
+              <p class="text-sm text-gray-300">Track article length and word count</p>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg text-center">
+              <h4 class="font-semibold text-blue-400 mb-2">Social Media</h4>
+              <p class="text-sm text-gray-300">Stay within character limits</p>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg text-center">
+              <h4 class="font-semibold text-green-400 mb-2">Students</h4>
+              <p class="text-sm text-gray-300">Check essay and assignment lengths</p>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg text-center">
+              <h4 class="font-semibold text-purple-400 mb-2">Developers</h4>
+              <p class="text-sm text-gray-300">Count code comments and strings</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Text Counter
+    function updateCounter() {
+      const input = document.getElementById('counter-input');
+      const charCount = document.getElementById('char-count');
+      const wordCount = document.getElementById('word-count');
+      const lineCount = document.getElementById('line-count');
+      const charNoSpaces = document.getElementById('char-no-spaces');
+      const sentenceCount = document.getElementById('sentence-count');
+      
+      if (!input || !charCount || !wordCount || !lineCount || !charNoSpaces || !sentenceCount) return;
+      
+      const text = input.value;
+      
+      // Character count (including spaces)
+      charCount.textContent = text.length;
+      
+      // Character count (excluding spaces)
+      charNoSpaces.textContent = text.replace(/\s/g, '').length;
+      
+      // Word count
+      const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+      wordCount.textContent = words;
+      
+      // Line count
+      const lines = text === '' ? 0 : text.split('\n').length;
+      lineCount.textContent = lines;
+      
+      // Sentence count
+      const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
+      sentenceCount.textContent = sentences;
+    }
+
+    function clearCounter() {
+      const input = document.getElementById('counter-input');
+      if (input) {
+        input.value = '';
+        updateCounter();
+      }
+    }
+
+    function copyText() {
+      const input = document.getElementById('counter-input');
+      if (!input || !input.value.trim()) {
+        alert('Please enter some text first!');
+        return;
+      }
+      
+      navigator.clipboard.writeText(input.value).then(() => {
+        const button = event.target as HTMLButtonElement;
+        if (button) {
+          const originalText = button.textContent || '';
+          button.textContent = 'Copied!';
+          button.style.background = 'linear-gradient(to right, #10b981, #059669)';
+          
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.style.background = '';
+          }, 2000);
+        }
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+        alert('Failed to copy text. Please try again.');
+      });
+    }
+
+    // Event listeners
+    document.addEventListener('DOMContentLoaded', function() {
+      const counterInput = document.getElementById('counter-input');
+      if (counterInput) {
+        counterInput.addEventListener('input', updateCounter);
+        counterInput.addEventListener('paste', updateCounter);
+        counterInput.addEventListener('keyup', updateCounter);
+      }
+    });
+  </script>
+</Layout>

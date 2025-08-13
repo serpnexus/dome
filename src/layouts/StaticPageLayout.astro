@@ -1,8 +1,8 @@
 ---
 import Header from '../components/Header.astro';
+import "../styles/custom.css";
 import Footer from '../components/Footer.astro';
-import { getLangFromUrl } from '../i18n/utils';
-import "../styles/global.css";
+// import "../styles/global.css";
 
 interface Props {
 	title: string;
@@ -43,8 +43,7 @@ const { title, description, image = '/images/og-image.webp' } = Astro.props;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, Astro.url)} />
-    <meta name="robots" content="index, follow">
-
+    <meta name="robots" content="index, follow" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -52,60 +51,50 @@ const { title, description, image = '/images/og-image.webp' } = Astro.props;
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={new URL(image, Astro.url)} />
-    
-    <link href="/styles/global.css" rel="stylesheet" />
     <meta name="theme-color" content="#0F1A36" />
 
-  <style>
-    .static-page-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-    
-    .static-page-content {
-      background-color: var(--navy-800);
-      border: 1px solid var(--navy-700);
-      border-radius: 0.75rem;
-      padding: 2rem;
-    }
-    
-    .static-page-title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--yellow-400);
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-    
-    @media (max-width: 768px) {
+    <style>
       .static-page-container {
-        padding: 2rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem;
       }
       
       .static-page-content {
-        padding: 1.5rem;
+        background-color: var(--navy-800);
+        border: 1px solid var(--navy-700);
+        border-radius: 0.75rem;
+        padding: 2rem;
       }
       
       .static-page-title {
-        font-size: 1.75rem;
-        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--yellow-400);
+        margin-bottom: 2rem;
+        text-align: center;
       }
-    }
-  </style>
-
-
-  
+      
+      @media (max-width: 768px) {
+        .static-page-container {
+          padding: 2rem 1rem;
+        }
+        
+        .static-page-content {
+          padding: 1.5rem;
+        }
+        
+        .static-page-title {
+          font-size: 1.75rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+    </style>
 </head>
 <body>
   <Header />
   <main>
-    <div class="static-page-container">
-      <div class="static-page-content">
-        <h1 class="static-page-title">{title}</h1>
-        <slot />
-      </div>
-    </div>
+    <slot />
   </main>
   <Footer />
 </body>

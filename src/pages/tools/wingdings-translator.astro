@@ -1,0 +1,192 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TextConverter from '../../components/TextConverter.astro';
+---
+
+<Layout title="Wingdings Translator - Convert Text to Wingdings Symbols" description="Convert your text into mysterious Wingdings symbols. This iconic symbol font transforms letters into pictographs, arrows, and decorative elements for creative designs and puzzles.">
+  <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header Section -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
+          Wingdings Translator
+        </h1>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          Convert your text into mysterious Wingdings symbols. This iconic symbol font transforms 
+          letters into pictographs, arrows, and decorative elements for creative designs and puzzles.
+        </p>
+      </div>
+
+      <TextConverter mode="wingdings" />
+      
+      <div class="mt-16 grid md:grid-cols-2 gap-8">
+        <div class="bg-navy-700 rounded-xl p-8 border border-navy-600">
+          <h2 class="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">🔤</span>
+            About Wingdings
+          </h2>
+          <div class="space-y-4 text-slate-300">
+            <p>
+              Wingdings is a TrueType dingbat font included with Microsoft Windows that contains 
+              symbols instead of alphanumeric characters. Created in the 1990s, it became famous 
+              for its mysterious appearance and conspiracy theories.
+            </p>
+            <p>
+              Each letter of the alphabet corresponds to a specific symbol, ranging from arrows 
+              and geometric shapes to zodiac signs and religious symbols. It's perfect for creating 
+              puzzles, decorative elements, or adding visual interest to designs.
+            </p>
+          </div>
+        </div>
+
+        <!-- Symbol Categories -->
+        <div class="bg-navy-700 rounded-xl p-8 border border-navy-600">
+          <h2 class="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">🎯</span>
+            Symbol Categories
+          </h2>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">♈♉♊</span>
+              <span class="text-slate-300">Zodiac Signs</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">🚁🚂🚃</span>
+              <span class="text-slate-300">Transportation</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">♋♌♍</span>
+              <span class="text-slate-300">Astrological Symbols</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">🚄🚅🚆</span>
+              <span class="text-slate-300">Vehicles & Objects</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Usage Ideas -->
+        <div class="bg-navy-700 rounded-xl p-8 border border-navy-600">
+          <h2 class="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">💡</span>
+            Creative Uses
+          </h2>
+          <ul class="space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-purple-400 mt-1">•</span>
+              <span>Create mysterious coded messages and puzzles</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-purple-400 mt-1">•</span>
+              <span>Design unique decorative elements for documents</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-purple-400 mt-1">•</span>
+              <span>Add visual interest to presentations and posters</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-purple-400 mt-1">•</span>
+              <span>Create escape room clues and treasure hunts</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-purple-400 mt-1">•</span>
+              <span>Design retro 90s-style graphics and layouts</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Fun Facts -->
+        <div class="bg-navy-700 rounded-xl p-8 border border-navy-600">
+          <h2 class="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">🎲</span>
+            Fun Facts
+          </h2>
+          <ul class="space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-cyan-400 mt-1">•</span>
+              <span>Wingdings sparked conspiracy theories in the 1990s</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-cyan-400 mt-1">•</span>
+              <span>It's one of the most recognizable symbol fonts ever created</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-cyan-400 mt-1">•</span>
+              <span>Microsoft included it in Windows to provide decorative symbols</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-cyan-400 mt-1">•</span>
+              <span>Each symbol was carefully designed to be visually distinct</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Decoding Guide -->
+        <div class="bg-navy-700 rounded-xl p-8 border border-navy-600">
+          <h2 class="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">🔍</span>
+            Quick Reference Guide
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+            <div class="space-y-2">
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">A</span>
+                <span class="text-purple-400 text-lg">♈</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">B</span>
+                <span class="text-purple-400 text-lg">♉</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">C</span>
+                <span class="text-purple-400 text-lg">♊</span>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">D</span>
+                <span class="text-purple-400 text-lg">♋</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">E</span>
+                <span class="text-purple-400 text-lg">♌</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">F</span>
+                <span class="text-purple-400 text-lg">♍</span>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">M</span>
+                <span class="text-purple-400 text-lg">🚁</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">N</span>
+                <span class="text-purple-400 text-lg">🚂</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">O</span>
+                <span class="text-purple-400 text-lg">🚃</span>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">X</span>
+                <span class="text-purple-400 text-lg">🚌</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">Y</span>
+                <span class="text-purple-400 text-lg">🚍</span>
+              </div>
+              <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                <span class="text-slate-400">Z</span>
+                <span class="text-purple-400 text-lg">🚎</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
