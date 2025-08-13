@@ -6,114 +6,52 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="types-of-invisible-text">
-  <div class="container">
-    <h2 class="types-title">{t("about.types.title")}</h2>
-    <div class="types-grid">
-      <div class="type-card">
-        <h3 class="type-title">{t("about.types.zeroWidthSpace.title")}</h3>
-        <div class="type-icon-container">
-          <div class="type-icon">
-            <span class="invisible-char">&#8203;</span>
+<section class="py-16">
+  <div class="max-w-1200 mx-auto px-6">
+    <h2 class="text-center text-2xl font-bold text-yellow-400 mb-8">{t("about.types.title")}</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-lg p-6">
+        <h3 class="text-yellow-400 font-semibold mb-6">{t("about.types.zeroWidthSpace.title")}</h3>
+        <div class="flex justify-center mb-6">
+          <div class="bg-navy-700 w-16 h-16 flex items-center justify-center rounded">
+            <span class="text-white text-xl">&#8203;</span>
           </div>
         </div>
-        <p class="type-description">{t("about.types.zeroWidthSpace.description")}</p>
+        <p class="text-white">{t("about.types.zeroWidthSpace.description")}</p>
       </div>
 
-      <div class="type-card">
-        <h3 class="type-title">{t("about.types.hangulFiller.title")}</h3>
-        <div class="type-icon-container">
-          <div class="type-icon">
-            <span class="invisible-char">ㅤ</span>
+      <div class="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-lg p-6">
+        <h3 class="text-yellow-400 font-semibold mb-6">{t("about.types.hangulFiller.title")}</h3>
+        <div class="flex justify-center mb-6">
+          <div class="bg-navy-700 w-16 h-16 flex items-center justify-center rounded">
+            <span class="text-white text-xl">ㅤ</span>
           </div>
         </div>
-        <p class="type-description">{t("about.types.hangulFiller.description")}</p>
+        <p class="text-white">{t("about.types.hangulFiller.description")}</p>
       </div>
 
-      <div class="type-card">
-        <h3 class="type-title">{t("about.types.zeroWidthJoiner.title")}</h3>
-        <div class="type-icon-container">
-          <div class="type-icon">
-            <span class="invisible-char">&#8205;</span>
+      <div class="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-lg p-6">
+        <h3 class="text-yellow-400 font-semibold mb-6">{t("about.types.zeroWidthJoiner.title")}</h3>
+        <div class="flex justify-center mb-6">
+          <div class="bg-navy-700 w-16 h-16 flex items-center justify-center rounded">
+            <span class="text-white text-xl">&#8205;</span>
           </div>
         </div>
-        <p class="type-description">{t("about.types.zeroWidthJoiner.description")}</p>
+        <p class="text-white">{t("about.types.zeroWidthJoiner.description")}</p>
       </div>
 
-      <div class="type-card">
-        <h3 class="type-title">{t("about.types.zeroWidthNonJoiner.title")}</h3>
-        <div class="type-icon-container">
-          <div class="type-icon">
-            <span class="invisible-char">&#8204;</span>
+      <div class="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-lg p-6">
+        <h3 class="text-yellow-400 font-semibold mb-6">{t("about.types.zeroWidthNonJoiner.title")}</h3>
+        <div class="flex justify-center mb-6">
+          <div class="bg-navy-700 w-16 h-16 flex items-center justify-center rounded">
+            <span class="text-white text-xl">&#8204;</span>
           </div>
         </div>
-        <p class="type-description">{t("about.types.zeroWidthNonJoiner.description")}</p>
+        <p class="text-white">{t("about.types.zeroWidthNonJoiner.description")}</p>
       </div>
     </div>
   </div>
 </section>
 
-<style>
-    .types-of-invisible-text {
-      padding: 4rem 0;
-    }
-    
-    .types-title {
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--yellow-400);
-      margin-bottom: 2rem;
-    }
-    
-    .types-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-    }
-    
-    .type-card {
-      background-color: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-    }
-    
-    .type-title {
-      color: var(--yellow-400);
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-    
-    .type-icon-container {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-    }
-    
-    .type-icon {
-      background-color: var(--navy-700);
-      width: 4rem;
-      height: 4rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 0.25rem;
-    }
-    
-    .invisible-char {
-      color: var(--white);
-      font-size: 1.25rem;
-    }
-    
-    .type-description {
-      color: var(--white);
-    }
-    
-    @media (min-width: 768px) {
-      .types-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-  </style>
+
   

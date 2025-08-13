@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TextConverter from '../../components/TextConverter.astro';
+import { getLangFromUrl } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<Layout title="Bold & Italic Text Converter - Create Styled Text Online" description="Convert your text to bold and italic styles using our free online converter. Generate bold and italic text for social media, documents, and more!">
+  <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 sm:px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
+          Bold & Italic Converter
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Convert your text to bold and italic styles using Unicode combining characters. Perfect for social media platforms and documents!
+        </p>
+      </div>
+    </section>
+
+    <!-- Tool Section -->
+    <section class="px-4 pb-20">
+      <div class="max-w-4xl mx-auto">
+        <!-- Added mode="style" to show only underline effects -->
+        <TextConverter mode="style" />
+
+        <!-- How It Works Section -->
+        <div class="mt-12 bg-navy-800/30 backdrop-blur-sm border border-navy-600 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-6 text-center">How It Works</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-3">
+              <h3 class="text-lg font-semibold text-yellow-400">Bold Style (Underlined)</h3>
+              <div class="bg-navy-700/30 p-4 rounded-lg shadow-md">
+                <p class="text-lg">H̲e̲l̲l̲o̲ W̲o̲r̲l̲d̲</p>
+                <p class="text-sm text-gray-400 mt-2">Uses Unicode combining underline (U+0332)</p>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <h3 class="text-lg font-semibold text-yellow-400">Italic Style (Double Underlined)</h3>
+              <div class="bg-navy-700/30 p-4 rounded-lg shadow-md">
+                <p class="text-lg">H̳e̳l̳l̳o̳ W̳o̳r̳l̳d̳</p>
+                <p class="text-sm text-gray-400 mt-2">Uses Unicode combining double underline (U+0333)</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 p-4 bg-yellow-400/10 border border-yellow-400/20 rounded-lg">
+            <p class="text-yellow-300 text-center">
+              <strong>Note:</strong> These styles work on most social media platforms and text editors that support Unicode combining characters.
+            </p>
+          </div>
+        </div>
+
+        <!-- Usage Examples -->
+        <div class="mt-12 bg-navy-800/30 backdrop-blur-sm border border-navy-600 shadow-sm rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-6 text-center">Usage Examples</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-navy-700/30 p-4 rounded-lg text-center shadow-md">
+              <h4 class="font-semibold text-yellow-400 mb-2">Social Media</h4>
+              <p class="text-sm text-gray-300">Make your posts stand out with bold and italic text</p>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg text-center shadow-md">
+              <h4 class="font-semibold text-yellow-400 mb-2">Usernames</h4>
+              <p class="text-sm text-gray-300">Create unique usernames with styled characters</p>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg text-center shadow-md">
+              <h4 class="font-semibold text-yellow-400 mb-2">Documents</h4>
+              <p class="text-sm text-gray-300">Add emphasis to important text in documents</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

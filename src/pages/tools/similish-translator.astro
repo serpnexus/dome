@@ -1,0 +1,133 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TextConverter from '../../components/TextConverter.astro';
+---
+
+<Layout title="Similish Translator - Convert Text to Simlish Language" description="Transform your text into Simlish, the fictional language from The Sims video game series. Perfect for adding a playful touch to your messages or creating authentic Sims-style content.">
+  <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header Section -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
+          Similish Translator
+        </h1>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          Transform your text into Simlish, the fictional language from The Sims video game series. 
+          Perfect for adding a playful touch to your messages or creating authentic Sims-style content.
+        </p>
+      </div>
+
+      <!-- Text Converter Component -->
+      <TextConverter mode="similish" />
+
+      <!-- Educational Content -->
+      <div class="mt-16 grid md:grid-cols-2 gap-8">
+        <!-- About Simlish -->
+        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="text-3xl">🎮</span>
+            About Simlish
+          </h2>
+          <div class="space-y-4 text-slate-300">
+            <p>
+              Simlish is the fictional language spoken by the characters in The Sims video game series. 
+              Created by game developers, it's designed to sound like a real language while remaining 
+              universally understandable through context and emotion.
+            </p>
+            <p>
+              The language uses a mix of sounds and syllables that feel familiar yet foreign, 
+              allowing players from different linguistic backgrounds to enjoy the game without 
+              language barriers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Common Phrases -->
+        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="text-3xl">💬</span>
+            Common Simlish Phrases
+          </h2>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2 border-b border-slate-600">
+              <span class="text-slate-400">Hello</span>
+              <span class="text-green-400 font-medium">Sul Sul</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-600">
+              <span class="text-slate-400">Goodbye</span>
+              <span class="text-green-400 font-medium">Dag Dag</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-600">
+              <span class="text-slate-400">Yes</span>
+              <span class="text-green-400 font-medium">Yibs</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-600">
+              <span class="text-slate-400">No</span>
+              <span class="text-green-400 font-medium">Nooboo</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-600">
+              <span class="text-slate-400">Thank you</span>
+              <span class="text-green-400 font-medium">Meshaloob</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <span class="text-slate-400">Love</span>
+              <span class="text-green-400 font-medium">Woohoo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Usage Tips -->
+        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="text-3xl">💡</span>
+            Usage Tips
+          </h2>
+          <ul class="space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-green-400 mt-1">•</span>
+              <span>Perfect for Sims fans and gaming content creators</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-green-400 mt-1">•</span>
+              <span>Great for adding humor to social media posts</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-green-400 mt-1">•</span>
+              <span>Use in gaming streams or Sims-related content</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-green-400 mt-1">•</span>
+              <span>Create authentic Sims dialogue for stories</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Fun Facts -->
+        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="text-3xl">🎯</span>
+            Fun Facts
+          </h2>
+          <ul class="space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-400 mt-1">•</span>
+              <span>Simlish was created by mixing various real languages</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-400 mt-1">•</span>
+              <span>Real musicians have recorded songs in Simlish</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-400 mt-1">•</span>
+              <span>The language has evolved across different Sims games</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-400 mt-1">•</span>
+              <span>"Nooboo" means baby in Simlish</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

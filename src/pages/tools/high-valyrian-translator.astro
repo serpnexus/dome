@@ -1,0 +1,368 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TextConverter from '../../components/TextConverter.astro';
+import { getLangFromUrl } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<Layout title="High Valyrian Translator - Translate to Dragon Language" description="Translate English text to High Valyrian, the language of dragons from Game of Thrones. Free online translator with comprehensive vocabulary!">
+  <div class="min-h-screen bg-gradient-to-b from-navy-900  to-navy-800 text-white">
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
+          High Valyrian Translator
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Translate English text to High Valyrian, the ancient language of dragons from Game of Thrones. Speak like a true Targaryen!
+        </p>
+      </div>
+    </section>
+
+    <!-- Tool Section -->
+    <section class="px-4 pb-20">
+      <div class="max-w-4xl mx-auto">
+        <!-- Added mode="valyrian" to show only translation functionality -->
+        <TextConverter mode="valyrian" />
+
+        <!-- Vocabulary Section -->
+        <div class="mt-12 bg-navy-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-6 text-center">High Valyrian Vocabulary</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-yellow-400 mb-2">Greetings</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">Hello:</span> <span class="text-red-400">Rytsas</span></p>
+                <p><span class="text-white">Goodbye:</span> <span class="text-red-400">Kessa</span></p>
+                <p><span class="text-white">Yes:</span> <span class="text-red-400">Kessa</span></p>
+                <p><span class="text-white">No:</span> <span class="text-red-400">Daor</span></p>
+              </div>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-orange-400 mb-2">Elements</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">Fire:</span> <span class="text-red-400">Dracarys</span></p>
+                <p><span class="text-white">Dragon:</span> <span class="text-red-400">Zaldrīzes</span></p>
+                <p><span class="text-white">Blood:</span> <span class="text-red-400">Jelmor</span></p>
+                <p><span class="text-white">Heart:</span> <span class="text-red-400">Prūmia</span></p>
+              </div>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-red-400 mb-2">Royalty</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">King:</span> <span class="text-red-400">Dārys</span></p>
+                <p><span class="text-white">Queen:</span> <span class="text-red-400">Dāria</span></p>
+                <p><span class="text-white">Lord:</span> <span class="text-red-400">Aeksio</span></p>
+                <p><span class="text-white">Lady:</span> <span class="text-red-400">Riña</span></p>
+              </div>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-green-400 mb-2">Nature</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">Sun:</span> <span class="text-red-400">Vēzos</span></p>
+                <p><span class="text-white">Moon:</span> <span class="text-red-400">Hūra</span></p>
+                <p><span class="text-white">Star:</span> <span class="text-red-400">Ñāqes</span></p>
+                <p><span class="text-white">Sky:</span> <span class="text-red-400">Ōños</span></p>
+              </div>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-blue-400 mb-2">Emotions</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">Love:</span> <span class="text-red-400">Jorrāelagon</span></p>
+                <p><span class="text-white">Death:</span> <span class="text-red-400">Morghūljagon</span></p>
+                <p><span class="text-white">Life:</span> <span class="text-red-400">Glaeson</span></p>
+                <p><span class="text-white">Power:</span> <span class="text-red-400">Hegnīr</span></p>
+              </div>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-purple-400 mb-2">Places</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">House:</span> <span class="text-red-400">Lenton</span></p>
+                <p><span class="text-white">Castle:</span> <span class="text-red-400">Dāez</span></p>
+                <p><span class="text-white">City:</span> <span class="text-red-400">Vala</span></p>
+                <p><span class="text-white">Land:</span> <span class="text-red-400">Tegun</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About High Valyrian -->
+        <div class="mt-12 bg-navy-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-6 text-center">About High Valyrian</h2>
+          <div class="space-y-4 text-gray-300">
+            <p>
+              High Valyrian is a fictional language created by linguist David J. Peterson for the HBO series Game of Thrones. 
+              It was the language of the Valyrian Freehold, a great empire that existed thousands of years before the events of the series.
+            </p>
+            <p>
+              The language is known for its complex grammar and rich vocabulary, particularly in areas related to dragons, 
+              magic, and the noble houses of Westeros. It's considered a "high" language, used for formal occasions and by the educated elite.
+            </p>
+            <p>
+              <strong>Fun Fact:</strong> The famous phrase "Valar morghulis" (All men must die) and "Valar dohaeris" (All men must serve) 
+              are among the most well-known High Valyrian expressions in the series.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+
+
+<!-- ---
+import Layout from '../../layouts/Layout.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="High Valyrian Translator - Translate to Dragon Language" description="Translate English text to High Valyrian, the language of dragons from Game of Thrones. Free online translator with comprehensive vocabulary!">
+  <div class="min-h-screen bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 text-white">
+    
+    <section class="pt-20 pb-16 px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 via-orange-500 to-red-600 bg-clip-text text-transparent">
+          High Valyrian Translator
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Translate English text to High Valyrian, the ancient language of dragons from Game of Thrones. Speak like a true Targaryen!
+        </p>
+      </div>
+    </section>
+
+
+    <section class="px-4 pb-20">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-navy-800/50 backdrop-blur-sm border border-red-400/20 rounded-2xl p-8">
+          <div class="space-y-6">
+            
+            <div>
+              <label for="valyrian-input" class="block text-lg font-semibold text-white mb-3">Enter English Text</label>
+              <input 
+                type="text" 
+                id="valyrian-input" 
+                placeholder="Type English words here..." 
+                class="w-full px-6 py-4 bg-navy-700/50 border border-gray-600/30 rounded-xl text-white placeholder-gray-400 text-lg focus:outline-none focus:border-red-400/50 focus:ring-2 focus:ring-red-400/20"
+              >
+            </div>
+
+            
+            <button 
+              onclick="translateToValyrian()" 
+              class="w-full px-6 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold text-lg rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg"
+            >
+              🐉 Translate to High Valyrian
+            </button>
+
+            
+            <div>
+              <label for="valyrian-output" class="block text-lg font-semibold text-white mb-3">High Valyrian Translation</label>
+              <textarea 
+                id="valyrian-output" 
+                readonly 
+                placeholder="High Valyrian translation will appear here..." 
+                class="w-full h-32 px-6 py-4 bg-navy-700/30 border border-gray-600/20 rounded-xl text-white placeholder-gray-500 resize-none focus:outline-none text-lg"
+              ></textarea>
+            </div>
+
+            
+            <button 
+              onclick="copyValyrianText()" 
+              class="w-full px-6 py-4 bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-semibold text-lg rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg"
+            >
+              Copy Translation
+            </button>
+          </div>
+        </div>
+
+        
+        <div class="mt-12 bg-navy-800/30 backdrop-blur-sm border border-gray-600/20 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-6 text-center">High Valyrian Vocabulary</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-yellow-400 mb-2">Greetings</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">Hello:</span> <span class="text-red-400">Vala morghulis</span></p>
+                <p><span class="text-white">Goodbye:</span> <span class="text-red-400">Valar dohaeris</span></p>
+                <p><span class="text-white">Yes:</span> <span class="text-red-400">Daor</span></p>
+                <p><span class="text-white">No:</span> <span class="text-red-400">Daor</span></p>
+              </div>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-orange-400 mb-2">Elements</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">Fire:</span> <span class="text-red-400">Dracarys</span></p>
+                <p><span class="text-white">Dragon:</span> <span class="text-red-400">Drakarys</span></p>
+                <p><span class="text-white">Blood:</span> <span class="text-red-400">Dovaogēdys</span></p>
+                <p><span class="text-white">Heart:</span> <span class="text-red-400">Dovaogēdys</span></p>
+              </div>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-red-400 mb-2">Royalty</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">King:</span> <span class="text-red-400">Aeksio</span></p>
+                <p><span class="text-white">Queen:</span> <span class="text-red-400">Dāria</span></p>
+                <p><span class="text-white">Lord:</span> <span class="text-red-400">Āeksio</span></p>
+                <p><span class="text-white">Lady:</span> <span class="text-red-400">Dāria</span></p>
+              </div>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-green-400 mb-2">Nature</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">Sun:</span> <span class="text-red-400">Dovaogēdys</span></p>
+                <p><span class="text-white">Moon:</span> <span class="text-red-400">Vala</span></p>
+                <p><span class="text-white">Star:</span> <span class="text-red-400">Dovaogēdys</span></p>
+                <p><span class="text-white">Sky:</span> <span class="text-red-400">Vala</span></p>
+              </div>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-blue-400 mb-2">Emotions</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">Love:</span> <span class="text-red-400">Rȳbās</span></p>
+                <p><span class="text-white">Death:</span> <span class="text-red-400">Morghon</span></p>
+                <p><span class="text-white">Life:</span> <span class="text-red-400">Vala</span></p>
+                <p><span class="text-white">Power:</span> <span class="text-red-400">Tegon</span></p>
+              </div>
+            </div>
+            <div class="bg-navy-700/30 p-4 rounded-lg">
+              <h3 class="font-semibold text-purple-400 mb-2">Places</h3>
+              <div class="space-y-1 text-sm">
+                <p><span class="text-white">House:</span> <span class="text-red-400">Kepa</span></p>
+                <p><span class="text-white">Castle:</span> <span class="text-red-400">Kepa</span></p>
+                <p><span class="text-white">City:</span> <span class="text-red-400">Kepa</span></p>
+                <p><span class="text-white">Land:</span> <span class="text-red-400">Vala</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="mt-12 bg-navy-800/30 backdrop-blur-sm border border-gray-600/20 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-6 text-center">About High Valyrian</h2>
+          <div class="space-y-4 text-gray-300">
+            <p>
+              High Valyrian is a fictional language created by linguist David J. Peterson for the HBO series Game of Thrones. 
+              It was the language of the Valyrian Freehold, a great empire that existed thousands of years before the events of the series.
+            </p>
+            <p>
+              The language is known for its complex grammar and rich vocabulary, particularly in areas related to dragons, 
+              magic, and the noble houses of Westeros. It's considered a "high" language, used for formal occasions and by the educated elite.
+            </p>
+            <p>
+              <strong>Fun Fact:</strong> The famous phrase "Valar morghulis" (All men must die) and "Valar dohaeris" (All men must serve) 
+              are among the most well-known High Valyrian expressions in the series.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // High Valyrian Translator
+    const valyrianDictionary = {
+      'hello': 'Vala morghulis',
+      'goodbye': 'Valar dohaeris',
+      'yes': 'Daor',
+      'no': 'Daor',
+      'fire': 'Dracarys',
+      'dragon': 'Drakarys',
+      'king': 'Aeksio',
+      'queen': 'Dāria',
+      'lord': 'Āeksio',
+      'lady': 'Dāria',
+      'house': 'Kepa',
+      'family': 'Tegon',
+      'friend': 'Vala',
+      'enemy': 'Dovaogēdy',
+      'war': 'Dovaogēdys',
+      'peace': 'Dovaogēdys',
+      'love': 'Rȳbās',
+      'death': 'Morghon',
+      'life': 'Vala',
+      'power': 'Tegon',
+      'strength': 'Tegon',
+      'wisdom': 'Vala',
+      'courage': 'Tegon',
+      'honor': 'Vala',
+      'justice': 'Dovaogēdys',
+      'freedom': 'Vala',
+      'truth': 'Vala',
+      'lie': 'Dovaogēdys',
+      'blood': 'Dovaogēdys',
+      'heart': 'Dovaogēdys',
+      'soul': 'Vala',
+      'spirit': 'Vala',
+      'magic': 'Tegon',
+      'sword': 'Dovaogēdys',
+      'shield': 'Vala',
+      'armor': 'Dovaogēdys',
+      'crown': 'Vala',
+      'throne': 'Dovaogēdys',
+      'castle': 'Kepa',
+      'city': 'Kepa',
+      'land': 'Vala',
+      'sea': 'Dovaogēdys',
+      'sky': 'Vala',
+      'sun': 'Dovaogēdys',
+      'moon': 'Vala',
+      'star': 'Dovaogēdys',
+      'night': 'Dovaogēdys',
+      'day': 'Vala',
+      'morning': 'Vala',
+      'evening': 'Dovaogēdys',
+      'winter': 'Dovaogēdys',
+      'summer': 'Vala',
+      'spring': 'Vala',
+      'autumn': 'Dovaogēdys'
+    };
+
+    function translateToValyrian() {
+      const input = document.getElementById('valyrian-input').value.toLowerCase();
+      const output = document.getElementById('valyrian-output');
+      
+      if (!input.trim()) {
+        alert('Please enter some text first!');
+        return;
+      }
+      
+      const words = input.split(' ');
+      const translated = words.map(word => {
+        return valyrianDictionary[word] || word;
+      }).join(' ');
+      
+      output.value = translated;
+    }
+
+    function copyValyrianText() {
+      const output = document.getElementById('valyrian-output');
+      const text = output.value;
+      
+      if (!text) {
+        alert('Please translate some text first!');
+        return;
+      }
+      
+      navigator.clipboard.writeText(text).then(() => {
+        const button = event.target as HTMLButtonElement;
+        if (button) {
+          const originalText = button.textContent || '';
+          button.textContent = 'Copied!';
+          button.style.background = 'linear-gradient(to right, #10b981, #059669)';
+          
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.style.background = '';
+          }, 2000);
+        }
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+        alert('Failed to copy text. Please try again.');
+      });
+    }
+  </script>
+</Layout> -->

@@ -6,65 +6,65 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="why-section">
-  <div class="container">
-    <h2 class="why-title">{t("why.title")}</h2>
+<section class="py-16">
+  <div class="max-w-1200 mx-auto px-6">
+    <h2 class="text-center text-yellow-400 mb-6">{t("why.title")}</h2>
 
-    <p class="why-intro text-center">{t('why.intro')}</p>
-    <div class="why-use-box">
-      <h3 class="why-use-title">{t('why.whyuse.title')}</h3>
-      <p class="why-use-description">{t('why.whyuse.description')}</p>
-      <ul class="why-use-list">
-        <li>{t("why.whyuse.use1")}</li>
-        <li>{t("why.whyuse.use2")}</li>
-        <li>{t("why.whyuse.use3")}</li>
-        <li>{t("why.whyuse.use4")}</li>
-        <li>{t("why.whyuse.use5")}</li>
-        <li>{t("why.whyuse.use6")}</li>
-        <li>{t("why.whyuse.use7")}</li>
+    <p class="max-w-3xl mx-auto mb-4 text-gray-300 text-center">{t('why.intro')}</p>
+    <div class="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-lg p-6 mb-8">
+      <h3 class="text-yellow-400 mb-4">{t('why.whyuse.title')}</h3>
+      <p class="mb-2 text-gray-300">{t('why.whyuse.description')}</p>
+      <ul class="list-disc pl-6 mb-2">
+        <li class="text-gray-300">{t("why.whyuse.use1")}</li>
+        <li class="text-gray-300">{t("why.whyuse.use2")}</li>
+        <li class="text-gray-300">{t("why.whyuse.use3")}</li>
+        <li class="text-gray-300">{t("why.whyuse.use4")}</li>
+        <li class="text-gray-300">{t("why.whyuse.use5")}</li>
+        <li class="text-gray-300">{t("why.whyuse.use6")}</li>
+        <li class="text-gray-300">{t("why.whyuse.use7")}</li>
       </ul>
       <p>
         {t("why.intro").split("invisibletext.me")[0]}
-        <a href="https://www.invisibletext.me" class="why-link">
+        <!-- <a href="https://www.invisibletext.me" class="text-yellow-400 no-underline hover:underline transition-all duration-200">
           {" "}
           invisibletext.me
-        </a>
+        </a> -->
         {t("why.intro").split("invisibletext.me")[1]}
       </p>
     </div>
 
-    <div class="benefits-section">
-      <h3 class="benefits-title">{t("why.benefits.title")}</h3>
+    <div class="mt-12  bg-opacity-5 border border-white border-opacity-10 rounded-lg p-6">
+      <h3 class=" text-yellow-400 mb-6">{t("why.benefits.title")}</h3>
 
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <h3 class="benefit-title">{t("why.features.accuracy.title")}</h3>
-          <p class="benefit-description">{t("why.features.accuracy.description")}</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="flex flex-col items-center text-center p-4 bg-white bg-opacity-5 rounded-lg">
+          <h4 class="text-yellow-100  mb-2">{t("why.features.accuracy.title")}</h4>
+          <p class="text-base text-gray-300">{t("why.features.accuracy.description")}</p>
         </div>
 
-        <div class="benefit-card">
-          <h3 class="benefit-title">{t("why.features.totallyFree.title")}</h3>
-          <p class="benefit-description">{t("why.features.totallyFree.description")}</p>
+        <div class="flex flex-col items-center text-center p-4 bg-white bg-opacity-5 rounded-lg">
+          <h4 class="text-yellow-400 mb-2">{t("why.features.totallyFree.title")}</h4>
+          <p class="text-base text-gray-300">{t("why.features.totallyFree.description")}</p>
         </div>
 
-        <div class="benefit-card">
-          <h3 class="benefit-title">{t("why.features.unlimitedCharacters.title")}</h3>
-          <p class="benefit-description">{t("why.features.unlimitedCharacters.description")}</p>
+        <div class="flex flex-col items-center text-center p-4 bg-white bg-opacity-5 rounded-lg">
+          <h4 class="text-yellow-400 mb-2">{t("why.features.unlimitedCharacters.title")}</h4>
+          <p class="text-base text-gray-300">{t("why.features.unlimitedCharacters.description")}</p>
         </div>
 
-        <div class="benefit-card">
-          <h3 class="benefit-title">{t("why.benefits.privacy.title")}</h3>
-          <p class="benefit-description">{t("why.features.easyToUse.description")}</p>
+        <div class="flex flex-col items-center text-center p-4 bg-white bg-opacity-5 rounded-lg">
+          <h4 class="text-yellow-400 mb-2">{t("why.benefits.privacy.title")}</h4>
+          <p class="text-base text-gray-300">{t("why.features.easyToUse.description")}</p>
         </div>
 
-        <div class="benefit-card">
-          <h3 class="benefit-title">{t("why.features.oneClickCopy.title")}</h3>
-          <p class="benefit-description">{t("why.features.oneClickCopy.description")}</p>
+        <div class="flex flex-col items-center text-center p-4 bg-white bg-opacity-5 rounded-lg">
+          <h4 class="text-yellow-400 mb-2">{t("why.features.oneClickCopy.title")}</h4>
+          <p class="text-base text-gray-300">{t("why.features.oneClickCopy.description")}</p>
         </div>
 
-        <div class="benefit-card">
-          <h3 class="benefit-title">{t("why.features.noSignup.title")}</h3>
-          <p class="benefit-description">{t("why.features.noSignup.description")}</p>
+        <div class="flex flex-col items-center text-center p-4 bg-white bg-opacity-5 rounded-lg">
+          <h4 class="text-yellow-400 mb-2">{t("why.features.noSignup.title")}</h4>
+          <p class="text-base text-gray-300">{t("why.features.noSignup.description")}</p>
         </div>
       </div>
     </div>

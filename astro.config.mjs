@@ -1,20 +1,46 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
-import netlify from '@astrojs/netlify';
-
-
+import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), partytown({config: {debug: false }}), sitemap(), mdx()],
+  integrations: [react(), sitemap({
+      changefreq: 'monthly',
+      priority: 1,
+      lastmod: new Date(),
+      filter: (page) => !page.includes('/404') && !page.includes('/sitemap.xml'),
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          'en': 'English',
+          'es': 'Spanish',
+          'fr': 'French',
+          'de': 'German',
+          'pt': 'Portuguese',
+          'ru': 'Russian',
+          'ko': 'Korean',
+          'tr': 'Turkish',
+          'nl': 'Dutch',
+          'it': 'Italian',
+          'id': 'Indonesian',
+          'my': 'Malay',
+          'fi': 'Finnish',
+          'ja': 'Japanese',
+          'hu': 'Hungarian',
+          'vi': 'Vietnamese',
+          'th': 'Thai',
+        }
+      }
+    }), tailwind(), mdx()
+  ],
+
   output: 'static',
-  adapter: netlify(),
-  site: 'https://www.invisibletext.me',
+  site: 'https://www.invisibletext.me/',
+
   i18n: {
     defaultLocale: 'en',
     locales: [
@@ -24,6 +50,7 @@ export default defineConfig({
       prefixDefaultLocale: false
     }
   },
-  trailingSlash: 'never',
 
+  trailingSlash: 'never',
+  adapter: vercel(),
 });

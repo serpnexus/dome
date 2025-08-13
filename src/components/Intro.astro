@@ -5,17 +5,17 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<section class="introduction-section" id="what-is-invisible-text">
-    <div class="section-content text-center">
-        <h2 class="section-title">
+<section class="py-12 px-4" id="what-is-invisible-text">
+    <div class="max-w-3xl mx-auto text-center">
+        <h2 class=" text-yellow-400 mb-6 leading-tight">
             {t("about.introduction.title").split("InvisibleText.me")[0]}{" "}
-            <a href="https://invisibletext.me" class="site-link">
+            <a href="https://invisibletext.me" class="underline text-yellow-400 hover:text-white transition-colors duration-300">
                 InvisibleText.me
             </a>
             {t("about.introduction.title").includes("InvisibleText.me")
             ? t("about.introduction.title").split("InvisibleText.me")[1]
               : ""}
         </h2>
-        <p class="section-description">{t("about.introduction.description")}</p>
+        <p class="text-lg text-white leading-relaxed">{t("about.introduction.description")}</p>
     </div>
 </section>

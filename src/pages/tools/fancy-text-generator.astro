@@ -1,0 +1,84 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TextConverter from '../../components/TextConverter.astro';
+// import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const examples = {
+  bold: { text: "𝐇𝐞𝐥𝐥𝐨 𝐖𝐨𝐫𝐥𝐝", description: "Perfect for emphasis and titles" },
+  italic: { text: "𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅", description: "Great for quotes and emphasis" },
+  cursive: { text: "ℋℯℓℓℴ 𝒲ℴ𝓇ℓ𝒹", description: "Elegant and decorative text" },
+  gothic: { text: "ℌ𝔢𝔩𝔩𝔬 𝔚𝔬𝔯𝔩𝔡", description: "Dark and mysterious appearance" },
+  monospace: { text: "𝙷𝚎𝚕𝚕𝚘 𝚆𝚘𝚛𝚕𝚍", description: "Code-like monospace styling" },
+  double: { text: "ℍ𝕖𝕝𝕝𝕠 𝕎𝕠𝕣𝕝𝕕", description: "Double-struck mathematical style" },
+  sans: { text: "𝖧𝖾𝗅𝗅𝗈 𝖶𝗈𝗋𝗅𝖽", description: "Clean sans-serif appearance" },
+  bubble: { text: "Ⓗⓔⓛⓛⓞ Ⓦⓞⓡⓛⓓ", description: "Fun bubble letters" },
+  square: { text: "🄷🄴🄻🄻🄾 🅆🄾🅁🄻🄳", description: "Bold squared letters" },
+  upside: { text: "plɹoM ollǝH", description: "Upside down flipped text" },
+  mirror: { text: "Hɘllo Woɿlb", description: "Horizontally mirrored text" },
+  small: { text: "ᴴᵉˡˡᵒ ᵂᵒʳˡᵈ", description: "Superscript small text" },
+}
+
+const styleConfig = {
+  bold: { name: "𝐁𝐨𝐥𝐝", color: "border-yellow-400/30 bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-400" },
+  italic: { name: "𝑰𝒕𝒂𝒍𝒊𝒄", color: "border-blue-400/30 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400" },
+  cursive: { name: "𝒞𝓊𝓇𝓈𝒾𝓋𝑒", color: "border-green-400/30 bg-green-500/20 hover:bg-green-500/30 text-green-400" },
+  gothic: { name: "𝔊𝔬𝔱𝔥𝔦𝔠", color: "border-purple-400/30 bg-purple-500/20 hover:bg-purple-500/30 text-purple-400" },
+  monospace: { name: "𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎", color: "border-cyan-400/30 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400" },
+  double: { name: "𝔻𝕠𝕦𝕓𝕝𝕖", color: "border-orange-400/30 bg-orange-500/20 hover:bg-orange-500/30 text-orange-400" },
+  sans: { name: "𝖲𝖺𝗇𝗌", color: "border-teal-400/30 bg-teal-500/20 hover:bg-teal-500/30 text-teal-400" },
+  bubble: { name: "Ⓑⓤⓑⓑⓛⓔ", color: "border-pink-400/30 bg-pink-500/20 hover:bg-pink-500/30 text-pink-400" },
+  square: { name: "🅂🅀🅄🄰🅁🄴", color: "border-indigo-400/30 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-400" },
+  upside: { name: "∩dsᴉpǝ", color: "border-red-400/30 bg-red-500/20 hover:bg-red-500/30 text-red-400" },
+  mirror: { name: "ᴿoɿɿim", color: "border-emerald-400/30 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400" },
+  small: { name: "ˢᵐᵃˡˡ", color: "border-violet-400/30 bg-violet-500/20 hover:bg-violet-500/30 text-violet-400" },
+}
+
+// const lang = getLangFromUrl(Astro.url);
+// const t = useTranslations(lang);
+
+
+---
+
+<Layout title="Fancy Text Generator - Create Stylish Text Online" description="Transform your text into fancy, stylized characters with our free online fancy text generator. Generate bold, italic, cursive, and gothic text styles instantly!">
+  <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <section class=" pb-8 px-4" id="intro">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
+            Fancy Text Generator
+          </h1>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Transform your text into fancy, stylized characters. Generate bold, italic, cursive, gothic, and many more
+            unique text styles for social media, usernames, and creative projects!
+          </p>
+        </div>
+      </section>
+
+      <TextConverter mode="fancy"/>
+
+      
+      <section class="mt-12 bg-navy-800 backdrop-blur-sm border border-navy-600 rounded-lg" id="examples">
+        <div class="p-6">
+          <h2 class="text-2xl font-bold text-white text-center mb-6">Text Style Examples</h2>
+        </div>
+        <div class="px-6 pb-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Object.entries(examples).map(([style, example]) => (
+              <div class="space-y-3">
+                <h3 class={`text-lg font-semibold ${styleConfig[style as keyof typeof styleConfig].color.split(" ")[4]}`}>
+                  {styleConfig[style as keyof typeof styleConfig].name} Style
+                </h3>
+                <div class="bg-slate-700/30 p-4 rounded-lg">
+                  <p class="text-xl mb-2">{example.text}</p>
+                  <p class="text-sm text-gray-400">{example.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+    </div>
+  </div>
+</Layout>
+

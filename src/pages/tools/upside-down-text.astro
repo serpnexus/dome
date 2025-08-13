@@ -1,0 +1,291 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TextConverter from '../../components/TextConverter.astro';
+---
+
+<Layout title="Upside Down Text Generator - Flip Text Vertically" description="Flip your text upside down using special Unicode characters that appear rotated 180 degrees. Create eye-catching posts, puzzles, and unique visual effects that grab attention.">
+  <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header Section -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
+          Upside Down Text Generator
+        </h1>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          Flip your text upside down using special Unicode characters that appear rotated 180 degrees. 
+          Create eye-catching posts, puzzles, and unique visual effects that grab attention.
+        </p>
+      </div>
+
+      <!-- Text Converter Component -->
+      <TextConverter mode="upside-down" />
+
+      <!-- Educational Content -->
+      <div class="mt-16 grid md:grid-cols-2 gap-8">
+        <!-- About Upside Down Text -->
+        <div class="bg-navy-700 rounded-xl p-8 border border-navy-600">
+          <h2 class="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">🙃</span>
+            About Upside Down Text
+          </h2>
+          <div class="space-y-4 text-slate-300">
+            <p>
+              Upside down text uses special Unicode characters that appear rotated 180 degrees, 
+              creating the illusion of text that has been flipped vertically. Each letter is 
+              replaced with its upside-down equivalent when available.
+            </p>
+            <p>
+              This creates a fun and attention-grabbing effect that's perfect for social media, 
+              creative writing, and adding a playful twist to your messages. The text remains 
+              readable but requires a moment of mental processing.
+            </p>
+          </div>
+        </div>
+
+        <!-- How It Works -->
+        <div class="bg-navy-700 rounded-xl p-8 border border-navy-600">
+          <h2 class="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">🔄</span>
+            How It Works
+          </h2>
+          <div class="space-y-4">
+            <div class="bg-navy-600 rounded-lg p-4">
+              <h3 class="text-yellow-400 font-semibold mb-2">Character Rotation</h3>
+              <p class="text-slate-300 text-sm mb-2">Each letter maps to its 180° rotated Unicode equivalent</p>
+              <div class="flex items-center gap-4 text-lg">
+                <span class="text-white">Hello</span>
+                <span class="text-slate-400">→</span>
+                <span class="text-white">ollǝH</span>
+              </div>
+            </div>
+            <div class="bg-navy-600 rounded-lg p-4">
+              <h3 class="text-white font-semibold mb-2">Text Reversal</h3>
+              <p class="text-slate-300 text-sm">Text is also reversed to maintain readability when flipped</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Usage Examples -->
+        <div class="bg-navy-700 rounded-xl p-8 border border-navy-600">
+          <h2 class="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">💡</span>
+            Usage Examples
+          </h2>
+          <div class="space-y-4">
+            <div class="bg-navy-600 rounded-lg p-4">
+              <p class="text-slate-400 text-sm mb-2">Normal Text:</p>
+              <p class="text-white mb-3">"Have a great day!"</p>
+              <p class="text-slate-400 text-sm mb-2">Upside Down:</p>
+              <p class="text-white">"¡ʎɐp ʇɐǝɹƃ ɐ ǝʌɐH"</p>
+            </div>
+            <div class="bg-navy-600 rounded-lg p-4">
+              <p class="text-slate-400 text-sm mb-2">Normal Text:</p>
+              <p class="text-white mb-3">"Welcome to our website"</p>
+              <p class="text-slate-400 text-sm mb-2">Upside Down:</p>
+              <p class="text-white">"ǝʇᴉsqǝʍ ɹno oʇ ǝɯoɔlǝM"</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Creative Applications -->
+        <div class="bg-navy-700 rounded-xl p-8 border border-navy-600">
+          <h2 class="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">🎨</span>
+            Creative Uses
+          </h2>
+          <ul class="space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-white mt-1">•</span>
+              <span>Create attention-grabbing social media posts</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white mt-1">•</span>
+              <span>Design unique memes and funny messages</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white mt-1">•</span>
+              <span>Add playful elements to presentations</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white mt-1">•</span>
+              <span>Create puzzles and brain teasers</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white mt-1">•</span>
+              <span>Design artistic typography and logos</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-white mt-1">•</span>
+              <span>Express emotions in a unique way</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Character Reference -->
+        <div class="bg-navy-700 rounded-xl p-8 border border-navy-600 md:col-span-2">
+          <h2 class="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
+            <span class="text-3xl">📚</span>
+            Character Reference Guide
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="space-y-2">
+              <h3 class="text-white font-semibold mb-3">A-F</h3>
+              <div class="space-y-1 text-sm">
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">A</span>
+                  <span class="text-white">∀</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">B</span>
+                  <span class="text-white">ᗺ</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">C</span>
+                  <span class="text-white">Ɔ</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">D</span>
+                  <span class="text-white">ᗡ</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">E</span>
+                  <span class="text-white">Ǝ</span>
+                </div>
+                <div class="flex justify-between items-center py-1">
+                  <span class="text-slate-400">F</span>
+                  <span class="text-white">ᖴ</span>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-white font-semibold mb-3">G-L</h3>
+              <div class="space-y-1 text-sm">
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">G</span>
+                  <span class="text-white">פ</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">H</span>
+                  <span class="text-white">H</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">I</span>
+                  <span class="text-white">I</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">J</span>
+                  <span class="text-white">ſ</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">K</span>
+                  <span class="text-white">ʞ</span>
+                </div>
+                <div class="flex justify-between items-center py-1">
+                  <span class="text-slate-400">L</span>
+                  <span class="text-white">˥</span>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-white font-semibold mb-3">M-R</h3>
+              <div class="space-y-1 text-sm">
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">M</span>
+                  <span class="text-white">W</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">N</span>
+                  <span class="text-white">N</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">O</span>
+                  <span class="text-white">O</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">P</span>
+                  <span class="text-white">Ԁ</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">Q</span>
+                  <span class="text-white">Q</span>
+                </div>
+                <div class="flex justify-between items-center py-1">
+                  <span class="text-slate-400">R</span>
+                  <span class="text-white">ᴿ</span>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-white font-semibold mb-3">S-Z</h3>
+              <div class="space-y-1 text-sm">
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">S</span>
+                  <span class="text-white">S</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">T</span>
+                  <span class="text-white">┴</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">U</span>
+                  <span class="text-white">∩</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">V</span>
+                  <span class="text-white">Λ</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">W</span>
+                  <span class="text-white">M</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">X</span>
+                  <span class="text-white">X</span>
+                </div>
+                <div class="flex justify-between items-center py-1 border-b border-slate-600">
+                  <span class="text-slate-400">Y</span>
+                  <span class="text-white">⅄</span>
+                </div>
+                <div class="flex justify-between items-center py-1">
+                  <span class="text-slate-400">Z</span>
+                  <span class="text-white">Z</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6 bg-navy-600 rounded-lg p-4">
+            <h3 class="text-yellow-400 font-semibold mb-2">Lowercase Letters</h3>
+            <p class="text-slate-300 text-sm mb-3">Common lowercase transformations:</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-slate-400">a → ɐ</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">b → q</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">e → ǝ</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">f → ɟ</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">g → ƃ</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">h → ɥ</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">m → ɯ</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">r → ɹ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

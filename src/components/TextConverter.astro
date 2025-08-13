@@ -1,0 +1,1139 @@
+---
+const { mode = "fancy" } = Astro.props;
+// mode can be: 'fancy', 'style', 'case', 'valyrian'
+---
+
+<div
+    class="w-full max-w-4xl mx-auto p-6 bg-[#ffe88c] rounded-lg border border-navy-900"
+>
+    <div class="space-y-6">
+        <!-- Input Section -->
+        <div>
+            <label
+                for="input-text"
+                class="block text-sm font-medium text-slate-600 mb-2"
+            >
+                Enter your text:
+            </label>
+            <textarea
+                id="input-text"
+                placeholder="Type your text here..."
+                class="w-full h-32 p-3 bg-yellow-50 border rounded-lg text-black placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+            ></textarea>
+        </div>
+
+        {
+            mode === "fancy" && (
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                    <button
+                        data-style="bold"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-yellow-400/30 bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-500"
+                    >
+                        <div class="font-semibold text-lg">𝐁𝐨𝐥𝐝</div>
+                        <div class="text-sm opacity-80 mt-1">𝐇𝐞𝐥𝐥𝐨 𝐖𝐨𝐫𝐥𝐝</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Perfect for emphasis
+                        </div>
+                    </button>
+
+                    <button
+                        data-style="italic"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-blue-400/30 bg-blue-500/20 hover:bg-blue-500/30 text-blue-500"
+                    >
+                        <div class="font-semibold text-lg">𝑰𝒕𝒂𝒍𝒊𝒄</div>
+                        <div class="text-sm opacity-80 mt-1">𝑯𝒆𝒍𝒍𝒐 𝑾𝒐𝒓𝒍𝒅</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Great for quotes
+                        </div>
+                    </button>
+
+                    <button
+                        data-style="cursive"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-green-400/30 bg-green-500/20 hover:bg-green-500/30 text-green-500"
+                    >
+                        <div class="font-semibold text-lg">𝒞𝓊𝓇𝓈𝒾𝓋𝑒</div>
+                        <div class="text-sm opacity-80 mt-1">ℋℯℓℓℴ 𝒲ℴ𝓇ℓ𝒹</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Elegant decorative
+                        </div>
+                    </button>
+
+                    <button
+                        data-style="gothic"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-purple-400/30 bg-purple-500/20 hover:bg-purple-500/30 text-purple-500"
+                    >
+                        <div class="font-semibold text-lg">𝔊𝔬𝔱𝔥𝔦𝔠</div>
+                        <div class="text-sm opacity-80 mt-1">ℌ𝔢𝔩𝔩𝔬 𝔚𝔬𝔯𝔩𝔡</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Dark mysterious
+                        </div>
+                    </button>
+
+                    <button
+                        data-style="monospace"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-cyan-400/30 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-500"
+                    >
+                        <div class="font-semibold text-lg">𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎</div>
+                        <div class="text-sm opacity-80 mt-1">𝙷𝚎𝚕𝚕𝚘 𝚆𝚘𝚛𝚕𝚍</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Code-like styling
+                        </div>
+                    </button>
+
+                    <button
+                        data-style="double"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-orange-400/30 bg-orange-500/20 hover:bg-orange-500/30 text-orange-500"
+                    >
+                        <div class="font-semibold text-lg">𝔻𝕠𝕦𝕓𝕝𝕖</div>
+                        <div class="text-sm opacity-80 mt-1">ℍ𝕖𝕝𝕝𝕠 𝕎𝕠𝕣𝕝𝕕</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Mathematical style
+                        </div>
+                    </button>
+
+                    <button
+                        data-style="sans"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-teal-400/30 bg-teal-500/20 hover:bg-teal-500/30 text-teal-500"
+                    >
+                        <div class="font-semibold text-lg">𝖲𝖺𝗇𝗌</div>
+                        <div class="text-sm opacity-80 mt-1">𝖧𝖾𝗅𝗅𝗈 𝖶𝗈𝗋𝗅𝖽</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Clean sans-serif
+                        </div>
+                    </button>
+
+                    <button
+                        data-style="bubble"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-pink-400/30 bg-pink-500/20 hover:bg-pink-500/30 text-pink-500"
+                    >
+                        <div class="font-semibold text-lg">Ⓑⓤⓑⓑⓛⓔ</div>
+                        <div class="text-sm opacity-80 mt-1">Ⓗⓔⓛⓛⓞ Ⓦⓞⓡⓛⓓ</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Fun bubble letters
+                        </div>
+                    </button>
+
+                    <button
+                        data-style="square"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-indigo-400/30 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-500"
+                    >
+                        <div class="font-semibold text-lg">🅂🅀🅄🄰🅁🄴</div>
+                        <div class="text-sm opacity-80 mt-1">🄷🄴🄻🄻🄾 🅆🄾🅁🄻🄳</div>
+                        <div class="text-xs opacity-60 mt-1">Bold squared</div>
+                    </button>
+
+                    <button
+                        data-style="upside"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-red-400/30 bg-red-500/20 hover:bg-red-500/30 text-red-500"
+                    >
+                        <div class="font-semibold text-lg">∩dsᴉpǝ</div>
+                        <div class="text-sm opacity-80 mt-1">plɹoM ollǝH</div>
+                        <div class="text-xs opacity-60 mt-1">Upside down</div>
+                    </button>
+
+                    <button
+                        data-style="mirror"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-emerald-400/30 bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-500"
+                    >
+                        <div class="font-semibold text-lg">ᴿoɿɿim</div>
+                        <div class="text-sm opacity-80 mt-1">Hɘllo Woɿlb</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Horizontally mirrored
+                        </div>
+                    </button>
+
+                    <button
+                        data-style="small"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-violet-400/30 bg-violet-500/20 hover:bg-violet-500/30 text-violet-500"
+                    >
+                        <div class="font-semibold text-lg">ˢᵐᵃˡˡ</div>
+                        <div class="text-sm opacity-80 mt-1">ᴴᵉˡˡᵒ ᵂᵒʳˡᵈ</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Superscript small
+                        </div>
+                    </button>
+                </div>
+            )
+        }
+
+        {
+            mode === "style" && (
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <button
+                        data-style="underline"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-blue-400/30 bg-blue-500/20 hover:bg-blue-500/30 text-blue-500"
+                    >
+                        <div class="font-semibold text-lg">U̲n̲d̲e̲r̲l̲i̲n̲e̲</div>
+                        <div class="text-sm opacity-80 mt-1">H̲e̲l̲l̲o̲ W̲o̲r̲l̲d̲</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Bold underline effect
+                        </div>
+                    </button>
+
+                    <button
+                        data-style="double-underline"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-purple-400/30 bg-purple-500/20 hover:bg-purple-500/30 text-purple-500"
+                    >
+                        <div class="font-semibold text-lg">D̳o̳u̳b̳l̳e̳</div>
+                        <div class="text-sm opacity-80 mt-1">H̳e̳l̳l̳o̳ W̳o̳r̳l̳d̳</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Italic double underline
+                        </div>
+                    </button>
+                </div>
+            )
+        }
+
+        {
+            mode === "case" && (
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <button
+                        data-style="uppercase"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-red-400/30 bg-red-500/20 hover:bg-red-500/30 text-red-500"
+                    >
+                        <div class="font-semibold text-lg">UPPER</div>
+                        <div class="text-sm opacity-80 mt-1">HELLO WORLD</div>
+                        <div class="text-xs opacity-60 mt-1">All uppercase</div>
+                    </button>
+
+                    <button
+                        data-style="lowercase"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-green-400/30 bg-green-500/20 hover:bg-green-500/30 text-green-500"
+                    >
+                        <div class="font-semibold text-lg">lower</div>
+                        <div class="text-sm opacity-80 mt-1">hello world</div>
+                        <div class="text-xs opacity-60 mt-1">All lowercase</div>
+                    </button>
+
+                    <button
+                        data-style="title"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-blue-400/30 bg-blue-500/20 hover:bg-blue-500/30 text-blue-500"
+                    >
+                        <div class="font-semibold text-lg">Title</div>
+                        <div class="text-sm opacity-80 mt-1">Hello World</div>
+                        <div class="text-xs opacity-60 mt-1">Title case</div>
+                    </button>
+
+                    <button
+                        data-style="alternating"
+                        class="style-btn p-4 rounded-lg border transition-all duration-200 border-purple-400/30 bg-purple-500/20 hover:bg-purple-500/30 text-purple-500"
+                    >
+                        <div class="font-semibold text-lg">aLtErNaTiNg</div>
+                        <div class="text-sm opacity-80 mt-1">hElLo WoRlD</div>
+                        <div class="text-xs opacity-60 mt-1">
+                            Alternating case
+                        </div>
+                    </button>
+                </div>
+            )
+        }
+
+        <!-- Output Section -->
+        <div>
+            <div class="flex items-center justify-between mb-2">
+                <label
+                    for="output-text"
+                    class="block text-sm font-medium text-slate-600"
+                >
+                    {
+                        mode === "valyrian"
+                            ? "High Valyrian translation:"
+                            : "Converted text:"
+                    }
+                </label>
+                <button
+                    id="copy-btn"
+                    class="px-3 py-1 bg-navy-600 hover:bg-navy-700 text-white text-sm rounded-md transition-colors duration-200 flex items-center gap-2"
+                >
+                    <svg
+                        class="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
+                        ></path>
+                    </svg>
+                    Copy
+                </button>
+            </div>
+            <textarea
+                id="output-text"
+                readonly
+                class="w-full h-32 p-3 bg-yellow-50 border rounded-lg text-black placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+            ></textarea>
+        </div>
+    </div>
+</div>
+
+<script define:vars={{ mode }}>
+    const fancyMaps = {
+        bold: {
+            a: "𝐚",
+            b: "𝐛",
+            c: "𝐜",
+            d: "𝐝",
+            e: "𝐞",
+            f: "𝐟",
+            g: "𝐠",
+            h: "𝐡",
+            i: "𝐢",
+            j: "𝐣",
+            k: "𝐤",
+            l: "𝐥",
+            m: "𝐦",
+            n: "𝐧",
+            o: "𝐨",
+            p: "𝐩",
+            q: "𝐪",
+            r: "𝐫",
+            s: "𝐬",
+            t: "𝐭",
+            u: "𝐮",
+            v: "𝐯",
+            w: "𝐰",
+            x: "𝐱",
+            y: "𝐲",
+            z: "𝐳",
+            A: "𝐀",
+            B: "𝐁",
+            C: "𝐂",
+            D: "𝐃",
+            E: "𝐄",
+            F: "𝐅",
+            G: "𝐆",
+            H: "𝐇",
+            I: "𝐈",
+            J: "𝐉",
+            K: "𝐊",
+            L: "𝐋",
+            M: "𝐌",
+            N: "𝐍",
+            O: "𝐎",
+            P: "𝐏",
+            Q: "𝐐",
+            R: "𝐑",
+            S: "𝐒",
+            T: "𝐓",
+            U: "𝐔",
+            V: "𝐕",
+            W: "𝐖",
+            X: "𝐗",
+            Y: "𝐘",
+            Z: "𝐙",
+        },
+        italic: {
+            a: "𝑎",
+            b: "𝑏",
+            c: "𝑐",
+            d: "𝑑",
+            e: "𝑒",
+            f: "𝑓",
+            g: "𝑔",
+            h: "ℎ",
+            i: "𝑖",
+            j: "𝑗",
+            k: "𝑘",
+            l: "𝑙",
+            m: "𝑚",
+            n: "𝑛",
+            o: "𝑜",
+            p: "𝑝",
+            q: "𝑞",
+            r: "𝑟",
+            s: "𝑠",
+            t: "𝑡",
+            u: "𝑢",
+            v: "𝑣",
+            w: "𝑤",
+            x: "𝑥",
+            y: "𝑦",
+            z: "𝑧",
+            A: "𝐴",
+            B: "𝐵",
+            C: "𝐶",
+            D: "𝐷",
+            E: "𝐸",
+            F: "𝐹",
+            G: "𝐺",
+            H: "𝐻",
+            I: "ℐ",
+            J: "𝐽",
+            K: "𝐾",
+            L: "𝐿",
+            M: "𝑀",
+            N: "𝑁",
+            O: "𝑂",
+            P: "𝑃",
+            Q: "𝑄",
+            R: "𝑅",
+            S: "𝑆",
+            T: "𝑇",
+            U: "𝐔",
+            V: "𝑉",
+            W: "𝑊",
+            X: "𝑋",
+            Y: "𝑌",
+            Z: "𝑍",
+        },
+        cursive: {
+            a: "𝒶",
+            b: "𝒷",
+            c: "𝒸",
+            d: "𝒹",
+            e: "𝑒",
+            f: "𝒻",
+            g: "𝑔",
+            h: "𝒽",
+            i: "𝒾",
+            j: "𝒿",
+            k: "𝓀",
+            l: "𝓁",
+            m: "𝓂",
+            n: "𝓃",
+            o: "𝑜",
+            p: "𝓅",
+            q: "𝓆",
+            r: "𝓇",
+            s: "𝓈",
+            t: "𝓉",
+            u: "𝓊",
+            v: "𝓋",
+            w: "𝓌",
+            x: "𝓍",
+            y: "𝓎",
+            z: "𝓏",
+            A: "𝒜",
+            B: "ℬ",
+            C: "𝒞",
+            D: "𝒟",
+            E: "ℰ",
+            F: "ℱ",
+            G: "𝒢",
+            H: "ℋ",
+            I: "ℐ",
+            J: "𝒥",
+            K: "𝒦",
+            L: "ℒ",
+            M: "ℳ",
+            N: "𝒩",
+            O: "𝒪",
+            P: "𝒫",
+            Q: "𝒬",
+            R: "ℛ",
+            S: "𝒮",
+            T: "𝒯",
+            U: "𝒰",
+            V: "𝒱",
+            W: "𝒲",
+            X: "𝒳",
+            Y: "𝒴",
+            Z: "𝒵",
+        },
+        gothic: {
+            a: "𝔞",
+            b: "𝔟",
+            c: "𝔠",
+            d: "𝔡",
+            e: "𝔢",
+            f: "𝔣",
+            g: "𝔤",
+            h: "𝔥",
+            i: "𝔦",
+            j: "𝔧",
+            k: "𝔨",
+            l: "𝔩",
+            m: "𝔪",
+            n: "𝔫",
+            o: "𝔬",
+            p: "𝔭",
+            q: "𝔮",
+            r: "𝔯",
+            s: "𝔰",
+            t: "𝔱",
+            u: "𝔲",
+            v: "𝔳",
+            w: "𝔴",
+            x: "𝔵",
+            y: "𝔶",
+            z: "𝔷",
+            A: "𝔄",
+            B: "𝔅",
+            C: "ℭ",
+            D: "𝔇",
+            E: "𝔈",
+            F: "𝔉",
+            G: "𝔊",
+            H: "ℌ",
+            I: "ℑ",
+            J: "𝔍",
+            K: "𝔎",
+            L: "𝔏",
+            M: "𝔐",
+            N: "𝔑",
+            O: "𝔒",
+            P: "𝔓",
+            Q: "𝔔",
+            R: "ℜ",
+            S: "𝔖",
+            T: "𝔗",
+            U: "𝔘",
+            V: "𝔙",
+            W: "𝔚",
+            X: "𝔛",
+            Y: "𝔜",
+            Z: "ℨ",
+        },
+        monospace: {
+            a: "𝚊",
+            b: "𝚋",
+            c: "𝚌",
+            d: "𝚍",
+            e: "𝚎",
+            f: "𝚏",
+            g: "𝚐",
+            h: "𝚑",
+            i: "𝚒",
+            j: "𝚓",
+            k: "𝚔",
+            l: "𝚕",
+            m: "𝚖",
+            n: "𝚗",
+            o: "𝚘",
+            p: "𝚙",
+            q: "𝚚",
+            r: "𝚛",
+            s: "𝚜",
+            t: "𝚝",
+            u: "𝚞",
+            v: "𝚟",
+            w: "𝚠",
+            x: "𝚡",
+            y: "𝚢",
+            z: "𝚣",
+            A: "𝙰",
+            B: "𝙱",
+            C: "𝙲",
+            D: "𝙳",
+            E: "𝙴",
+            F: "𝙵",
+            G: "𝙶",
+            H: "𝙷",
+            I: "𝙸",
+            J: "𝙹",
+            K: "𝙺",
+            L: "𝙻",
+            M: "𝙼",
+            N: "𝙽",
+            O: "𝙾",
+            P: "𝙿",
+            Q: "𝚀",
+            R: "𝚁",
+            S: "𝚂",
+            T: "𝚃",
+            U: "𝚄",
+            V: "𝚅",
+            W: "𝚆",
+            X: "𝚇",
+            Y: "𝚈",
+            Z: "𝚉",
+        },
+        double: {
+            a: "𝕒",
+            b: "𝕓",
+            c: "𝕔",
+            d: "𝕕",
+            e: "𝕖",
+            f: "𝕗",
+            g: "𝕘",
+            h: "𝕙",
+            i: "𝕚",
+            j: "𝕛",
+            k: "𝕜",
+            l: "𝕝",
+            m: "𝕞",
+            n: "𝕟",
+            o: "𝕠",
+            p: "𝕡",
+            q: "𝕢",
+            r: "𝕣",
+            s: "𝕤",
+            t: "𝕥",
+            u: "𝕦",
+            v: "𝕧",
+            w: "𝕨",
+            x: "𝕩",
+            y: "𝕪",
+            z: "𝕫",
+            A: "𝔸",
+            B: "𝔹",
+            C: "ℂ",
+            D: "𝔻",
+            E: "𝔼",
+            F: "𝔽",
+            G: "𝔾",
+            H: "ℍ",
+            I: "𝕀",
+            J: "𝕁",
+            K: "𝕂",
+            L: "𝕃",
+            M: "𝕄",
+            N: "ℕ",
+            O: "𝕆",
+            P: "ℙ",
+            Q: "ℚ",
+            R: "ℝ",
+            S: "𝕊",
+            T: "𝕋",
+            U: "𝕌",
+            V: "𝕍",
+            W: "𝕎",
+            X: "𝕏",
+            Y: "𝕐",
+            Z: "ℤ",
+        },
+        sans: {
+            a: "𝖺",
+            b: "𝖻",
+            c: "𝖼",
+            d: "𝖽",
+            e: "𝖾",
+            f: "𝖿",
+            g: "𝗀",
+            h: "𝗁",
+            i: "𝗂",
+            j: "𝗃",
+            k: "𝗄",
+            l: "𝗅",
+            m: "𝗆",
+            n: "𝗇",
+            o: "𝗈",
+            p: "𝗉",
+            q: "𝗊",
+            r: "𝗋",
+            s: "𝗌",
+            t: "𝗍",
+            u: "𝗎",
+            v: "𝗏",
+            w: "𝗐",
+            x: "𝗑",
+            y: "𝗒",
+            z: "𝗓",
+            A: "𝖠",
+            B: "𝖡",
+            C: "𝖢",
+            D: "𝖣",
+            E: "𝖤",
+            F: "𝖥",
+            G: "𝖦",
+            H: "𝖧",
+            I: "𝖨",
+            J: "𝖩",
+            K: "𝖪",
+            L: "𝖫",
+            M: "𝖬",
+            N: "𝖭",
+            O: "𝖮",
+            P: "𝖯",
+            Q: "𝖰",
+            R: "𝖱",
+            S: "𝖲",
+            T: "𝖳",
+            U: "𝖴",
+            V: "𝖵",
+            W: "𝖶",
+            X: "𝖷",
+            Y: "𝖸",
+            Z: "𝖹",
+        },
+        bubble: {
+            a: "ⓐ",
+            b: "ⓑ",
+            c: "ⓒ",
+            d: "ⓓ",
+            e: "ⓔ",
+            f: "ⓕ",
+            g: "ⓖ",
+            h: "ⓗ",
+            i: "ⓘ",
+            j: "ⓙ",
+            k: "ⓚ",
+            l: "ⓛ",
+            m: "ⓜ",
+            n: "ⓝ",
+            o: "ⓞ",
+            p: "ⓟ",
+            q: "ⓠ",
+            r: "ⓡ",
+            s: "ⓢ",
+            t: "ⓣ",
+            u: "ⓤ",
+            v: "ⓥ",
+            w: "ⓦ",
+            x: "ⓧ",
+            y: "ⓨ",
+            z: "ⓩ",
+            A: "Ⓐ",
+            B: "Ⓑ",
+            C: "Ⓒ",
+            D: "Ⓓ",
+            E: "Ⓔ",
+            F: "Ⓕ",
+            G: "Ⓖ",
+            H: "Ⓗ",
+            I: "Ⓘ",
+            J: "Ⓙ",
+            K: "Ⓚ",
+            L: "Ⓛ",
+            M: "Ⓜ",
+            N: "Ⓝ",
+            O: "Ⓞ",
+            P: "Ⓟ",
+            Q: "Ⓠ",
+            R: "Ⓡ",
+            S: "Ⓢ",
+            T: "Ⓣ",
+            U: "Ⓤ",
+            V: "Ⓥ",
+            W: "Ⓦ",
+            X: "Ⓧ",
+            Y: "Ⓨ",
+            Z: "Ⓩ",
+        },
+        square: {
+            a: "🄰",
+            b: "🄱",
+            c: "🄲",
+            d: "🄳",
+            e: "🄴",
+            f: "🄵",
+            g: "🄶",
+            h: "🄷",
+            i: "🄸",
+            j: "🄹",
+            k: "🄺",
+            l: "🄻",
+            m: "🄼",
+            n: "🄽",
+            o: "🄾",
+            p: "🄿",
+            q: "🅀",
+            r: "🅁",
+            s: "🅂",
+            t: "🅃",
+            u: "🅄",
+            v: "🅅",
+            w: "🅆",
+            x: "🅇",
+            y: "🅈",
+            z: "🅉",
+            A: "🄰",
+            B: "🄱",
+            C: "🄲",
+            D: "🄳",
+            E: "🄴",
+            F: "🄵",
+            G: "🄶",
+            H: "🄷",
+            I: "🄸",
+            J: "🄹",
+            K: "🄺",
+            L: "🄻",
+            M: "🄼",
+            N: "🄽",
+            O: "🄾",
+            P: "🄿",
+            Q: "🅀",
+            R: "🅁",
+            S: "🅂",
+            T: "🅃",
+            U: "🅄",
+            V: "🅅",
+            W: "🅆",
+            X: "🅇",
+            Y: "🅈",
+            Z: "🅉",
+        },
+        upside: {
+            a: "ɐ",
+            b: "q",
+            c: "ɔ",
+            d: "p",
+            e: "ǝ",
+            f: "ɟ",
+            g: "ƃ",
+            h: "ɥ",
+            i: "ᴉ",
+            j: "ɾ",
+            k: "ʞ",
+            l: "l",
+            m: "ɯ",
+            n: "u",
+            o: "o",
+            p: "d",
+            q: "b",
+            r: "ɹ",
+            s: "s",
+            t: "ʇ",
+            u: "n",
+            v: "ʌ",
+            w: "ʍ",
+            x: "x",
+            y: "ʎ",
+            z: "z",
+            A: "∀",
+            B: "ᗺ",
+            C: "Ɔ",
+            D: "ᗡ",
+            E: "Ǝ",
+            F: "ᖴ",
+            G: "פ",
+            H: "H",
+            I: "I",
+            J: "ſ",
+            K: "ʞ",
+            L: "˥",
+            M: "W",
+            N: "N",
+            O: "O",
+            P: "Ԁ",
+            Q: "Q",
+            R: "ᴿ",
+            S: "S",
+            T: "┴",
+            U: "∩",
+            V: "Λ",
+            W: "M",
+            X: "X",
+            Y: "⅄",
+            Z: "Z",
+        },
+        mirror: {
+            a: "ɒ",
+            b: "d",
+            c: "ɔ",
+            d: "b",
+            e: "ɘ",
+            f: "ʇ",
+            g: "ǫ",
+            h: "ʜ",
+            i: "i",
+            j: "ꞁ",
+            k: "ʞ",
+            l: "l",
+            m: "m",
+            n: "n",
+            o: "o",
+            p: "q",
+            q: "p",
+            r: "ɿ",
+            s: "ƨ",
+            t: "ƚ",
+            u: "u",
+            v: "v",
+            w: "w",
+            x: "x",
+            y: "ʏ",
+            z: "z",
+            A: "A",
+            B: "ᙠ",
+            C: "Ɔ",
+            D: "ᗡ",
+            E: "Ǝ",
+            F: "ꟻ",
+            G: "Ә",
+            H: "H",
+            I: "I",
+            J: "Ⴑ",
+            K: "ʞ",
+            L: "⅃",
+            M: "M",
+            N: "N",
+            O: "O",
+            P: "q",
+            Q: "p",
+            R: "ᴿ",
+            S: "Ƨ",
+            T: "T",
+            U: "U",
+            V: "V",
+            W: "W",
+            X: "X",
+            Y: "Y",
+            Z: "Z",
+        },
+        small: {
+            a: "ᵃ",
+            b: "ᵇ",
+            c: "ᶜ",
+            d: "ᵈ",
+            e: "ᵉ",
+            f: "ᶠ",
+            g: "ᵍ",
+            h: "ʰ",
+            i: "ⁱ",
+            j: "ʲ",
+            k: "ᵏ",
+            l: "ˡ",
+            m: "ᵐ",
+            n: "ⁿ",
+            o: "ᵒ",
+            p: "ᵖ",
+            q: "q",
+            r: "ʳ",
+            s: "ˢ",
+            t: "ᵗ",
+            u: "ᵘ",
+            v: "ᵛ",
+            w: "ʷ",
+            x: "ˣ",
+            y: "ʸ",
+            z: "ᶻ",
+            A: "ᴬ",
+            B: "ᴮ",
+            C: "ᶜ",
+            D: "ᴰ",
+            E: "ᴱ",
+            F: "ᶠ",
+            G: "ᴳ",
+            H: "ᴴ",
+            I: "ᴵ",
+            J: "ᴶ",
+            K: "ᴷ",
+            L: "ᴸ",
+            M: "ᴹ",
+            N: "ᴺ",
+            O: "ᴼ",
+            P: "ᴾ",
+            Q: "Q",
+            R: "ᴿ",
+            S: "ˢ",
+            T: "ᵀ",
+            U: "ᵁ",
+            V: "ⱽ",
+            W: "ᵂ",
+            X: "ˣ",
+            Y: "ʸ",
+            Z: "ᶻ",
+        },
+    };
+
+    function toUpperCase(text) {
+        return text.toUpperCase();
+    }
+
+    function toLowerCase(text) {
+        return text.toLowerCase();
+    }
+
+    function toTitleCase(text) {
+        return text.replace(
+            /\w\S*/g,
+            (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(),
+        );
+    }
+
+    function toAlternatingCase(text) {
+        return text
+            .split("")
+            .map((char, index) =>
+                index % 2 === 0 ? char.toLowerCase() : char.toUpperCase(),
+            )
+            .join("");
+    }
+
+    function convertToUnderline(text) {
+        return text
+            .split("")
+            .map((char) => char + "\u0332")
+            .join("");
+    }
+
+    function convertToDoubleUnderline(text) {
+        return text
+            .split("")
+            .map((char) => char + "\u0333")
+            .join("");
+    }
+
+    const valyianDictionary = {
+        hello: "rytsas",
+        goodbye: "avy jorrāelan",
+        yes: "kessa",
+        no: "daor",
+        please: "kostilus",
+        thank: "kirimvose",
+        you: "ao",
+        love: "jorrāelagon",
+        fire: "perzys",
+        blood: "āeksia",
+        dragon: "zaldrīzes",
+        king: "dārys",
+        queen: "dāria",
+        prince: "dārilaros",
+        princess: "dārȳs",
+        lord: "aōha",
+        lady: "riña",
+        knight: "ser",
+        sword: "rūklon",
+        battle: "tegon",
+        war: "tegon",
+        peace: "gīmigon",
+        death: "morghūlis",
+        life: "glaeson",
+        water: "bāne",
+        wind: "vāedar",
+        earth: "tegon",
+        sky: "ōños",
+        sun: "vāedar",
+        moon: "hūra",
+        star: "ñāqes",
+        night: "bantis",
+        day: "tubis",
+        morning: "ñāqes",
+        evening: "bantis",
+        house: "lenton",
+        home: "lenton",
+        family: "lentor",
+        mother: "muña",
+        father: "kepa",
+        son: "trēsy",
+        daughter: "tala",
+        brother: "lēkia",
+        sister: "mandia",
+        friend: "raqiros",
+        enemy: "vīlībāzma",
+        strong: "āeksio",
+        weak: "bāne",
+        brave: "āeksio",
+        wise: "gīmigon",
+        beautiful: "gevie",
+        ugly: "qrīdrughagon",
+        good: "sȳz",
+        bad: "qrīdrughagon",
+        great: "olvie",
+        small: "bāne",
+        big: "olvie",
+        old: "āeksio",
+        young: "riña",
+        new: "ūndegon",
+        ancient: "āeksio",
+    };
+
+    function translateToValyrian(text) {
+        const words = text.toLowerCase().split(/\s+/);
+        const translatedWords = words.map((word) => {
+            const cleanWord = word.replace(/[^\w]/g, "");
+            return valyianDictionary[cleanWord] || word;
+        });
+        return translatedWords.join(" ");
+    }
+
+    function convertToStyle(text, style) {
+        if (!text.trim()) return "";
+
+        const map = fancyMaps[style];
+        if (!map) return text;
+
+        let result = "";
+        for (const char of text) {
+            result += map[char] || char;
+        }
+        return result;
+    }
+
+    const inputTextarea = document.getElementById("input-text");
+    const outputTextarea = document.getElementById("output-text");
+    const copyBtn = document.getElementById("copy-btn");
+    const styleButtons = document.querySelectorAll(".style-btn");
+
+    let currentStyle = "";
+
+    function updateOutput() {
+        const inputText = inputTextarea.value;
+        if (!inputText.trim()) {
+            outputTextarea.value = "";
+            return;
+        }
+
+        let converted = "";
+
+        if (mode === "valyrian") {
+            converted = translateToValyrian(inputText);
+        } else if (currentStyle) {
+            switch (currentStyle) {
+                case "uppercase":
+                    converted = toUpperCase(inputText);
+                    break;
+                case "lowercase":
+                    converted = toLowerCase(inputText);
+                    break;
+                case "title":
+                    converted = toTitleCase(inputText);
+                    break;
+                case "alternating":
+                    converted = toAlternatingCase(inputText);
+                    break;
+                case "underline":
+                    converted = convertToUnderline(inputText);
+                    break;
+                case "double-underline":
+                    converted = convertToDoubleUnderline(inputText);
+                    break;
+                default:
+                    converted = convertToStyle(inputText, currentStyle);
+            }
+        }
+
+        outputTextarea.value = converted;
+    }
+
+    if (mode === "valyrian") {
+        inputTextarea.addEventListener("input", updateOutput);
+    } else {
+        inputTextarea.addEventListener("input", updateOutput);
+
+        styleButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                currentStyle = button.dataset.style;
+
+                styleButtons.forEach((btn) =>
+                    btn.classList.remove("ring-2", "ring-white/50"),
+                );
+                button.classList.add("ring-2", "ring-black");
+
+                updateOutput();
+            });
+        });
+    }
+
+    copyBtn.addEventListener("click", async () => {
+        const text = outputTextarea.value;
+        if (!text.trim()) return;
+
+        try {
+            await navigator.clipboard.writeText(text);
+            copyBtn.innerHTML = `
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        Copied!
+      `;
+
+            setTimeout(() => {
+                copyBtn.innerHTML = `
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+          </svg>
+          Copy
+        `;
+            }, 2000);
+        } catch (err) {
+            console.error("Failed to copy text: ", err);
+        }
+    });
+</script>

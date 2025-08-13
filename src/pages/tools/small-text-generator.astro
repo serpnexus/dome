@@ -1,0 +1,182 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TextConverter from '../../components/TextConverter.astro';
+---
+
+<Layout title="Small Text Generator - Generate Tiny Superscript & Subscript Text" description="Generate tiny text in three different styles: small caps, superscript, and subscript. Perfect for mathematical formulas, footnotes, social media captions, and creative typography.">
+  <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <!-- Header Section -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
+          Small Text Generator
+        </h1>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          Generate tiny text in three different styles: small caps, superscript, and subscript. 
+          Perfect for mathematical formulas, footnotes, social media captions, and creative typography.
+        </p>
+      </div>
+
+      <!-- Text Converter Component -->
+      <TextConverter mode="small-text" />
+
+      <!-- Educational Content -->
+      <div class="mt-16 grid md:grid-cols-2 gap-8">
+        <!-- About Small Text -->
+        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="text-3xl">🔬</span>
+            About Small Text
+          </h2>
+          <div class="space-y-4 text-slate-300">
+            <p>
+              Small text uses Unicode characters to create miniature versions of regular letters. 
+              These tiny characters maintain readability while adding visual variety and emphasis 
+              to your content.
+            </p>
+            <p>
+              Unlike regular text formatting, Unicode small text works across all platforms and 
+              social media sites, making it perfect for creating unique posts, captions, and 
+              mathematical expressions that stand out.
+            </p>
+          </div>
+        </div>
+
+        <!-- Text Styles -->
+        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="text-3xl">✨</span>
+            Text Styles
+          </h2>
+          <div class="space-y-4">
+            <div class="bg-slate-700/50 rounded-lg p-4">
+              <h3 class="text-blue-400 font-semibold mb-2">Small Caps</h3>
+              <p class="text-slate-300 text-sm mb-2">ᴄᴏɴᴠᴇʀᴛs ᴛᴇxᴛ ᴛᴏ sᴍᴀʟʟ ᴄᴀᴘɪᴛᴀʟs</p>
+              <p class="text-slate-400 text-xs">Perfect for headings and emphasis</p>
+            </div>
+            <div class="bg-slate-700/50 rounded-lg p-4">
+              <h3 class="text-green-400 font-semibold mb-2">Subscript</h3>
+              <p class="text-slate-300 text-sm mb-2">ₜₑₓₜ ₐₚₚₑₐᵣₛ ᵦₑₗₒw ₜₕₑ ᵦₐₛₑₗᵢₙₑ</p>
+              <p class="text-slate-400 text-xs">Great for chemical formulas and footnotes</p>
+            </div>
+            <div class="bg-slate-700/50 rounded-lg p-4">
+              <h3 class="text-purple-400 font-semibold mb-2">Superscript</h3>
+              <p class="text-slate-300 text-sm mb-2">ᵗᵉˣᵗ ᵃᵖᵖᵉᵃʳˢ ᵃᵇᵒᵛᵉ ᵗʰᵉ ᵇᵃˢᵉˡⁱⁿᵉ</p>
+              <p class="text-slate-400 text-xs">Ideal for exponents and ordinal numbers</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Usage Examples -->
+        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="text-3xl">📝</span>
+            Usage Examples
+          </h2>
+          <div class="space-y-4">
+            <div class="bg-slate-700/50 rounded-lg p-4">
+              <p class="text-slate-400 text-sm mb-2">Mathematical Formula:</p>
+              <p class="text-white">E = mc²</p>
+              <p class="text-blue-400 text-sm">E = mcˢᵘᵖᵉʳˢᶜʳⁱᵖᵗ</p>
+            </div>
+            <div class="bg-slate-700/50 rounded-lg p-4">
+              <p class="text-slate-400 text-sm mb-2">Chemical Formula:</p>
+              <p class="text-white">H₂O</p>
+              <p class="text-green-400 text-sm">HₛᵤᵦₛcᵣᵢₚₜO</p>
+            </div>
+            <div class="bg-slate-700/50 rounded-lg p-4">
+              <p class="text-slate-400 text-sm mb-2">Social Media Caption:</p>
+              <p class="text-purple-400">ᴛʜɪs ɪs ᴀ ᴄᴏᴏʟ ᴄᴀᴘᴛɪᴏɴ</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Applications -->
+        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="text-3xl">🎯</span>
+            Perfect For
+          </h2>
+          <ul class="space-y-3 text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-400 mt-1">•</span>
+              <span>Mathematical and scientific formulas</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-green-400 mt-1">•</span>
+              <span>Chemical equations and molecular formulas</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-purple-400 mt-1">•</span>
+              <span>Social media posts and captions</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-cyan-400 mt-1">•</span>
+              <span>Academic papers and footnotes</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-yellow-400 mt-1">•</span>
+              <span>Creative typography and design</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-pink-400 mt-1">•</span>
+              <span>Ordinal numbers (1ˢᵗ, 2ⁿᵈ, 3ʳᵈ)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Technical Notes -->
+        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700 md:col-span-2">
+          <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+            <span class="text-3xl">⚙️</span>
+            Technical Notes
+          </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="text-lg font-semibold text-white mb-3">Compatibility</h3>
+              <ul class="space-y-2 text-slate-300 text-sm">
+                <li class="flex items-center gap-2">
+                  <span class="text-green-400">✓</span>
+                  <span>Works on all social media platforms</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-green-400">✓</span>
+                  <span>Compatible with messaging apps</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-green-400">✓</span>
+                  <span>Displays correctly in emails</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-green-400">✓</span>
+                  <span>Supported by modern browsers</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-white mb-3">Limitations</h3>
+              <ul class="space-y-2 text-slate-300 text-sm">
+                <li class="flex items-center gap-2">
+                  <span class="text-yellow-400">!</span>
+                  <span>Not all characters have small versions</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-yellow-400">!</span>
+                  <span>May appear differently on some devices</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-yellow-400">!</span>
+                  <span>Screen readers may not pronounce correctly</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-yellow-400">!</span>
+                  <span>Use sparingly for better readability</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

@@ -51,9 +51,9 @@ That’s it—you’ve just sent a blank message!
 
 ## Tools to Make It Easy
 There are several online tools that offer invisible characters, but for the most reliable results, we recommend:
-invisble text generator – A user-friendly website where you can generate and copy invisible characters instantly.
+invisble text generator – A user-friendly website where you can generate and copy invisible characters instantly. If you often <a href="https://predis.ai/instagram-reels-maker/" target="_blank" rel="noopener">create Instagram reels</a> and want cleaner captions or hidden hashtags, these tools are perfect for you.
 
-Try this [best invisible text tool](https://invisiblesymbol.com) – Ideal for more advanced needs like multiple invisible characters, custom lengths, and so many text generator tools.
+Try this <u>[best invisible text tool](https://invisiblesymbol.com)</u> – Ideal for more advanced needs like multiple invisible characters, custom lengths, and so many text generator tools.
 
 
 These tools ensure compatibility across most platforms and devices, including iOS, Android, Windows, and macOS.

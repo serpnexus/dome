@@ -3,14 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import Intro from '../components/Intro.astro';
 import WhtIsInvisibleTxt from '../components/WhtIsInvisibleTxt.astro';
 import WhySection from '../components/WhyUse.astro';
-import PracticalUseCasesSection from '../components/PracticalUseCasesSection.astro';
+import PracticalUseCasesSection from '../components/UseCases.astro';
 import InvisibleTextGenerator from '../components/InvisibleTextGenerator.astro';
 import TypesOfInvisibleText from '../components/Types.astro';
 import FAQSection from '../components/FAQ.astro';
 import UnicodeTable from '../components/UnicodeTable.astro';
 import BlogSection from '../components/BlogSection.astro';
+import Sidebar from '../components/Sidebar.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
-
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -18,14 +18,21 @@ export const prerender = true;
 ---
 
 <Layout title={t('meta.title')} description={t('meta.description')}>
-  <InvisibleTextGenerator />
-  <Intro />
-  <WhtIsInvisibleTxt />
-  <TypesOfInvisibleText />
-  <UnicodeTable />
-  <WhySection />
-  <PracticalUseCasesSection />
-  <BlogSection />
-  <FAQSection />
+  <!-- <div class="flex"> -->
+    <!-- Sidebar -->
+    <!-- <Sidebar class="hidden lg:block w-64 flex-shrink-0" /> -->
+    
+    <!-- Main Content -->
+    <div class="flex-1">
+      <InvisibleTextGenerator />
+      <Intro />
+      <WhtIsInvisibleTxt />
+      <TypesOfInvisibleText />
+      <UnicodeTable />
+      <WhySection />
+      <PracticalUseCasesSection />
+      <BlogSection />
+      <FAQSection />
+    <!-- </div>
+  </div> -->
 </Layout>
-

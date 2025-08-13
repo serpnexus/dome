@@ -1,0 +1,64 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+
+const tools = [
+  { href: '/tools/fancy-text-generator', icon: '✨', title: 'Fancy Text Generator' },
+  { href: '/tools/bold-italic-converter', icon: '🔤', title: 'Bold & Italic' },
+  { href: '/tools/high-valyrian-translator', icon: '��', title: 'High Valyrian' },
+  { href: '/tools/case-converter', icon: '🔄', title: 'Case Converter' },
+  { href: '/tools/text-counter', icon: '📊', title: 'Text Counter' }
+];
+
+const resources = [
+  { href: '/tools', icon: '🛠️', title: 'All Tools' },
+  { href: '/blog', icon: '📝', title: 'Blog' },
+  { href: '/unicode', icon: '��', title: 'Unicode' }
+];
+---
+
+<aside class={`bg-navy-800/50 border-r border-navy-600 p-6 min-h-screen ${className}`}>
+  <!-- Tools Section -->
+  <div class="mb-8">
+    <h3 class="text-lg font-bold text-yellow-400 mb-4">Text Tools</h3>
+    <div class="space-y-3">
+      {tools.map(tool => (
+        <a href={tool.href} class="flex items-center gap-3 p-3 rounded-lg text-gray-300 hover:bg-navy-700 hover:text-white transition-colors duration-200">
+          <span class="text-xl">{tool.icon}</span>
+          <span class="text-sm font-medium">{tool.title}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- Resources Section -->
+  <div class="mb-8">
+    <h3 class="text-lg font-bold text-yellow-400 mb-4">Resources</h3>
+    <div class="space-y-3">
+      {resources.map(resource => (
+        <a href={resource.href} class="flex items-center gap-3 p-3 rounded-lg text-gray-300 hover:bg-navy-700 hover:text-white transition-colors duration-200">
+          <span class="text-xl">{resource.icon}</span>
+          <span class="text-sm font-medium">{resource.title}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+  <div class="border-t border-navy-600 pt-6">
+    <h3 class="text-lg font-bold text-yellow-400 mb-4">Quick Actions</h3>
+    <div class="space-y-3">
+      <a href="/" class="flex items-center gap-3 p-3 rounded-lg text-gray-300 hover:bg-navy-700 hover:text-white transition-colors duration-200">
+        <span class="text-xl">🏠</span>
+        <span class="text-sm font-medium">Home</span>
+      </a>
+      <a href="#top" class="flex items-center gap-3 p-3 rounded-lg text-gray-300 hover:bg-navy-700 hover:text-white transition-colors duration-200">
+        <span class="text-xl">⬆️</span>
+        <span class="text-sm font-medium">Back to Top</span>
+      </a>
+    </div>
+  </div>
+</aside>
