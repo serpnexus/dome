@@ -18,13 +18,13 @@ export const prerender = true;
 ---
 
 <Layout title={t('meta.title')} description={t('meta.description')}>
-  <InvisibleTextGenerator />
-  <Intro />
-  <WhtIsInvisibleTxt />
-  <TypesOfInvisibleText />
-  <UnicodeTable />
-  <WhySection />
-  <PracticalUseCasesSection />
-  <BlogSection />
-  <FAQSection />
+  <InvisibleTextGenerator server:defer/>
+  <Intro server:defer/>
+  <WhtIsInvisibleTxt server:defer/>
+  <TypesOfInvisibleText server:defer/>
+  <UnicodeTable server:defer/>
+  <WhySection server:defer/>
+  <PracticalUseCasesSection server:defer/>
+  <BlogSection server:defer/>
+  <FAQSection server:defer/>
 </Layout>

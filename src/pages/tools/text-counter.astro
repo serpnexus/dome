@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../layouts/StaticPageLayout.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -144,7 +144,7 @@ const t = useTranslations(lang);
     </section>
   </div>
 
-  <script>
+  <script type="module">
     // Text Counter
     function updateCounter() {
       const input = document.getElementById('counter-input');
@@ -193,7 +193,7 @@ const t = useTranslations(lang);
       }
       
       navigator.clipboard.writeText(input.value).then(() => {
-        const button = event.target as HTMLButtonElement;
+        const button = event.target;
         if (button) {
           const originalText = button.textContent || '';
           button.textContent = 'Copied!';
