@@ -1,7 +1,7 @@
 {
   "name": "invisible-text_me",
   "type": "module",
-  "version": "0.0.1",
+  "version": "2.9.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -20,7 +20,7 @@
     "date-fns": "^4.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sharp": "^0.34.1",
+    "sharp": "^0.34.3",
     "uniqid": "^5.4.0"
   },
   "devDependencies": {

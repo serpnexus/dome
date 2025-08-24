@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../layouts/StaticPageLayout.astro';
 import TextConverter from '../../components/TextConverter.astro';
 // import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
@@ -65,7 +65,7 @@ const styleConfig = {
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {Object.entries(examples).map(([style, example]) => (
               <div class="space-y-3">
-                <h3 class={`text-lg font-semibold ${styleConfig[style as keyof typeof styleConfig].color.split(" ")[4]}`}>
+                <h3 class={`text-lg font-semibold ${styleConfig[style as keyof typeof styleConfig].color}`}>
                   {styleConfig[style as keyof typeof styleConfig].name} Style
                 </h3>
                 <div class="bg-slate-700/30 p-4 rounded-lg">

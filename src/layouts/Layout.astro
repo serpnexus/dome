@@ -34,6 +34,7 @@ const { title, description, image='og-image.webp' } = Astro.props;
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, Astro.url)} />
     <meta name="robots" content="index, follow">
+	<meta property="og:site_name" content="Invisible Text" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
@@ -58,6 +59,8 @@ const { title, description, image='og-image.webp' } = Astro.props;
     <link rel="alternate" hreflang="th" href="https://www.invisibletext.me/th">
     <link rel="alternate" hreflang="vi" href="https://www.invisibletext.me/vi">
     <link rel="alternate" hreflang="x-default" href="https://www.invisibletext.me/">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1370487049277752"
+     crossorigin="anonymous"></script>
   </head>
   <body>
     <Header />

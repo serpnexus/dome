@@ -9,7 +9,6 @@ import TypesOfInvisibleText from '../components/Types.astro';
 import FAQSection from '../components/FAQ.astro';
 import UnicodeTable from '../components/UnicodeTable.astro';
 import BlogSection from '../components/BlogSection.astro';
-import Sidebar from '../components/Sidebar.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
@@ -18,11 +17,6 @@ export const prerender = true;
 ---
 
 <Layout title={t('meta.title')} description={t('meta.description')}>
-  <!-- <div class="flex"> -->
-    <!-- Sidebar -->
-    <!-- <Sidebar class="hidden lg:block w-64 flex-shrink-0" /> -->
-    
-    <!-- Main Content -->
     <div class="flex-1">
       <InvisibleTextGenerator />
       <Intro />
@@ -33,6 +27,5 @@ export const prerender = true;
       <PracticalUseCasesSection />
       <BlogSection />
       <FAQSection />
-    <!-- </div>
-  </div> -->
+    </div>
 </Layout>

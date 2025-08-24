@@ -1,12 +1,12 @@
 ---
-import Layout from '../../layouts/StaticPageLayout.astro';
-import { getCollection, getEntry } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
-import { Image } from 'astro:assets';
+import Layout from "../../layouts/StaticPageLayout.astro";
+import { getCollection, getEntry } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  return posts.map(post => ({
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
     params: { slug: post.slug },
     props: { post },
   }));
@@ -18,26 +18,55 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 
 // Get related posts
-const allPosts = await getCollection('blog');
+const allPosts = await getCollection("blog");
 const relatedPosts = allPosts
-  .filter(p => p.slug !== post.slug && p.data.tags?.some(tag => post.data.tags?.includes(tag)))
+  .filter(
+    (p) =>
+      p.slug !== post.slug &&
+      p.data.tags?.some((tag) => post.data.tags?.includes(tag)),
+  )
   .slice(0, 3);
 
 // Get all tools for sidebar
 const tools = [
-  { name: 'Fancy Text Generator', href: '/tools/fancy-text-generator', icon: '✨', description: 'Transform text into fancy, stylized characters' },
-  { name: 'Bold & Italic Converter', href: '/tools/bold-italic-converter', icon: '🔤', description: 'Convert text to bold and italic styles' },
-  { name: 'High Valyrian Translator', href: '/tools/high-valyrian-translator', icon: '🐉', description: 'Translate English to High Valyrian' },
-  { name: 'Case Converter', href: '/tools/case-converter', icon: '🔄', description: 'Convert text between different cases' },
-  { name: 'Text Counter', href: '/tools/text-counter', icon: '📊', description: 'Count characters, words, and lines' },
+  {
+    name: "Fancy Text Generator",
+    href: "/tools/fancy-text-generator",
+    icon: "✨",
+    description: "Transform text into fancy, stylized characters",
+  },
+  {
+    name: "Bold & Italic Converter",
+    href: "/tools/bold-italic-converter",
+    icon: "🔤",
+    description: "Convert text to bold and italic styles",
+  },
+  {
+    name: "High Valyrian Translator",
+    href: "/tools/high-valyrian-translator",
+    icon: "🐉",
+    description: "Translate English to High Valyrian",
+  },
+  {
+    name: "Case Converter",
+    href: "/tools/case-converter",
+    icon: "🔄",
+    description: "Convert text between different cases",
+  },
+  {
+    name: "Text Counter",
+    href: "/tools/text-counter",
+    icon: "📊",
+    description: "Count characters, words, and lines",
+  },
 ];
 
 // Format date
 const formatDate = (date: Date) => {
-  return new Intl.DateTimeFormat('en-US', { 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
+  return new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   }).format(date);
 };
 ---
@@ -48,9 +77,21 @@ const formatDate = (date: Date) => {
     <aside class="blog-post-toc">
       <div class="toc-container">
         <div class="toc-header">
-          <h3 class="toc-title">Table of Contents</h3>
-          <button class="toc-toggle" id="tocToggle" aria-label="Toggle table of contents">
-            <svg class="toc-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <span class="toc-title">Table of Contents</span>
+          <button
+            class="toc-toggle"
+            id="tocToggle"
+            aria-label="Toggle table of contents"
+          >
+            <svg
+              class="toc-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <line x1="3" y1="6" x2="21" y2="6"></line>
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -68,55 +109,71 @@ const formatDate = (date: Date) => {
     <!-- Main Content -->
     <main class="blog-post-main">
       <article class="blog-post">
-    <!-- Header -->
+        <!-- Header -->
         <header class="blog-post-header">
           <div class="blog-post-meta">
             <span class="blog-post-date">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-            <line x1="16" y1="2" x2="16" y2="6"></line>
-            <line x1="8" y1="2" x2="8" y2="6"></line>
-            <line x1="3" y1="10" x2="21" y2="10"></line>
-          </svg>
-          <FormattedDate date={post.data.pubDate} />
-        </span>
-      </div>
-      
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <FormattedDate date={post.data.pubDate} />
+            </span>
+          </div>
+
           <h1 class="blog-post-title">{post.data.title}</h1>
-      
-      {post.data.description && (
-            <p class="blog-post-description">{post.data.description}</p>
-      )}
-      
-      {post.data.tags && post.data.tags.length > 0 && (
-            <div class="blog-post-tags">
-          {post.data.tags.map(tag => (
-                <span class="blog-post-tag">#{tag}</span>
-          ))}
-        </div>
-      )}
-    </header>
 
-    <!-- Featured Image -->
-    {post.data.image && (
-      <div class="blog-post-image">
-        <Image 
-          width={1200}
-          height={600}
-          src={post.data.image} 
-          alt={post.data.title}
-          class="blog-post-featured-image"
-          height="510"
-          width="1200"
-          loading="lazy"
-        />
-      </div>
-    )}
+          {
+            post.data.description && (
+              <p class="blog-post-description">{post.data.description}</p>
+            )
+          }
 
-    <!-- Content -->
+          {
+            post.data.tags && post.data.tags.length > 0 && (
+              <div class="blog-post-tags">
+                {post.data.tags.map((tag) => (
+                  <span class="blog-post-tag">#{tag}</span>
+                ))}
+              </div>
+            )
+          }
+        </header>
+
+        <!-- Featured Image -->
+        {
+          post.data.image && (
+            <div class="blog-post-image">
+              <Image
+                width={1200}
+                height={600}
+                src={post.data.image}
+                alt={post.data.title}
+                class="blog-post-featured-image"
+                height="510"
+                width="1200"
+                loading="lazy"
+              />
+            </div>
+          )
+        }
+
+        <!-- Content -->
         <div class="blog-post-content" id="blogContent">
-      <Content />
-    </div>
+          <Content />
+        </div>
       </article>
     </main>
 
@@ -125,17 +182,19 @@ const formatDate = (date: Date) => {
       <div class="sidebar-container">
         <h3 class="sidebar-title">Text Tools</h3>
         <div class="tools-list">
-          {tools.map(tool => (
-            <a href={tool.href} class="tool-card">
-              <div class="tool-icon">{tool.icon}</div>
-              <div class="tool-info">
-                <h4 class="tool-name">{tool.name}</h4>
-                <p class="tool-description">{tool.description}</p>
-              </div>
-            </a>
-          ))}
+          {
+            tools.map((tool) => (
+              <a href={tool.href} class="tool-card">
+                <div class="tool-icon">{tool.icon}</div>
+                <div class="tool-info">
+                  <h4 class="tool-name">{tool.name}</h4>
+                  <p class="tool-description">{tool.description}</p>
+                </div>
+              </a>
+            ))
+          }
         </div>
-        
+
         <div class="sidebar-section">
           <h4 class="sidebar-section-title">Quick Links</h4>
           <ul class="sidebar-links">
@@ -149,71 +208,99 @@ const formatDate = (date: Date) => {
   </div>
 
   <!-- Related Posts Section (Full Width) -->
-    {relatedPosts.length > 0 && (
-    <section class="blog-post-related-full">
-      <div class="related-container">
-        <h2 class="blog-post-related-title">Related Articles</h2>
-        <div class="blog-post-related-grid">
-          {relatedPosts.map(relatedPost => (
-            <article class="blog-post-related-card">
-              {relatedPost.data.image && (
-                <a href={`/blog/${relatedPost.slug}`} class="blog-post-related-image-link">
-                  <img 
-                    src={relatedPost.data.image} 
-                    alt={relatedPost.data.title}
-                    class="blog-post-related-image"
-                  />
-                </a>
-              )}
-              <div class="blog-post-related-content">
-                <h3 class="blog-post-related-card-title">
-                  <a href={`/blog/${relatedPost.slug}`} class="blog-post-related-link">
-                    {relatedPost.data.title}
+  {
+    relatedPosts.length > 0 && (
+      <section class="blog-post-related-full">
+        <div class="related-container">
+          <h2 class="blog-post-related-title">Related Articles</h2>
+          <div class="blog-post-related-grid">
+            {relatedPosts.map((relatedPost) => (
+              <article class="blog-post-related-card">
+                {relatedPost.data.image && (
+                  <a
+                    href={`/blog/${relatedPost.slug}`}
+                    class="blog-post-related-image-link"
+                  >
+                    <img
+                      src={relatedPost.data.image}
+                      alt={relatedPost.data.title}
+                      class="blog-post-related-image"
+                    />
                   </a>
-                </h3>
-                <p class="blog-post-related-description">{relatedPost.data.description || ''}</p>
-                <div class="blog-post-related-meta">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="16" y1="2" x2="16" y2="6"></line>
-                    <line x1="8" y1="2" x2="8" y2="6"></line>
-                    <line x1="3" y1="10" x2="21" y2="10"></line>
-                  </svg>
-                  <span>{formatDate(relatedPost.data.pubDate)}</span>
+                )}
+                <div class="blog-post-related-content">
+                  <h3 class="blog-post-related-card-title">
+                    <a
+                      href={`/blog/${relatedPost.slug}`}
+                      class="blog-post-related-link"
+                    >
+                      {relatedPost.data.title}
+                    </a>
+                  </h3>
+                  <p class="blog-post-related-description">
+                    {relatedPost.data.description || ""}
+                  </p>
+                  <div class="blog-post-related-meta">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                      <line x1="16" y1="2" x2="16" y2="6" />
+                      <line x1="8" y1="2" x2="8" y2="6" />
+                      <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                    <span>{formatDate(relatedPost.data.pubDate)}</span>
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
-    )}
+    )
+  }
 </Layout>
 
 <script>
   // Table of Contents functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    const tocToggle = document.getElementById('tocToggle') as HTMLButtonElement | null;
-    const tocNav = document.getElementById('tocNav') as HTMLElement | null;
-    const tocList = document.getElementById('tocList') as HTMLUListElement | null;
-    const blogContent = document.getElementById('blogContent') as HTMLElement | null;
-    
+  document.addEventListener("DOMContentLoaded", function () {
+    const tocToggle = document.getElementById(
+      "tocToggle",
+    ) as HTMLButtonElement | null;
+    const tocNav = document.getElementById("tocNav") as HTMLElement | null;
+    const tocList = document.getElementById(
+      "tocList",
+    ) as HTMLUListElement | null;
+    const blogContent = document.getElementById(
+      "blogContent",
+    ) as HTMLElement | null;
+
     if (!tocToggle || !tocNav || !tocList || !blogContent) return;
 
     // Toggle TOC visibility
-    tocToggle.addEventListener('click', function() {
+    tocToggle.addEventListener("click", function () {
       if (!tocNav) return;
-      tocNav.classList.toggle('toc-collapsed');
-      const isCollapsed = tocNav.classList.contains('toc-collapsed');
-      tocToggle.setAttribute('aria-expanded', (!isCollapsed).toString());
-      
+      tocNav.classList.toggle("toc-collapsed");
+      const isCollapsed = tocNav.classList.contains("toc-collapsed");
+      tocToggle.setAttribute("aria-expanded", (!isCollapsed).toString());
+
       // Update icon
-      const icon = tocToggle.querySelector('.toc-icon') as HTMLElement | null;
+      const icon = tocToggle.querySelector(".toc-icon") as HTMLElement | null;
       if (icon) {
         if (isCollapsed) {
-          icon.innerHTML = '<line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+          icon.innerHTML =
+            '<line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
         } else {
-          icon.innerHTML = '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+          icon.innerHTML =
+            '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
         }
       }
     });
@@ -221,80 +308,85 @@ const formatDate = (date: Date) => {
     // Generate table of contents
     function generateTOC() {
       if (!blogContent || !tocList) return;
-      
-      const headings = blogContent.querySelectorAll('h2, h3, h4');
+
+      const headings = blogContent.querySelectorAll("h2, h3, h4");
       const tocItems: Array<{
         level: number;
         text: string | null;
         id: string;
         element: Element;
       }> = [];
-      
+
       headings.forEach((heading, index) => {
         const level = parseInt(heading.tagName.charAt(1));
         const text = heading.textContent;
         const id = heading.id || `heading-${index}`;
-        
+
         // Add ID if not present
         if (!heading.id) {
           heading.id = id;
         }
-        
+
         tocItems.push({
           level,
           text,
           id,
-          element: heading
+          element: heading,
         });
       });
-      
+
       // Render TOC
-      tocList.innerHTML = tocItems.map(item => {
-        const indent = (item.level - 1) * 0.5;
-        return `
+      tocList.innerHTML = tocItems
+        .map((item) => {
+          const indent = (item.level - 1) * 0.5;
+          return `
           <li class="toc-item toc-level-${item.level}">
-            <a href="#${item.id}" class="toc-link" style="padding-left: ${indent}rem; font-size: ${item.level === 1 ? '16px' : item.level === 2 ? '14px' : item.level === 3 ? '12px' : '10px'}">
-              ${item.text || ''}
+            <a href="#${item.id}" class="toc-link" style="padding-left: ${indent}rem; font-size: ${item.level === 1 ? "16px" : item.level === 2 ? "14px" : item.level === 3 ? "12px" : "10px"}">
+              ${item.text || ""}
             </a>
           </li>
         `;
-      }).join('');
-      
+        })
+        .join("");
+
       // Add click handlers for smooth scrolling
-      tocList.querySelectorAll('.toc-link').forEach(link => {
-        link.addEventListener('click', function(e: Event) {
+      tocList.querySelectorAll(".toc-link").forEach((link) => {
+        link.addEventListener("click", function (e: Event) {
           e.preventDefault();
           const target = e.target as HTMLAnchorElement;
-          const targetId = target.getAttribute('href')?.substring(1);
+          const targetId = target.getAttribute("href")?.substring(1);
           if (!targetId) return;
-          
+
           const targetElement = document.getElementById(targetId);
-          
+
           if (targetElement) {
             const headerHeight = 80; // Adjust based on your header height
-            const elementPosition = (targetElement as HTMLElement).offsetTop - headerHeight;
-            
+            const elementPosition =
+              (targetElement as HTMLElement).offsetTop - headerHeight;
+
             window.scrollTo({
               top: elementPosition,
-              behavior: 'smooth'
+              behavior: "smooth",
             });
           }
         });
       });
     }
-    
+
     // Generate TOC after content is loaded
     generateTOC();
-    
+
     // Highlight current section in TOC
     function highlightCurrentSection() {
       if (!blogContent || !tocList) return;
-      
-      const headings = Array.from(blogContent.querySelectorAll('h2, h3, h4, h5, h6'));
+
+      const headings = Array.from(
+        blogContent.querySelectorAll("h2, h3, h4, h5, h6"),
+      );
       const scrollPosition = window.scrollY + 100;
-      
+
       let currentHeading = headings[0] as HTMLElement;
-      
+
       for (let i = headings.length - 1; i >= 0; i--) {
         const heading = headings[i] as HTMLElement;
         if (heading.offsetTop <= scrollPosition) {
@@ -302,24 +394,26 @@ const formatDate = (date: Date) => {
           break;
         }
       }
-      
+
       // Remove previous active class
-      tocList.querySelectorAll('.toc-link').forEach(link => {
-        link.classList.remove('toc-active');
+      tocList.querySelectorAll(".toc-link").forEach((link) => {
+        link.classList.remove("toc-active");
       });
-      
+
       // Add active class to current section
       if (currentHeading) {
-        const activeLink = tocList.querySelector(`a[href="#${currentHeading.id}"]`) as HTMLAnchorElement | null;
+        const activeLink = tocList.querySelector(
+          `a[href="#${currentHeading.id}"]`,
+        ) as HTMLAnchorElement | null;
         if (activeLink) {
-          activeLink.classList.add('toc-active');
+          activeLink.classList.add("toc-active");
         }
       }
     }
-    
+
     // Update TOC highlighting on scroll
-    window.addEventListener('scroll', highlightCurrentSection);
-    
+    window.addEventListener("scroll", highlightCurrentSection);
+
     // Initial highlight
     highlightCurrentSection();
   });
@@ -360,7 +454,6 @@ const formatDate = (date: Date) => {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-    
   }
 
   .toc-title {
@@ -407,11 +500,11 @@ const formatDate = (date: Date) => {
   .toc-link {
     display: block;
     color: rgb(var(--gray));
-    text-decoration: none;
+    text-decoration: underline;
     padding: 0rem;
     border-radius: 8px;
     transition: all 0.2s ease;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     line-height: 1.1;
   }
 
@@ -427,12 +520,30 @@ const formatDate = (date: Date) => {
     font-weight: 500;
   }
 
-  .toc-level-1 { font-weight: 500; }
-  .toc-level-2 { font-weight: 400; color: #ffd329;}
-  .toc-level-3 { font-weight: 400; font-size: 0.60rem;}
-  .toc-level-4 { font-weight: 400; font-size: 0.8rem; }
-  .toc-level-5 { font-weight: 400; font-size: 0.75rem; }
-  .toc-level-6 { font-weight: 400; font-size: 0.7rem; }
+  .toc-level-1 {
+    font-weight: 500;
+  }
+  .toc-level-2 {
+    font-weight: 400;
+    color: #ffd329;
+    font-size: 16px;
+  }
+  .toc-level-3 {
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .toc-level-4 {
+    font-weight: 400;
+    font-size: 0.8rem;
+  }
+  .toc-level-5 {
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+  .toc-level-6 {
+    font-weight: 400;
+    font-size: 0.7rem;
+  }
 
   /* Main Content */
   .blog-post-main {
@@ -540,7 +651,7 @@ const formatDate = (date: Date) => {
   .sidebar-links li {
     margin-bottom: 0.5rem;
   }
-  
+
   .sidebar-link {
     display: block;
     color: rgb(var(--gray));
@@ -568,7 +679,6 @@ const formatDate = (date: Date) => {
     max-width: 1200px;
     margin: 0 auto;
   }
-
 
   /* Blog Post Content - Using custom.css for typography */
   .blog-post-content {
@@ -657,7 +767,6 @@ const formatDate = (date: Date) => {
 
   /* List styling handled by custom.css */
 
-
   .blog-post-content a {
     color: rgb(255, 215, 0);
     text-decoration: underline;
@@ -667,6 +776,7 @@ const formatDate = (date: Date) => {
   }
 
   .blog-post-content a:hover {
+    text-decoration: underline;
     color: rgb(255, 193, 7);
     text-decoration-color: rgba(255, 193, 7, 0.6);
   }
@@ -707,7 +817,12 @@ const formatDate = (date: Date) => {
   .blog-post-content hr {
     border: none;
     height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.5), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 215, 0, 0.5),
+      transparent
+    );
     margin: 3rem 0;
   }
 
@@ -1003,4 +1118,3 @@ const formatDate = (date: Date) => {
     }
   }
 </style>
-
