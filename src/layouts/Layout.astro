@@ -34,6 +34,7 @@ const { title, description, image='og-image.webp' } = Astro.props;
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL(image, Astro.url)} />
     <meta name="robots" content="index, follow">
+	<meta property="og:site_name" content="Invisible Text" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={title} />
