@@ -3,40 +3,53 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
+import partytown from '@astrojs/partytown';
+
+
 import vercel from '@astrojs/vercel';
 
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), sitemap({
+  integrations: [
+    react(), 
+    sitemap({
       i18n: {
         defaultLocale: 'en',
         locales: {
-          'en': 'English',
-          'es': 'Spanish',
-          'fr': 'French',
-          'de': 'German',
-          'pt': 'Portuguese',
-          'ru': 'Russian',
-          'ko': 'Korean',
-          'tr': 'Turkish',
-          'nl': 'Dutch',
-          'it': 'Italian',
-          'id': 'Indonesian',
-          'my': 'Malay',
-          'fi': 'Finnish',
-          'ja': 'Japanese',
-          'hu': 'Hungarian',
-          'vi': 'Vietnamese',
-          'th': 'Thai',
+          'en': 'en',
+          'es': 'es',
+          'fr': 'fr',
+          'de': 'de',
+          'pt': 'pt',
+          'ru': 'ru',
+          'ko': 'ko',
+          'tr': 'tr',
+          'nl': 'nl',
+          'it': 'it',
+          'id': 'id',
+          'my': 'my',
+          'fi': 'fi',
+          'ja': 'ja',
+          'hu': 'hu',
+          'vi': 'vi',
+          'th': 'th',
         }
       }
-    }), tailwind(), mdx()
+    }), 
+    tailwind(), 
+    mdx(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push", "gtag"],
+        debug: false
+      }
+    })
   ],
 
   output: 'server',
   adapter: vercel(),
-  site: 'https://www.invisibletext.me/',
+  site: 'https://www.invisibletext.me',
 
   i18n: {
     locales: [
@@ -49,6 +62,6 @@ export default defineConfig({
   },
 
   trailingSlash: 'never',
-  
   compressHtml: false,
+  adapter: vercel(),
 });

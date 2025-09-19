@@ -13,10 +13,10 @@ const navigation = [
 ];
 ---
 
-<nav class="fixed top-2.5 left-0 right-0 w-full z-50 animate-[slideDown_0.6s_cubic-bezier(0.4,0,0.2,1)]">
-  <div class="max-w-1200 mx-auto p-2 flex items-center justify-between backdrop-blur-md border border-yellow-400/20 rounded-xl shadow-[0_8px_32px_rgba(18,28,65,0.4),inset_0_1px_0_rgba(255,215,0,0.2),inset_0_-1px_0_rgba(18,28,65,0.2)]">
-    <a href={lang === 'en' ?  '/' : `/${lang}`} class="flex items-center text-xl font-bold text-white no-underline relative overflow-hidden hover:text-yellow-400 transition-colors duration-300">
-      <img src="/images/logo.webp" alt="Invisible Text Logo" class="w-10 h-10 mr-1" width="40" height="40" loading="eager" decoding="async">
+<nav class="fixed top-2.5 left-0 right-0 w-full z-50 animate-[slideDown_0.6s_cubic-bezier(0.4,0,0.2,1)] px-4">
+  <div class="max-w-1200 mx-auto p-2 flex items-center justify-between backdrop-blur-md bg-navy-800 border border-yellow-400 rounded-xl shadow-[0_8px_32px_rgba(18,28,65,0.4),inset_0_1px_0_rgba(255,215,0,0.2),inset_0_-1px_0_rgba(18,28,65,0.2)]">
+    <a href={lang === 'en' ?  '/' : `/${lang}`} class="bg-transparent flex items-center text-xl font-bold text-white no-underline relative overflow-hidden hover:text-yellow-400 transition-colors duration-300">
+      <img src="/images/glass.png" alt="Invisible Text Logo" class="bg-navy-900 rounded-lg w-10 h-10 mr-1" width="40" height="40" loading="eager" decoding="async">
       InvisibleText
     </a>
     
@@ -61,8 +61,9 @@ const navigation = [
   /* Dark theme optimizations */
   @media (prefers-color-scheme: dark) {
     nav > div {
-      background: rgba(255, 215, 0, 0.05);
-      border-color: rgba(255, 215, 0, 0.15);
+      border-color: #ffd70026;
+      background: var(--yellow-300);
+      /* background: rgba(255, 215, 0, 0.05); */
     }
     
     .bg-yellow-400\/8 {

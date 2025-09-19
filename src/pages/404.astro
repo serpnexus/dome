@@ -1,0 +1,55 @@
+---
+// src/pages/404.astro - 404 page
+import Layout from '../layouts/Blog.astro';
+import { fetchPosts } from '../lib/wordpress';
+import { formatDate } from '../lib/wordpress';
+
+const recentPosts = await fetchPosts({ per_page: 3 });
+---
+
+<Layout title="Page Not Found" description='The page you are looking for does not exist.'>
+  <div class="container mx-auto px-4 py-16 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h1 class="text-6xl font-bold text-gray-300 mb-4">404</h1>
+      <h2 class="text-3xl font-bold mb-6">Page Not Found</h2>
+      <p class="text-xl text-gray-600 mb-8">
+        Sorry, we couldn't find the page you're looking for.
+      </p>
+      
+      <div class="space-x-4 mb-12">
+        <a 
+          href="/"
+          class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          Go Home
+        </a>
+        <a 
+          href="/blog"
+          class="inline-block border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+        >
+          Browse Blog
+        </a>
+      </div>
+      
+      <!-- Recent Posts -->
+      {recentPosts && recentPosts.length > 0 && (
+        <div class="text-left">
+          <h3 class="text-2xl font-bold mb-6">Recent Posts</h3>
+          <div class="space-y-4">
+            {recentPosts.map((post: { slug: any; title: { rendered: unknown; }; date: any; }) => (
+              <article class="border-b pb-4 last:border-b-0">
+                <a href={`/blog/${post.slug}`} class="group block">
+                  <h4 class="font-semibold group-hover:text-blue-600 transition-colors" 
+                      set:html={post.title.rendered} />
+                  <p class="text-gray-600 text-sm mt-1">
+                    {formatDate(post.date)}
+                  </p>
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</Layout>

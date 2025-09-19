@@ -1,0 +1,44 @@
+---
+// src/components/Hero.astro - Hero section
+const { 
+  title, 
+  subtitle, 
+  ctaText, 
+  ctaLink, 
+  backgroundImage,
+  className = "py-20 md:py-32" 
+} = Astro.props;
+---
+
+<section class={`relative ${className} bg-gradient-to-r from-white/20 to-white/5 text-white`}>
+  {backgroundImage && (
+    <div class="absolute inset-0 opacity-20">
+      <img 
+        src={backgroundImage}
+        alt=""
+        class="w-full h-full object-cover"
+      />
+    </div>
+  )}
+  
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      {title && (
+        <h1 class="text-4xl md:text-6xl font-bold mb-6" set:html={title} />
+      )}
+      
+      {subtitle && (
+        <p class="text-xl md:text-2xl mb-8 opacity-90" set:html={subtitle} />
+      )}
+      
+      {ctaText && ctaLink && (
+        <a 
+          href={ctaLink}
+          class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+        >
+          {ctaText}
+        </a>
+      )}
+    </div>
+  </div>
+</section>

@@ -1,349 +1,41 @@
 ---
-import Layout from '../../layouts/StaticPageLayout.astro';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
-import { Image } from 'astro:assets';
+// src/pages/index.astro - Homepage
+import Layout from '../../layouts/Blog.astro';
+import Hero from '../../components/blog/Hero.astro';
+import FeaturedPosts from '../../components/blog/FeaturedPosts.astro';
+import { fetchPageBySlug, fetchPosts, getHeroData, getSEOData } from '../../lib/wordpress.js';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const homepage = await fetchPageBySlug('home');
+const featuredPosts = await fetchPosts({ per_page: 3 });
+const heroData = homepage ? getHeroData(homepage) : {};
+const seoData = homepage ? getSEOData(homepage) : {};
 ---
 
-<Layout title="Blog - InvisibleText.me" description='Explore our articles about invisible characters, Unicode, and creative text formatting'>
-  <main class="blog-main">
-    <section class="blog-section">
-      <div class="blog-header">
-        <h1 class="blog-title">Blog</h1>
-        <p class="blog-subtitle">Explore our articles about invisible characters, Unicode, and creative text formatting</p>
+<Layout 
+  title={seoData.title || "Welcome to Our Site"}
+  description={seoData.description || "Your amazing website"}
+  image={seoData.image}
+>
+  <!-- Hero Section -->
+  <Hero 
+    title={heroData.title || homepage?.title?.rendered || "Welcome"}
+    subtitle={heroData.subtitle || homepage?.excerpt?.rendered}
+    ctaText={heroData.cta_text || "Learn More"}
+    ctaLink={heroData.cta_link || "#"}
+    backgroundImage={homepage?.featured_image_data?.sizes?.large?.[0]}
+  />
+  
+  <!-- Featured Posts -->
+  {featuredPosts && featuredPosts.length > 0 && (
+    <FeaturedPosts posts={featuredPosts} />
+  )}
+  
+  <!-- Page Content -->
+  {homepage && homepage.content?.rendered && (
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose prose-lg max-w-none" set:html={homepage.content.rendered} />
       </div>
-      
-      <ul class="blog-grid">
-        {
-          posts.map((post, index) => (
-            <li class={`blog-item ${index === 0 ? 'featured' : ''}`}>
-              <a href={`/blog/${post.slug}`} class="blog-link">
-                {post.data.image && (
-                  <div class="blog-image-container">
-                    <Image 
-                      width={720} 
-                      height={360} 
-                      src={post.data.image} 
-                      alt={post.data.title}
-                      class="blog-image"
-                    />
-                  </div>
-                )}
-                <div class="blog-content">
-                  <h4 class="blog-title-text">{post.data.title}</h4>
-                  <p class="blog-date">
-                    <FormattedDate date={post.data.pubDate} />
-                  </p>
-                  {post.data.description && (
-                    <p class="blog-description">{post.data.description}</p>
-                  )}
-                </div>
-              </a>
-            </li>
-          ))
-        }
-      </ul>
     </section>
-  </main>
+  )}
 </Layout>
-
-<style>
-  .blog-main {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-
-  .blog-section {
-    padding: 2rem 0;
-  }
-
-  .blog-header {
-    text-align: center;
-    margin-bottom: 3rem;
-    padding: 0 1rem;
-  }
-
-  .blog-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    margin: 0 0 1rem 0;
-    color: rgb(var(--black));
-    line-height: 1.2;
-  }
-
-  .blog-subtitle {
-    font-size: clamp(1rem, 3vw, 1.25rem);
-    color: rgb(var(--gray));
-    margin: 0;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  .blog-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .blog-item {
-    width: 100%;
-  }
-
-  .blog-item.featured {
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-
-  .blog-link {
-    display: block;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border-radius: 16px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .blog-link:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .blog-image-container {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .blog-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-  }
-
-  .blog-link:hover .blog-image {
-    transform: scale(1.05);
-  }
-
-  .blog-content {
-    padding: 1.5rem;
-  }
-
-  .blog-title-text {
-    margin: 0 0 0.75rem 0;
-    color: rgb(var(--black));
-    line-height: 1.3;
-    font-size: clamp(1.25rem, 4vw, 1rem);
-    font-weight: 600;
-  }
-
-  .blog-item.featured .blog-title-text {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    font-weight: 700;
-  }
-
-  .blog-date {
-    margin: 0 0 0.75rem 0;
-    color: rgb(var(--gray));
-    font-size: 0.875rem;
-    font-weight: 500;
-  }
-
-  .blog-description {
-    margin: 0;
-    color: rgb(var(--gray));
-    font-size: 0.875rem;
-    line-height: 1.6;
-    opacity: 0.8;
-  }
-
-  .blog-link:hover .blog-title-text,
-  .blog-link:hover .blog-date {
-    color: rgb(var(--accent));
-  }
-
-  /* Tablet and larger screens */
-  @media (min-width: 768px) {
-    .blog-main {
-      padding: 0 2rem;
-    }
-
-    .blog-section {
-      padding: 3rem 0;
-    }
-
-    .blog-header {
-      margin-bottom: 4rem;
-    }
-
-    .blog-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2.5rem;
-    }
-
-    .blog-item.featured {
-      grid-column: 1 / -1;
-    }
-
-    .blog-content {
-      padding: 2rem;
-    }
-  }
-
-  /* Desktop and larger screens */
-  @media (min-width: 1024px) {
-    .blog-main {
-      padding: 0 3rem;
-    }
-
-    .blog-section {
-      padding: 4rem 0;
-    }
-
-    .blog-grid {
-      gap: 3rem;
-    }
-
-    .blog-content {
-      padding: 2.5rem;
-    }
-  }
-
-  /* Large desktop screens */
-  @media (min-width: 1280px) {
-    .blog-main {
-      padding: 0 4rem;
-    }
-
-    .blog-grid {
-      gap: 3.5rem;
-    }
-  }
-
-  /* Mobile-specific improvements */
-  @media (max-width: 767px) {
-    .blog-main {
-      padding: 0 1rem;
-    }
-
-    .blog-section {
-      padding: 1.5rem 0;
-    }
-
-    .blog-header {
-      margin-bottom: 2rem;
-      padding: 0 0.5rem;
-    }
-
-    .blog-grid {
-      gap: 1.5rem;
-    }
-
-    .blog-content {
-      padding: 1.25rem;
-    }
-
-    .blog-title-text {
-      font-size: 1.25rem;
-    }
-
-    .blog-item.featured .blog-title-text {
-      font-size: 1.5rem;
-    }
-
-    .blog-date {
-      font-size: 0.8rem;
-    }
-
-    .blog-description {
-      font-size: 0.8rem;
-    }
-  }
-
-  /* Small mobile devices */
-  @media (max-width: 480px) {
-    .blog-main {
-      padding: 0 0.75rem;
-    }
-
-    .blog-section {
-      padding: 1rem 0;
-    }
-
-    .blog-header {
-      margin-bottom: 1.5rem;
-    }
-
-    .blog-grid {
-      gap: 1rem;
-    }
-
-    .blog-content {
-      padding: 1rem;
-    }
-
-    .blog-title-text {
-      font-size: 1.125rem;
-    }
-
-    .blog-item.featured .blog-title-text {
-      font-size: 1.375rem;
-    }
-  }
-
-  /* Landscape mobile orientation */
-  @media (max-width: 767px) and (orientation: landscape) {
-    .blog-header {
-      margin-bottom: 1.5rem;
-    }
-
-    .blog-grid {
-      gap: 1rem;
-    }
-  }
-
-  /* High DPI displays */
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .blog-image {
-      image-rendering: -webkit-optimize-contrast;
-      image-rendering: crisp-edges;
-    }
-  }
-
-  /* Reduced motion preferences */
-  @media (prefers-reduced-motion: reduce) {
-    .blog-link,
-    .blog-image {
-      transition: none;
-    }
-
-    .blog-link:hover {
-      transform: none;
-    }
-  }
-
-  /* Dark mode support */
-  @media (prefers-color-scheme: dark) {
-    .blog-link {
-      background: rgba(0, 0, 0, 0.3);
-      border-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .blog-link:hover {
-      background: rgba(0, 0, 0, 0.4);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-  }
-</style>

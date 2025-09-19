@@ -28,42 +28,30 @@ const nextChar = currentIndex < sortedChars.length - 1 ? sortedChars[currentInde
 
 <Layout title={`${entry.data.title} - InvisibleText.me`} description={entry.data.description}>
   <div class="max-w-1200 mx-auto px-4 py-8">
-    <div class="max-w-4xl mx-auto">
-      <div class="mb-8">
-        <a href="/unicode" class="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors duration-200 mb-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-8 mt-6">
+        <a href="/unicode" class="bg-yellow-100/80 p-2 rounded-md inline-flex items-center gap-2 text-black hover:text-black hover:bg-yellow-100 transition-colors duration-200 mb-6">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m15 18-6-6 6-6"></path>
           </svg>
           Back to Unicode Characters
         </a>
         
-        <h1 class="text-4xl font-bold text-yellow-400 mb-4">{entry.data.title}</h1>
-        
-        <p class="text-gray-300 text-lg leading-relaxed">
-          {entry.data.description}
-        </p>
+        <div class="py-2">
+          <h1 class="text-4xl font-bold text-yellow-400 mb-4">{entry.data.title}</h1>
+          
+          <p class="text-gray-300 text-lg leading-relaxed">
+            {entry.data.description}
+          </p>
+        </div>
       </div>
       
+      <!-- Mobile: Info column first, then content -->
+      <!-- Desktop: Content column first (left), then info column (right) -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div class="lg:col-span-2">
-          <div class="bg-navy-800 border border-navy-700 rounded-xl p-8 mb-8">
-            <Content />
-            
-            {entry.data.useCases && entry.data.useCases.length > 0 && (
-              <div class="mt-8 pt-8 border-t border-navy-700">
-                <h3 class="text-2xl font-semibold text-white mb-4">Common Use Cases</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-300">
-                  {entry.data.useCases.map(useCase => (
-                    <li>{useCase}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </div>
-        </div>
-        
-        <div class="lg:col-span-1">
-          <div class="bg-navy-800 border border-navy-700 rounded-xl p-6 sticky top-8">
+        <!-- Info Column - Order 1 on mobile, Order 2 on desktop -->
+        <div class="lg:col-span-1 order-1 lg:order-2">
+          <div class="bg-navy-800 border border-navy-700 rounded-xl p-6 lg:sticky lg:top-8">
             <div class="mb-6 pb-4 border-b border-navy-700">
               <h2 class="text-2xl font-bold text-white mb-3">{entry.data.title}</h2>
               <div class="inline-block bg-navy-700 text-yellow-400 font-mono px-3 py-2 rounded text-sm">{entry.data.code}</div>
@@ -102,7 +90,7 @@ const nextChar = currentIndex < sortedChars.length - 1 ? sortedChars[currentInde
             
             <div class="mt-8 pt-6 border-t border-navy-700">
               {prevChar && (
-                <a href={`/unicode/${prevChar.slug}`} class="flex items-center gap-3 bg-navy-800 border border-navy-700 rounded-lg p-4 text-gray-300 transition-all duration-200 hover:border-yellow-400 hover:text-white hover:-translate-y-1 mb-3">
+                <a href={`/unicode/${prevChar.slug}`} class="flex items-center gap-3 bg-navy-900 border border-white/10 rounded-lg p-4 text-gray-300 transition-all duration-200 hover:border-yellow-400 hover:text-white hover:-translate-y-1 mb-3">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="m15 18-6-6 6-6"></path>
                   </svg>
@@ -111,7 +99,7 @@ const nextChar = currentIndex < sortedChars.length - 1 ? sortedChars[currentInde
               )}
               
               {nextChar && (
-                <a href={`/unicode/${nextChar.slug}`} class="flex items-center justify-end gap-3 bg-navy-800 border border-navy-700 rounded-lg p-4 text-gray-300 transition-all duration-200 hover:border-yellow-400 hover:text-white hover:-translate-y-1">
+                <a href={`/unicode/${nextChar.slug}`} class="flex items-center justify-end gap-3 bg-white/10 border border-white/10 rounded-lg p-4 text-gray-300 transition-all duration-200 hover:border-yellow-400 hover:text-white hover:-translate-y-1">
                   <span>Next</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="m9 18 6-6-6-6"></path>
@@ -119,6 +107,24 @@ const nextChar = currentIndex < sortedChars.length - 1 ? sortedChars[currentInde
                 </a>
               )}
             </div>
+          </div>
+        </div>
+        
+        <!-- Content Column - Order 2 on mobile, Order 1 on desktop -->
+        <div class="lg:col-span-2 order-2 lg:order-1">
+          <div class="bg-navy-800 border border-navy-700 rounded-xl p-8">
+            <Content />
+            
+            {entry.data.useCases && entry.data.useCases.length > 0 && (
+              <div class="mt-8 pt-8 border-t border-navy-700">
+                <h3 class="text-2xl font-semibold text-white mb-4">Common Use Cases</h3>
+                <ul class="list-disc list-inside space-y-2 text-gray-300">
+                  {entry.data.useCases.map(useCase => (
+                    <li>{useCase}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </div>

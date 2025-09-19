@@ -5,11 +5,16 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+
 # Build outputs
 dist/
 .astro/
 .output/
 build/
+
+
+
+config/
 
 # Environment variables
 .env

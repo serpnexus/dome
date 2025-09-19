@@ -16,7 +16,7 @@ const { title, description, pubDate, author, authorImage, slug, tags = [], image
 const formattedDate = new Date(pubDate).toISOString().slice(0, 10);
 ---
 
-<article class="overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-md">
+<article class="overflow-hidden rounded-lg border border-gray-200 bg-white/50 shadow-sm transition-all duration-300 hover:shadow-md">
   <a href={`/blog/${slug}/`} class="block overflow-hidden hover:text-emerald-400">
     {/* Image Section */}
     <div class="relative aspect-video w-full overflow-hidden">

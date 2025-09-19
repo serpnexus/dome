@@ -1,0 +1,29 @@
+---
+// src/components/FeaturedPosts.astro - Featured posts section
+import BlogCard from './BlogCard.astro';
+
+const { posts, title = "Latest Posts" } = Astro.props;
+---
+
+{posts && posts.length > 0 && (
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">{title}</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post: unknown) => (
+          <BlogCard post={post} />
+        ))}
+      </div>
+      
+      <div class="text-center mt-12">
+        <a 
+          href="/blog"
+          class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          View All Posts
+        </a>
+      </div>
+    </div>
+  </section>
+)}
