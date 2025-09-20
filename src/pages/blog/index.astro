@@ -1,41 +1,145 @@
 ---
-// src/pages/index.astro - Homepage
+// src/pages/blog/index.astro - Enhanced blog listing page
 import Layout from '../../layouts/Blog.astro';
-import Hero from '../../components/blog/Hero.astro';
-import FeaturedPosts from '../../components/blog/FeaturedPosts.astro';
-import { fetchPageBySlug, fetchPosts, getHeroData, getSEOData } from '../../lib/wordpress.js';
+import BlogCard from '../../components/blog/BlogCard.astro';
+import FeaturedPost from '../../components/blog/FeaturedPost.astro';
+import CategoryCarousel from '../../components/blog/CategoryCarousel.astro';
+import BlogFilter from '../../components/blog/BlogFilter.astro';
+import Pagination from '../../components/blog/Pagination.astro';
+import { 
+  fetchPosts, 
+  fetchFeaturedPosts, 
+  getCategories, 
+  getTags,
+  getSEOData 
+} from '../../lib/wordpress.js';
+import { getCollection } from 'astro:content';
 
-const homepage = await fetchPageBySlug('home');
-const featuredPosts = await fetchPosts({ per_page: 3 });
-const heroData = homepage ? getHeroData(homepage) : {};
-const seoData = homepage ? getSEOData(homepage) : {};
+// Get URL parameters for pagination and filtering
+const url = new URL(Astro.request.url);
+const currentPage = parseInt(url.searchParams.get('page') || '1');
+const categoryFilter = url.searchParams.get('category') || 'all';
+const tagFilter = url.searchParams.get('tag') || 'all';
+const postsPerPage = 9;
+
+// Try to fetch WordPress data first
+const wpFeaturedPosts = await fetchFeaturedPosts({ per_page: 1 });
+const wpPosts = await fetchPosts({ 
+  per_page: postsPerPage,
+  page: currentPage,
+  ...(categoryFilter !== 'all' && { categories: categoryFilter }),
+  ...(tagFilter !== 'all' && { tags: tagFilter })
+});
+
+let featuredPost = null;
+let displayPosts = wpPosts && wpPosts.length > 0 ? wpPosts : null;
+let totalPages = 1;
+
+if (wpFeaturedPosts && wpFeaturedPosts.length > 0) {
+  featuredPost = wpFeaturedPosts[0];
+}
+
+// Fallback to Astro content if WordPress is not available
+if (!displayPosts) {
+  const astroPosts = (await getCollection('blog'))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  
+  // Convert Astro posts to WordPress-like format
+  displayPosts = astroPosts.map(post => ({
+    id: post.id,
+    slug: post.slug,
+    title: { rendered: post.data.title },
+    excerpt: { rendered: post.data.description || '' },
+    date: post.data.pubDate.toISOString(),
+    featured_media: null,
+    _embedded: {},
+    astroData: post.data
+  }));
+  
+  // Pagination for Astro content
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
+  displayPosts = displayPosts.slice(startIndex, endIndex);
+  totalPages = Math.ceil(astroPosts.length / postsPerPage);
+  
+  // Set featured post from Astro content
+  if (!featuredPost && astroPosts.length > 0) {
+    featuredPost = {
+      id: astroPosts[0].id,
+      slug: astroPosts[0].slug,
+      title: { rendered: astroPosts[0].data.title },
+      excerpt: { rendered: astroPosts[0].data.description || '' },
+      date: astroPosts[0].data.pubDate.toISOString(),
+      featured_media: null,
+      _embedded: {},
+      astroData: astroPosts[0].data
+    };
+  }
+}
+
+const seoData = {
+  title: "Blog - Latest Posts",
+  description: "Read our latest blog posts and articles",
+  image: "/og-image.webp"
+};
 ---
 
 <Layout 
-  title={seoData.title || "Welcome to Our Site"}
-  description={seoData.description || "Your amazing website"}
+  title={seoData.title}
+  description={seoData.description}
   image={seoData.image}
 >
-  <!-- Hero Section -->
-  <Hero 
-    title={heroData.title || homepage?.title?.rendered || "Welcome"}
-    subtitle={heroData.subtitle || homepage?.excerpt?.rendered}
-    ctaText={heroData.cta_text || "Learn More"}
-    ctaLink={heroData.cta_link || "#"}
-    backgroundImage={homepage?.featured_image_data?.sizes?.large?.[0]}
-  />
-  
-  <!-- Featured Posts -->
-  {featuredPosts && featuredPosts.length > 0 && (
-    <FeaturedPosts posts={featuredPosts} />
-  )}
-  
-  <!-- Page Content -->
-  {homepage && homepage.content?.rendered && (
-    <section class="py-16">
-      <div class="container mx-auto px-4">
-        <div class="prose prose-lg max-w-none" set:html={homepage.content.rendered} />
+  <div class="container mx-auto px-4 py-16">
+    <!-- Page Header -->
+    <header class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">Our Blog</h1>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+        Discover insights, tutorials, and updates from our team
+      </p>
+    </header>
+    
+    <!-- Featured Post Section -->
+    {featuredPost && (
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-8 text-white">Featured Post</h2>
+        <FeaturedPost post={featuredPost} />
+      </section>
+    )}
+    
+    <!-- Category Carousel -->
+    <CategoryCarousel />
+    
+    <!-- Blog Filter -->
+    <BlogFilter />
+    
+    <!-- Posts Grid -->
+    {displayPosts && displayPosts.length > 0 ? (
+      <>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          {displayPosts.map((post: any) => (
+            <div data-post data-category="all" data-tags="all">
+              <BlogCard post={post} />
+            </div>
+          ))}
+        </div>
+        
+        <!-- Pagination -->
+        <Pagination 
+          currentPage={currentPage}
+          totalPages={totalPages}
+          baseUrl="/blog"
+        />
+      </>
+    ) : (
+      <div class="text-center py-16">
+        <div class="text-gray-400 text-lg mb-4">
+          <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2">No posts found</h3>
+          <p>Check back later for new content!</p>
+        </div>
       </div>
-    </section>
-  )}
+    )}
+  </div>
 </Layout>

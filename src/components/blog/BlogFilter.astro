@@ -1,0 +1,141 @@
+---
+// src/components/blog/BlogFilter.astro - Blog filter component
+import { fetchCategories, fetchTags, getCategoryInfo, getTagInfo } from '../../lib/wordpress.js';
+
+// Try to fetch WordPress categories and tags
+const wpCategories = await fetchCategories({ per_page: 20 });
+const wpTags = await fetchTags({ per_page: 20 });
+
+// Fallback data if WordPress is not available
+const fallbackCategories = [
+  { id: 1, name: 'Technology', slug: 'technology', count: 12 },
+  { id: 2, name: 'Tutorials', slug: 'tutorials', count: 8 },
+  { id: 3, name: 'News', slug: 'news', count: 15 },
+  { id: 4, name: 'Reviews', slug: 'reviews', count: 6 }
+];
+
+const fallbackTags = [
+  { id: 1, name: 'JavaScript', slug: 'javascript', count: 5 },
+  { id: 2, name: 'React', slug: 'react', count: 3 },
+  { id: 3, name: 'Tutorial', slug: 'tutorial', count: 8 },
+  { id: 4, name: 'Guide', slug: 'guide', count: 6 }
+];
+
+const displayCategories = wpCategories && wpCategories.length > 0 ? wpCategories : fallbackCategories;
+const displayTags = wpTags && wpTags.length > 0 ? wpTags : fallbackTags;
+---
+
+<section class="py-8 border-b border-white/10">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col lg:flex-row gap-6 items-center">
+      <!-- Category Dropdown -->
+      <div class="flex-1">
+        <label for="category-filter" class="block text-sm font-medium text-white mb-2">Filter by Category</label>
+        <select 
+          id="category-filter" 
+          class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+          data-filter="category"
+        >
+          <option value="all" class="bg-gray-800 text-white">All Categories</option>
+          {displayCategories.map((category: any) => {
+            const categoryInfo = getCategoryInfo(category);
+            return (
+              <option value={categoryInfo.slug} class="bg-gray-800 text-white">
+                {categoryInfo.name} ({categoryInfo.count})
+              </option>
+            );
+          })}
+        </select>
+      </div>
+      
+      <!-- Tag Dropdown -->
+      <div class="flex-1">
+        <label for="tag-filter" class="block text-sm font-medium text-white mb-2">Filter by Tag</label>
+        <select 
+          id="tag-filter" 
+          class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+          data-filter="tag"
+        >
+          <option value="all" class="bg-gray-800 text-white">All Tags</option>
+          {displayTags.map((tag: any) => {
+            const tagInfo = getTagInfo(tag);
+            return (
+              <option value={tagInfo.slug} class="bg-gray-800 text-white">
+                #{tagInfo.name} ({tagInfo.count})
+              </option>
+            );
+          })}
+        </select>
+      </div>
+      
+      <!-- Clear Filters -->
+      <div class="flex items-end">
+        <button 
+          class="px-6 py-3 bg-gray-600 text-white rounded-lg text-sm font-medium hover:bg-gray-700 transition-colors"
+          onclick="clearFilters()"
+        >
+          Clear All
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Filter functionality
+  function filterPosts(category = 'all', tag = 'all') {
+    const posts = document.querySelectorAll('[data-post]');
+    
+    posts.forEach((post: HTMLElement) => {
+      const postCategory = post.dataset.category || '';
+      const postTags = (post.dataset.tags || '').split(',');
+      
+      const categoryMatch = category === 'all' || postCategory === category;
+      const tagMatch = tag === 'all' || postTags.includes(tag);
+      
+      if (categoryMatch && tagMatch) {
+        post.style.display = 'block';
+      } else {
+        post.style.display = 'none';
+      }
+    });
+    
+    // Update active filter buttons
+    updateActiveFilters(category, tag);
+  }
+  
+  function updateActiveFilters(activeCategory: string, activeTag: string) {
+    // Update dropdown values
+    const categorySelect = document.getElementById('category-filter') as HTMLSelectElement;
+    const tagSelect = document.getElementById('tag-filter') as HTMLSelectElement;
+    
+    if (categorySelect) categorySelect.value = activeCategory;
+    if (tagSelect) tagSelect.value = activeTag;
+  }
+  
+  function clearFilters() {
+    filterPosts('all', 'all');
+  }
+  
+  // Add event listeners
+  document.addEventListener('DOMContentLoaded', () => {
+    const categorySelect = document.getElementById('category-filter') as HTMLSelectElement;
+    const tagSelect = document.getElementById('tag-filter') as HTMLSelectElement;
+    
+    if (categorySelect) {
+      categorySelect.addEventListener('change', (e) => {
+        const target = e.target as HTMLSelectElement;
+        const currentTag = tagSelect?.value || 'all';
+        filterPosts(target.value, currentTag);
+      });
+    }
+    
+    if (tagSelect) {
+      tagSelect.addEventListener('change', (e) => {
+        const target = e.target as HTMLSelectElement;
+        const currentCategory = categorySelect?.value || 'all';
+        filterPosts(currentCategory, target.value);
+      });
+    }
+  });
+</script>

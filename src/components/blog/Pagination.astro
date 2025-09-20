@@ -1,0 +1,118 @@
+---
+// src/components/blog/Pagination.astro - Pagination component
+export interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl: string;
+}
+
+const { currentPage, totalPages, baseUrl } = Astro.props;
+
+// Calculate page numbers to show
+const getPageNumbers = (current: number, total: number) => {
+  const delta = 2;
+  const range = [];
+  const rangeWithDots = [];
+
+  for (let i = Math.max(2, current - delta); i <= Math.min(total - 1, current + delta); i++) {
+    range.push(i);
+  }
+
+  if (current - delta > 2) {
+    rangeWithDots.push(1, '...');
+  } else {
+    rangeWithDots.push(1);
+  }
+
+  rangeWithDots.push(...range);
+
+  if (current + delta < total - 1) {
+    rangeWithDots.push('...', total);
+  } else if (total > 1) {
+    rangeWithDots.push(total);
+  }
+
+  return rangeWithDots;
+};
+
+const pageNumbers = getPageNumbers(currentPage, totalPages);
+---
+
+{totalPages > 1 && (
+  <nav class="flex justify-center items-center mt-12" aria-label="Pagination">
+    <div class="flex items-center space-x-2">
+      <!-- Previous Button -->
+      {currentPage > 1 ? (
+        <a 
+          href={`${baseUrl}?page=${currentPage - 1}`}
+          class="px-3 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors"
+          aria-label="Previous page"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </a>
+      ) : (
+        <span class="px-3 py-2 bg-white/5 text-gray-500 rounded-lg cursor-not-allowed">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </span>
+      )}
+
+      <!-- Page Numbers -->
+      {pageNumbers.map((page, index) => {
+        if (page === '...') {
+          return (
+            <span class="px-3 py-2 text-gray-400" key={`dots-${index}`}>
+              ...
+            </span>
+          );
+        }
+
+        const pageNum = page as number;
+        const isCurrentPage = pageNum === currentPage;
+
+        return (
+          <a
+            href={`${baseUrl}?page=${pageNum}`}
+            class={`px-4 py-2 rounded-lg transition-colors ${
+              isCurrentPage
+                ? 'bg-yellow-400 text-gray-900 font-semibold'
+                : 'bg-white/10 text-white hover:bg-white/20'
+            }`}
+            aria-label={`Page ${pageNum}`}
+            aria-current={isCurrentPage ? 'page' : undefined}
+            key={pageNum}
+          >
+            {pageNum}
+          </a>
+        );
+      })}
+
+      <!-- Next Button -->
+      {currentPage < totalPages ? (
+        <a 
+          href={`${baseUrl}?page=${currentPage + 1}`}
+          class="px-3 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors"
+          aria-label="Next page"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      ) : (
+        <span class="px-3 py-2 bg-white/5 text-gray-500 rounded-lg cursor-not-allowed">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </span>
+      )}
+    </div>
+
+    <!-- Page Info -->
+    <div class="ml-6 text-sm text-gray-400">
+      Page {currentPage} of {totalPages}
+    </div>
+  </nav>
+)}

@@ -1,27 +1,78 @@
 ---
+import { fetchPosts, getFeaturedImage, formatDate } from '../lib/wordpress.js';
 import { getCollection } from 'astro:content';
-import FormattedDate from './FormattedDate.astro';
-import { Image } from 'astro:assets';
 
-const posts = (await getCollection('blog'))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 6);
+// Try to fetch WordPress posts first
+const wpPosts = await fetchPosts({ per_page: 6 });
+
+// Fallback to Astro content if WordPress is not available
+let displayPosts = wpPosts && wpPosts.length > 0 ? wpPosts : null;
+
+if (!displayPosts) {
+  // Use Astro content collections as fallback
+  const astroPosts = (await getCollection('blog'))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 6);
+  
+  // Convert Astro posts to WordPress-like format
+  displayPosts = astroPosts.map(post => ({
+    id: post.id,
+    slug: post.slug,
+    title: { rendered: post.data.title },
+    excerpt: { rendered: post.data.description || '' },
+    date: post.data.pubDate.toISOString(),
+    featured_media: null,
+    _embedded: {},
+    // Add Astro-specific data
+    astroData: post.data
+  }));
+}
 ---
+
 <section class="max-w-1200 mx-auto py-16 px-6">
-  <h2 class=" mb-8 text-center text-yellow-400">Latest Blog Posts</h2>
+  <h2 class="mb-8 text-center text-yellow-400">Latest Blog Posts</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {posts.map((post) => (
-      <a href={`/blog/${post.slug}`} class="bg-white/5 shadow-md border border-white/10 hover:border-yellow-400 rounded-2xl shadow-sm overflow-hidden  no-underline text-inherit transition-all duration-200 hover:shadow-lg hover:border-yellow-300">
-        {post.data.image && (
-          <Image src={post.data.image} alt={post.data.title} width={400} height={200} class="w-full sm:h-48 h-60 lg:h-48 object-fit transition-transform duration-200 block bg-navy-600 hover:scale-105" />
-        )}
-        <div class="p-6 flex flex-col flex-1 ">
-          <h3 class="text-lg mb-2  text-gray-200 transition-colors duration-200 hover:text-yellow-400">{post.data.title}</h3>
-          <p class="text-base text-yellow-400 mb-4"><FormattedDate date={post.data.pubDate} /></p>
-          <p class="text-muted text-md line-clamp-3 flex-1">{post.data.description || ''}</p>
-        </div>
-      </a>
-    ))}
+    {displayPosts.map((post: any) => {
+      const isAstroPost = post.astroData;
+      const featuredImage = isAstroPost ? null : getFeaturedImage(post);
+      const publishDate = isAstroPost ? 
+        new Date(post.date).toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric' 
+        }) : 
+        formatDate(post.date);
+      
+      return (
+        <a href={`/blog/${post.slug}`} class="bg-white/5 shadow-md border border-white/10 hover:border-yellow-400 rounded-2xl shadow-sm overflow-hidden no-underline text-inherit transition-all duration-200 hover:shadow-lg hover:border-yellow-300">
+          {/* WordPress featured image */}
+          {featuredImage && (
+            <img 
+              src={featuredImage.sizes.medium || featuredImage.sizes.large || featuredImage.sizes.full}
+              alt={featuredImage.alt || post.title.rendered}
+              class="w-full sm:h-48 h-60 lg:h-48 object-cover transition-transform duration-200 block bg-navy-600 hover:scale-105" 
+              loading="lazy"
+            />
+          )}
+          
+          {/* Astro content image */}
+          {isAstroPost && post.astroData.image && (
+            <img 
+              src={post.astroData.image.src}
+              alt={post.astroData.title}
+              class="w-full sm:h-48 h-60 lg:h-48 object-cover transition-transform duration-200 block bg-navy-600 hover:scale-105" 
+              loading="lazy"
+            />
+          )}
+          
+          <div class="p-6 flex flex-col flex-1">
+            <h3 class="text-lg mb-2 text-gray-200 transition-colors duration-200 hover:text-yellow-400" set:html={post.title.rendered}></h3>
+            <p class="text-base text-yellow-400 mb-4">{publishDate}</p>
+            <p class="text-muted text-md line-clamp-3 flex-1" set:html={post.excerpt?.rendered || ''}></p>
+          </div>
+        </a>
+      );
+    })}
   </div>
 </section>
 

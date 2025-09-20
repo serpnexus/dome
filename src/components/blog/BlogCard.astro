@@ -1,15 +1,29 @@
 ---
 // src/components/BlogCard.astro - Blog post card
-import { getFeaturedImage, formatDate } from '../../lib/wordpress.js';
+import { getFeaturedImage, getAuthor, getCategories, getTags, formatDate } from '../../lib/wordpress.js';
+import { Image } from 'astro:assets';
 
 const { post } = Astro.props;
-const featuredImage = getFeaturedImage(post);
-const publishDate = formatDate(post.date);
+
+// Handle both WordPress and Astro data
+const isAstroPost = post.astroData;
+const featuredImage = isAstroPost ? null : getFeaturedImage(post);
+const author = isAstroPost ? null : getAuthor(post);
+const categories = isAstroPost ? [] : getCategories(post);
+const tags = isAstroPost ? [] : getTags(post);
+const publishDate = isAstroPost ? 
+  new Date(post.date).toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  }) : 
+  formatDate(post.date);
 const readingTime = post.reading_time || 1;
 ---
 
-<article class="rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow group">
+<article class="bg-navy-800 border border-navy-700 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow group">
   <a href={`/blog/${post.slug}`} class="block">
+    {/* WordPress featured image */}
     {featuredImage && (
       <div class="overflow-hidden">
         <img 
@@ -21,21 +35,42 @@ const readingTime = post.reading_time || 1;
       </div>
     )}
     
+
+    
     <div class="p-6">
-      <h2 class="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors line-clamp-2" 
+      {/* Categories */}
+      {categories && categories.length > 0 && (
+        <div class="flex flex-wrap gap-1 mb-3">
+          {categories.slice(0, 2).map((category: any) => (
+            <a 
+              href={`/blog/category/${category.slug}`}
+              class="px-2 py-1 bg-yellow-100 text-black hover:text-black text-xs rounded-full hover:bg-yellow-300 transition-colors"
+            >
+              {category.name}
+            </a>
+          ))}
+        </div>
+      )}
+      
+      <h2 class="text-xl text-white font-semibold mb-3 group-hover:text-yellow-300 transition-colors line-clamp-2" 
           set:html={post.title.rendered} />
       
-      <div class="flex items-center text-gray-600 text-sm mb-4 space-x-2">
+      <div class="flex items-center text-yellow-100 text-sm mb-4 space-x-2">
         <time datetime={post.date}>{publishDate}</time>
         <span>•</span>
         <span>{readingTime} min read</span>
+        {author && (
+          <>
+            <span>•</span>
+            <span>By {author.name}</span>
+          </>
+        )}
       </div>
       
       {post.excerpt?.rendered && (
         <div class="text-gray-700 mb-4 line-clamp-3" set:html={post.excerpt.rendered} />
       )}
-      
-      <span class="text-blue-600 hover:text-blue-800 font-medium">
+      <span class="text-white/80 hover:text-white font-medium">
         Read more →
       </span>
     </div>

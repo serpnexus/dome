@@ -14,7 +14,7 @@ export async function getStaticPaths() {
   
   if (!posts) return [];
   
-  return posts.map(post => ({
+  return posts.map((post: { slug: any; }) => ({
     params: { slug: post.slug },
     props: { post }
   }));
@@ -31,17 +31,17 @@ if (!currentPost) {
 
 const featuredImage = getFeaturedImage(currentPost);
 const author = getAuthor(currentPost);
-const publishDate = formatDate(currentPost.date);
+const publishDate = formatDate((currentPost as any)?.date ?? '');
 const seoData = getSEOData(currentPost);
-const readingTime = currentPost.reading_time || 1;
+const readingTime = (currentPost as any)?.reading_time ?? 1;
 
 // Fetch related posts
 const relatedPosts = await fetchPosts({
   per_page: 3,
-  exclude: currentPost.id
+  exclude: (currentPost as any)?.id
 });
 
-export const prerender = false;
+export const prerender = true;
 ---
 
 <Layout 
@@ -63,28 +63,25 @@ export const prerender = false;
     
     <!-- Article Header -->
     <header class="mb-8">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4" set:html={currentPost.title.rendered} />
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        {(currentPost as any)?.title?.rendered ?? ''}
+      </h1>
       
       <div class="flex flex-wrap items-center gap-4 text-gray-600 mb-4">
-        <time datetime={currentPost.date}>{publishDate}</time>
+        <time datetime={(currentPost as any)?.date}>{publishDate}</time>
         <span>•</span>
         <span>{readingTime} min read</span>
         {author && (
           <>
             <span>•</span>
-            <span>By {author.name}</span>
+            <span>Written by {author.name}</span>
           </>
         )}
       </div>
-      
-      {currentPost.excerpt?.rendered && (
-        <div class="text-xl text-gray-700 leading-relaxed border-l-4 border-blue-500 pl-6 italic" 
-             set:html={currentPost.excerpt.rendered} />
-      )}
     </header>
     
     <!-- Article Content -->
-    <div class="prose prose-lg max-w-none mb-12" set:html={currentPost.content.rendered} />
+    <div class="prose prose-lg max-w-none mb-12" set:html={(currentPost as any)?.content?.rendered ?? ''} />
     
     <!-- Author Bio -->
     {author && (
@@ -122,7 +119,7 @@ export const prerender = false;
       <section class="border-t pt-8">
         <h3 class="text-2xl font-bold mb-6">Related Posts</h3>
         <div class="grid md:grid-cols-3 gap-6">
-          {relatedPosts.map(relatedPost => {
+          {relatedPosts.map((relatedPost: { date: any; slug: any; title: { rendered: unknown; }; }) => {
             const relatedImage = getFeaturedImage(relatedPost);
             const relatedDate = formatDate(relatedPost.date);
             

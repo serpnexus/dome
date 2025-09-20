@@ -1,0 +1,98 @@
+---
+// src/pages/blog/tag/[slug].astro - Tag page
+import Layout from '../../../layouts/Blog.astro';
+import BlogCard from '../../../components/blog/BlogCard.astro';
+import { 
+  fetchPostsByTag, 
+  fetchTagBySlug,
+  getTags,
+  getSEOData 
+} from '../../../lib/wordpress.js';
+import { getCollection } from 'astro:content';
+
+export const prerender = false;
+
+const { slug } = Astro.params;
+
+// Try to fetch WordPress tag data
+let tag = await fetchTagBySlug(slug);
+const wpPosts = await fetchPostsByTag(tag?.id || slug, { per_page: 12 });
+let posts = wpPosts;
+
+// Fallback to Astro content if WordPress is not available
+if (!posts || posts.length === 0) {
+  const astroPosts = (await getCollection('blog'))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 12);
+  
+  posts = astroPosts.map(post => ({
+    id: post.id,
+    slug: post.slug,
+    title: { rendered: post.data.title },
+    excerpt: { rendered: post.data.description || '' },
+    date: post.data.pubDate.toISOString(),
+    featured_media: null,
+    _embedded: {},
+    astroData: post.data
+  }));
+  
+  // Create demo tag data
+  if (!tag) {
+    tag = {
+      id: 1,
+      name: slug.charAt(0).toUpperCase() + slug.slice(1),
+      slug: slug,
+      description: `Posts tagged with ${slug}`,
+      count: posts.length
+    };
+  }
+}
+
+const seoData = {
+  title: `#${tag?.name || 'Tag'} - InvisibleText.me`,
+  description: tag?.description || `Read all posts tagged with ${tag?.name || 'this tag'}.`,
+  image: "/og-image.webp"
+};
+---
+
+<Layout 
+  title={seoData.title}
+  description={seoData.description}
+  image={seoData.image}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Tag Header -->
+    <header class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+        #{tag?.name || 'Tag'}
+      </h1>
+      {tag?.description && (
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-6">
+          {tag.description}
+        </p>
+      )}
+      <div class="text-gray-400">
+        {tag?.count || posts.length} posts
+      </div>
+    </header>
+    
+    <!-- Posts Grid -->
+    {posts && posts.length > 0 ? (
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post: any) => (
+          <BlogCard post={post} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-16">
+        <div class="text-gray-400 text-lg mb-4">
+          <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2">No posts found</h3>
+          <p>No posts found with this tag.</p>
+        </div>
+      </div>
+    )}
+  </div>
+</Layout>

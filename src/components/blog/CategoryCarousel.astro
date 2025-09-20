@@ -1,0 +1,168 @@
+---
+// src/components/blog/CategoryCarousel.astro - Category carousel component
+import { fetchCategories, getCategoryInfo } from '../../lib/wordpress.js';
+
+// Try to fetch WordPress categories
+const wpCategories = await fetchCategories({ per_page: 10 });
+
+// Fallback categories if WordPress is not available
+const fallbackCategories = [
+  {
+    id: 1,
+    name: 'Technology',
+    slug: 'technology',
+    description: 'Latest tech news and insights',
+    count: 12,
+    icon: '💻'
+  },
+  {
+    id: 2,
+    name: 'Tutorials',
+    slug: 'tutorials',
+    description: 'Step-by-step guides',
+    count: 8,
+    icon: '📚'
+  },
+  {
+    id: 3,
+    name: 'News',
+    slug: 'news',
+    description: 'Industry updates',
+    count: 15,
+    icon: '📰'
+  },
+  {
+    id: 4,
+    name: 'Reviews',
+    slug: 'reviews',
+    description: 'Product and service reviews',
+    count: 6,
+    icon: '⭐'
+  },
+  {
+    id: 5,
+    name: 'Tips & Tricks',
+    slug: 'tips-tricks',
+    description: 'Helpful tips and tricks',
+    count: 9,
+    icon: '💡'
+  }
+];
+
+const displayCategories = wpCategories && wpCategories.length > 0 ? wpCategories : fallbackCategories;
+---
+
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-white">Browse by Category</h2>
+    
+    <div class="relative">
+      <!-- Carousel Container -->
+      <div class="overflow-hidden">
+        <div class="flex gap-6 pb-4 overflow-x-auto scrollbar-hide" id="category-carousel" style="scroll-behavior: smooth;">
+          {displayCategories.map((category: any) => {
+            const categoryInfo = getCategoryInfo(category);
+            return (
+              <a 
+                href={`/blog/category/${categoryInfo.slug}`}
+                class="group flex-shrink-0 w-80 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-yellow-400 transition-all duration-300 hover:scale-105"
+              >
+                <div class="relative">
+                  {/* Background Pattern */}
+                  <div class="absolute inset-0 opacity-10">
+                    <div class="w-full h-full bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-xl"></div>
+                  </div>
+                  
+                  {/* Content */}
+                  <div class="relative z-10">
+                    {/* Icon */}
+                    <div class="text-4xl mb-4">
+                      {category.icon || '📝'}
+                    </div>
+                    
+                    {/* Category Name */}
+                    <h3 class="text-xl font-semibold mb-2 text-white group-hover:text-yellow-400 transition-colors">
+                      {categoryInfo.name}
+                    </h3>
+                    
+                    {/* Description */}
+                    <p class="text-gray-300 text-sm mb-4 line-clamp-2">
+                      {categoryInfo.description}
+                    </p>
+                    
+                    {/* Post Count */}
+                    <div class="flex items-center justify-between">
+                      <span class="text-yellow-400 text-sm font-medium">
+                        {categoryInfo.count} posts
+                      </span>
+                      <svg class="w-4 h-4 text-gray-400 group-hover:text-yellow-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+      
+      <!-- Navigation Buttons -->
+      <button 
+        class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-3 hover:bg-white/20 transition-colors"
+        onclick="scrollCarousel('left')"
+      >
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+      
+      <button 
+        class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full p-3 hover:bg-white/20 transition-colors"
+        onclick="scrollCarousel('right')"
+      >
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+  function scrollCarousel(direction) {
+    const carousel = document.getElementById('category-carousel');
+    const scrollAmount = 320; // Width of one card + gap
+    
+    if (direction === 'left') {
+      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else {
+      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  }
+
+  // Make carousel work on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('category-carousel');
+    if (carousel) {
+      // Enable smooth scrolling
+      carousel.style.scrollBehavior = 'smooth';
+      
+      // Add mouse wheel support
+      carousel.addEventListener('wheel', (e) => {
+        e.preventDefault();
+        carousel.scrollLeft += e.deltaY;
+      });
+    }
+  });
+</script>
+
+<style>
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>

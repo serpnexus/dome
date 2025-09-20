@@ -4,8 +4,6 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
-
-
 import vercel from '@astrojs/vercel';
 
 

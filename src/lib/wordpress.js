@@ -14,13 +14,25 @@ export async function fetchFromWP(endpoint, params = {}) {
   });
   
   try {
-    const response = await fetch(url.toString());
+    const response = await fetch(url.toString(), {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    
     if (!response.ok) {
-      throw new Error(`API error: ${response.status}`);
+      console.error(`WordPress API error: ${response.status} ${response.statusText}`);
+      if (response.status === 404) {
+        console.warn(`WordPress endpoint not found: ${url.toString()}`);
+      }
+      return null;
     }
-    return await response.json();
+    
+    const data = await response.json();
+    return data;
   } catch (error) {
     console.error('WordPress fetch error:', error);
+    console.error('URL attempted:', url.toString());
     return null;
   }
 }
@@ -37,7 +49,11 @@ export async function fetchPosts(params = {}) {
 
 // Fetch single post by slug
 export async function fetchPostBySlug(slug) {
-  const posts = await fetchFromWP('posts', { slug, _embed: true });
+  const posts = await fetchFromWP('posts', { 
+    slug, 
+    _embed: true,
+    status: 'publish'
+  });
   return posts && posts.length > 0 ? posts[0] : null;
 }
 
@@ -58,13 +74,75 @@ export async function fetchPageBySlug(slug) {
 }
 
 // Fetch categories
-export async function fetchCategories() {
-  return await fetchFromWP('categories');
+export async function fetchCategories(params = {}) {
+  return await fetchFromWP('categories', {
+    per_page: 100,
+    ...params
+  });
+}
+
+// Fetch single category by slug
+export async function fetchCategoryBySlug(slug) {
+  const categories = await fetchFromWP('categories', { slug });
+  return categories && categories.length > 0 ? categories[0] : null;
 }
 
 // Fetch tags
-export async function fetchTags() {
-  return await fetchFromWP('tags');
+export async function fetchTags(params = {}) {
+  return await fetchFromWP('tags', {
+    per_page: 100,
+    ...params
+  });
+}
+
+// Fetch single tag by slug
+export async function fetchTagBySlug(slug) {
+  const tags = await fetchFromWP('tags', { slug });
+  return tags && tags.length > 0 ? tags[0] : null;
+}
+
+// Fetch posts by category
+export async function fetchPostsByCategory(categoryId, params = {}) {
+  return await fetchFromWP('posts', {
+    _embed: true,
+    per_page: 10,
+    status: 'publish',
+    categories: categoryId,
+    ...params
+  });
+}
+
+// Fetch posts by tag
+export async function fetchPostsByTag(tagId, params = {}) {
+  return await fetchFromWP('posts', {
+    _embed: true,
+    per_page: 10,
+    status: 'publish',
+    tags: tagId,
+    ...params
+  });
+}
+
+// Fetch posts by author
+export async function fetchPostsByAuthor(authorId, params = {}) {
+  return await fetchFromWP('posts', {
+    _embed: true,
+    per_page: 10,
+    status: 'publish',
+    author: authorId,
+    ...params
+  });
+}
+
+// Fetch featured posts
+export async function fetchFeaturedPosts(params = {}) {
+  return await fetchFromWP('posts', {
+    _embed: true,
+    per_page: 3,
+    status: 'publish',
+    sticky: true,
+    ...params
+  });
 }
 
 // Fetch navigation menu
@@ -81,19 +159,36 @@ export async function searchPosts(query, postType = 'post') {
 
 // Get featured image from post
 export function getFeaturedImage(post) {
-  const imageData = post.featured_image_data;
-  if (!imageData) return null;
+  // Check for embedded featured media
+  if (post._embedded?.['wp:featuredmedia']?.[0]) {
+    const media = post._embedded['wp:featuredmedia'][0];
+    return {
+      id: media.id,
+      alt: media.alt_text || '',
+      sizes: {
+        thumbnail: media.media_details?.sizes?.thumbnail?.source_url || '',
+        medium: media.media_details?.sizes?.medium?.source_url || '',
+        large: media.media_details?.sizes?.large?.source_url || '',
+        full: media.source_url || ''
+      }
+    };
+  }
   
-  return {
-    id: imageData.id,
-    alt: imageData.alt || '',
-    sizes: {
-      thumbnail: imageData.sizes?.thumbnail?.[0] || '',
-      medium: imageData.sizes?.medium?.[0] || '',
-      large: imageData.sizes?.large?.[0] || '',
-      full: imageData.sizes?.full?.[0] || ''
-    }
-  };
+  // Fallback to featured_media if available
+  if (post.featured_media) {
+    return {
+      id: post.featured_media,
+      alt: '',
+      sizes: {
+        thumbnail: '',
+        medium: '',
+        large: '',
+        full: ''
+      }
+    };
+  }
+  
+  return null;
 }
 
 // Get author info from embedded data
@@ -101,13 +196,66 @@ export function getAuthor(post) {
   if (post._embedded?.author?.[0]) {
     const author = post._embedded.author[0];
     return {
+      id: author.id,
       name: author.name,
       description: author.description,
       avatar: author.avatar_urls?.['96'] || '',
-      url: author.url || ''
+      url: author.url || '',
+      slug: author.slug || ''
     };
   }
   return null;
+}
+
+// Get categories from post
+export function getCategories(post) {
+  if (post._embedded?.['wp:term']?.[0]) {
+    return post._embedded['wp:term'][0].map(cat => ({
+      id: cat.id,
+      name: cat.name,
+      slug: cat.slug,
+      description: cat.description,
+      count: cat.count
+    }));
+  }
+  return post.categories || [];
+}
+
+// Get tags from post
+export function getTags(post) {
+  if (post._embedded?.['wp:term']?.[1]) {
+    return post._embedded['wp:term'][1].map(tag => ({
+      id: tag.id,
+      name: tag.name,
+      slug: tag.slug,
+      description: tag.description,
+      count: tag.count
+    }));
+  }
+  return post.tags || [];
+}
+
+// Get category info
+export function getCategoryInfo(category) {
+  return {
+    id: category.id,
+    name: category.name,
+    slug: category.slug,
+    description: category.description,
+    count: category.count,
+    parent: category.parent || 0
+  };
+}
+
+// Get tag info
+export function getTagInfo(tag) {
+  return {
+    id: tag.id,
+    name: tag.name,
+    slug: tag.slug,
+    description: tag.description,
+    count: tag.count
+  };
 }
 
 // Format date

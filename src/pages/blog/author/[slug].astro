@@ -1,0 +1,117 @@
+---
+// src/pages/blog/author/[slug].astro - Author page
+import Layout from '../../../layouts/Blog.astro';
+import BlogCard from '../../../components/blog/BlogCard.astro';
+import { 
+  fetchPostsByAuthor, 
+  getAuthor, 
+  getSEOData,
+  formatDate 
+} from '../../../lib/wordpress.js';
+import { getCollection } from 'astro:content';
+
+export const prerender = false;
+
+const { slug } = Astro.params;
+
+// Try to fetch WordPress author data
+const wpPosts = await fetchPostsByAuthor(slug, { per_page: 12 });
+let author = null;
+let posts = wpPosts;
+
+if (wpPosts && wpPosts.length > 0) {
+  author = getAuthor(wpPosts[0]);
+}
+
+// Fallback to Astro content if WordPress is not available
+if (!posts || posts.length === 0) {
+  const astroPosts = (await getCollection('blog'))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .slice(0, 12);
+  
+  posts = astroPosts.map(post => ({
+    id: post.id,
+    slug: post.slug,
+    title: { rendered: post.data.title },
+    excerpt: { rendered: post.data.description || '' },
+    date: post.data.pubDate.toISOString(),
+    featured_media: null,
+    _embedded: {},
+    astroData: post.data
+  }));
+  
+  // Create demo author data
+  author = {
+    id: 1,
+    name: 'Author Name',
+    description: 'This is a demo author description.',
+    avatar: '',
+    url: '',
+    slug: slug
+  };
+}
+
+const seoData = {
+  title: `Posts by ${author?.name || 'Author'} - Blog`,
+  description: `Read all posts by ${author?.name || 'this author'} on our blog.`,
+  image: "/og-image.webp"
+};
+---
+
+<Layout 
+  title={seoData.title}
+  description={seoData.description}
+  image={seoData.image}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Author Header -->
+    <header class="text-center mb-16">
+      <div class="flex flex-col items-center">
+        {author?.avatar && (
+          <img 
+            src={author.avatar}
+            alt={`${author.name} avatar`}
+            class="w-24 h-24 rounded-full mb-6"
+          />
+        )}
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+          Posts by {author?.name || 'Author'}
+        </h1>
+        {author?.description && (
+          <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-6">
+            {author.description}
+          </p>
+        )}
+        {author?.url && (
+          <a 
+            href={author.url}
+            class="text-blue-400 hover:text-blue-300 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visit {author.name}'s website →
+          </a>
+        )}
+      </div>
+    </header>
+    
+    <!-- Posts Grid -->
+    {posts && posts.length > 0 ? (
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post: any) => (
+          <BlogCard post={post} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center py-16">
+        <div class="text-gray-400 text-lg mb-4">
+          <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2">No posts found</h3>
+          <p>This author hasn't published any posts yet.</p>
+        </div>
+      </div>
+    )}
+  </div>
+</Layout>

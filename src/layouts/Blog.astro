@@ -1,8 +1,8 @@
 ---
-// src/layouts/Layout.astro - Main layout
-import "../styles/custom.css";
+// src/layouts/Blog.astro - Blog layout
 import Navigation from "../components/Header.astro";
-// import Navigation from "../components/blog/Navigation.astro";
+import "../styles/custom.css";
+// import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 
 export interface Props {
@@ -15,7 +15,7 @@ export interface Props {
 const {
     title,
     description = "Your amazing website",
-    image = "/og-default.jpg",
+    image = "/og-image.webp",
     canonical,
 } = Astro.props;
 
@@ -26,7 +26,6 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="canonical" href={canonicalURL} />
@@ -69,7 +68,9 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
         <Navigation />
 
         <main class="min-h-screen flex flex-col bg-gradient-to-b from-navy-900  to-navy-900">
-            <slot />
+            <div class="container mx-auto px-4 py-16 max-w-6xl">
+                <slot />
+            </div>
         </main>
 
         <Footer />
@@ -133,12 +134,12 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
             }
 
             .prose a {
-                color: #2563eb;
+                color: var(--yellow-300)/80;
                 text-decoration: underline;
             }
 
             .prose a:hover {
-                color: #1d4ed8;
+                color: var(--yellow-400);
             }
 
             .prose img {

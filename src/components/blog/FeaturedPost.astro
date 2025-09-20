@@ -1,0 +1,105 @@
+---
+// src/components/blog/FeaturedPost.astro - Featured post component
+import { getFeaturedImage, getAuthor, getCategories, formatDate } from '../../lib/wordpress.js';
+import { Image } from 'astro:assets';
+
+const { post } = Astro.props;
+
+// Handle both WordPress and Astro data
+const isAstroPost = post.astroData;
+const featuredImage = isAstroPost ? null : getFeaturedImage(post);
+const author = isAstroPost ? null : getAuthor(post);
+const categories = isAstroPost ? [] : getCategories(post);
+const publishDate = isAstroPost ? 
+  new Date(post.date).toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  }) : 
+  formatDate(post.date);
+---
+
+<article class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+  <div class="absolute inset-0 bg-black/20"></div>
+  
+  <div class="relative z-10 p-8 md:p-12">
+    <div class="max-w-4xl">
+      <!-- Categories -->
+      {categories && categories.length > 0 && (
+        <div class="flex flex-wrap gap-2 mb-4">
+          {categories.slice(0, 2).map((category: any) => (
+            <span class="px-3 py-1 bg-white/20 rounded-full text-sm font-medium">
+              {category.name}
+            </span>
+          ))}
+        </div>
+      )}
+      
+      <!-- Title -->
+      <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight" set:html={post.title.rendered}></h1>
+      
+      <!-- Excerpt -->
+      {post.excerpt?.rendered && (
+        <p class="text-xl mb-8 text-white/90 leading-relaxed" set:html={post.excerpt.rendered}></p>
+      )}
+      
+      <!-- Meta -->
+      <div class="flex flex-wrap items-center gap-4 mb-8">
+        <time datetime={post.date} class="text-white/80">
+          {publishDate}
+        </time>
+        
+        {author && (
+          <>
+            <span class="text-white/60">•</span>
+            <div class="flex items-center gap-2">
+              {author.avatar && (
+                <img 
+                  src={author.avatar}
+                  alt={author.name}
+                  class="w-8 h-8 rounded-full"
+                />
+              )}
+              <span class="text-white/80">By {author.name}</span>
+            </div>
+          </>
+        )}
+      </div>
+      
+      <!-- CTA Button -->
+      <a 
+        href={`/blog/${post.slug}`}
+        class="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+      >
+        Read More
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Background Image -->
+  {featuredImage && (
+    <div class="absolute inset-0 z-0">
+      <img 
+        src={featuredImage.sizes.large || featuredImage.sizes.full}
+        alt={featuredImage.alt || post.title.rendered}
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80"></div>
+    </div>
+  )}
+  
+  {/* Astro content image */}
+  {isAstroPost && post.astroData.image && (
+    <div class="absolute inset-0 z-0">
+      <img 
+        src={post.astroData.image.src}
+        alt={post.astroData.title}
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80"></div>
+    </div>
+  )}
+</article>
