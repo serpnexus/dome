@@ -1,4 +1,36 @@
-/* Font Definitions */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+:root {
+  
+  --navy-900: #0a1744;
+  --navy-800: #0f1e50; 
+  --navy-700: #152a5c; 
+  --navy-600: #1b3668; 
+  --navy-500: #0f2657;
+  --navy-400: #0f2657;
+  --yellow-500: #d9c43d;
+  --yellow-400: hsl(54, 84%, 67%); 
+  --yellow-400: hsl(54, 100%, 73%); 
+  --yellow-200: #ffe88c; 
+  --yellow-100: #fff387; 
+  --white: #ffffff; 
+  --black: #000000; 
+  --gray-300: #d1d5db; 
+  --gray-400: #9ca3af; 
+  --gray-500: #6b7280; 
+  --gray-600: hwb(220 12% 85%);
+  --yellow-50: #fffac2;
+}
+
 @font-face {
   font-family: 'Atkinson';
   src: url('/fonts/atkinson-regular.woff') format('woff');
@@ -24,7 +56,7 @@ html {
 body {
   font-family: 'Atkinson', system-ui, sans-serif;
   @apply bg-navy-900 text-white leading-relaxed min-h-screen flex flex-col;
-  padding: 0 1rem;
+  
 }
 
 a {
@@ -216,3 +248,4 @@ ul, ol {
 .sidebar-mobile-toggle {
   @apply lg:hidden fixed top-20 right-4 z-50 bg-navy-700 border border-navy-600 rounded-lg p-3 text-white hover:bg-navy-600 transition-colors duration-200;
 }
+

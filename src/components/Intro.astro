@@ -5,9 +5,9 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
-<section class="py-12 px-4" id="what-is-invisible-text">
+<section class="py-12 mt-12 px-4" id="what-is-invisible-text">
     <div class="max-w-3xl mx-auto text-center">
-        <h2 class=" text-yellow-400 mb-6 leading-tight">
+        <h2 class=" text-yellow-400 mb-4 leading-tight">
             {t("about.introduction.title").split("InvisibleText.me")[0]}{" "}
             <a href="https://invisibletext.me" class="underline text-yellow-400 hover:text-white transition-colors duration-300">
                 InvisibleText.me

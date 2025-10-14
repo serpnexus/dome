@@ -9,34 +9,33 @@ import vercel from '@astrojs/vercel';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), sitemap({
-      i18n: {
-        defaultLocale: 'en',
-        locales: {
-          'en': 'English',
-          'es': 'Spanish',
-          'fr': 'French',
-          'de': 'German',
-          'pt': 'Portuguese',
-          'ru': 'Russian',
-          'ko': 'Korean',
-          'tr': 'Turkish',
-          'nl': 'Dutch',
-          'it': 'Italian',
-          'id': 'Indonesian',
-          'my': 'Malay',
-          'fi': 'Finnish',
-          'ja': 'Japanese',
-          'hu': 'Hungarian',
-          'vi': 'Vietnamese',
-          'th': 'Thai',
-        }
+    i18n: {
+      defaultLocale: 'en',
+      locales: {
+        'en': 'English',
+        'es': 'Spanish',
+        'fr': 'French',
+        'de': 'German',
+        'pt': 'Portuguese',
+        'ru': 'Russian',
+        'ko': 'Korean',
+        'tr': 'Turkish',
+        'nl': 'Dutch',
+        'it': 'Italian',
+        'id': 'Indonesian',
+        'my': 'Malay',
+        'fi': 'Finnish',
+        'ja': 'Japanese',
+        'hu': 'Hungarian',
+        'vi': 'Vietnamese',
+        'th': 'Thai',
       }
-    }), tailwind(), mdx()
-  ],
+    }
+  }), tailwind(), mdx()],
 
   output: 'server',
   adapter: vercel(),
-  site: 'https://www.invisibletext.me/',
+  site: 'https://www.invisibletext.me',
 
   i18n: {
     locales: [
@@ -50,5 +49,5 @@ export default defineConfig({
 
   trailingSlash: 'never',
   
-  compressHtml: false,
+  compressHtml: true,
 });

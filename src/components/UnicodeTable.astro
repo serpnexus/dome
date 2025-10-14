@@ -1,11 +1,9 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
-// Get the current language and translation function
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-// Unicode character data
 const unicodeChars = [
   {
     unicode: "U+0020",
@@ -242,33 +240,33 @@ const unicodeChars = [
 ];
 ---
 
-<section class="py-4">
-  <div class="max-w-1200 mx-auto px-6">
-    <h2 class="text-center font-bold text-yellow-400 mb-4">{t("unicode.title")}</h2>
-    <p class="text-center max-w-3xl mx-auto mb-8 text-gray-300">{t("unicode.subtitle")}</p>
+<section class="unicode-table">
+  <div class="max-w-6xl mx-auto px-6 md:px-0">
+    <h2 class="text-yellow-400 mb-4 text-center">{t("unicode.title")}</h2>
+    <p class="unicode-description">{t("unicode.subtitle")}</p>
     
-    <div class="max-w-full overflow-x-auto bg-navy-800 border border-navy-600 rounded-lg shadow-lg">
-      <table class="w-full border-collapse">
+    <div class="table-container">
+      <table class="unicode-table-content">
         <thead>
           <tr>
-            <th class="bg-navy-900 border-b border-navy-600 text-yellow-400 font-semibold text-left py-3 px-4">{t("unicode.table.unicode")}</th>
-            <th class="bg-navy-900 border-b border-navy-600 text-yellow-400 font-semibold text-left py-3 px-4">{t("unicode.table.description")}</th>
-            <th class="bg-navy-900 border-b border-navy-600 text-yellow-400 font-semibold text-left py-3 px-4">{t("unicode.table.html")}</th>
-            <th class="bg-navy-900 border-b border-navy-600 text-yellow-400 font-semibold text-left py-3 px-4">{t("unicode.table.example")}</th>
-            <th class="bg-navy-900 border-b border-navy-600 text-yellow-400 font-semibold py-3 px-4 w-20 text-left md:w-auto">{t("unicode.table.actions")}</th>
+            <th>{t("unicode.table.unicode")}</th>
+            <th>{t("unicode.table.description")}</th>
+            <th>{t("unicode.table.html")}</th>
+            <th>{t("unicode.table.example")}</th>
+            <th class="actions-column">{t("unicode.table.actions")}</th>
           </tr>
         </thead>
         <tbody>
           {unicodeChars.map((char, index) => (
             <>
-              <tr class={index % 2 === 0 ? "bg-navy-700 bg-opacity-5 hover:bg-white hover:bg-opacity-10" : "bg-white/5 bg-opacity-2 hover:bg-white hover:bg-opacity-10"}>
-                <td class="py-3 px-4 border-b border-navy-700">{char.unicode}</td>
-                <td class="py-3 px-4 border-b border-navy-700">{char.description}</td>
-                <td class="py-3 px-4 border-b border-navy-700"><code>{char.html}</code></td>
-                <td class="py-3 px-4 border-b border-navy-700 font-mono text-lg">[{char.example}]</td>
-                <td class="py-3 px-4 border-b border-navy-700 flex gap-2 justify-start items-center">
+              <tr class={index % 2 === 0 ? "row-even" : "row-odd"}>
+                <td>{char.unicode}</td>
+                <td>{char.description}</td>
+                <td><code>{char.html}</code></td>
+                <td class="example-cell">[{char.example}]</td>
+                <td class="actions-cell">
                   <button 
-                    class="flex items-center gap-1 bg-navy-600 text-yellow-400 border-none rounded px-2 py-1 text-sm cursor-pointer transition-colors duration-200 hover:bg-navy-500"
+                    class="copy-btn"
                     data-character={char.character}
                     aria-label={t("unicode.copy")}
                   >
@@ -281,7 +279,7 @@ const unicodeChars = [
                   
                   {char.notes && (
                     <button 
-                      class="flex items-center justify-center bg-navy-600 text-yellow-400 border-none rounded px-1 py-1 cursor-pointer transition-colors duration-200 hover:bg-navy-500"
+                      class="info-btn"
                       data-index={index}
                       aria-label="Unicode info button"
                     >
@@ -295,9 +293,9 @@ const unicodeChars = [
                 </td>
               </tr>
               {char.notes && (
-                <tr class="bg-navy-700 hidden" data-info-row={index}>
+                <tr class="info-row hidden" data-info-row={index}>
                   <td colspan="5">
-                    <div class="py-3 px-4 text-gray-300 text-sm">{char.notes}</div>
+                    <div class="info-content">{char.notes}</div>
                   </td>
                 </tr>
               )}
@@ -312,6 +310,7 @@ const unicodeChars = [
 <style>
   .unicode-table {
     padding: 1rem 0;
+
   }
   
   .unicode-title {
@@ -490,7 +489,7 @@ const unicodeChars = [
   });
 
   // Toast notification function
-  function showToast(message) {
+  function showToast(message: any) {
     // Remove any existing toasts
     const existingToasts = document.querySelectorAll('.toast-notification');
     existingToasts.forEach(toast => {

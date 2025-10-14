@@ -4,539 +4,23 @@ import InstagramIcon from "../assets/icons/instagram_logo_icon.svg";
 import WhatsappIcon from "../assets/icons/whatapp_logo-icon.svg";
 import SlackIcon from "../assets/icons/slack-new-logo.svg";
 import FacebookIcon from "../assets/icons/facebook_icon.svg";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getLangFromUrl } from "../i18n/utils";
+import { useTranslations } from "../i18n/utils";
 
-// Get the current language and translation function
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="practical-usecases">
-<style>
-  .practical-usecases {
-    padding: 5rem 0;
-    background-color: var(--navy-900);
-  }
-
-  .practical-usecases .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-
-  .usecases-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 3rem;
-  }
-
-  .usecases-description {
-    text-align: center;
-    font-size: 1.1rem;
-    color: var(--gray-300);
-    max-width: 800px;
-    margin: 0 auto 3rem;
-  }
-
-  .usecases-section {
-    margin-bottom: 4rem;
-    background-color: var(--navy-700);
-    border-radius: 1rem;
-    padding: 2rem;
-  }
-
-  .usecases-section:last-child {
-    margin-bottom: 0;
-  }
-
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  .section-icon {
-    color: var(--white);
-    height: 2.5rem;
-    width: 2.5rem;
-    flex-shrink: 0;
-    padding: 0.5rem;
-    background-color: var(--navy-600);
-    border-radius: 0.75rem;
-  }
-  .section-icons {
-    color: #ffe88c;
-    height: 2.5rem;
-    width: 2.5rem;
-    flex-shrink: 0;
-    padding: 0.5rem;
-    background-color: var(--navy-500);
-    border-radius: 0.75rem;
-  }
-
-  .section-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: var(--white);
-  }
-
-  .section-description {
-    margin-bottom: 1.5rem;
-    color: var(--gray-300);
-    line-height: 1.6;
-  }
-
-  .section-additional-info {
-    margin-bottom: 1.5rem;
-    color: var(--gray-300);
-    line-height: 1.6;
-  }
-
-  /* Gaming Section Styles */
-  .games-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .game-card {
-    background-color: var(--navy-600);
-    border-radius: 0.75rem;
-    padding: 2rem;
-    height: 100%;
-    transition: transform 0.2s ease;
-  }
-
-  .game-card:hover {
-    transform: translateY(-4px);
-  }
-
-  .game-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 1.5rem;
-  }
-
-  .game-description {
-    color: var(--gray-300);
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-
-  .game-howto {
-    margin-bottom: 2rem;
-  }
-
-  .howto-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 1rem;
-  }
-
-  .steps-list {
-    list-style-type: decimal;
-    list-style-position: inside;
-    color: var(--gray-300);
-  }
-
-  .steps-list li {
-    margin-bottom: 0.75rem;
-    line-height: 1.5;
-  }
-
-  .game-uses {
-    margin-bottom: 1rem;
-  }
-
-  .uses-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 1rem;
-  }
-
-  .uses-list {
-    list-style-type: disc;
-    list-style-position: inside;
-    color: var(--gray-300);
-  }
-
-  .uses-list li {
-    margin-bottom: 0.75rem;
-    line-height: 1.5;
-  }
-
-  /* Other Games Section */
-  .other-games {
-    margin-top: 3rem;
-  }
-
-  .other-games-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 1rem;
-  }
-
-  .other-games-description {
-    color: var(--gray-300);
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
-
-  .other-games-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-
-  .other-game {
-    background-color: var(--navy-600);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-  }
-
-  .other-game-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--white);
-    margin-bottom: 1rem;
-  }
-
-  .other-game-description {
-    color: var(--gray-300);
-    line-height: 1.6;
-  }
-
-  /* Messaging Apps Section */
-  .messaging-apps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-
-  .messaging-app {
-    background-color: var(--navy-600);
-    border-radius: 0.75rem;
-    padding: 2rem;
-    height: 100%;
-  }
-
-  .app-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .app-icon {
-    color: var(--white);
-    background-color: var(--navy-500);
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    flex-shrink: 0;
-  }
-
-  .app-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--white);
-
-  }
-
-  .app-description {
-    color: var(--gray-300);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-
-  .app-instructions {
-    color: var(--gray-300);
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background-color: var(--navy-700);
-    border-radius: 0.5rem;
-    font-size: 0.95rem;
-  }
-
-  .app-uses {
-    margin-bottom: 2rem;
-  }
-
-  .app-image-container {
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  .app-image {
-    border-radius: 0.5rem;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Other Messaging Apps */
-  .other-messaging-apps {
-    margin-top: 3rem;
-  }
-
-  .other-apps-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 2rem;
-  }
-
-  .other-apps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-
-  .other-app {
-    background-color: var(--navy-600);
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-  }
-
-  .other-app-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-  }
-
-  .other-app-icon {
-    color: var(--white);
-    flex-shrink: 0;
-  }
-
-  .other-app-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--white);
-  }
-
-  .other-app-description {
-    color: var(--gray-300);
-    line-height: 1.6;
-  }
-
-  /* Other Use Cases Section */
-  .other-usecases-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .usecase-card {
-    background-color: var(--navy-600);
-    border-radius: 0.75rem;
-    padding: 1rem;
-    height: 100%;
-  }
-
-  .usecase-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .usecase-icon {
-    color: var(--white);
-    background-color: var(--navy-500);
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    flex-shrink: 0;
-  }
-
-  .usecase-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--white);
-  }
-
-  .usecase-description {
-    color: var(--gray-300);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-
-  .usecase-list {
-    list-style-type: disc;
-    list-style-position: inside;
-    color: var(--gray-300);
-  }
-
-  .usecase-list li {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
-  }
-
-  /* Professional Use Cases */
-  .professional-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-  }
-
-  .professional-card {
-    background-color: var(--navy-600);
-    border-radius: 0.75rem;
-    padding: 1rem;
-    height: 100%;
-  }
-
-  .professional-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .professional-icon {
-    color: var(--white);
-    background-color: var(--navy-500);
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    flex-shrink: 0;
-
-  }
-
-  .professional-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--white);
-  }
-
-  .professional-description {
-    color: var(--gray-300);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-  }
-
-  .professional-list {
-    list-style-type: disc;
-    list-style-position: inside;
-    color: var(--gray-300);
-  }
-
-  .professional-list li {
-    margin-bottom: 0.75rem;
-    line-height: 1.5;
-  }
-
-  /* Mobile Responsive Styles */
-  @media (max-width: 768px) {
-    .practical-usecases {
-      padding: 4rem 0;
-    }
-
-    .practical-usecases .container {
-      padding: 0 1rem;
-    }
-
-    .usecases-title {
-      font-size: 1.75rem;
-      margin-bottom: 2rem;
-    }
-
-    .usecases-section {
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .section-header {
-      margin-bottom: 1.5rem;
-      align-items: center;
-    }
-
-    .section-icon {
-      height: 2rem;
-      width: 2rem;
-      padding: 0.375rem;
-      align-items: center;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-    }
-
-    .games-grid,
-    .messaging-apps-grid,
-    .other-apps-grid,
-    .other-games-grid,
-    .other-usecases-grid,
-    .professional-grid {
-      gap: 1.5rem;
-      grid-template-columns: 1fr;
-    }
-
-    .game-card,
-    .messaging-app,
-    .professional-card,
-    .usecase-card,
-    .other-game,
-    .other-app {
-      padding: 1.5rem;
-    }
-
-    .app-header,
-    .professional-header,
-    .usecase-header {
-      margin-bottom: 1.25rem;
-    }
-
-    .game-title,
-    .app-title,
-    .professional-title,
-    .usecase-title {
-      font-size: 1.25rem;
-    }
-
-    .other-games-title,
-    .other-apps-title {
-      font-size: 1.25rem;
-    }
-
-    .app-image {
-      max-width: 280px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .usecases-section {
-      padding: 1rem;
-    }
-
-    .section-header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.75rem;
-    }
-
-    .app-image {
-      max-width: 240px;
-    }
-  }
-</style>
-  <div class="container">
-    <h2 class="usecases-title">{t("usecases.title")}</h2>
+<section class="py-16 md:py-20 px-6">
+  <div class="max-w-6xl mx-auto ">
+    <h2 class="text-yellow-400 mb-6 text-center">
+      {t("usecases.title")}
+    </h2>
 
     <!-- Gaming Section -->
-    <div class="usecases-section gaming-section">
-      <div class="usecases-header">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icons">
+    <div class="mb-8 md:mb-16 bg-[var(--navy-800)] rounded-2xl p-8 md:p-6 border border-navy-700 shadow-md">
+      <div class="flex items-center gap-4 md:flex-col md:items-start md:gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffe88c] h-10 w-10 md:h-8 md:w-8 flex-shrink-0 p-2 md:p-1.5 bg-[var(--navy-900)] rounded-xl">
           <rect x="2" y="6" width="20" height="12" rx="2"/>
           <path d="M12 12h.01"/>
           <path d="M7 12h.01"/>
@@ -544,325 +28,433 @@ const t = useTranslations(lang);
           <path d="M2 10h20"/>
           <path d="M2 14h20"/>
         </svg>
-        <h3 class="section-title">{t('usecases.gaming.title')}</h3>
+        <h3 class="text-white mb-2">
+          {t('usecases.gaming.title')}
+        </h3>
       </div>
 
-      <p class="section-description">{t('usecases.gaming.description')}</p>
+      <p class="mb-6 text-[var(--gray-300)] leading-[1.6]">
+        {t('usecases.gaming.description')}
+      </p>
 
-      <div class="games-grid">
-        <div class="game-card">
-          <h4 class="game-title">{t('usecases.fortnite.title')}</h4>
-          <p class="game-description">{t("usecases.fortnite.description")}</p>
-          <div class="game-howto">
-            <h5 class="howto-title">
+      <div class="grid grid-cols-1 min-[300px]:grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12">
+        <!-- Fortnite Card -->
+        <div class="bg-[var(--navy-700)] rounded-xl p-8 md:p-6 h-full transition-transform duration-200 hover:-translate-y-1">
+          <h4 class="text-white/90 mb-4">
+            {t('usecases.fortnite.title')}
+          </h4>
+          <p class="text-[var(--gray-300)] leading-[1.6] mb-8">
+            {t("usecases.fortnite.description")}
+          </p>
+          
+          <div class="mb-8">
+            <h4 class="text-white/90 mb-4">
               {t("usecases.fortnite.howto")}
-            </h5>
-            <ol class="steps-list">
-              <li>{t('usecases.fortnite.step1')}</li>
-              <li>{t("usecases.fortnite.step2")}</li>
-              <li>{t("usecases.fortnite.step3")}</li>
-              <li>{t("usecases.fortnite.step4")}</li>
-              <li>{t("usecases.fortnite.step5")}</li>
+            </h4>
+            <ol class="list-decimal list-inside text-[var(--gray-300)]">
+              <li class="mb-1 leading-[1.5]">{t('usecases.fortnite.step1')}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.fortnite.step2")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.fortnite.step3")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.fortnite.step4")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.fortnite.step5")}</li>
             </ol>
           </div>
-          <div class="game-uses">
-            <h5 class="uses-title">{t('usecases.fortnite.uses')}</h5>
-            <ul class="uses-list">
-              <li>{t("usecases.fortnite.use1")}</li>
-              <li>{t("usecases.fortnite.use2")}</li>
-              <li>{t("usecases.fortnite.use3")}</li>
-              <li>{t("usecases.fortnite.use4")}</li>
+          
+          <div class="mb-4">
+            <h4 class="text-white/90 mb-4">
+              {t('usecases.fortnite.uses')}
+            </h4>
+            <ul class="list-disc list-inside text-[var(--gray-300)]">
+              <li class="mb-1 leading-[1.5]">{t("usecases.fortnite.use1")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.fortnite.use2")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.fortnite.use3")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.fortnite.use4")}</li>
             </ul>
           </div>
         </div>
 
-        <div class="game-card">
-          <h4 class="game-title">{t("usecases.pubg.title")}</h4>
-          <p class="game-description">{t("usecases.pubg.description")}</p>
-          <div class="game-howto">
-            <h5 class="howto-title">{t("usecases.pubg.howto")}</h5>
-            <ol class="steps-list">
-              <li>{t("usecases.pubg.step1")}</li>
-              <li>{t("usecases.pubg.step2")}</li>
-              <li>{t("usecases.pubg.step3")}</li>
-              <li>{t("usecases.pubg.step4")}</li>
-              <li>{t("usecases.pubg.step5")}</li>
+        <!-- PUBG Card -->
+        <div class="bg-[var(--navy-700)] rounded-xl p-8 md:p-6 h-full transition-transform duration-200 hover:-translate-y-1">
+          <h4 class="text-white/90 mb-4">
+            {t("usecases.pubg.title")}
+          </h4>
+          <p class="text-[var(--gray-300)] leading-[1.6] mb-2">
+            {t("usecases.pubg.description")}
+          </p>
+          
+          <div class="mb-8">
+            <h4 class="text-white/90 mb-4">
+              {t("usecases.pubg.howto")}
+            </h4>
+            <ol class="list-decimal list-inside text-[var(--gray-300)]">
+              <li class="mb-1 leading-[1.5]">{t("usecases.pubg.step1")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.pubg.step2")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.pubg.step3")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.pubg.step4")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.pubg.step5")}</li>
             </ol>
           </div>
-          <div class="game-uses">
-            <h5 class="uses-title">{t("usecases.pubg.uses")}</h5>
-            <ul class="uses-list">
-              <li>{t("usecases.pubg.use1")}</li>
-              <li>{t("usecases.pubg.use2")}</li>
-              <li>{t("usecases.pubg.use3")}</li>
-              <li>{t("usecases.pubg.use4")}</li>
+          
+          <div class="mb-4">
+            <h4 class="text-white/90 mb-4">
+              {t("usecases.pubg.uses")}
+            </h4>
+            <ul class="list-disc list-inside text-[var(--gray-300)]">
+              <li class="mb-1 leading-[1.5]">{t("usecases.pubg.use1")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.pubg.use2")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.pubg.use3")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.pubg.use4")}</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div class="other-games">
-        <h4 class="other-games-title">{t("usecases.othergames.title")}</h4>
-        <p class="other-games-description">{t("usecases.othergames.description")}</p>
+      <!-- Other Games -->
+      <div class="mt-12">
+        <h3 class="text-white mb-4">
+          {t("usecases.othergames.title")}
+        </h3>
+        <p class="text-[var(--gray-300)] leading-[1.6] mb-8">
+          {t("usecases.othergames.description")}
+        </p>
 
-        <div class="other-games-grid">
-          <div class="other-game">
-            <h5 class="other-game-title">{t("usecases.minecraft.title")}</h5>
-            <p class="other-game-description">{t("usecases.minecraft.description")}</p>
+        <div class="grid grid-cols-1 min-[250px]:grid-cols-1 lg:grid-cols-3 gap-8 md:gap-6">
+          <div class="bg-[var(--navy-700)] rounded-xl p-6">
+            <h4 class="text-white/90 mb-4">
+              {t("usecases.minecraft.title")}
+            </h4>
+            <p class="text-[var(--gray-300)] leading-[1.6]">
+              {t("usecases.minecraft.description")}
+            </p>
           </div>
 
-          <div class="other-game">
-            <h5 class="other-game-title">{t("usecases.callofduty.title")}</h5>
-            <p class="other-game-description">{t("usecases.callofduty.description")}</p>
+          <div class="bg-[var(--navy-700)] rounded-xl p-6">
+            <h4 class="text-white/90 mb-4">
+              {t("usecases.callofduty.title")}
+            </h4>
+            <p class="text-[var(--gray-300)] leading-[1.6]">
+              {t("usecases.callofduty.description")}
+            </p>
           </div>
 
-          <div class="other-game">
-            <h5 class="other-game-title">{t("usecases.leagueoflegends.title")}</h5>
-            <p class="other-game-description">{t("usecases.leagueoflegends.description")}</p>
+          <div class="bg-[var(--navy-700)] rounded-xl p-6">
+            <h4 class="text-white/90 mb-4">
+              {t("usecases.leagueoflegends.title")}
+            </h4>
+            <p class="text-[var(--gray-300)] leading-[1.6]">
+              {t("usecases.leagueoflegends.description")}
+            </p>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Messaging Apps Section -->
-    <div class="usecases-section messaging-section">
-      <div class="usecases-header">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icons">
+    <div class="mb-8 md:mb-16 bg-[var(--navy-800)] rounded-2xl p-8 md:p-6 border border-navy-700 shadow-lg">
+      <div class="flex items-center gap-4 md:flex-col md:items-start md:gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffe88c] h-10 w-10 md:h-8 md:w-8 flex-shrink-0 p-2 md:p-1.5 bg-[var(--navy-700)] rounded-xl">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
         </svg>
-        <h3 class="section-title">{t("usecases.messaging.title")}</h3>
+        <h3 class="text-white">
+          {t("usecases.messaging.title")}
+        </h3>
       </div>
 
-      <p class="section-description">{t("usecases.messaging.description")}</p>
-      <p class="section-additional-info">{t("usecases.messaging.additionalInfo")}</p>
+      <p class="mb-2 text-[var(--gray-300)] leading-[1.6]">
+        {t("usecases.messaging.description")}
+      </p>
+      <p class=" text-[var(--gray-300)] leading-[1.6]">
+        {t("usecases.messaging.additionalInfo")}
+      </p>
 
-      <div class="messaging-apps-grid">
-        <div class="messaging-app">
-          <div class="app-header">
-            <Image 
-              src={WhatsappIcon}
-              alt="whatsapp icon"
-              width="20"
-              height="20"
-              class="other-app-icon"
-            />
-            <h4 class="app-title">{t("usecases.whatsapp.title")}</h4>
+      <div class="grid grid-cols-1 min-[300px]:grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-12">
+        <!-- WhatsApp -->
+        <div class="bg-[var(--navy-700)] rounded-xl p-8 md:p-6 h-full">
+          <div class="flex items-center gap-4">
+            <div class="bg-[var(--navy-900)] p-2 rounded-xl flex items-center justify-center">
+              <Image 
+                src={WhatsappIcon || "/placeholder.svg"}
+                alt="whatsapp icon"
+                width={20}
+                height={20}
+                class="flex-shrink-0"
+              />
+            </div>
+            <h4 class="text-white/90 mb-4 mt-4">
+              {t("usecases.whatsapp.title")}
+            </h4>
           </div>
-          <p class="app-description">{t("usecases.whatsapp.description")}</p>
-          <p class="app-instructions">{t("usecases.whatsapp.instructions")}</p>
+          <p class="text-[var(--gray-300)] leading-[1.6]">
+            {t("usecases.whatsapp.description")}
+          </p>
+          <p class="text-[var(--gray-300)] leading-[1.6] p-4 bg-[var(--navy-600)] rounded-lg text-[0.95rem]">
+            {t("usecases.whatsapp.instructions")}
+          </p>
 
-          <div class="app-uses">
-            <h5 class="uses-title">{t("usecases.whatsapp.uses")}</h5>
-            <ul class="uses-list">
-              <li>{t("usecases.whatsapp.use1")}</li>
-              <li>{t("usecases.whatsapp.use2")}</li>
-              <li>{t("usecases.whatsapp.use3")}</li>
-              <li>{t("usecases.whatsapp.use4")}</li>
+          <div class="mb-8">
+            <h4 class="text-white/90 mb-4">
+              {t("usecases.whatsapp.uses")}
+            </h4>
+            <ul class="list-disc list-inside text-[var(--gray-300)]">
+              <li class="mb-1 leading-[1.5]">{t("usecases.whatsapp.use1")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.whatsapp.use2")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.whatsapp.use3")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.whatsapp.use4")}</li>
             </ul>
           </div>
 
-          <div class="app-image-container">
+          <div class="mt-8 text-center">
             <Image
               src="/images/send-invisible-messages-on-whatsapp.webp"
               alt="WhatsApp message example"
               width={200}
               height={300}
-              class="app-image"
+              class="rounded-lg max-w-full h-auto mx-auto shadow-[0_4px_6px_rgba(0,0,0,0.1)] max-[768px]:max-w-[280px] max-[480px]:max-w-[240px]"
             />
           </div>
         </div>
 
-        <div class="messaging-app">
-          <div class="app-header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icon">
-              <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
-            </svg>
-            <h4 class="app-title">{t("usecases.twitter.title")}</h4>
+        <!-- Twitter -->
+        <div class="bg-[var(--navy-700)] rounded-xl p-8 md:p-6 h-full">
+          <div class="flex items-center gap-4">
+            <div class="bg-[var(--navy-900)] p-2 rounded-xl flex items-center justify-center">
+              <Image 
+                src="/placeholder.svg"
+                alt="Twitter icon"
+                width={20}
+                height={20}
+                class="flex-shrink-0"
+              />
+            </div>
+            <h4 class="text-white/90 mb-4 mt-4">
+              {t("usecases.twitter.title")}
+            </h4>
           </div>
-          <p class="app-description">{t("usecases.twitter.description")}</p>
+          <p class="text-[var(--gray-300)] leading-[1.6] mb-6">
+            {t("usecases.twitter.description")}
+          </p>
 
-          <div class="app-uses">
-            <h5 class="uses-title">{t("usecases.twitter.uses")}</h5>
-            <ul class="uses-list">
-              <li>{t("usecases.twitter.use1")}</li>
-              <li>{t("usecases.twitter.use2")}</li>
-              <li>{t("usecases.twitter.use3")}</li>
-              <li>{t("usecases.twitter.use4")}</li>
+          <div class="mb-8">
+            <h4 class="text-white/90 mb-4">
+              {t("usecases.twitter.uses")}
+            </h4>
+            <ul class="list-disc list-inside text-[var(--gray-300)]">
+              <li class="mb-1 leading-[1.5]">{t("usecases.twitter.use1")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.twitter.use2")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.twitter.use3")}</li>
+              <li class="mb-1 leading-[1.5]">{t("usecases.twitter.use4")}</li>
             </ul>
           </div>
 
-          <div class="app-image-container">
+          <div class="mt-8 text-center">
             <Image
               src="/images/send-invisible-message-on-twitter.webp"
               alt="Twitter blank tweet example"
               width={200}
               height={300}
-              class="app-image"
+              class="rounded-lg max-w-full h-auto mx-auto shadow-[0_4px_6px_rgba(0,0,0,0.1)] max-[768px]:max-w-[280px] max-[480px]:max-w-[240px]"
             />
           </div>
         </div>
       </div>
 
-      <div class="other-messaging-apps">
-        <h4 class="other-apps-title">{t("usecases.othermessaging.title")}</h4>
-        <div class="other-apps-grid">
-          <div class="other-app">
-            <div class="other-app-header">
+      <!-- Other Messaging Apps -->
+      <div class="mt-12">
+        <h4 class="text-white/90 mb-4">
+          {t("usecases.othermessaging.title")}
+        </h4>
+        <div class="grid grid-cols-1 min-[300px]:grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <div class="bg-[var(--navy-700)] rounded-xl p-4">
+            <div class="flex items-center gap-3">
               <Image
-                src={SlackIcon}
+                src={SlackIcon || "/placeholder.svg"}
                 alt="Slack icon"
                 width="20"
                 height="20"
-                class="other-app-icon"
+                class="flex-shrink-0"
               />
-              <h5 class="other-app-title">{t('usecases.slack.title')}</h5>
+              <h4 class="text-white/90 mt-4">
+                {t('usecases.slack.title')}
+              </h4>
             </div>
-            <p class="other-app-description">{t("usecases.slack.description")}</p>
+            <p class="text-[var(--gray-300)] leading-[1.6]">
+              {t("usecases.slack.description")}
+            </p>
           </div>
 
-          <div class="other-app">
-            <div class="other-app-header">
+          <div class="bg-[var(--navy-700)] rounded-xl p-4">
+            <div class="flex items-center gap-3">
               <Image 
-                src={InstagramIcon}
+                src={InstagramIcon || "/placeholder.svg"}
                 alt="Instagram icon"
                 width="20"
                 height="20"
-                class="other-app-icon"
+                class="flex-shrink-0"
               />
-              <h5 class="other-app-title">{t('usecases.instagram.title')}</h5>
+              <h4 class="text-white/90 mt-4">
+                {t('usecases.instagram.title')}
+              </h4>
             </div>
-            <p class="other-app-description">{t("usecases.instagram.description")}</p>
+            <p class="text-[var(--gray-300)] leading-[1.6]">
+              {t("usecases.instagram.description")}
+            </p>
           </div>
 
-          <div class="other-app">
-            <div class="other-app-header">
+          <div class="bg-[var(--navy-700)] rounded-xl p-4">
+            <div class="flex items-center gap-3">
               <Image 
-                src={FacebookIcon}
+                src={FacebookIcon || "/placeholder.svg"}
                 alt="Facebook icon"
                 width="20"
                 height="20"
-                class="other-app-icon"
+                class="flex-shrink-0"
               />
-              <h5 class="other-app-title">{t('usecases.facebook.title')}</h5>
+              <h4 class="text-white/90 mt-4">
+                {t('usecases.facebook.title')}
+              </h4>
             </div>
-            <p class="other-app-description">{t("usecases.facebook.description")}</p>
+            <p class="text-[var(--gray-300)] leading-[1.6]">
+              {t("usecases.facebook.description")}
+            </p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="usecases-section other-usecases-section">
-      <div class="usecases-header">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icons">
+    <!-- Other Use Cases Section -->
+    <div class="mb-8 md:mb-16 bg-[var(--navy-800)] rounded-2xl p-8 md:p-6 border border-navy-700 shadow-lg">
+      <div class="flex items-center gap-4  md:flex-col md:items-start md:gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffe88c] h-10 w-10 md:h-8 md:w-8 flex-shrink-0 p-2 md:p-1.5 bg-[var(--navy-500)] rounded-xl">
           <circle cx="12" cy="12" r="3"/>
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 1.82-.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
         </svg>
-        <h3 class="section-title">{t("usecases.other.title")}</h3>
+        <h3 class="text-white mb-4">
+          {t("usecases.other.title")}
+        </h3>
       </div>
 
-      <div class="other-usecases-grid">
-        <div class="usecase-card">
-          <div class="usecase-header">
-            <svg xmlns="http://www.w3.org/2000/svg" color="#fff275" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icons">
+      <div class="grid grid-cols-1 min-[300px]:grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="bg-[var(--navy-700)] rounded-xl p-4 h-full">
+          <div class="flex items-center gap-4 mb-6 md:mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" color="#fff275" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffe88c] h-10 w-10 flex-shrink-0 p-2 bg-[var(--navy-900)] rounded-lg">
               <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
               <polyline points="14 2 14 8 20 8"/>
               <line x1="16" y1="13" x2="8" y2="13"/>
               <line x1="16" y1="17" x2="8" y2="17"/>
               <line x1="10" y1="9" x2="8" y2="9"/>
             </svg>
-            <h4 class="usecase-title">{t("usecases.documents.title")}</h4>
+            <h4 class="text-white/90 mb-4 mt-4">
+              {t("usecases.documents.title")}
+            </h4>
           </div>
-          <p class="usecase-description">{t("usecases.documents.description")}</p>
-          <ul class="usecase-list">
-            <li>{t("usecases.documents.use1")}</li>
-            <li>{t("usecases.documents.use2")}</li>
-            <li>{t("usecases.documents.use3")}</li>
-            <li>{t("usecases.documents.use4")}</li>
+          <p class="text-[var(--gray-300)] leading-[1.6] mb-6">
+            {t("usecases.documents.description")}
+          </p>
+          <ul class="list-disc list-inside text-[var(--gray-300)]">
+            <li class="mb-1 leading-[1.5]">{t("usecases.documents.use1")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.documents.use2")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.documents.use3")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.documents.use4")}</li>
           </ul>
         </div>
 
-        <div class="usecase-card">
-          <div class="usecase-header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icons">
+        <div class="bg-[var(--navy-700)] rounded-xl p-4 h-full">
+          <div class="flex items-center gap-4 mb-6 md:mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffe88c] h-10 w-10 flex-shrink-0 p-3 bg-[var(--navy-900)] rounded-lg">
               <polyline points="16 18 22 12 16 6"/>
               <polyline points="8 6 2 12 8 18"/>
             </svg>
-            <h4 class="usecase-title">{t("usecases.programming.title")}</h4>
+            <h4 class="text-white/90 mb-4 mt-4">
+              {t("usecases.programming.title")}
+            </h4>
           </div>
-          <p class="usecase-description">{t("usecases.programming.description")}</p>
-          <ul class="usecase-list">
-            <li>{t("usecases.programming.use1")}</li>
-            <li>{t("usecases.programming.use2")}</li>
-            <li>{t("usecases.programming.use3")}</li>
-            <li>{t("usecases.programming.use4")}</li>
+          <p class="text-[var(--gray-300)] leading-[1.6] mb-6">
+            {t("usecases.programming.description")}
+          </p>
+          <ul class="list-disc list-inside text-[var(--gray-300)]">
+            <li class="mb-1 leading-[1.5]">{t("usecases.programming.use1")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.programming.use2")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.programming.use3")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.programming.use4")}</li>
           </ul>
         </div>
 
-        <div class="usecase-card">
-          <div class="usecase-header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icons">
+        <div class="bg-[var(--navy-700)] rounded-xl p-4 h-full">
+          <div class="flex items-center gap-4 mb-6 md:mb-5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffe88c] h-10 w-10 flex-shrink-0 p-3 bg-[var(--navy-900)] rounded-lg">
               <path d="m12 19 7-7 3 3-7 7-3-3z"/>
               <path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/>
               <path d="m2 2 7.586 7.586"/>
               <circle cx="11" cy="11" r="2"/>
             </svg>
-            <h4 class="usecase-title">{t("usecases.design.title")}</h4>
+            <h4 class="text-white/90 mb-4 mt-4">
+              {t("usecases.design.title")}
+            </h4>
           </div>
-          <p class="usecase-description">{t("usecases.design.description")}</p>
-          <ul class="usecase-list">
-            <li>{t("usecases.design.use1")}</li>
-            <li>{t("usecases.design.use2")}</li>
-            <li>{t("usecases.design.use3")}</li>
-            <li>{t("usecases.design.use4")}</li>
+          <p class="text-[var(--gray-300)] leading-[1.6] mb-6">
+            {t("usecases.design.description")}
+          </p>
+          <ul class="list-disc list-inside text-[var(--gray-300)]">
+            <li class="mb-1 leading-[1.5]">{t("usecases.design.use1")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.design.use2")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.design.use3")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.design.use4")}</li>
           </ul>
         </div>
       </div>
     </div>
 
     <!-- Professional Use Cases -->
-    <div class="usecases-section professional-section">
-      <div class="usecases-header">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icons">
-          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-          <line x1="8" y1="21" x2="16" y2="21"/>
-          <line x1="12" y1="17" x2="12" y2="21"/>
-        </svg>
-        <h3 class="section-title">{t("usecases.professional.title")}</h3>
-      </div>
+    <div class="mb-8 md:mb-16 bg-[var(--navy-800)] rounded-2xl p-8 md:p-6 border border-navy-700 shadow-lg">
+      <h3 class="text-white mb-4">
+        {t("usecases.professional.title")}
+      </h3>
 
-      <div class="professional-grid">
-        <div class="professional-card">
-          <div class="professional-header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icons">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-              <rect x="2" y="9" width="4" height="12"/>
-              <circle cx="4" cy="4" r="2"/>
-            </svg>
-            <h4 class="professional-title">{t("usecases.linkedin.title")}</h4>
+      <div class="grid grid-cols-1 min-[300px]:grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+        <div class="bg-[var(--navy-700)] rounded-xl p-8 md:p-6 h-full">
+          <div class="flex items-center gap-4">
+            <div class="bg-[var(--navy-900)] rounded-xl flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffe88c] h-10 w-10 flex-shrink-0 p-3 bg-[var(--navy-900)] rounded-lg">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </div>
+            <h4 class="text-white/90 mb-4 mt-4">
+              {t("usecases.linkedin.title")}
+            </h4>
           </div>
-          <p class="professional-description">{t("usecases.linkedin.description")}</p>
-          <ul class="professional-list">
-            <li>{t("usecases.linkedin.use1")}</li>
-            <li>{t("usecases.linkedin.use2")}</li>
-            <li>{t("usecases.linkedin.use3")}</li>
-            <li>{t("usecases.linkedin.use4")}</li>
+          <p class="text-[var(--gray-300)] leading-[1.6] mb-6">
+            {t("usecases.linkedin.description")}
+          </p>
+          <ul class="list-disc list-inside text-[var(--gray-300)]">
+            <li class="mb-1 leading-[1.5]">{t("usecases.linkedin.use1")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.linkedin.use2")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.linkedin.use3")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.linkedin.use4")}</li>
           </ul>
         </div>
 
-        <div class="professional-card">
-          <div class="professional-header">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="section-icons">
-              <rect x="2" y="4" width="20" height="16" rx="2"/>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-            </svg>
-            <h4 class="professional-title">{t("usecases.email.title")}</h4>
+        <div class="bg-[var(--navy-700)] rounded-xl p-8 md:p-6 h-full">
+          <div class="flex items-center gap-4">
+            <div class="bg-[var(--navy-900)] rounded-xl flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#ffe88c] h-10 w-10 flex-shrink-0 p-3 bg-[var(--navy-900)] rounded-lg">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+            </div>
+            <h4 class="text-white/90 mb-4 mt-4">
+              {t("usecases.email.title")}
+            </h4>
           </div>
-          <p class="professional-description">{t("usecases.email.description")}</p>
-          <ul class="professional-list">
-            <li>{t("usecases.email.use1")}</li>
-            <li>{t("usecases.email.use2")}</li>
-            <li>{t("usecases.email.use3")}</li>
-            <li>{t("usecases.email.use4")}</li>
+          <p class="text-[var(--gray-300)] leading-[1.6] mb-6">
+            {t("usecases.email.description")}
+          </p>
+          <ul class="list-disc list-inside text-[var(--gray-300)]">
+            <li class="mb-1 leading-[1.5]">{t("usecases.email.use1")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.email.use2")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.email.use3")}</li>
+            <li class="mb-1 leading-[1.5]">{t("usecases.email.use4")}</li>
           </ul>
         </div>
       </div>
