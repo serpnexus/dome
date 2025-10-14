@@ -13,14 +13,14 @@ const posts = (await getCollection('blog'))
   <h2 class=" mb-8 text-center text-yellow-400">Latest Blog Posts</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
     {posts.map((post) => (
-      <a href={`/blog/${post.slug}`} class="bg-white border border-yellow-400 rounded-2xl shadow-sm overflow-hidden flex flex-col no-underline text-inherit transition-all duration-200 hover:shadow-lg hover:border-yellow-300">
+      <a href={`/blog/${post.slug}`} class=" border border-white/5 rounded-2xl shadow-xl hover:shadow-sm shadow-yellow-100/5 overflow-hidden flex flex-col no-underline text-inherit transition-all duration-200 hover:shadow-none">
         {post.data.image && (
           <Image src={post.data.image} alt={post.data.title} width={400} height={200} class="w-full h-48 object-cover transition-transform duration-200 block bg-navy-600 hover:scale-105" />
         )}
-        <div class="p-6 flex flex-col flex-1 bg-navy-700">
-          <h3 class=" mb-2 text-gray-200 transition-colors duration-200 hover:text-yellow-400">{post.data.title}</h3>
-          <p class="text-base text-yellow-400 mb-4"><FormattedDate date={post.data.pubDate} /></p>
-          <p class="text-gray-400 line-clamp-3 flex-1">{post.data.description || ''}</p>
+        <div class="p-6 flex flex-col flex-1 bg-navy-800">
+          <h3 class="text-xl/[1.25] mb-2 hover:text-yellow-400">{post.data.title}</h3>
+          <p class="text-base text-yellow-100/60 mb-4"><FormattedDate date={post.data.pubDate} /></p>
+          <p class="text-gray-300 line-clamp-3 flex-1">{post.data.description || ''}</p>
         </div>
       </a>
     ))}

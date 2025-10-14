@@ -6,11 +6,11 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="py-16">
+<section class="py-16 mt-8">
   <div class="max-w-1200 mx-auto px-6">
     <h2 class="text-center text-yellow-400 mb-2">{t("why.title")}</h2>
 
-    <p class="max-w-3xl mx-auto mb-4 text-gray-300 text-center">{t('why.intro')}</p>
+    <p class="max-w-4xl mx-auto py-4 text-gray-300 text-center">{t('why.intro')}</p>
     <div class="bg-white bg-opacity-5 border border-white border-opacity-10 rounded-lg p-6 mb-8">
       <h3 class="text-white mb-4">{t('why.whyuse.title')}</h3>
       <p class="mb-2 text-gray-300">{t('why.whyuse.description')}</p>

@@ -1479,7 +1479,7 @@ export const ui = {
       "Post blank status updates that grab attention or create clean spacing in longer posts.",
 
     // Other Use Cases section
-    "usecases.other.title": "Other Creative Use Cases",
+    "usecases.other.title": "Creative use cases might can be",
 
     "usecases.documents.title": "Documents & Forms",
     "usecases.documents.description":
@@ -1718,30 +1718,22 @@ export const ui = {
     "faq.subtitle":
       "Find answers to common questions about invisible text and how to use it",
 
-    "faq.q1": "What are invisible characters?",
+    "faq.q1": "What is invisible text?",
     "faq.a1":
-      "Invisible characters are Unicode characters that don't display any visible symbol but still occupy space in text. They have unique Unicode values and can be used for various formatting and creative purposes.",
+      "Invisible text is an character that doesn\'t display any visible text or character but still occupy space as a other alphabet, text, or symbol.",
 
     "faq.q2": "Are invisible characters safe to use?",
     "faq.a2":
       "Yes, invisible characters are completely safe. They are standard Unicode characters used in many applications and websites. However, some platforms may have restrictions on their use in usernames or other fields.",
 
     "faq.q3": "Will invisible characters work everywhere?",
-    "faq.a3":
-      "Most modern applications, websites, and operating systems support Unicode characters, including invisible ones. However, some older systems or applications with strict text validation might not display them correctly or may filter them out.",
-
+    "faq.a3": "Most modern applications, websites, and operating systems support Unicode characters, including invisible ones. However, some older systems or applications with strict text validation might not display them correctly or may filter them out.",
     "faq.q4": "Can I use invisible characters in my username?",
-    "faq.a4":
-      "It depends on the platform. Many games and social media platforms allow invisible characters in usernames, but some have implemented restrictions to prevent confusion or abuse. Always check the platform's policies before using them.",
-
+    "faq.a4": "It depends on the platform. Many games and social media platforms allow invisible characters in usernames, but some have implemented restrictions to prevent confusion or abuse. Always check the platform's policies before using them.",
     "faq.q5": "How do I know if the invisible character is working?",
-    "faq.a5":
-      "You can test invisible characters in our Test Area. If the text appears empty but still takes up space, the invisible character is working correctly. You can also check the character count to confirm their presence.",
-
+    "faq.a5": "You can test invisible characters in our Test Area. If the text appears empty but still takes up space, the invisible character is working correctly. You can also check the character count to confirm their presence.",
     "faq.q6": "Can I combine different types of invisible characters?",
-    "faq.a6":
-      "Yes, you can combine different invisible characters to create various effects. Our Advanced Options in the generator allow you to mix different types of invisible characters or create patterns with them.",
-
+    "faq.a6": "Yes, you can combine different invisible characters to create various effects. Our Advanced Options in the generator allow you to mix different types of invisible characters or create patterns with them.",
     // Footer
     "footer.about": "About InvisibleText.me",
     // "footer.description": 'InvisibleText.me provides tools for generating an  "About InvisibleText.me',
