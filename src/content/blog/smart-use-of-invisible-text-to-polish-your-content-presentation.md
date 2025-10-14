@@ -64,9 +64,9 @@ TextReverse.com is mainly a text-reversing platform, but it also has a smart <u>
 - No daily or monthly limit.
 - Completely free usability.
 
-### InvisibleSymbol — Empty Text
+### Invisible-Symbol — Empty Text
 
-<u>[Invisible Symbol](https://invisiblesymbol.com/)</u> is another web-based resource where you can find a free tool to get empty text. It also offers two methods to copy blank text, but what makes it unique is that it provides three further options in the first technique. These involve copying small, medium, and large invisible characters. This flexibility allows you to choose the right size of space depending on whether you need a slight gap, a balanced break, or a wider separation in your content.
+<u>[Invisible Symbol](https://www.invisibletext.me/)</u> is another web-based resource where you can find a free tool to get empty text. It also offers two methods to copy blank text, but what makes it unique is that it provides three further options in the first technique. These involve copying small, medium, and large invisible characters. This flexibility allows you to choose the right size of space depending on whether you need a slight gap, a balanced break, or a wider separation in your content.
 
 ![invisible-symbol-tool](/images/invisible-symbol.webp "blank text")
 

@@ -83,7 +83,7 @@ Automation may also lead to workforce displacement, so companies should balance 
 
 Besides transforming the way businesses work, AI is transforming consumer decision behavior. Individual recommendations minimize decision fatigue, which influences customers to shop quickly. At the same time, there are dynamic pricing and offer specialization, which lead to a sense of urgency and contribute to the purchasing behavior.
 
-In this regard, consumers in most instances are becoming more brand loyal to brands that continuously offer relatable and convenient shopping experiences backed by <u>[Artificial Intelligence](https://scientificasia.net/artificial-intelligence-ai/)</u>.
+In this regard, consumers in most instances are becoming more brand loyal to brands that continuously offer relatable and convenient shopping experiences backed by Artificial Intelligence.
 
 ## Real-World Examples of AI Success in E-commerce
 
