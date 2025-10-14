@@ -10,25 +10,34 @@ import FAQSection from '../../components/FAQ.astro';
 import UnicodeTable from '../../components/UnicodeTable.astro';
 import BlogSection from '../../components/BlogSection.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
-import { languages } from '../../i18n/ui';
 
 export function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({
-    params: { lang },
-  }));
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'fr' } },
+    { params: { lang: 'de' } },
+    { params: { lang: 'my' } },
+    { params: { lang: 'it' } },
+    { params: { lang: 'id' } },
+    { params: { lang: 'ru' } },
+    { params: { lang: 'tr' } },
+    { params: { lang: 'ko' } },
+    { params: { lang: 'pt' } },
+    { params: { lang: 'nl' } },
+    { params: { lang: 'ja' } },
+    { params: { lang: 'th' } },
+    { params: { lang: 'vi' } },
+    { params: { lang: 'hu' } },
+    { params: { lang: 'fi' } },
+    // Add more languages as needed
+  ];
 }
-
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 export const prerender = true;
 ---
-
 <Layout title={t('meta.title')} description={t('meta.description')}>
   <div class="flex-1">
-    <h1 class="text-center mt-8">{t("invisibletext.title")}</h1>
-    <p class="text-center">
-      {t("invisibletext.description")}
-    </p>
     <InvisibleTextGenerator />
     <Intro />
     <WhtIsInvisibleTxt />

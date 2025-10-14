@@ -13,8 +13,8 @@ const navigation = [
 ];
 ---
 
-<nav class="fixed top-2.5 left-0 right-0 w-full z-50 animate-[slideDown_0.6s_cubic-bezier(0.4,0,0.2,1)]">
-  <div class="max-w-1200 mx-auto p-2 flex items-center justify-between backdrop-blur-md border border-yellow-400/20 rounded-xl shadow-[0_8px_32px_rgba(18,28,65,0.4),inset_0_1px_0_rgba(255,215,0,0.2),inset_0_-1px_0_rgba(18,28,65,0.2)]">
+<nav class="fixed left-0 right-0 w-full z-50 animate-[slideDown_0.6s_cubic-bezier(0.4,0,0.2,1)]">
+  <div class="max-w-1200 mx-auto p-2 flex items-center justify-between backdrop-blur-md border border-yellow-400/25 rounded-b-xl shadow-[0_8px_32px_rgba(18,28,65,0.4),inset_0_1px_0_rgba(255,215,0,0.2),inset_0_-1px_0_rgba(18,28,65,0.2)]">
     <a href={lang === 'en' ?  '/' : `/${lang}`} class="flex items-center text-xl font-bold text-white no-underline relative overflow-hidden hover:text-yellow-400 transition-colors duration-300">
       <img src="/images/logo.webp" alt="Invisible Text Logo" class="w-10 h-10 mr-1" width="40" height="40" loading="eager" decoding="async">
       InvisibleText
@@ -31,7 +31,7 @@ const navigation = [
         ))}
       </ul>
       
-      <LanguageSwitcher class="bg-yellow-400/8 backdrop-blur-md border border-yellow-400/25 rounded-xl transition-all duration-300 hover:bg-yellow-400/20 hover:-translate-y-0.5 shadow-[0_8px_32px_rgba(18,28,65,0.4),inset_0_1px_0_rgba(255,215,0,0.2),inset_0_-1px_0_rgba(18,28,65,0.2)] hover:shadow-[0_12px_40px_rgba(18,28,65,0.5),inset_0_1px_0_rgba(255,215,0,0.3)]" /> 
+      <LanguageSwitcher class="bg-white backdrop-blur-md border border-yellow-400/25 rounded-xl transition-all duration-300 hover:bg-yellow-400/20 hover:-translate-y-0.5 shadow-[0_8px_32px_rgba(18,28,65,0.4),inset_0_1px_0_rgba(255,215,0,0.2),inset_0_-1px_0_rgba(18,28,65,0.2)] hover:shadow-[0_12px_40px_rgba(18,28,65,0.5),inset_0_1px_0_rgba(255,215,0,0.3)]" /> 
     </div>
   </div>
 </nav>
@@ -61,8 +61,8 @@ const navigation = [
   /* Dark theme optimizations */
   @media (prefers-color-scheme: dark) {
     nav > div {
-      background: rgba(255, 215, 0, 0.05);
-      border-color: rgba(255, 215, 0, 0.15);
+      /* background: rgba(255, 215, 0, 0.05); */
+      /* border-color: rgba(255, 215, 0, 0.15); */
     }
     
     .bg-yellow-400\/8 {
