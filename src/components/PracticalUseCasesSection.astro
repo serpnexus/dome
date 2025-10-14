@@ -4,6 +4,7 @@ import InstagramIcon from "../assets/icons/instagram_logo_icon.svg";
 import WhatsappIcon from "../assets/icons/whatapp_logo-icon.svg";
 import SlackIcon from "../assets/icons/slack-new-logo.svg";
 import FacebookIcon from "../assets/icons/facebook_icon.svg";
+import TwitterIcon from "../assets/icons/twitter.svg";
 import { getLangFromUrl } from "../i18n/utils";
 import { useTranslations } from "../i18n/utils";
 
@@ -219,7 +220,7 @@ const t = useTranslations(lang);
           <div class="flex items-center gap-4">
             <div class="bg-[var(--navy-900)] p-2 rounded-xl flex items-center justify-center">
               <Image 
-                src="/placeholder.svg"
+                src={TwitterIcon || "/placeholder.svg"}
                 alt="Twitter icon"
                 width={20}
                 height={20}
