@@ -9,7 +9,7 @@ const t = useTranslations(lang);
     <div class="max-w-3xl mx-auto text-center">
         <h2 class=" text-yellow-400 mb-4 leading-tight">
             {t("about.introduction.title").split("InvisibleText.me")[0]}{" "}
-            <a href="https://invisibletext.me" class="underline text-yellow-400 hover:text-white transition-colors duration-300">
+            <a href={lang === 'en' ?  '/' : `/${lang}`}  class="underline text-yellow-400 hover:text-white transition-colors duration-300">
                 InvisibleText.me
             </a>
             {t("about.introduction.title").includes("InvisibleText.me")
