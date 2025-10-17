@@ -10,23 +10,24 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer class="mt-auto py-16 pb-2 border-t border-navy-700">
-  <div class="max-w-1200 mx-auto px-6">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div>
-        <a href="/">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8 xl:gap-10">
+      <!-- Brand/Logo -->
+      <div class="flex flex-col items-start mb-8 lg:mb-0">
+        <a href="/" class="mb-4">
           <Image 
             src="/images/logo.webp"
             alt="logo"
             height="100"
             width="100"
-            class="w-24 h-24 mb-3"
+            class="w-20 h-20 mb-3 rounded-xl shadow-lg"
           />
-          <h3 class="text-xl mb-4 text-yellow-200">InvisibleText.me</h3>
+          <h3 class="text-2xl font-bold text-yellow-200 mb-2">InvisibleText.me</h3>
         </a>
-        <p class="text-gray-300">
+        <p class="text-gray-300 mb-4 text-base leading-relaxed">
           {t('footer.description')}
         </p>
-        <div class="flex gap-4 mt-4">
+        <div class="flex gap-4 mt-2">
           <a href="https://www.invisibletext.me/#" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200">
             <span class="sr-only">Twitter</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -41,48 +42,52 @@ const currentYear = new Date().getFullYear();
           </a>
         </div>
       </div>
-      
-      <div>
-        <h3 class="text-xl mb-4 text-yellow-200">{t('footer.quickLinks')}</h3>
-        <div class="flex flex-col gap-2">
-          <a href="/" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200">
-            {t('nav.home')}
-          </a>
-          <a href="/tools" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200">
-            Tools
-          </a>
-          <a href="/unicode" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200">
-            {t('nav.unicode')}
-          </a>
-          <a href="/blog" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200">
-            {t('nav.blog')}
-          </a>
-          <a href="/about" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200">
-            About Us
-          </a>
-          <a href="/contact" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200">
-            Contact
-          </a>
+
+      <!-- Tools -->
+      <div class="flex flex-col mb-8 lg:mb-0">
+        <h3 class="text-xl font-semibold text-yellow-200 mb-4">Tools</h3>
+        <div class="flex flex-col ">
+          <a href="/tools/text-counter" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Text Counter</a>
+          <a href="/tools/case-converter" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Case Converter</a>
+          <a href="/tools/similish-translator" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Similish Translator</a>
+          <a href="/tools/wingdings-translator" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Wingdings Translator</a>
+          <a href="/tools/fancy-text-generator" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Fancy Text Generator</a>
+          <a href="/tools/small-text-generator" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Small Text Generator</a>
+          <a href="/tools/mirror-text-generator" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Mirror Text Generator</a>
+          <a href="/tools/old-english-translator" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Old English Translator</a>
+          <a href="/tools/high-valyrian-translator" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">High Valyrian Translator</a>
+          <a href="/tools/bold-italic-converter" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Bold Italic Text Converter</a>
+          <a href="/tools/upside-down-text" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Upside Down Text Generator</a>
         </div>
       </div>
-      
-      <div>
-        <h3 class="text-xl mb-4 text-yellow-200">{t('footer.contact')}</h3>
-        <p class="text-gray-300">{t('footer.contactText')}</p>
-        <a href="mailto:serpnexus.biz@gmail.com" class="text-yellow-400 hover:underline">
-          serpnexus.biz@gmail.com
-        </a>
-        <div class="mt-4 flex gap-4">
-          <a href="/terms" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200">Terms of Service</a>
-          <a href="/privacy" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200">Privacy Policy</a>
+
+      <!-- Quick Links -->
+      <div class="flex flex-col mb-8 lg:mb-0">
+        <h3 class="text-xl font-semibold text-yellow-200 mb-4">{t('footer.quickLinks')}</h3>
+        <div class="flex flex-col ">
+          <a href="/" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">{t('nav.home')}</a>
+          <a href="/blog" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">{t('nav.blog')}</a>
+          <a href="/unicode" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">{t('nav.unicode')}</a>
+          <a href="/contact" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Contact</a>
+          <a href="/about" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">About Us</a>
+          <a href="/disclaimer" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Disclaimer</a>
+          <a href="/write-for-us" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Write for Us</a>
         </div>
-        <div class="mt-4 flex gap-4">
-          <a href="/disclaimer" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200">Disclaimer</a>
+      </div>
+
+      
+      <div class="flex flex-col mb-8 lg:mb-0">
+        <h3 class="text-xl font-semibold text-yellow-200 mb-4">{t('footer.contact')}</h3>
+        <p class="text-gray-300 mb-2 text-base leading-relaxed">{t('footer.contactText')}</p>
+        <a href="mailto:serpnexus.biz@gmail.com" class="text-yellow-400 hover:underline mb-4 overflow-hidden overflow-wrap">serpnexus.biz@gmail.com</a>
+        <div class="flex flex-col mt-2">
+          <a href="/terms" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Terms of Service</a>
+          <a href="/privacy" class="text-gray-300 hover:text-yellow-400 transition-colors duration-200 py-1 px-2 rounded-lg">Privacy Policy</a>
         </div>
       </div>
     </div>
 
-    <div class="mt-8 pt-8 border-t border-navy-700 text-center text-gray-400">
+    <div class="mt-12 pt-8 border-t border-navy-700 text-center text-gray-400 text-sm">
       <p>&copy; {currentYear} InvisibleText.me. {t('footer.rights')}</p>
     </div>
   </div>

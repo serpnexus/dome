@@ -1201,9 +1201,8 @@ export const ui = {
 
 
     // Meta tags for SEO
-    "meta.title": "Invisible Character - (ㅤ) Blank Space Copy Paste",
-    "meta.description":
-      "Use our Invisible Text Tool to create blank or empty space easily. Perfect for invisible names, usernames, or hidden messages. 100% free & copy-paste ready.",
+    "meta.title": "Invisible Text Tool ( ) - Generate Blank Characters Online",
+    "meta.description":"Generate unlimited invisible text and blank space characters. Free one-click copy tool for social media, gaming, Discord, and more. No signup needed.",
     "meta.keywords":
       "Invisible Text, Blank Text, Copy Paste Invisible Characters, Unicode Invisible Characters, Hangul Filler, Zero Width Space",
 

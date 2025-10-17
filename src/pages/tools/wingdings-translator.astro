@@ -1,25 +1,112 @@
 ---
 import Layout from '../../layouts/StaticPageLayout.astro';
-import TextConverter from '../../components/TextConverter.astro';
+import TextTransformer from '../../components/TextTransformer';
+
+const faqs = [
+  {
+    question: "What is Wingding?",
+    answer: "Wingdings is a font that uses symbols and icons instead of traditional alphanumeric characters."
+  },
+  {
+    question: "What are the uses of Wingding text?",
+    answer: "The Wingdings text is versatile, suitable for usernames, images, comments, messages, and unique titles."
+  },
+  {
+    question: "What should be avoided when using Wingdings?",
+    answer: "Avoid overusing symbols, being inconsistent, and using irrelevant symbols."
+  },
+  {
+    question: "Can Wingdings be used in social media campaigns?",
+    answer: "Absolutely. Wingdings can make social media posts and ads more eye-catching and engaging."
+  },
+  {
+    question: "How can Wingdings enhance email marketing?",
+    answer: "Wingdings can make email subject lines and content more visually appealing, increasing open rates and engagement."
+  },
+  {
+    question: "How many words can the Wingdings translator tool translate?",
+    answer: "The tool supports unlimited word translation, catering to both short and long-form texts."
+  },
+  {
+    question: "What are some best practices for using Wingdings?",
+    answer: "Keep designs simple, use symbols consistently, and ensure relevance to the message."
+  },
+  {
+    question: "Are there tools for creating with Wingdings?",
+    answer: "Yes, tools like Adobe Illustrator and various online design tools can help integrate Wingdings into marketing materials."
+  }
+];
 ---
 
 <Layout title="Wingdings Translator - Convert Text to Wingdings Symbols" description="Convert your text into mysterious Wingdings symbols. This iconic symbol font transforms letters into pictographs, arrows, and decorative elements for creative designs and puzzles.">
-  <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
+  <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
-      <!-- Header Section -->
-      <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
-          Wingdings Translator
-        </h1>
-        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-          Convert your text into mysterious Wingdings symbols. This iconic symbol font transforms 
-          letters into pictographs, arrows, and decorative elements for creative designs and puzzles.
-        </p>
-      </div>
 
-      <TextConverter mode="wingdings" />
-      
-      <div class="mt-16 grid md:grid-cols-2 gap-8">
+      <TextTransformer 
+        client:load
+        title='Wingdings Translator' 
+        description='Convert your text into mysterious Wingdings symbols. Our wingding translator tool allows you to easily convert text into the wingding font, enabling you to add a unique and creative touch to your messages or designs. Try it out now for a fun and quirky way to communicate!' 
+        transformType="wingdings"
+        placeholder='Type or paste your text here...'
+      />
+      <section class="py-12 md:py-16">  
+        <div class="max-w-4xl mx-auto mt-16 md:mt-16">
+          <h2 class=" text-center">What is Wingdings?</h2>
+          <p class="text-center">Wingdings is a font that uses symbols and icons instead of traditional alphanumeric characters. It was created by Microsoft in 1990 and has since become a popular choice for adding visual interest to documents, presentations, and designs. The Wingdings font includes a wide range of symbols, including arrows, shapes, and various pictograms.
+            <br /><br />
+            The Wingdings translator tool allows you to easily convert text into the Wingdings font, enabling you to add a unique and creative touch to your messages or designs. Whether you're looking to create a fun puzzle, add decorative elements to a document, or simply want to communicate in a quirky way, the Wingdings translator is a great tool to have at your disposal.
+            <br /><br />
+            Try it out now for a fun and quirky way to communicate!
+          </p>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="py-8 md:py-8 max-w-4xl mx-auto">
+        <div class="bg-navy-700 p-6 mx-auto mt-16 rounded-xl border border-navy-600">
+          <h2 class="text-center">How the Wingdings Translator Works?</h2>
+          
+          <p class="text-center">
+            The <a 
+              href="https://www.techmatly.com/tools/wingdings-translator"
+              class="text-yellow-100 hover:text-yellow-300 underline font-medium"
+            >Wingdings translator</a> converts regular text into Wingdings font symbols instantly. Follow these simple steps to transform your text in seconds.
+          </p>
+
+          <h3>Quick Start Guide</h3>
+          <ol class="space-y-4 mb-8">
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 inline-flex items-center justify-center h-8 w-8 rounded-full bg-blue-600 text-white font-bold">1</span>
+              <div>
+                <p class="text-white font-medium">Enter Your Text</p>
+                <p>Type or paste your text into the input box. You can use any regular characters or symbols.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 inline-flex items-center justify-center h-8 w-8 rounded-full bg-blue-600 text-white font-bold">2</span>
+              <div>
+                <p class="text-white font-medium">View Instant Translation</p>
+                <p>The translator automatically converts your text to Wingdings symbols in real-time.</p>
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 inline-flex items-center justify-center h-8 w-8 rounded-full bg-blue-600 text-white font-bold">3</span>
+              <div>
+                <p class="text-white font-medium">Copy and Share</p>
+                <p>Click the "Copy to Clipboard" button to copy your converted Wingdings text, then paste it anywhere you want.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+            <p class="font-semibold text-black">
+              Use Cases: <span class="text-sm">Share Wingdings text on social media, messaging apps, comments sections, documents, or any other platform that supports text paste.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-8 md:py-12 grid md:grid-cols-2 gap-8">
         <div class="bg-navy-700 rounded-xl p-8 border border-navy-600">
           <h2 class="text-2xl font-bold text-yellow-400 mb-6 flex items-center gap-3">
             <span class="text-3xl">🔤</span>
@@ -27,9 +114,7 @@ import TextConverter from '../../components/TextConverter.astro';
           </h2>
           <div class="space-y-4 text-slate-300">
             <p>
-              Wingdings is a TrueType dingbat font included with Microsoft Windows that contains 
-              symbols instead of alphanumeric characters. Created in the 1990s, it became famous 
-              for its mysterious appearance and conspiracy theories.
+              Microsoft developed a distinctive font, in 1990 called wingding. More than a mere font, wingding boasts special winged characters and symbols, also known as “<strong>dingbats</strong>.” printers in the early 19th century used these symbols to add a unique touch to book titles and papers. The wingdings translator keeps the font relevant and accessible today. This iconic symbol font transforms letters into pictographs, arrows, and decorative elements for creative designs and puzzles. 
             </p>
             <p>
               Each letter of the alphabet corresponds to a specific symbol, ranging from arrows 
@@ -186,7 +271,115 @@ import TextConverter from '../../components/TextConverter.astro';
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    
+      
+
+      <!-- Features Section -->
+      <section class="py-8 md:py-12">
+        <div class="container mx-auto max-w-screen-lg">
+          <h2 class="text-center">Key Features of Our Translator</h2>
+          <p class="text-center">
+            Discover why thousands of users choose our Wingdings translator for reliable, fast text conversion.
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white/5 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Instant Conversion</h3>
+                  <p>Get real-time results as you type. Convert your text to Wingdings symbols in under a second.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white/5 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Intuitive Design</h3>
+                  <p>Clean and user-friendly interface requires no technical knowledge. Perfect for everyone.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white/5 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>One-Click Copy</h3>
+                  <p>Copy converted text to your clipboard instantly. Share on social media, messaging apps, and more.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white/5 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Browser-Based</h3>
+                  <p>No software downloads or installations needed. Access the translator anywhere with an internet connection.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white/5 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>100% Free</h3>
+                  <p>Full access to all features at no cost. No premium memberships or hidden charges.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs Section -->
+      <section class="py-8 md:py-12">
+        <div class="container mx-auto max-w-screen-lg">
+          <h2 class="text-center">Frequently Asked Questions</h2>
+          <p class="text-center">Find answers to common questions about the Wingdings translator and how to use it.</p>
+          
+          <div class="space-y-4">
+            {faqs.map(faq => (
+              <details class="group bg-yellow-400/70 rounded-lg shadow-md p-6 cursor-pointer hover:shadow-lg transition-shadow">
+                <summary class="flex justify-between items-center font-semibold text-gray-900 text-lg">
+                  {faq.question}
+                  <span class="transform group-open:rotate-180 transition-transform">
+                    <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                </summary>
+                <p class="text-gray-600 mt-4 leading-relaxed">{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>  
   </div>
 </Layout>

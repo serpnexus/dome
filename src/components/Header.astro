@@ -20,8 +20,8 @@ const navigation = [
       InvisibleText
     </a>
     
-    <div class="flex items-center gap-8">
-      <ul class="hidden md:flex items-center gap-6 list-none m-0 p-0">
+    <div class="flex items-center gap-2">
+      <ul class="hidden md:flex items-center gap-2 list-none m-0 p-0">
         {navigation.map(({ href, label }) => (
           <li class="relative">
             <a href={href} class="relative px-4 py-2 text-sm text-white/90 no-underline rounded-lg transition-all duration-300 hover:bg-yellow-400/10 hover:text-yellow-400 hover:-translate-y-0.5 focus:outline-2 focus:outline-yellow-400 focus:outline-offset-2 focus:rounded">
@@ -31,8 +31,40 @@ const navigation = [
         ))}
       </ul>
       
-      <LanguageSwitcher class="bg-white backdrop-blur-md border border-yellow-400/25 rounded-xl transition-all duration-300 hover:bg-yellow-400/20 hover:-translate-y-0.5 shadow-[0_8px_32px_rgba(18,28,65,0.4),inset_0_1px_0_rgba(255,215,0,0.2),inset_0_-1px_0_rgba(18,28,65,0.2)] hover:shadow-[0_12px_40px_rgba(18,28,65,0.5),inset_0_1px_0_rgba(255,215,0,0.3)]" /> 
+      <LanguageSwitcher class="" /> 
+      
+      <!-- Mobile Menu Button -->
+      <button 
+        id="mobile-menu-toggle"
+        class="md:hidden flex flex-col gap-1.5 p-2 text-white hover:bg-yellow-400/10 rounded-lg transition-all duration-300 focus:outline-2 focus:outline-yellow-400 focus:outline-offset-2"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+        <span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+        <span class="block w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+      </button>
     </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div 
+    id="mobile-menu"
+    class="hidden md:hidden absolute top-full left-0 right-0 mt-2 mx-2 bg-navy-900 backdrop-blur-md border border-yellow-400/25 rounded-xl shadow-[0_8px_32px_rgba(18,28,65,0.4),inset_0_1px_0_rgba(255,215,0,0.2),inset_0_-1px_0_rgba(18,28,65,0.2)] overflow-hidden transition-all duration-300 origin-top opacity-0 scale-y-95"
+  >
+    <ul class="flex flex-col list-none m-0 p-2 gap-1">
+      {navigation.map(({ href, label }) => (
+        <li>
+          <a 
+            href={href} 
+            class="block px-4 py-3 text-sm text-yellow-100 no-underline rounded-lg transition-all duration-300 hover:bg-yellow-400/90 hover:text-navy-900 hover:translate-x-1 focus:outline-2 focus:outline-yellow-400 focus:outline-offset-2"
+          >
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
   </div>
 </nav>
 
@@ -48,6 +80,26 @@ const navigation = [
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  #mobile-menu {
+    &.open {
+      @apply block opacity-100 scale-y-100;
+    }
+  }
+
+  #mobile-menu-toggle {
+    &.active span:nth-child(1) {
+      @apply rotate-45 translate-y-2;
+    }
+
+    &.active span:nth-child(2) {
+      @apply opacity-0;
+    }
+
+    &.active span:nth-child(3) {
+      @apply -rotate-45 -translate-y-2;
     }
   }
 
@@ -81,8 +133,63 @@ const navigation = [
     }
     
     nav a,
-    nav > div > div > div:last-child > div {
+    nav > div > div > div:last-child > div,
+    #mobile-menu-toggle span,
+    #mobile-menu {
       transition: none;
     }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = mobileMenu?.querySelectorAll('a');
+
+    // Toggle menu on button click
+    menuToggle?.addEventListener('click', () => {
+      const isOpen = menuToggle.classList.contains('active');
+      
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Close menu when a link is clicked
+    navLinks?.forEach(link => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const isClickInsideNav = (e.target as HTMLElement).closest('nav');
+      if (!isClickInsideNav && menuToggle?.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menuToggle?.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+
+    function openMenu() {
+      menuToggle?.classList.add('active');
+      mobileMenu?.classList.add('open');
+      menuToggle?.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      menuToggle?.classList.remove('active');
+      mobileMenu?.classList.remove('open');
+      menuToggle?.setAttribute('aria-expanded', 'false');
+    }
+  });
+</script>

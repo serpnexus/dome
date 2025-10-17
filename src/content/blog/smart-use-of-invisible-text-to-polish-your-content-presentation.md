@@ -52,9 +52,21 @@ Our website offers most innovative invisible character generator and is popular 
 - Easy output copying option.
 - Integrated with other helpful tools.
 
-### TextReverse.com — Invisible Character
+### Invisible-Symbol.com
 
-TextReverse.com is mainly a text-reversing platform, but it also has a smart <u>[Invisible space](https://www.textreverse.com/invisible-character.php)</u> generator in its toolkit. This tool gives you two main methods to copy pre-made blank spaces. The first one involves simply clicking the “Copy to clipboard.” As you do so, an empty character automatically gets copied, requiring you to just paste it where you want. In the second method, you have to first select the number of required spaces and then click the “Copy” button. 
+<u>[Invisible-Symbol](https://www.invisible-symbol.com/)</u> is another web-based resource where you can find a free tool to get empty text. It also offers two methods to copy blank text, but what makes it unique is that it provides three further options in the first technique. These involve copying small, medium, and large invisible characters. This flexibility allows you to choose the right size of space depending on whether you need a slight gap, a balanced break, or a wider separation in your content.
+
+![invisible-character-tool](/images/invisible-symbol.webp "blank text")
+
+**Key Features:**
+
+- Option to switch interface language.
+- Test box to test the copied blank spaces.
+- Easily accessible through all devices.
+
+### TextReverse.com
+
+TextReverse.com is mainly a text-reversing platform, but it also has a smart Invisible space generator in its toolkit. This tool gives you two main methods to copy pre-made blank spaces. The first one involves simply clicking the “Copy to clipboard.” As you do so, an empty character automatically gets copied, requiring you to just paste it where you want. In the second method, you have to first select the number of required spaces and then click the “Copy” button. 
 
 ![invisibletextreverse](/images/invsibletextreverse.webp "blank text")
 
@@ -63,18 +75,6 @@ TextReverse.com is mainly a text-reversing platform, but it also has a smart <u>
 - Neat and clean user interface.
 - No daily or monthly limit.
 - Completely free usability.
-
-### Invisible-Symbol — Empty Text
-
-<u>[Invisible Symbol](https://www.invisibletext.me/)</u> is another web-based resource where you can find a free tool to get empty text. It also offers two methods to copy blank text, but what makes it unique is that it provides three further options in the first technique. These involve copying small, medium, and large invisible characters. This flexibility allows you to choose the right size of space depending on whether you need a slight gap, a balanced break, or a wider separation in your content.
-
-![invisible-symbol-tool](/images/invisible-symbol.webp "blank text")
-
-**Key Features:**
-
-- Option to switch interface language.
-- Test box to test the copied blank spaces.
-- Easily accessible through all devices.
 
 ## Summing It Up
 
