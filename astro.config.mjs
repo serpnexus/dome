@@ -10,7 +10,7 @@ export default defineConfig({
   integrations: [react(), sitemap(), tailwind(), mdx()],
   output: 'static',
   adapter: vercel(),
-  site: 'https://www.invisibletext.me/',
+  site: 'https://www.invisibletext.me',
   i18n: {
     defaultLocale: 'en',
     locales: [
