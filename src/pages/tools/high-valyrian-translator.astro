@@ -2,29 +2,25 @@
 import Layout from '../../layouts/StaticPageLayout.astro';
 import TextConverter from '../../components/TextConverter.astro';
 import { getLangFromUrl } from '../../i18n/utils';
+import TextTransformer from '../../components/TextTransformer';
 
 const lang = getLangFromUrl(Astro.url);
 ---
 
 <Layout title="High Valyrian Translator - Translate to Dragon Language" description="Translate English text to High Valyrian, the language of dragons from Game of Thrones. Free online translator with comprehensive vocabulary!">
   <div class="min-h-screen bg-gradient-to-b from-navy-900  to-navy-800 text-white">
-    <!-- Hero Section -->
-    <section class="pt-20 pb-16 px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
-          High Valyrian Translator
-        </h1>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Translate English text to High Valyrian, the ancient language of dragons from Game of Thrones. Speak like a true Targaryen!
-        </p>
-      </div>
-    </section>
+
+    <TextTransformer
+      client:load
+      title='High Valyrian Translator' 
+      description='Translate English text to High Valyrian, the ancient language of dragons from Game of Thrones. Speak like a true Targaryen!' 
+      transformType="valyrian"
+      placeholder='Type or paste your text here...' 
+    />
 
     <!-- Tool Section -->
     <section class="px-4 pb-20">
       <div class="max-w-4xl mx-auto">
-        <!-- Added mode="valyrian" to show only translation functionality -->
-        <TextConverter mode="valyrian" />
 
         <!-- Vocabulary Section -->
         <div class="mt-12 bg-navy-800/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8">

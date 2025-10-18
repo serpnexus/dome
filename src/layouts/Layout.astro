@@ -1,17 +1,27 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import OGImage from '../components/OGImage.astro';
 import { getLangFromUrl } from '../i18n/utils';
 import "../styles/custom.css";
+import { ClientRouter, fade, slide } from 'astro:transitions';
+
 
 interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	type?: 'website' | 'article' | 'blog';
 }
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const lang = getLangFromUrl(Astro.url);
-const { title, description, image='og-image.webp' } = Astro.props;
+const { title, description, image, type = 'website' } = Astro.props;
+
+// Generate dynamic OG image URL
+// Ensure we have the full URL for OG image (title only)
+const baseUrl = Astro.site ? Astro.site.toString().replace(/\/$/, '') : 'https://www.invisibletext.me';
+const ogImageUrl = `${baseUrl}/api/og?title=${encodeURIComponent(title)}&type=${type}`;
+const finalImageUrl = image ? new URL(image, baseUrl).toString() : ogImageUrl;
 ---
 
 <!DOCTYPE html>
@@ -28,20 +38,22 @@ const { title, description, image='og-image.webp' } = Astro.props;
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.url)} />
-    <meta name="robots" content="index, follow">
-	<meta property="og:site_name" content="Invisible Text" />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Invisible Text" />
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={new URL(image, Astro.url)} />
+    <meta property="twitter:image" content={finalImageUrl} />
+    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#0F1A36" />
-    <link rel="alternate" hreflang="en" href="https://www.invisibletext.me">
+    <link rel="alternate" hreflang="en" href="https://www.invisibletext.me/">
     <link rel="alternate" hreflang="de" href="https://www.invisibletext.me/de">
     <link rel="alternate" hreflang="es" href="https://www.invisibletext.me/es">
     <link rel="alternate" hreflang="fr" href="https://www.invisibletext.me/fr">
@@ -58,7 +70,8 @@ const { title, description, image='og-image.webp' } = Astro.props;
     <link rel="alternate" hreflang="my" href="https://www.invisibletext.me/my">
     <link rel="alternate" hreflang="th" href="https://www.invisibletext.me/th">
     <link rel="alternate" hreflang="vi" href="https://www.invisibletext.me/vi">
-    <link rel="alternate" hreflang="x-default" href="https://www.invisibletext.me">
+    <link rel="alternate" hreflang="x-default" href="https://www.invisibletext.me/">
+    <ClientRouter transition:persist />
   </head>
   <body>
     <Header />

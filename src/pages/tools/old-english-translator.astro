@@ -1,29 +1,23 @@
 ---
 import Layout from '../../layouts/StaticPageLayout.astro';
 import TextConverter from '../../components/TextConverter.astro';
+import TextTransformer from '../../components/TextTransformer';
 ---
 
 <Layout title="Old English Translator - Convert Modern Text to Shakespearean English" description="Transform your modern text into Shakespearean Old English with authentic thou, thee, and thy pronouns. Perfect for creative writing, theatrical scripts, or adding a classical touch to your content.">
   <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
     <div class="max-w-6xl mx-auto">
-      <!-- Header Section -->
-      <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
-          Old English Translator
-        </h1>
-        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-          Transform your modern text into Shakespearean Old English with authentic thou, thee, and thy pronouns. 
-          Perfect for creative writing, theatrical scripts, or adding a classical touch to your content.
-        </p>
-      </div>
+      <TextTransformer 
+        client:load
+        title='Old English Translator' 
+        description='Transform your modern text into Shakespearean Old English with authentic thou, thee, and thy pronouns. Perfect for creative writing, theatrical scripts, or adding a classical touch to your content.' 
+        transformType="oldenglish"
+        placeholder='Type or paste your text here...'
+      />
 
-      <!-- Text Converter Component -->
-      <TextConverter mode="old-english" />
-
-      <!-- Educational Content -->
       <div class="mt-16 grid md:grid-cols-2 gap-8">
         <!-- About Old English -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-slate-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">📜</span>
             About Old English
@@ -42,63 +36,63 @@ import TextConverter from '../../components/TextConverter.astro';
         </div>
 
         <!-- Grammar Guide -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-slate-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">📚</span>
             Grammar Guide
           </h2>
           <div class="space-y-3">
-            <div class="flex justify-between items-center py-2 border-b border-slate-600">
-              <span class="text-slate-400">you</span>
+            <div class="flex justify-between items-center py-2 border-b border-navy-600">
+              <span class="text-gray-300">you</span>
               <span class="text-amber-400 font-medium">thou</span>
             </div>
-            <div class="flex justify-between items-center py-2 border-b border-slate-600">
-              <span class="text-slate-400">your</span>
+            <div class="flex justify-between items-center py-2 border-b border-navy-600">
+              <span class="text-gray-300">your</span>
               <span class="text-amber-400 font-medium">thy</span>
             </div>
-            <div class="flex justify-between items-center py-2 border-b border-slate-600">
-              <span class="text-slate-400">yours</span>
+            <div class="flex justify-between items-center py-2 border-b border-navy-600">
+              <span class="text-gray-300">yours</span>
               <span class="text-amber-400 font-medium">thine</span>
             </div>
-            <div class="flex justify-between items-center py-2 border-b border-slate-600">
-              <span class="text-slate-400">are</span>
+            <div class="flex justify-between items-center py-2 border-b border-navy-600">
+              <span class="text-gray-300">are</span>
               <span class="text-amber-400 font-medium">art</span>
             </div>
-            <div class="flex justify-between items-center py-2 border-b border-slate-600">
-              <span class="text-slate-400">does</span>
+            <div class="flex justify-between items-center py-2 border-b border-navy-600">
+              <span class="text-gray-300">does</span>
               <span class="text-amber-400 font-medium">doth</span>
             </div>
             <div class="flex justify-between items-center py-2">
-              <span class="text-slate-400">please</span>
+              <span class="text-gray-300">please</span>
               <span class="text-amber-400 font-medium">prithee</span>
             </div>
           </div>
         </div>
 
         <!-- Usage Examples -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-slate-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">✨</span>
             Usage Examples
           </h2>
           <div class="space-y-4">
-            <div class="bg-slate-700/50 rounded-lg p-4">
-              <p class="text-slate-400 text-sm mb-2">Modern:</p>
+            <div class="bg-navy-700/50 rounded-lg p-4">
+              <p class="text-gray-300 text-sm mb-2">Modern:</p>
               <p class="text-white mb-3">"Hello, how are you today?"</p>
-              <p class="text-slate-400 text-sm mb-2">Old English:</p>
+              <p class="text-gray-300 text-sm mb-2">Old English:</p>
               <p class="text-amber-400">"Hail, how art thou this day?"</p>
             </div>
-            <div class="bg-slate-700/50 rounded-lg p-4">
-              <p class="text-slate-400 text-sm mb-2">Modern:</p>
+            <div class="bg-navy-700/50 rounded-lg p-4">
+              <p class="text-gray-300 text-sm mb-2">Modern:</p>
               <p class="text-white mb-3">"Thank you for your help"</p>
-              <p class="text-slate-400 text-sm mb-2">Old English:</p>
+              <p class="text-gray-300 text-sm mb-2">Old English:</p>
               <p class="text-amber-400">"Gramercy for thy help"</p>
             </div>
           </div>
         </div>
 
         <!-- Applications -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-slate-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">🎭</span>
             Perfect For

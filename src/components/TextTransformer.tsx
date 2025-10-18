@@ -1,6 +1,6 @@
 import React from "react"
 import { useState, useEffect } from "react"
-import { transformToBold, transformToItalic, transformToCursive, transformToBubble, transformToReverse, transformToInstagramFonts, transformToFancyText } from "../utils/textTransformers"
+import { transformToBold, transformToItalic, transformToCursive, transformToBubble, transformToReverse, transformToInstagramFonts, transformToFancyText, transformToMirrorText, transformToSmallText, transformToUpsideDownText } from "../utils/textTransformers"
 import { translateToWingdings, translateToUwU, translateToOldEnglish } from "../utils/translators"
 import { generateStylishFonts, generateFacebookFonts, generateIGFonts } from "../utils/fontGenerators"
 import { generateGlitchText, generateHalfElfNames, generateAestheticUsernames, generateCatNames, generateQuirks } from "../utils/specialGenerators"
@@ -39,6 +39,9 @@ interface TextTransformerProps {
     | "tiktok"
     | "creepy"
     | "valyrian"
+    | "small"
+    | "mirror"
+    | "upsidedown"
   placeholder?: string
   isGenerator?: boolean
 }
@@ -112,6 +115,12 @@ const TextTransformer = ({
         return generateCreepyFonts(text)
       case "valyrian":
         return translateToHighValyrian(text)
+      case "small":
+        return transformToSmallText(text)
+      case "mirror":
+        return transformToMirrorText(text)
+      case "upsidedown":
+        return transformToUpsideDownText(text)
       default:
         return text
     }

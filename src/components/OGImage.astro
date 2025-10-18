@@ -1,0 +1,56 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  author?: string;
+  type?: 'website' | 'article' | 'blog';
+  url: string;
+  locale?: string;
+}
+const {
+  title,
+  description = '',
+  image,
+  author = 'InvisibleText',
+  type = 'website',
+  url,
+  locale = 'en',
+} = Astro.props;
+const ogImageUrl = new URL('/api/og/', Astro.site).toString() + 
+  `?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}&type=${type}`;
+const ogImage = image || ogImageUrl;
+const fullOgImageUrl = new URL(ogImage, Astro.site).toString();
+---
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:url" content={url} />
+<meta property="og:type" content={type === 'blog' ? 'article' : 'website'} />
+<meta property="og:title" content={title} />
+{description && <meta property="og:description" content={description} />}
+<meta property="og:image" content={fullOgImageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content={locale} />
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+{description && <meta name="twitter:description" content={description} />}
+<meta name="twitter:image" content={fullOgImageUrl} />
+
+<!-- Additional Meta Tags -->
+{author && <meta name="author" content={author} />}
+<meta name="description" content={description || title} />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': type === 'blog' ? 'BlogPosting' : 'WebPage',
+  headline: title,
+  description: description || title,
+  image: fullOgImageUrl,
+  ...(type === 'blog' && { author: { '@type': 'Person', name: author } }),
+})}>
+</script>

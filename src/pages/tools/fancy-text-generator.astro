@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/StaticPageLayout.astro';
 import TextConverter from '../../components/TextConverter.astro';
+import TextTransformer from '../../components/TextTransformer';
 // import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 
 const examples = {
@@ -42,19 +43,14 @@ const styleConfig = {
 <Layout title="Fancy Text Generator - Create Stylish Text Online" description="Transform your text into fancy, stylized characters with our free online fancy text generator. Generate bold, italic, cursive, and gothic text styles instantly!">
   <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
     <div class="max-w-6xl mx-auto">
-      <section class=" pb-8 px-4" id="intro">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
-            Fancy Text Generator
-          </h1>
-          <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Transform your text into fancy, stylized characters. Generate bold, italic, cursive, gothic, and many more
-            unique text styles for social media, usernames, and creative projects!
-          </p>
-        </div>
-      </section>
 
-      <TextConverter mode="fancy"/>
+      <TextTransformer 
+        client:load
+        title='Fancy Text Generator' 
+        description='Transform your text into fancy, stylized characters with our free online fancy text generator. Generate bold, italic, cursive, and gothic text styles instantly!' 
+        transformType="fancy"
+        placeholder='Type or paste your text here...'
+      />
 
       
       <section class="mt-12 bg-navy-800 backdrop-blur-sm border border-navy-600 rounded-lg" id="examples">

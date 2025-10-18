@@ -1,34 +1,29 @@
 ---
 import Layout from '../../layouts/StaticPageLayout.astro';
-import TextConverter from '../../components/TextConverter.astro';
+import TextTransformer from '../../components/TextTransformer';
 ---
 
 <Layout title="Mirror Text Generator - Create Horizontally Flipped Text" description="Create horizontally flipped mirror text that appears as if reflected in a mirror. Perfect for creating mysterious messages, artistic designs, and unique visual effects.">
   <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
     <div class="max-w-6xl mx-auto">
-      <!-- Header Section -->
-      <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
-          Mirror Text Generator
-        </h1>
-        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-          Create horizontally flipped mirror text that appears as if reflected in a mirror. 
-          Perfect for creating mysterious messages, artistic designs, and unique visual effects.
-        </p>
-      </div>
 
-      <!-- Text Converter Component -->
-      <TextConverter mode="mirror" />
+      <TextTransformer 
+        client:load
+        title='Mirror Text Generator' 
+        description='Create horizontally flipped mirror text that appears as if reflected in a mirror. Perfect for creating mysterious messages, artistic designs, and unique visual effects.' 
+        transformType="mirror"
+        placeholder='Type or paste your text here...' 
+      />
 
-      <!-- Educational Content -->
+      
       <div class="mt-16 grid md:grid-cols-2 gap-8">
         <!-- About Mirror Text -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800 rounded-xl p-8 border border-navy-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">🪞</span>
             About Mirror Text
           </h2>
-          <div class="space-y-4 text-slate-300">
+          <div class="space-y-4 text-navy-300">
             <p>
               Mirror text uses special Unicode characters that appear horizontally flipped, 
               creating the illusion of text reflected in a mirror. Each letter is replaced 
@@ -43,57 +38,57 @@ import TextConverter from '../../components/TextConverter.astro';
         </div>
 
         <!-- How It Works -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-navy-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">⚙️</span>
             How It Works
           </h2>
           <div class="space-y-4">
-            <div class="bg-slate-700/50 rounded-lg p-4">
+            <div class="bg-navy-700/50 rounded-lg p-4">
               <h3 class="text-emerald-400 font-semibold mb-2">Character Mapping</h3>
-              <p class="text-slate-300 text-sm mb-2">Each letter maps to its mirrored Unicode equivalent</p>
+              <p class="text-navy-300 text-sm mb-2">Each letter maps to its mirrored Unicode equivalent</p>
               <div class="flex items-center gap-4 text-lg">
                 <span class="text-white">Hello</span>
-                <span class="text-slate-400">→</span>
+                <span class="text-gray-300">→</span>
                 <span class="text-emerald-400">Hɘllo</span>
               </div>
             </div>
-            <div class="bg-slate-700/50 rounded-lg p-4">
+            <div class="bg-navy-700/50 rounded-lg p-4">
               <h3 class="text-emerald-400 font-semibold mb-2">Visual Effect</h3>
-              <p class="text-slate-300 text-sm">Creates the appearance of horizontally flipped text</p>
+              <p class="text-navy-300 text-sm">Creates the appearance of horizontally flipped text</p>
             </div>
           </div>
         </div>
 
         <!-- Usage Examples -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-navy-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">✨</span>
             Usage Examples
           </h2>
           <div class="space-y-4">
-            <div class="bg-slate-700/50 rounded-lg p-4">
-              <p class="text-slate-400 text-sm mb-2">Normal Text:</p>
+            <div class="bg-navy-700/50 rounded-lg p-4">
+              <p class="text-gray-300 text-sm mb-2">Normal Text:</p>
               <p class="text-white mb-3">"Welcome to our website"</p>
-              <p class="text-slate-400 text-sm mb-2">Mirror Text:</p>
+              <p class="text-gray-300 text-sm mb-2">Mirror Text:</p>
               <p class="text-emerald-400">"Wɘlɔomɘ ƚo ouɿ wɘdƨiƚɘ"</p>
             </div>
-            <div class="bg-slate-700/50 rounded-lg p-4">
-              <p class="text-slate-400 text-sm mb-2">Normal Text:</p>
+            <div class="bg-navy-700/50 rounded-lg p-4">
+              <p class="text-gray-300 text-sm mb-2">Normal Text:</p>
               <p class="text-white mb-3">"Secret Message"</p>
-              <p class="text-slate-400 text-sm mb-2">Mirror Text:</p>
+              <p class="text-gray-300 text-sm mb-2">Mirror Text:</p>
               <p class="text-emerald-400">"Sɘɔɿɘƚ Mɘƨƨɒǫɘ"</p>
             </div>
           </div>
         </div>
 
         <!-- Creative Applications -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-navy-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">🎨</span>
             Creative Uses
           </h2>
-          <ul class="space-y-3 text-slate-300">
+          <ul class="space-y-3 text-navy-300">
             <li class="flex items-start gap-3">
               <span class="text-emerald-400 mt-1">•</span>
               <span>Create mysterious and intriguing social media posts</span>
@@ -118,7 +113,7 @@ import TextConverter from '../../components/TextConverter.astro';
         </div>
 
         <!-- Character Reference -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700 md:col-span-2">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-navy-700 md:col-span-2">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">📖</span>
             Character Reference Guide
@@ -127,28 +122,28 @@ import TextConverter from '../../components/TextConverter.astro';
             <div class="space-y-2">
               <h3 class="text-emerald-400 font-semibold mb-3">A-F</h3>
               <div class="space-y-1 text-sm">
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">A</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">A</span>
                   <span class="text-emerald-400">A</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">B</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">B</span>
                   <span class="text-emerald-400">ᙠ</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">C</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">C</span>
                   <span class="text-emerald-400">Ɔ</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">D</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">D</span>
                   <span class="text-emerald-400">ᗡ</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">E</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">E</span>
                   <span class="text-emerald-400">Ǝ</span>
                 </div>
                 <div class="flex justify-between items-center py-1">
-                  <span class="text-slate-400">F</span>
+                  <span class="text-gray-300">F</span>
                   <span class="text-emerald-400">ꟻ</span>
                 </div>
               </div>
@@ -156,28 +151,28 @@ import TextConverter from '../../components/TextConverter.astro';
             <div class="space-y-2">
               <h3 class="text-emerald-400 font-semibold mb-3">G-L</h3>
               <div class="space-y-1 text-sm">
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">G</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">G</span>
                   <span class="text-emerald-400">Ә</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">H</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">H</span>
                   <span class="text-emerald-400">H</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">I</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">I</span>
                   <span class="text-emerald-400">I</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">J</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">J</span>
                   <span class="text-emerald-400">Ⴑ</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">K</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">K</span>
                   <span class="text-emerald-400">ʞ</span>
                 </div>
                 <div class="flex justify-between items-center py-1">
-                  <span class="text-slate-400">L</span>
+                  <span class="text-gray-300">L</span>
                   <span class="text-emerald-400">⅃</span>
                 </div>
               </div>
@@ -185,28 +180,28 @@ import TextConverter from '../../components/TextConverter.astro';
             <div class="space-y-2">
               <h3 class="text-emerald-400 font-semibold mb-3">M-R</h3>
               <div class="space-y-1 text-sm">
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">M</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">M</span>
                   <span class="text-emerald-400">M</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">N</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">N</span>
                   <span class="text-emerald-400">N</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">O</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">O</span>
                   <span class="text-emerald-400">O</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">P</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">P</span>
                   <span class="text-emerald-400">q</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">Q</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">Q</span>
                   <span class="text-emerald-400">p</span>
                 </div>
                 <div class="flex justify-between items-center py-1">
-                  <span class="text-slate-400">R</span>
+                  <span class="text-gray-300">R</span>
                   <span class="text-emerald-400">ᴿ</span>
                 </div>
               </div>
@@ -214,36 +209,36 @@ import TextConverter from '../../components/TextConverter.astro';
             <div class="space-y-2">
               <h3 class="text-emerald-400 font-semibold mb-3">S-Z</h3>
               <div class="space-y-1 text-sm">
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">S</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">S</span>
                   <span class="text-emerald-400">Ƨ</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">T</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">T</span>
                   <span class="text-emerald-400">T</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">U</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">U</span>
                   <span class="text-emerald-400">U</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">V</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">V</span>
                   <span class="text-emerald-400">V</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">W</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">W</span>
                   <span class="text-emerald-400">W</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">X</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">X</span>
                   <span class="text-emerald-400">X</span>
                 </div>
-                <div class="flex justify-between items-center py-1 border-b border-slate-600">
-                  <span class="text-slate-400">Y</span>
+                <div class="flex justify-between items-center py-1 border-b border-navy-600">
+                  <span class="text-gray-300">Y</span>
                   <span class="text-emerald-400">Y</span>
                 </div>
                 <div class="flex justify-between items-center py-1">
-                  <span class="text-slate-400">Z</span>
+                  <span class="text-gray-300">Z</span>
                   <span class="text-emerald-400">Z</span>
                 </div>
               </div>

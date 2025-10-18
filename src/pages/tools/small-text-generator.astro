@@ -1,29 +1,23 @@
 ---
 import Layout from '../../layouts/StaticPageLayout.astro';
 import TextConverter from '../../components/TextConverter.astro';
+import TextTransformer from '../../components/TextTransformer';
 ---
 
 <Layout title="Small Text Generator - Generate Tiny Superscript & Subscript Text" description="Generate tiny text in three different styles: small caps, superscript, and subscript. Perfect for mathematical formulas, footnotes, social media captions, and creative typography.">
   <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
     <div class="max-w-6xl mx-auto">
-      <!-- Header Section -->
-      <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
-          Small Text Generator
-        </h1>
-        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-          Generate tiny text in three different styles: small caps, superscript, and subscript. 
-          Perfect for mathematical formulas, footnotes, social media captions, and creative typography.
-        </p>
-      </div>
+      <TextTransformer 
+        client:load
+        title="Small Text Generator"
+        description="Generate tiny text in three different styles: small caps, superscript, and subscript. Perfect for mathematical formulas, footnotes, social media captions, and creative typography."
+        transformType="small"
+        placeholder="Type or paste your text here..."
+      />
 
-      <!-- Text Converter Component -->
-      <TextConverter mode="small-text" />
-
-      <!-- Educational Content -->
       <div class="mt-16 grid md:grid-cols-2 gap-8">
         <!-- About Small Text -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-navy-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">🔬</span>
             About Small Text
@@ -43,23 +37,23 @@ import TextConverter from '../../components/TextConverter.astro';
         </div>
 
         <!-- Text Styles -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-navy-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">✨</span>
             Text Styles
           </h2>
           <div class="space-y-4">
-            <div class="bg-slate-700/50 rounded-lg p-4">
+            <div class="bg-navy-700/50 rounded-lg p-4">
               <h3 class="text-blue-400 font-semibold mb-2">Small Caps</h3>
               <p class="text-slate-300 text-sm mb-2">ᴄᴏɴᴠᴇʀᴛs ᴛᴇxᴛ ᴛᴏ sᴍᴀʟʟ ᴄᴀᴘɪᴛᴀʟs</p>
               <p class="text-slate-400 text-xs">Perfect for headings and emphasis</p>
             </div>
-            <div class="bg-slate-700/50 rounded-lg p-4">
+            <div class="bg-navy-700/50 rounded-lg p-4">
               <h3 class="text-green-400 font-semibold mb-2">Subscript</h3>
               <p class="text-slate-300 text-sm mb-2">ₜₑₓₜ ₐₚₚₑₐᵣₛ ᵦₑₗₒw ₜₕₑ ᵦₐₛₑₗᵢₙₑ</p>
               <p class="text-slate-400 text-xs">Great for chemical formulas and footnotes</p>
             </div>
-            <div class="bg-slate-700/50 rounded-lg p-4">
+            <div class="bg-navy-700/50 rounded-lg p-4">
               <h3 class="text-purple-400 font-semibold mb-2">Superscript</h3>
               <p class="text-slate-300 text-sm mb-2">ᵗᵉˣᵗ ᵃᵖᵖᵉᵃʳˢ ᵃᵇᵒᵛᵉ ᵗʰᵉ ᵇᵃˢᵉˡⁱⁿᵉ</p>
               <p class="text-slate-400 text-xs">Ideal for exponents and ordinal numbers</p>
@@ -68,23 +62,23 @@ import TextConverter from '../../components/TextConverter.astro';
         </div>
 
         <!-- Usage Examples -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-navy-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">📝</span>
             Usage Examples
           </h2>
           <div class="space-y-4">
-            <div class="bg-slate-700/50 rounded-lg p-4">
+            <div class="bg-navy-700/50 rounded-lg p-4">
               <p class="text-slate-400 text-sm mb-2">Mathematical Formula:</p>
               <p class="text-white">E = mc²</p>
               <p class="text-blue-400 text-sm">E = mcˢᵘᵖᵉʳˢᶜʳⁱᵖᵗ</p>
             </div>
-            <div class="bg-slate-700/50 rounded-lg p-4">
+            <div class="bg-navy-700/50 rounded-lg p-4">
               <p class="text-slate-400 text-sm mb-2">Chemical Formula:</p>
               <p class="text-white">H₂O</p>
               <p class="text-green-400 text-sm">HₛᵤᵦₛcᵣᵢₚₜO</p>
             </div>
-            <div class="bg-slate-700/50 rounded-lg p-4">
+            <div class="bg-navy-700/50 rounded-lg p-4">
               <p class="text-slate-400 text-sm mb-2">Social Media Caption:</p>
               <p class="text-purple-400">ᴛʜɪs ɪs ᴀ ᴄᴏᴏʟ ᴄᴀᴘᴛɪᴏɴ</p>
             </div>
@@ -92,7 +86,7 @@ import TextConverter from '../../components/TextConverter.astro';
         </div>
 
         <!-- Applications -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-navy-700">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">🎯</span>
             Perfect For
@@ -126,7 +120,7 @@ import TextConverter from '../../components/TextConverter.astro';
         </div>
 
         <!-- Technical Notes -->
-        <div class="bg-slate-800/50 rounded-xl p-8 border border-slate-700 md:col-span-2">
+        <div class="bg-navy-800/50 rounded-xl p-8 border border-navy-700 md:col-span-2">
           <h2 class="text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <span class="text-3xl">⚙️</span>
             Technical Notes

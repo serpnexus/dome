@@ -1,24 +1,18 @@
 ---
 import Layout from '../../layouts/StaticPageLayout.astro';
-import TextConverter from '../../components/TextConverter.astro';
+import TextTransformer from '../../components/TextTransformer';
 ---
 
 <Layout title="Upside Down Text Generator - Flip Text Vertically" description="Flip your text upside down using special Unicode characters that appear rotated 180 degrees. Create eye-catching posts, puzzles, and unique visual effects that grab attention.">
   <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
     <div class="max-w-6xl mx-auto">
-      <!-- Header Section -->
-      <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
-          Upside Down Text Generator
-        </h1>
-        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-          Flip your text upside down using special Unicode characters that appear rotated 180 degrees. 
-          Create eye-catching posts, puzzles, and unique visual effects that grab attention.
-        </p>
-      </div>
-
-      <!-- Text Converter Component -->
-      <TextConverter mode="upside-down" />
+      <TextTransformer 
+        client:load
+        title='Upside Down Text Generator' 
+        description='Flip your text upside down using special Unicode characters that appear rotated 180 degrees. Create eye-catching posts, puzzles, and unique visual effects that grab attention.' 
+        transformType="upsidedown"
+        placeholder='Type or paste your text here...'
+      />
 
       <!-- Educational Content -->
       <div class="mt-16 grid md:grid-cols-2 gap-8">

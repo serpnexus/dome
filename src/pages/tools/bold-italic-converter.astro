@@ -2,29 +2,25 @@
 import Layout from '../../layouts/StaticPageLayout.astro';
 import TextConverter from '../../components/TextConverter.astro';
 import { getLangFromUrl } from '../../i18n/utils';
+import TextTransformer from '../../components/TextTransformer';
 
 const lang = getLangFromUrl(Astro.url);
 ---
 
 <Layout title="Bold & Italic Text Converter - Create Styled Text Online" description="Convert your text to bold and italic styles using our free online converter. Generate bold and italic text for social media, documents, and more!">
   <div class="min-h-screen bg-gradient-to-b from-navy-900 to-navy-800 py-12 px-4">
-    <!-- Hero Section -->
-    <section class="pt-20 pb-16 sm:px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-4xl md:text-6xl font-bold text-yellow-300 mb-4">
-          Bold & Italic Converter
-        </h1>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Convert your text to bold and italic styles using Unicode combining characters. Perfect for social media platforms and documents!
-        </p>
-      </div>
-    </section>
+
+    <TextTransformer 
+      client:load
+      title='Bold & Italic Converter' 
+      description='Convert your text to bold and italic styles using our free online converter. Generate bold and italic text for social media, documents, and more!' 
+      transformType="bold" 
+      placeholder='Type or paste your text here...'
+    />
 
     <!-- Tool Section -->
     <section class="px-4 pb-20">
       <div class="max-w-4xl mx-auto">
-        <!-- Added mode="style" to show only underline effects -->
-        <TextConverter mode="style" />
 
         <!-- How It Works Section -->
         <div class="mt-12 bg-navy-800/30 backdrop-blur-sm border border-navy-600 rounded-2xl p-8">
