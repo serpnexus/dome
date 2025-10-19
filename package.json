@@ -16,6 +16,7 @@
     "@astrojs/vercel": "^8.0.4",
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
+    "@vercel/og": "^0.8.5",
     "astro": "^5.14.5",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.545.0",

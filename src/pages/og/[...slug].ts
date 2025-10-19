@@ -4,11 +4,12 @@ import type { APIRoute } from 'astro';
 
 export const prerender = false;
 
-export const GET: APIRoute = async ({ url }) => {
+export const GET: APIRoute = async ({ params }) => {
   try {
-    const params = url.searchParams;
-    const title = params.get('title') || 'Invisible Text';
-    const type = params.get('type') || 'website';
+    // Get the slug parts from the URL
+    const slugParts = (params.slug || '').split('/');
+    const type = slugParts[0] || 'website';
+    const title = slugParts.slice(1).join('/') || 'Invisible Text';
 
     // Define styling based on content type
     const styles = {
@@ -28,7 +29,7 @@ export const GET: APIRoute = async ({ url }) => {
 
     const style = styles[type as keyof typeof styles] || styles.website;
 
-    // Create the element using React.createElement to avoid JSX compilation issues
+    // Create the element using React.createElement
     const element = React.createElement(
       'div',
       {

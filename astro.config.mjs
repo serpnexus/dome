@@ -8,7 +8,7 @@ import vercel from '@astrojs/vercel';
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), sitemap(), tailwind(), mdx()],
-  output: 'static',
+  output: 'server',
   adapter: vercel(),
   site: 'https://www.invisibletext.me',
   i18n: {

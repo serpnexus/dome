@@ -17,11 +17,10 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const lang = getLangFromUrl(Astro.url);
 const { title, description, image, type = 'website' } = Astro.props;
 
-// Generate dynamic OG image URL
-// Ensure we have the full URL for OG image (title only)
+// Generate dynamic OG image URL for the homepage
 const baseUrl = Astro.site ? Astro.site.toString().replace(/\/$/, '') : 'https://www.invisibletext.me';
-const ogImageUrl = `${baseUrl}/api/og?title=${encodeURIComponent(title)}&type=${type}`;
-const finalImageUrl = image ? new URL(image, baseUrl).toString() : ogImageUrl;
+const ogImageUrl = new URL('/og/image', baseUrl);
+const finalImageUrl = image ? new URL(image, baseUrl).toString() : ogImageUrl.toString();
 ---
 
 <!DOCTYPE html>
