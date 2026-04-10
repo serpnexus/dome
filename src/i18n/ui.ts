@@ -1201,8 +1201,8 @@ export const ui = {
 
 
     // Meta tags for SEO
-    "meta.title": "Invisible Text Tool ( ) - Generate Blank Characters Online",
-    "meta.description":"Generate unlimited invisible text and blank space characters. Free one-click copy tool for social media, gaming, Discord, and more. No signup needed.",
+    "meta.title": "Invisible Character - (ㅤ) Blank Space Copy Past",
+    "meta.description":" Copy and paste the invisible character (ㅤ) for use in social media, gaming, or anywhere you need hidden text.",
     "meta.keywords":
       "Invisible Text, Blank Text, Copy Paste Invisible Characters, Unicode Invisible Characters, Hangul Filler, Zero Width Space",
 
@@ -1908,7 +1908,7 @@ export const ui = {
   es: {
     //meta's
     'meta.title': 'Texto Invisible ( ) | Copiar y Pegar Espacio en Blanco',
-    'meta.description': 'Genera y copia fácilmente texto invisible y espacio en blanco para usar en WhatsApp, Instagram, Free Fire y más. Copia & Pega espacio invisible con un clic.',
+    'meta.description': 'Genera y copia fácilmente texto invisible y espacio en blanco para usar en WhatsApp, Instagram, Free Fire y más. Copia &#38; Pega espacio invisible con un clic.',
     'meta.keywords': 'texto invisible, generador de texto invisible, caracteres invisibles, espacio en blanco, copiar y pegar texto invisible',
     // Header translations
     'header.brand': 'INVISIBLETEXT',
