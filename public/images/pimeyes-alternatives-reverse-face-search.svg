@@ -1,0 +1,64 @@
+<svg width="1200" height="630" viewBox="0 0 680 380" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Best PimEyes Alternatives for Reverse Face Search</title>
+  <desc>Featured image showing AI face recognition concept with scanning grid, face outline, and search nodes</desc>
+  <rect width="680" height="380" fill="#0a0e1a" rx="12"/>
+  <g stroke="#1a2540" stroke-width="0.5">
+    <line x1="0" y1="63" x2="680" y2="63"/><line x1="0" y1="126" x2="680" y2="126"/>
+    <line x1="0" y1="189" x2="680" y2="189"/><line x1="0" y1="252" x2="680" y2="252"/>
+    <line x1="0" y1="315" x2="680" y2="315"/><line x1="113" y1="0" x2="113" y2="380"/>
+    <line x1="226" y1="0" x2="226" y2="380"/><line x1="339" y1="0" x2="339" y2="380"/>
+    <line x1="452" y1="0" x2="452" y2="380"/><line x1="565" y1="0" x2="565" y2="380"/>
+  </g>
+  <g opacity="0.18">
+    <ellipse cx="340" cy="175" rx="52" ry="62" fill="#4a9eff"/>
+    <ellipse cx="340" cy="148" rx="30" ry="32" fill="#4a9eff"/>
+    <ellipse cx="324" cy="142" rx="6" ry="7" fill="#0a0e1a"/>
+    <ellipse cx="356" cy="142" rx="6" ry="7" fill="#0a0e1a"/>
+    <path d="M328 160 Q340 168 352 160" stroke="#0a0e1a" stroke-width="2" fill="none"/>
+  </g>
+  <g stroke="#4a9eff" stroke-width="2" fill="none">
+    <path d="M270 100 L270 88 L282 88"/><path d="M410 88 L422 88 L422 100"/>
+    <path d="M270 250 L270 262 L282 262"/><path d="M410 262 L422 262 L422 250"/>
+  </g>
+  <rect x="270" y="174" width="152" height="1.5" fill="#4a9eff" opacity="0.7"/>
+  <rect x="270" y="174" width="152" height="6" fill="#4a9eff" opacity="0.07"/>
+  <g fill="#4a9eff">
+    <circle cx="323" cy="138" r="2.5" opacity="0.9"/><circle cx="357" cy="138" r="2.5" opacity="0.9"/>
+    <circle cx="340" cy="155" r="2" opacity="0.8"/><circle cx="330" cy="165" r="2" opacity="0.8"/>
+    <circle cx="350" cy="165" r="2" opacity="0.8"/><circle cx="340" cy="125" r="2" opacity="0.7"/>
+    <circle cx="315" cy="148" r="1.5" opacity="0.6"/><circle cx="365" cy="148" r="1.5" opacity="0.6"/>
+    <circle cx="340" cy="175" r="2" opacity="0.6"/>
+  </g>
+  <g stroke="#2a5fa0" stroke-width="1" fill="none" stroke-dasharray="4 3" opacity="0.7">
+    <line x1="290" y1="150" x2="160" y2="108"/><line x1="290" y1="175" x2="140" y2="195"/>
+    <line x1="300" y1="210" x2="155" y2="275"/><line x1="390" y1="150" x2="520" y2="108"/>
+    <line x1="390" y1="175" x2="540" y2="195"/><line x1="380" y1="210" x2="525" y2="275"/>
+  </g>
+  <g>
+    <rect x="72" y="82" width="82" height="40" rx="6" fill="#0d1b36" stroke="#2a5fa0" stroke-width="1"/>
+    <text x="113" y="97" text-anchor="middle" fill="#4a9eff" font-size="10" font-family="monospace">FaceCheck.ID</text>
+    <text x="113" y="111" text-anchor="middle" fill="#5a7fa8" font-size="9" font-family="monospace">Identity</text>
+    <rect x="52" y="168" width="82" height="40" rx="6" fill="#0d1b36" stroke="#2a5fa0" stroke-width="1"/>
+    <text x="93" y="183" text-anchor="middle" fill="#4a9eff" font-size="10" font-family="monospace">AIFaceSearch</text>
+    <text x="93" y="197" text-anchor="middle" fill="#5a7fa8" font-size="9" font-family="monospace">AI matching</text>
+    <rect x="66" y="254" width="82" height="40" rx="6" fill="#0d1b36" stroke="#2a5fa0" stroke-width="1"/>
+    <text x="107" y="269" text-anchor="middle" fill="#4a9eff" font-size="10" font-family="monospace">Social Catfish</text>
+    <text x="107" y="283" text-anchor="middle" fill="#5a7fa8" font-size="9" font-family="monospace">Fraud detect</text>
+  </g>
+  <g>
+    <rect x="526" y="82" width="82" height="40" rx="6" fill="#0d1b36" stroke="#2a5fa0" stroke-width="1"/>
+    <text x="567" y="97" text-anchor="middle" fill="#4a9eff" font-size="10" font-family="monospace">ProFaceFinder</text>
+    <text x="567" y="111" text-anchor="middle" fill="#5a7fa8" font-size="9" font-family="monospace">Low-res img</text>
+    <rect x="546" y="168" width="82" height="40" rx="6" fill="#0d1b36" stroke="#2a5fa0" stroke-width="1"/>
+    <text x="587" y="183" text-anchor="middle" fill="#4a9eff" font-size="10" font-family="monospace">Google Lens</text>
+    <text x="587" y="197" text-anchor="middle" fill="#5a7fa8" font-size="9" font-family="monospace">Free search</text>
+    <rect x="532" y="254" width="82" height="40" rx="6" fill="#0d1b36" stroke="#2a5fa0" stroke-width="1"/>
+    <text x="573" y="269" text-anchor="middle" fill="#4a9eff" font-size="10" font-family="monospace">Yandex Images</text>
+    <text x="573" y="283" text-anchor="middle" fill="#5a7fa8" font-size="9" font-family="monospace">Deep search</text>
+  </g>
+  <text x="340" y="50" text-anchor="middle" fill="#e8f0ff" font-size="17" font-weight="600" font-family="Georgia, serif" letter-spacing="0.5">Best PimEyes Alternatives</text>
+  <text x="340" y="68" text-anchor="middle" fill="#4a9eff" font-size="11" font-family="monospace" letter-spacing="2">REVERSE FACE SEARCH  ·  2026</text>
+  <text x="340" y="340" text-anchor="middle" fill="#2a4060" font-size="10" font-family="monospace" letter-spacing="1">AI · OSINT · IDENTITY VERIFICATION</text>
+  <circle cx="340" cy="175" r="78" fill="none" stroke="#4a9eff" stroke-width="0.5" opacity="0.25"/>
+  <circle cx="340" cy="175" r="95" fill="none" stroke="#4a9eff" stroke-width="0.5" opacity="0.12"/>
+</svg>
