@@ -7,21 +7,9 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), sitemap(), tailwind(), mdx()],
-  output: 'server',
-  adapter: vercel(),
-import vercel from '@astrojs/vercel';
-
-
-import mdx from '@astrojs/mdx';
-
-
-// https://astro.build/config
-export default defineConfig({
-  integrations: [react(), partytown({config: {debug: false }}), sitemap(), mdx()],
-  output: 'static',
+  integrations: [react(), sitemap(), tailwind(), mdx(), partytown({config: {debug: false }}), ],
   site: 'https://www.invisibletext.me',
-
+  output: 'server',
   i18n: {
     defaultLocale: 'en',
     locales: [
