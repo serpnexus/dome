@@ -4,7 +4,6 @@ description: "Discover how the Zero Width Joiner makes complex emoji combination
 pubDate: 2025-01-25
 author: "Jane Smith"
 image: "/images/zeroo-width-joiner.png?height=600&width=1200"
-image: "/images/zero-width-joiner.png?height=600&width=1200"
 tags: ["unicode", "emoji", "zero width joiner"]
 featured: false
 ---

@@ -3,7 +3,6 @@ import Header from '../components/Header.astro';
 import "../styles/custom.css";
 import Footer from '../components/Footer.astro';
 import OGImage from '../components/OGImage.astro';
-import "../styles/global.css";
 
 interface Props {
 	title: string;
@@ -57,69 +56,6 @@ const finalImageUrl = image ? new URL(image, baseUrl).toString() : ogImageUrl.to
     <meta name="robots" content="index, follow" /> 
     <meta name="theme-color" content="#0F1A36" />
     <style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1370487049277752"
-     crossorigin="anonymous"></script>
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-K5YY1JW4YH');
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Invisible Text",
-        "url": "https://www.invisibletext.me/",
-        "description": "Generate and use invisible Unicode characters for various applications.",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.invisibletext.me/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Invisible Text",
-        "url": "https://www.invisibletext.me/",
-        "logo": "https://www.invisibletext.me/logo.webp",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "contact@invisibletext.me",
-          "contactType": "Customer Support",
-          "availableLanguage": "English",
-          "areaServed": "Worldwide"
-        }
-      }
-    </script>
-    
-
-  <style>
-    .static-page-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-    
-    .static-page-content {
-      background-color: var(--navy-800);
-      border: 1px solid var(--navy-700);
-      border-radius: 0.75rem;
-      padding: 2rem;
-    }
-    
-    .static-page-title {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--yellow-400);
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-    
-    @media (max-width: 768px) {
       .static-page-container {
         max-width: 1200px;
         margin: 0 auto;
@@ -156,8 +92,6 @@ const finalImageUrl = image ? new URL(image, baseUrl).toString() : ogImageUrl.to
         }
       }
     </style>
-    }
-  </style>
 </head>
 <body>
   <Header />

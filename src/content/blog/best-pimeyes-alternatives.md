@@ -21,7 +21,6 @@ And this is exactly where modern PimEyes alternatives come into play.
 
 In this in-depth guide, we'll break down the top competitors to PimEyes, including next-gen tools like AIFaceSearch.io, and help you understand which one fits your needs best.
 
----
 
 ## Why Look for PimEyes Alternatives?
 
@@ -43,7 +42,6 @@ But it struggles with: *"Who is this person?"*
 
 That's why newer tools focus on AI-based identity matching instead of simple image similarity.
 
----
 
 ## Top PimEyes Alternatives & Competitors (Detailed Breakdown)
 
@@ -61,7 +59,6 @@ FaceCheck.ID has emerged as one of the strongest competitors to PimEyes, especia
 
 **Best Use Cases:** Catfish detection, background verification, fraud prevention
 
----
 
 ### 2. AIFaceSearch.io – Next-Gen AI Face Search Platform
 
@@ -78,7 +75,6 @@ AIFaceSearch.io represents the next evolution of face search technology.
 
 **Best Use Cases:** Advanced AI face recognition, research & tech exploration, complex image matching
 
----
 
 ### 3. Social Catfish – Best for Background Checks & Fraud Detection
 
@@ -93,8 +89,6 @@ Social Catfish is not just a face search tool — it's a complete identity verif
 
 **Best Use Cases:** Dating safety, scam detection, background checks
 
----
-
 ### 4. ProFaceFinder – Best for Low-Quality Image Matching
 
 ProFaceFinder is designed for one thing: **accuracy on difficult images**.
@@ -106,8 +100,6 @@ ProFaceFinder is designed for one thing: **accuracy on difficult images**.
 **Why It Competes with PimEyes:** Better results in challenging scenarios — finds matches PimEyes often misses.
 
 **Best Use Cases:** Investigations, OSINT, security research
-
----
 
 ### 5. Google Images – Best Free Alternative
 
@@ -122,8 +114,6 @@ Google Images remains the most accessible free option.
 
 **Best Use Cases:** Quick checks, free searches
 
----
-
 ### 6. Yandex Images – Best for Deep Image Matching
 
 Yandex is often underrated — but extremely powerful.
@@ -134,8 +124,6 @@ Yandex is often underrated — but extremely powerful.
 - Sometimes surfaces results that Google and PimEyes miss
 
 **Best Use Cases:** Deep web image search, alternative discovery
-
----
 
 ## Which PimEyes Alternative Should You Choose?
 

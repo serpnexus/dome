@@ -5,7 +5,6 @@ description: "Learn how invisibletext.me can help gamers, who are always looking
 pubDate: 2025-04-01
 author: "Jane Smith"
 image: "/images/invisible-text-gaming.png?height=600&width=1200"
-image: "/images/invisible-characters-in-games.png?height=600&width=1200"
 tags: ["invisible-name", "gamers", "pubg", "freefire"]
 featured: false
 ---

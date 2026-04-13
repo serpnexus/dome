@@ -6,8 +6,6 @@ import { getLangFromUrl } from '../i18n/utils';
 import "../styles/custom.css";
 import { ClientRouter, fade, slide } from 'astro:transitions';
 
-import "../styles/global.css";
-import AdSenseAd from '../components/ads/AdSenseAd';
 
 interface Props {
 	title: string;
@@ -73,31 +71,8 @@ const finalImageUrl = image ? new URL(image, baseUrl).toString() : ogImageUrl.to
     <link rel="alternate" hreflang="vi" href="https://www.invisibletext.me/vi">
     <link rel="alternate" hreflang="x-default" href="https://www.invisibletext.me/">
     <ClientRouter transition:persist />
-    <script src="https://cmp.gatekeeperconsent.com/min.js" data-cfasync="false"></script>
-    <script src="https://the.gatekeeperconsent.com/cmp.min.js" data-cfasync="false"></script>
-    <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
-    <script>
-        window.ezstandalone = window.ezstandalone || {};
-        ezstandalone.cmd = ezstandalone.cmd || [];
-    </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1370487049277752"
-     crossorigin="anonymous"></script>
-	  <!-- Google tag (gtag.js) -->
-    <script 
-      type="text/partytown"
-      async 
-      src="https://www.googletagmanager.com/gtag/js?id=G-K5YY1JW4YH"
-    ></script>
-    <script type="text/partytown">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-K5YY1JW4YH');
-    </script>   
   </head>
   <body>
-    <AdSenseAd client:visible/>
     <Header />
     <main class="bg-gradient-to-b from-navy-900 to-navy-800">
         <slot />
@@ -128,29 +103,6 @@ const finalImageUrl = image ? new URL(image, baseUrl).toString() : ogImageUrl.to
           "position": 1,
           "name": "Home",
           "item": "https://www.invisibletext.me/"
-      </script><script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.invisibletext.me/"
-          }
-        ]
-      }
-      </script><script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "Invisible Text - English",
-        "url": "https://www.invisibletext.me/",
-        "inLanguage": "en",
-        "isPartOf": {
-          "@type": "WebSite",
-          "url": "https://www.invisibletext.me/"
         }
       ]
     }
@@ -222,8 +174,5 @@ const finalImageUrl = image ? new URL(image, baseUrl).toString() : ogImageUrl.to
       ]
     }
     </script>
-        ]
-      }
-      </script>
   </body>
 </html>
