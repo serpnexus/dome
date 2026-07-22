@@ -37,15 +37,10 @@ Mostly, invisible character tools work in almost the same way, so you can select
 ## How to Make Your Profile Name Invisible on Instagram?
 
 Now that you have copied invisible characters, here's how to actually use them on Instagram.
-
 1) Open the Instagram app and go to your profile. Tap on "Edit Profile". This option is right there under your profile picture and bio section.
-
 2) Click on the "Name" field, and a new window will open with your name showing there. Clear whatever is written in it currently.
-
 3) Now paste the invisible character you copied earlier into this name field. Instagram will show the field as empty, but the characters are present there.
-
 4) Once pasted, tap on the "Tick" mark showing on the top right corner.
-
 5) Go back to your profile and check. Your name will now show up blank.
 
 One thing to keep in mind, though, is that Instagram's username field is different from the name field. And it doesn't support invisible characters the same way. So you can only blank out your display name, not your actual username.
@@ -53,13 +48,9 @@ One thing to keep in mind, though, is that Instagram's username field is differe
 ## How to Make Your Profile Name Invisible on TikTok?
 
 1) Open the TikTok app and tap on your profile icon at the bottom.
-
 2) Here, tap "Edit". It shows right under your profile picture, on the right side of your profile name.
-
 3) Click on the "Name" field, and a new window will open where you can edit your name.
-
 4) Here, clear your present name and paste the invisible character you copied into this field. After that, click on the "Save" button present in the top right corner.
-
 5) Now, go back and check your profile. Your display name will appear blank.
 
 Same as Instagram, TikTok's username field works differently and won't accept invisible characters. So only your display name can be made blank.
