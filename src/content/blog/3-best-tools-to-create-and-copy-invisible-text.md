@@ -3,7 +3,7 @@ title: "3 Best Tools to Create and Copy Invisible Text"
 description: "Discover the 3 best online tools to create and copy invisible characters, how they work, and what to keep in mind before using them."
 pubDate: 2026-07-08
 author: "Admin"
-image: "/images/create-and-copy-invisible-text.png?height=600&width=1200"
+image: "/images/three-best-tools-to-create-and-copy-invisible-text.png?height=600&width=1200"
 tags: ["invisible text", "unicode", "productivity tools"]
 featured: false
 ---
