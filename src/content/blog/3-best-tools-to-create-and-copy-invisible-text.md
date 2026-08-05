@@ -26,13 +26,13 @@ There's also a test box on the site. You paste your copied character there, and 
 
 One thing worth mentioning is that this tool also has a whole table listing different Unicode blank characters. Each one has its own code and use case. Most people won't need to go that deep, but it's there if you're curious or need a specific character that works better on certain apps or platforms.
 
-## 2) Invisible Character by Editpad
+## 2) Invisible Character by DNSChecker
 
-This one is offered by Editpad, a platform known for its note-taking, content writing and optimization tools. Its invisible character tool is fine on its own. The first method here is just to hit the copy button. The character is copied to your clipboard in just one click. If that does not work for you in some way, do not worry, there is another method as well. The second method allows you to copy the invisible text manually using keyboard shortcuts like Ctrl+C or Cmd+C.
+This one is offered by DNSChecker, a platform known for offering various networking and productivity tools. Its [invisible character tool](https://dnschecker.org/invisible-character) is fine on its own. With method 1, you get to copy a defined number of characters with a single click. Alternatively, with method 2, you can also generate and copy the desired number of blank characters
 
-What's different about this one? They have a really long list of Unicode blank characters, way more than most tools show. Different types for different situations. Most users won't need this whole list, but if one type doesn't work somewhere, you have backups right there instead of going to search another site.
+What’s different about this one? They have a really long list of Unicode blank characters, way more than most tools show. Different types for different situations. Most users won’t need this whole list, but if one type doesn’t work somewhere, you have backups right there instead of going to search another site.
 
-The only downside is that the site has quite a few ads running, and an AdBlock pop-up shows up too if you're using one. Nothing major, but it's worth mentioning since the first tool didn't have this hassle.
+The only downside is that the site has quite a few ads running. Nothing major, but it’s worth mentioning since the first tool didn’t have this hassle.
 
 ## 3) Prepostseo Invisible Character
 
