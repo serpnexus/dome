@@ -55,7 +55,7 @@ This should be used carefully, though. If a name is still in use or belongs to s
 
 ## How to Copy an Invisible Space?
 
-Copying an [invisible space](https://www.editpad.org/tool/invisible-character) is very easy using online tools. There are many free invisible character generator tools available online that let you copy invisible spaces with a single click. Just open any trusted tool and click the “Copy” button. The invisible space will be saved to your clipboard.
+Copying an [invisible space](https://www.ilovenote.net/tool/invisible-character) is very easy using online tools. There are many free invisible character generator tools available online that let you copy invisible spaces with a single click. Just open any trusted tool and click the “Copy” button. The invisible space will be saved to your clipboard.
 
 After that, you can paste it into usernames, social media profiles, messages, game names, or anywhere else you need an invisible character. Most of these tools also provide different types of invisible Unicode characters for different use cases.
 
